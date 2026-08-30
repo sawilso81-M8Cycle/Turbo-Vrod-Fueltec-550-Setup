@@ -1,0 +1,38 @@
+Circuit_ID,Function,Source_or_Supply,Destination,OEM_Component,OEM_Wire_Colour,New_Harness_Colour,FT550_Pin,PMU_Output,Ground_Domain,Status,Verification
+S-001,CKP signal,CKP sensor,FT550,32313-01A,R,WH,A19,,SIM,WORKING VERIFIED,Scope polarity and waveform
+S-002,CKP reference,CKP sensor,FT550,32313-01A,BK,BK,A18,,SIM,WORKING VERIFIED,Scope polarity and waveform
+S-003,TPS 5V,FT550 5V,TPS,27975-01,R/W,R/W,,,SIM,WORKING VERIFIED,Verify exact FT550 5V cavity
+S-004,TPS signal,TPS,FT550,27975-01,GY/V,GY/V,A22,,SIM,WORKING VERIFIED,Calibrate closed/WOT voltage
+S-005,TPS return,TPS,FT550 sensor ground,27975-01,BK/W,BK/W,,,SIM,WORKING VERIFIED,Verify ground cavity
+S-006,MAP 5V,FT550 5V,OEM MAP,32416-10,R/W,R/W,,,SIM,DESIGN,Verify MAP range and transfer curve
+S-007,MAP signal,OEM MAP,FT550 analogue input,32416-10,V/W,V/W,VERIFY,,SIM,VERIFY,Assign exact FT550 analogue input
+S-008,MAP return,OEM MAP,FT550 sensor ground,32416-10,BK/W,BK/W,,,SIM,WORKING VERIFIED,Verify ground cavity
+S-009,ECT signal,ECT,FT550,32315-01,PK/Y,PK/Y,A24,,SIM,WORKING VERIFIED,Verify thermistor calibration
+S-010,ECT return,ECT,FT550 sensor ground,32315-01,BK/W,BK/W,,,SIM,WORKING VERIFIED,Verify ground cavity
+S-011,IAT signal,IAT,FT550,27388-01,LGN/Y,LGN/Y,B5,,SIM,WORKING VERIFIED,Verify thermistor calibration
+S-012,IAT return,IAT,FT550 sensor ground,27388-01,BK/W,BK/W,,,SIM,WORKING VERIFIED,Verify ground cavity
+S-013,VSS supply,Protected switched 12V,VSS,74402-05B,BK/R,BK/R,,,SIM/POWER,WORKING VERIFIED,Verify current and protection
+S-014,VSS signal,VSS,FT550,74402-05B,BK/BE,BK/BE,A26,,SIM,WORKING VERIFIED,Verify pulses/rev and amplitude
+S-015,VSS ground,VSS,Controlled ground,74402-05B,BK,BK,,,POWER,VERIFY,Confirm preferred return topology
+S-016,Oil pressure switch,Oil switch,FT550 digital input,26561-99,GN/Y,GN/Y,VERIFY,,SIM,VERIFY,Confirm switch polarity and input
+S-017,Neutral switch,Neutral switch,FT550 digital input,33902-98A,VERIFY,TN,VERIFY,,SIM,VERIFY,Confirm colour polarity input
+E-001,FT550 main power,EPM protected feed,FT550,,,,VERIFY,,EPM,VERIFY,Exact FuelTech power cavities and conductor size
+E-002,FT550 main ground,FT550,Battery/engine star,,,,VERIFY,,EPM,VERIFY,Exact FuelTech ground cavities and conductor size
+E-003,Front injector +12V,EPM protected feed,Front injector,OEM injector,VERIFY,RD,,,,EPM,VERIFY,Measure injector current
+E-004,Front injector control,Front injector,FT550,OEM injector,VERIFY,BU,VERIFY,,EPM,VERIFY,Assign output cavity
+E-005,Rear injector +12V,EPM protected feed,Rear injector,OEM injector,VERIFY,RD,,,,EPM,VERIFY,Measure injector current
+E-006,Rear injector control,Rear injector,FT550,OEM injector,VERIFY,GN,VERIFY,,EPM,VERIFY,Assign output cavity
+E-007,Front coil +12V,EPM protected feed,Front coil,OEM coil,VERIFY,RD,,,,EPM,VERIFY,Verify coil type and driver
+E-008,Front coil control,Front coil,FT550,OEM coil,VERIFY,BU/WH,VERIFY,,EPM,VERIFY,Verify driver compatibility
+E-009,Rear coil +12V,EPM protected feed,Rear coil,OEM coil,VERIFY,RD,,,,EPM,VERIFY,Verify coil type and driver
+E-010,Rear coil control,Rear coil,FT550,OEM coil,VERIFY,GN/WH,VERIFY,,EPM,VERIFY,Verify driver compatibility
+P-001,Primary fuel pump,PMU16,Primary pump,OEM/installed pump,VERIFY,RD/YE,,O1,APM,DESIGN,Measure steady and inrush current
+P-002,Secondary fuel pump,PMU16,Secondary pump if fitted,,VERIFY,RD/OG,,O2,APM,DESIGN,Only populate if fitted
+P-003,Radiator fan 1,PMU16,Fan 1,OEM fan,VERIFY,RD/BU,,O3,APM,DESIGN,Measure steady and inrush current
+P-004,Radiator fan 2,PMU16,Fan 2 if fitted,,VERIFY,RD/GN,,O4,APM,DESIGN,Only populate if fitted
+P-005,Charge cooler pump,PMU16,Pump if fitted,,VERIFY,RD/VT,,O5,APM,DESIGN,Only populate if fitted
+P-006,Aux engine-control supply,PMU16,Aux load,,VERIFY,RD/BK,,O6,APM,RESERVED,Final function VERIFY
+P-007,Warning lamp,PMU16,Warning lamp,,VERIFY,YE/BK,,O8,APM,DESIGN,Verify lamp/load type
+P-008,Logger/display feed,PMU16,Data/service devices,,VERIFY,OG/WH,,O10,APM,DESIGN,Verify actual connected devices
+C-001,CAN H,FT550/PMU CAN,PMU/FT550,,,WH/BU,VERIFY,,COMM,VERIFY,Do not define messages until verified
+C-002,CAN L,FT550/PMU CAN,PMU/FT550,,,WH/GN,VERIFY,,COMM,VERIFY,120-ohm topology VERIFY
