@@ -10,6 +10,8 @@
 - [x] Record Harley VRXSE/VRSC factory publication set.
 - [x] Record key 70155-03 engine-harness cross-model finding.
 - [x] Record known VRXSE sensor part numbers.
+- [x] Add ECUMASTER PMU-16 official manual and pinout references.
+- [x] Add PMU-16 architecture evaluation for Turbo V-Rod use.
 - [ ] Obtain/archive permitted working copies of the exact Harley publications used for engineering access.
 - [ ] Confirm every quoted drawing page/circuit against the exact publication revision.
 
@@ -63,16 +65,22 @@
 - [ ] Injector supply and switching architecture.
 - [ ] Ignition-coil supply and control architecture.
 - [ ] Engine-critical relay / solid-state protection design.
-- [ ] Fuse schedule.
+- [ ] Evaluate whether any engine-critical loads should be migrated to PMU-16 after failure-mode analysis.
+- [ ] Fuse / electronic protection schedule.
 
 ### APM
 
+- [x] ECUMASTER PMU-16 identified as preferred candidate APM backbone for evaluation.
+- [ ] Create PMU-16 output allocation matrix.
+- [ ] Measure/verify steady-state and inrush current for every candidate load.
+- [ ] Define per-output current limits, retry behaviour and fault actions.
 - [ ] Primary fuel-pump circuit.
 - [ ] Secondary fuel-pump circuit if used.
 - [ ] Cooling-fan circuits.
 - [ ] Boost-solenoid supply/control.
 - [ ] Auxiliary pump/accessory circuits.
 - [ ] Inrush and flyback protection review.
+- [ ] Bench-test PMU switching while monitoring FT550 analogue channels for induced noise.
 
 ### SIM
 
@@ -84,6 +92,18 @@
 - [ ] Speed input conditioning if required.
 - [ ] Communications routing.
 - [ ] Connector and service-test-point definition.
+
+## Milestone 5A — FT550 ↔ PMU-16 Communications
+
+- [ ] Obtain/verify ECUMASTER CAN documentation relevant to PMU-16.
+- [ ] Determine whether direct FT550-to-PMU command/status exchange is supported in the desired configuration.
+- [ ] Define CAN bus bitrate, termination and physical topology.
+- [ ] Define default safe states on CAN loss.
+- [ ] Identify PMU current, voltage, state and fault channels to log.
+- [ ] Keep critical enable paths hardwired where CAN loss must not create an unsafe state.
+- [ ] Bench-validate CAN messaging before assigning any safety-critical dependency to it.
+
+No CAN identifiers or payload definitions may be guessed.
 
 ## Milestone 6 — Full VRXSE-to-FT550 Master Wiring Matrix
 
@@ -101,10 +121,11 @@ Create a production table containing, for every circuit:
 - FT550 connector and cavity;
 - FuelTech wire colour;
 - EPM/APM/SIM domain;
+- PMU-16 output/input where relevant;
 - module terminal;
 - wire gauge;
 - shield/twist requirement;
-- fuse value;
+- fuse/electronic protection value;
 - relay/driver details;
 - ground point;
 - test procedure;
@@ -135,11 +156,12 @@ After the sensor side is frozen, map and verify:
 
 - [ ] Continuity test every conductor.
 - [ ] Insulation/short check between domains.
-- [ ] Validate all fuse values.
+- [ ] Validate all fuse/electronic protection values.
 - [ ] Power ECU with actuators disconnected.
 - [ ] Validate 5 V reference.
 - [ ] Validate every sensor channel.
 - [ ] Cycle pumps/fans/solenoids and watch analogue channels for induced noise.
+- [ ] Validate PMU-16 current sensing and trip/retry behaviour on every configured output.
 - [ ] Crank with fuel/ignition disabled and validate trigger.
 - [ ] Confirm emergency stop / master isolation behaviour.
 
@@ -151,8 +173,10 @@ After the sensor side is frozen, map and verify:
 - [ ] Verify fuel pressure against manifold pressure.
 - [ ] Verify coolant and IAT plausibility.
 - [ ] Verify lambda.
+- [ ] Verify PMU current draw and fault status under running conditions.
 - [ ] Heat-cycle and inspect harness/connectors.
 - [ ] Save first verified FT550 configuration baseline.
+- [ ] Save matching PMU configuration baseline if PMU-16 is adopted.
 
 ## Milestone 10 — Boost Commissioning
 
@@ -162,6 +186,7 @@ After the sensor side is frozen, map and verify:
 - [ ] IAT/ECT/EGT trend review.
 - [ ] Progressive boost-control enablement.
 - [ ] Engine-protection thresholds.
+- [ ] PMU protection thresholds reviewed against measured race-load currents.
 - [ ] Data-log review after every stage.
 
 ## Final release gate
@@ -173,6 +198,8 @@ The harness and configuration may be marked production-ready only when:
 3. every sensor calibration is verified;
 4. CKP polarity and timing are physically validated;
 5. high-current switching does not corrupt sensor readings;
-6. protection strategies have been tested;
-7. as-built wiring matches the released drawings;
-8. the final FT550 configuration is archived with the hardware revision.
+6. PMU-16 adoption, output allocation and current limits are fully validated if used;
+7. protection strategies have been tested;
+8. as-built wiring matches the released drawings;
+9. the final FT550 configuration is archived with the hardware revision;
+10. the matching PMU configuration is archived if PMU-16 is part of the released architecture.
