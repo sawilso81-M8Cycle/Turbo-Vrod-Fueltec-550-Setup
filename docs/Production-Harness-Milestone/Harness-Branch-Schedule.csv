@@ -1,0 +1,17 @@
+Branch_ID,From,To_or_Area,Contents,Routing_Rule,Length_Status,Release_Action
+B01,X01/X02 FT550,Engine sensor spine,CKP TPS MAP ECT IAT sensor reference and returns,Separate from PMU outputs coil primaries and starter cables,VERIFY,Measure on bike with ECU mounting frozen
+B02,Sensor spine,X10 CKP,CKP signal/reference twisted shielded pair,Maximum practical separation from ignition and starter conductors,VERIFY,Measure and scope installed route
+B03,Sensor spine,X11 TPS,TPS 5V signal return,Keep with low-level sensor bundle,VERIFY,Measure physical branch
+B04,Sensor spine,X12 MAP,MAP 5V signal return,Keep with low-level sensor bundle,VERIFY,Measure physical branch
+B05,Sensor spine,X13 ECT,ECT signal/return,Keep with sensor bundle and away from fan feed,VERIFY,Measure physical branch
+B06,Sensor spine,X14 IAT,IAT signal/return,Route to actual OEM sensor location without heat damage,VERIFY,Measure physical branch
+B07,Sensor spine,X15 VSS,VSS 12V signal ground,Keep speed signal away from ignition where practical,VERIFY,Measure physical branch
+B08,FT550/EPM,X20/X21 injectors,Injector supply and individual controls,Do not bundle beside CKP for long parallel runs,VERIFY,Confirm injector connector orientation and length
+B09,FT550/EPM,X22/X23 coils,Coil supply and individual controls,Physically segregate from CKP and analogue sensor branch,VERIFY,Confirm coil connector and routing
+B10,X03 PMU,X30 primary fuel pump,PMU O1 high-current feed,Route as high-current branch with appropriate conductor and connector,VERIFY,Measure pump current then size wire
+B11,X03 PMU,X32 radiator fan 1,PMU O3 high-current feed,Keep away from sensor-reference splice pack,VERIFY,Measure fan current/inrush then size wire
+B12,X03 PMU,X34 auxiliary pump,PMU O5 feed if fitted,High-current auxiliary branch,DNP/VERIFY,Populate only if fitted
+B13,X03 PMU,X50 service/logger,PMU O10 service feed and communications,Accessible service routing,VERIFY,Define connector family and mount point
+B14,FT550,X03/X51,CAN H/L twisted pair,Maintain bus topology and termination rules,VERIFY,Freeze topology after manufacturer CAN details are verified
+B15,J-P01,X03 PMU,PMU main battery feed,Shortest practical protected high-current route,VERIFY,Size after PMU manual/current plan is frozen
+B16,J-P02,FT550/PMU/engine,Power-ground conductors,Short low-resistance star routing not shared through sensor-return splice,VERIFY,Measure and define conductor sizes
