@@ -1,0 +1,36 @@
+Verify_ID,Area,Item,Current_State,Required_Evidence,Blocks_Release
+V001,FT550,Exact FT550 main power cavity/cavities,VERIFY,Current FuelTech manual plus installed harness confirmation,YES
+V002,FT550,Exact FT550 main ground cavity/cavities,VERIFY,Current FuelTech manual plus installed harness confirmation,YES
+V003,FT550,Exact FT550 5V reference cavity,VERIFY,Current FuelTech manual,YES
+V004,FT550,Exact FT550 sensor-ground cavity/cavities,VERIFY,Current FuelTech manual,YES
+V005,FT550,OEM MAP analogue input cavity,VERIFY,Assign verified compatible FT550 analogue input,YES
+V006,FT550,Oil pressure switch digital input cavity and logic,VERIFY,Verify switch polarity and FT550 input strategy,YES
+V007,FT550,Neutral switch digital input cavity and logic,VERIFY,Verify switch polarity and FT550 input strategy,YES
+V008,FT550,Front injector output cavity,VERIFY,Current FuelTech manual and final engine configuration,YES
+V009,FT550,Rear injector output cavity,VERIFY,Current FuelTech manual and final engine configuration,YES
+V010,FT550,Front coil output cavity and driver compatibility,VERIFY,Current FuelTech manual plus OEM coil electrical validation,YES
+V011,FT550,Rear coil output cavity and driver compatibility,VERIFY,Current FuelTech manual plus OEM coil electrical validation,YES
+V012,OEM SENSOR,CKP polarity and waveform,WORKING,Oscilloscope capture while cranking,YES
+V013,OEM SENSOR,TPS closed/WOT calibration,WORKING,Measured voltages/calibration in FT550,YES
+V014,OEM SENSOR,OEM MAP transfer curve,VERIFY,Bench pressure/voltage characterization or verified OEM data,YES
+V015,OEM SENSOR,ECT thermistor curve,VERIFY,Bench characterization or verified OEM curve,YES
+V016,OEM SENSOR,IAT thermistor curve,VERIFY,Bench characterization or verified OEM curve,YES
+V017,OEM SENSOR,VSS pulses/rev and voltage amplitude,VERIFY,Scope/log measurement,YES
+V018,OEM SENSOR,VSS preferred ground topology,VERIFY,Electrical test and manufacturer circuit confirmation,YES
+V019,OEM HARDWARE,Front/rear injector connector family and terminals,VERIFY,Physical connector identification and terminal inspection,YES
+V020,OEM HARDWARE,Front/rear coil connector family and terminals,VERIFY,Physical connector identification and terminal inspection,YES
+V021,OEM HARDWARE,Injector steady/peak current,VERIFY,Measure or verified component specification,YES
+V022,OEM HARDWARE,Coil electrical type and current profile,VERIFY,Measure or verified component specification,YES
+V023,PMU16,Exact PMU-16 main connector cavity map,VERIFY,Repository copy of verified PMU-16 pinout/manual data,YES
+V024,PMU16,PMU O1 current limit and wire size,VERIFY,Measured primary pump current/inrush plus PMU limits,YES
+V025,PMU16,PMU O3 current limit and wire size,VERIFY,Measured fan current/inrush plus PMU limits,YES
+V026,PMU16,PMU optional output limits O2/O4/O5/O8/O10,VERIFY,Actual fitted loads and measured currents,IF FITTED
+V027,CAN,FT550 to PMU CAN physical pins,VERIFY,Manufacturer documentation in repository,YES
+V028,CAN,CAN topology and 120-ohm termination positions,VERIFY,Final device/bus layout,YES
+V029,POWER,Main battery protection device and rating,VERIFY,Total load/fault-current design and conductor size,YES
+V030,POWER,PMU main feed conductor size,VERIFY,PMU manual constraints plus total expected current,YES
+V031,POWER,FT550/EPM feed conductor size and protection,VERIFY,FuelTech requirements plus measured engine loads,YES
+V032,GROUND,Battery-engine-PMU-FT550 star conductors,VERIFY,Measured cranking drop and final conductor sizing,YES
+V033,HARNESS,Exact branch lengths B01-B16,VERIFY,Physical bike measurement after component mounting is frozen,YES
+V034,HARNESS,Connector families terminals seals backshells,VERIFY,Final component connector survey and sourcing decision,YES
+V035,HARNESS,CKP shield termination method,VERIFY,Exact FuelTech recommendation for installed harness,YES
