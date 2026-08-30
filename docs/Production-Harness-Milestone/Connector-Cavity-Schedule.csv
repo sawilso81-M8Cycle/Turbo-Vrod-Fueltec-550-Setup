@@ -1,0 +1,27 @@
+Connector_ID,Cavity,Function,Circuit_ID,Wire_Colour,Domain,Status,Release_Blocker
+X01,A18,CKP reference,S-002,BK,SIM,WORKING VERIFIED,Scope polarity before release
+X01,A19,CKP signal,S-001,WH,SIM,WORKING VERIFIED,Scope polarity before release
+X01,A22,TPS signal,S-004,GY/V,SIM,WORKING VERIFIED,Calibrate TPS
+X01,A24,ECT signal,S-009,PK/Y,SIM,WORKING VERIFIED,Verify thermistor curve
+X01,A26,VSS signal,S-014,BK/BE,SIM,WORKING VERIFIED,Verify pulse calibration
+X02,B5,IAT signal,S-011,LGN/Y,SIM,WORKING VERIFIED,Verify thermistor curve
+X01,VERIFY,FT550 5V sensor reference,S-003;S-006,R/W,SIM,VERIFY,Yes
+X01,VERIFY,FT550 sensor return,S-005;S-008;S-010,BK/W,SIM,VERIFY,Yes
+X01/02,VERIFY,OEM MAP signal,S-007,V/W,SIM,VERIFY,Yes
+X01/02,VERIFY,Oil pressure switch,S-016,GN/Y,SIM,VERIFY,Yes
+X01/02,VERIFY,Neutral switch,S-017,TN,SIM,VERIFY,Yes
+X01/02,VERIFY,FT550 main power,E-001,VERIFY,EPM,VERIFY,Yes
+X01/02,VERIFY,FT550 main ground,E-002,VERIFY,EPM,VERIFY,Yes
+X01/02,VERIFY,Front injector control,E-004,BU,EPM,VERIFY,Yes
+X01/02,VERIFY,Rear injector control,E-006,GN,EPM,VERIFY,Yes
+X01/02,VERIFY,Front coil control,E-008,BU/WH,EPM,VERIFY,Yes
+X01/02,VERIFY,Rear coil control,E-010,GN/WH,EPM,VERIFY,Yes
+X03,VERIFY,PMU output O1 primary fuel pump,P-001,RD/YE,APM,VERIFY,Yes
+X03,VERIFY,PMU output O2 secondary fuel pump,P-002,RD/OG,APM,VERIFY,If fitted
+X03,VERIFY,PMU output O3 radiator fan 1,P-003,RD/BU,APM,VERIFY,Yes
+X03,VERIFY,PMU output O4 radiator fan 2,P-004,RD/GN,APM,VERIFY,If fitted
+X03,VERIFY,PMU output O5 charge-cooler pump,P-005,RD/VT,APM,VERIFY,If fitted
+X03,VERIFY,PMU output O8 warning lamp,P-007,YE/BK,APM,VERIFY,If fitted
+X03,VERIFY,PMU output O10 service/logger feed,P-008,OG/WH,APM,VERIFY,No
+X03,VERIFY,CAN H,C-001,WH/BU,COMM,VERIFY,Yes
+X03,VERIFY,CAN L,C-002,WH/GN,COMM,VERIFY,Yes
