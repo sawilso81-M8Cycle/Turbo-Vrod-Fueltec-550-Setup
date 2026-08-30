@@ -24,6 +24,16 @@ All three domains share the required vehicle reference but high-current load pat
 - [Sheet 05 - Start, Kill, Cooling and Auxiliaries](docs/HD-Style-Wiring/Sheet-05-Start-Kill-Cooling-Aux.md)
 - [Master Wire and Connector Schedule](docs/HD-Style-Wiring/Master-Wire-and-Connector-Schedule.csv)
 
+## Production harness milestone
+
+- **[Production Harness Milestone](docs/Production-Harness-Milestone/README.md)**
+- [Connector Index](docs/Production-Harness-Milestone/Connector-Index.md)
+- [Connector Cavity Schedule](docs/Production-Harness-Milestone/Connector-Cavity-Schedule.csv)
+- [Splice and Ground Reference](docs/Production-Harness-Milestone/Splice-Ground-Reference.md)
+- [Harness Branch Schedule](docs/Production-Harness-Milestone/Harness-Branch-Schedule.csv)
+- [Verification Register](docs/Production-Harness-Milestone/Verification-Register.csv)
+- [Rev 1 Release Checklist](docs/Production-Harness-Milestone/Release-Checklist.md)
+
 ## Supporting documentation
 
 - [FuelTech Official Manuals](docs/FuelTech-Official-Manuals/README.md)
