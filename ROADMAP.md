@@ -44,7 +44,7 @@
 - [ ] Decide EGT strategy: none / front only / front + rear.
 - [ ] Define wastegate/dome pressure sensing if closed-loop dome control is used.
 - [ ] Define IAT location downstream of compression/intercooling appropriate to tuning strategy.
-- [ ] Finalise FT550 internal 7-bar MAP plumbing.
+- [ ] Finalise FT550 internal 7-bar MAP plumbing if later used as secondary/reference source; OEM MAP remains the current requested hardware baseline.
 
 ## Milestone 4 — Trigger Validation
 
@@ -70,25 +70,26 @@
 
 ### APM
 
-- [x] ECUMASTER PMU-16 identified as preferred candidate APM backbone for evaluation.
-- [ ] Create PMU-16 output allocation matrix.
+- [x] ECUMASTER PMU-16 identified as preferred APM backbone.
+- [x] Create initial PMU-16 output allocation structure in HD-style wiring package.
 - [ ] Measure/verify steady-state and inrush current for every candidate load.
 - [ ] Define per-output current limits, retry behaviour and fault actions.
-- [ ] Primary fuel-pump circuit.
-- [ ] Secondary fuel-pump circuit if used.
-- [ ] Cooling-fan circuits.
-- [ ] Boost-solenoid supply/control.
-- [ ] Auxiliary pump/accessory circuits.
+- [ ] Freeze primary fuel-pump circuit.
+- [ ] Freeze secondary fuel-pump circuit if used.
+- [ ] Freeze cooling-fan circuits.
+- [ ] Freeze boost-solenoid supply/control.
+- [ ] Freeze auxiliary pump/accessory circuits.
 - [ ] Inrush and flyback protection review.
 - [ ] Bench-test PMU switching while monitoring FT550 analogue channels for induced noise.
 
 ### SIM
 
-- [ ] 5 V reference distribution.
-- [ ] Precision sensor-return topology.
-- [ ] CKP shield/twist routing.
-- [ ] Analogue sensor inputs.
-- [ ] Digital switch inputs.
+- [x] Define project sensor-reference splice architecture.
+- [x] Define precision sensor-return topology.
+- [x] Define CKP as dedicated twisted/shielded branch.
+- [ ] Freeze exact FT550 5 V and sensor-ground cavities.
+- [ ] Freeze analogue sensor input cavities.
+- [ ] Freeze digital switch inputs.
 - [ ] Speed input conditioning if required.
 - [ ] Communications routing.
 - [ ] Connector and service-test-point definition.
@@ -107,32 +108,37 @@ No CAN identifiers or payload definitions may be guessed.
 
 ## Milestone 6 — Full VRXSE-to-FT550 Master Wiring Matrix
 
-Create a production table containing, for every circuit:
+**Status: REV 0 COMPLETE / verification remains open**
 
-- function;
-- Harley component part number;
-- Harley connector number;
-- Harley connector cavity;
-- Harley wire colour;
-- OEM ECM pin where relevant;
-- sensor/actuator electrical type;
-- supply voltage;
-- expected signal range;
-- FT550 connector and cavity;
-- FuelTech wire colour;
-- EPM/APM/SIM domain;
-- PMU-16 output/input where relevant;
-- module terminal;
-- wire gauge;
-- shield/twist requirement;
-- fuse/electronic protection value;
-- relay/driver details;
-- ground point;
-- test procedure;
-- source/provenance;
-- verification status.
+- [x] Create HD-style multi-sheet wiring package.
+- [x] Create master wire and connector schedule.
+- [x] Map known OEM sensors to working FT550 cavities.
+- [x] Establish PMU-16 working output allocation.
+- [x] Establish EPM/APM/SIM domain boundaries.
+- [ ] Eliminate every release-blocking `VERIFY` item.
 
 No production matrix row may contain an unresolved critical `VERIFY` item.
+
+## Milestone 6A — Production Connector and Harness Definition
+
+**Status: STARTED / framework complete**
+
+- [x] Create project connector index X01-X51.
+- [x] Create cavity-by-cavity termination schedule.
+- [x] Create sensor splice and ground reference SP-S01/J-P01/G01 series.
+- [x] Create physical harness branch schedule B01-B16.
+- [x] Create formal Verification Register V001-V035.
+- [x] Create Rev 1 Production Harness Release Checklist.
+- [ ] Identify exact FT550 remaining cavities from repository-authorised source material.
+- [ ] Identify exact PMU-16 connector cavities from repository-authorised source material.
+- [ ] Identify OEM injector connector family/terminals.
+- [ ] Identify OEM coil connector family/terminals and electrical driver type.
+- [ ] Freeze wire gauge for every conductor after measured load/current data.
+- [ ] Select terminal part numbers, seals, backshells and cavity plugs.
+- [ ] Measure physical branch lengths after FT550/PMU mounting locations are frozen.
+- [ ] Produce Rev 1 released connector drawings with zero critical `VERIFY` entries.
+
+Reference folder: `docs/Production-Harness-Milestone/`
 
 ## Milestone 7 — Outputs and Vehicle Functions
 
@@ -176,7 +182,7 @@ After the sensor side is frozen, map and verify:
 - [ ] Verify PMU current draw and fault status under running conditions.
 - [ ] Heat-cycle and inspect harness/connectors.
 - [ ] Save first verified FT550 configuration baseline.
-- [ ] Save matching PMU configuration baseline if PMU-16 is adopted.
+- [ ] Save matching PMU configuration baseline.
 
 ## Milestone 10 — Boost Commissioning
 
@@ -198,8 +204,9 @@ The harness and configuration may be marked production-ready only when:
 3. every sensor calibration is verified;
 4. CKP polarity and timing are physically validated;
 5. high-current switching does not corrupt sensor readings;
-6. PMU-16 adoption, output allocation and current limits are fully validated if used;
+6. PMU-16 output allocation and current limits are fully validated;
 7. protection strategies have been tested;
 8. as-built wiring matches the released drawings;
 9. the final FT550 configuration is archived with the hardware revision;
-10. the matching PMU configuration is archived if PMU-16 is part of the released architecture.
+10. the matching PMU configuration is archived;
+11. the Production Harness Verification Register contains zero release-blocking `VERIFY` entries.
