@@ -1,0 +1,41 @@
+Pin,Name,Type,Rating_or_Range,Project_Use,Status
+1,Output O13,High-side output,25A,Reserved,VERIFIED
+2,Output O12,High-side output,25A,Reserved,VERIFIED
+3,Output O11,High-side output,15A,Reserved,VERIFIED
+4,Output O10,High-side output,15A,Logger/display/service feed,VERIFIED
+5,Output O9,High-side output,15A,Race accessory reserved,VERIFIED
+6,Input A9,Analog input,0-5V nominal,Reserved,VERIFIED
+7,+12V sw,PMU switched supply input,+12V ignition-switched,PMU enable supply,VERIFIED
+8,Input A14,Analog input,0-5V nominal,Reserved,VERIFIED
+9,Output O8,High-side output,15A,Warning/fault lamp,VERIFIED
+10,Output O7,High-side output,15A,Auxiliary coolant/race pump reserved,VERIFIED
+11,Output O6,High-side output,15A,Boost-control solenoid supply,VERIFIED
+12,Output O5,High-side output,25A,Charge/intercooler pump,VERIFIED
+13,Output O4,High-side output,25A,Radiator fan 2,VERIFIED
+14,Output O14,High-side output,25A,Reserved,VERIFIED
+15,+5V output,Sensor supply,500mA max,PMU-local sensor/reference only,VERIFIED
+16,Input A2,Analog input,0-5V nominal,Start request,VERIFIED
+17,Input A4,Analog input,0-5V nominal,Fan override,VERIFIED
+18,Input A6,Analog input,0-5V nominal,Reserved,VERIFIED
+19,Input A8,Analog input,0-5V nominal,Reserved,VERIFIED
+20,Input A11,Analog input,0-5V nominal,Reserved,VERIFIED
+21,Input A13,Analog input,0-5V nominal,Reserved,VERIFIED
+22,Input A16,Analog input,0-5V nominal,Reserved,VERIFIED
+23,CAN1H,Communication,1Mbps fixed,PC/peripheral CAN high,VERIFIED
+24,CAN2H,Communication,125/250/500/1000kbps,Vehicle/FT550 CAN high candidate,VERIFIED
+25,Ground,Device ground,Low-resistance return,PMU ground to power star,VERIFIED
+26,Output O3,High-side output,25A,Radiator fan 1,VERIFIED
+27,Output O15,High-side output,25A,Reserved,VERIFIED
+28,Output O16,High-side output,25A,Reserved,VERIFIED
+29,Input A1,Analog input,0-5V nominal,Master enable,VERIFIED
+30,Input A3,Analog input,0-5V nominal,Kill/emergency torque-disable request,VERIFIED
+31,Input A5,Analog input,0-5V nominal,Service/test mode,VERIFIED
+32,Input A7,Analog input,0-5V nominal,Reserved,VERIFIED
+33,Input A10,Analog input,0-5V nominal,Reserved,VERIFIED
+34,Input A12,Analog input,0-5V nominal,Reserved,VERIFIED
+35,Input A15,Analog input,0-5V nominal,Reserved,VERIFIED
+36,CAN1L,Communication,1Mbps fixed,PC/peripheral CAN low,VERIFIED
+37,CAN2L,Communication,125/250/500/1000kbps,Vehicle/FT550 CAN low candidate,VERIFIED
+38,Output O1,High-side output,25A,Primary fuel pump,VERIFIED
+39,Output O2,High-side output,25A,Secondary/staged fuel pump,VERIFIED
+STUD,+12V battery,Main PMU power,150A max constant,Main protected battery feed,VERIFIED
