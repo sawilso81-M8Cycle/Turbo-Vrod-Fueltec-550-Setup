@@ -1,17 +1,30 @@
 Connector_ID,Cavity,Function,Circuit_ID,Wire_Colour,Domain,Status,Release_Blocker
+X01,A12,FT550 signal ground / sensor return,S-005;S-008;S-010,BK/W,SIM,MANUFACTURER VERIFIED CAVITY,Verify final splice topology only
+X01,A13,FT550 switched 12V input,E-001,RD,EPM,MANUFACTURER VERIFIED CAVITY,Verify conductor/protection sizing
+X01,A14,FT550 5V sensor reference,S-003;S-006,R/W,SIM,MANUFACTURER VERIFIED CAVITY,Verify total 5V sensor load
+X01,A15,CAN A LOW,C-001,WH/BU,COMM,MANUFACTURER VERIFIED CAVITY,Verify final CAN topology
+X01,A16,CAN A HIGH,C-002,WH/RD,COMM,MANUFACTURER VERIFIED CAVITY,Verify final CAN topology
 X01,A18,CKP reference,S-002,BK,SIM,WORKING VERIFIED,Scope polarity before release
 X01,A19,CKP signal,S-001,WH,SIM,WORKING VERIFIED,Scope polarity before release
+X01,A20,OEM MAP signal reserved,S-007,V/W,SIM,DESIGN RESERVED,Verify FTManager input configuration and MAP calibration
 X01,A22,TPS signal,S-004,GY/V,SIM,WORKING VERIFIED,Calibrate TPS
+X01,A23,Engine oil pressure transducer,SX-004,WH#4,SIM,MANUFACTURER VERIFIED CAVITY,Select sensor range and calibrate
 X01,A24,ECT signal,S-009,PK/Y,SIM,WORKING VERIFIED,Verify thermistor curve
+X01,A25,Fuel pressure transducer,SX-003,WH#6,SIM,MANUFACTURER VERIFIED CAVITY,Select sensor range and calibrate
 X01,A26,VSS signal,S-014,BK/BE,SIM,WORKING VERIFIED,Verify pulse calibration
+X02,B1,FT550 power ground 1,E-002,BK/WH,EPM,MANUFACTURER VERIFIED CAVITY,Verify conductor size
+X02,B2,FT550 power ground 2,E-002,BK/WH,EPM,MANUFACTURER VERIFIED CAVITY,Verify conductor size
+X02,B3,CAN B LOW,C-003,BU/YE,COMM,MANUFACTURER VERIFIED CAVITY,Reserve unless architecture requires CAN B
+X02,B4,CAN B HIGH,C-004,WH/RD,COMM,MANUFACTURER VERIFIED CAVITY,Reserve unless architecture requires CAN B
 X02,B5,IAT signal,S-011,LGN/Y,SIM,WORKING VERIFIED,Verify thermistor curve
-X01,VERIFY,FT550 5V sensor reference,S-003;S-006,R/W,SIM,VERIFY,Yes
-X01,VERIFY,FT550 sensor return,S-005;S-008;S-010,BK/W,SIM,VERIFY,Yes
-X01/02,VERIFY,OEM MAP signal,S-007,V/W,SIM,VERIFY,Yes
+X02,B6,White #9 Pan Vac / back-pressure input,SX-010,WH#9,SIM,MANUFACTURER VERIFIED CAVITY,Conditional crankcase pressure allocation
+X02,B7,White #10 wastegate/dome pressure input,SX-013,WH#10,SIM,MANUFACTURER VERIFIED CAVITY,Populate only for dome-control strategy
+X02,B12,White #11 free input reserved post-IC IAT,SX-006,WH#11,SIM,MANUFACTURER VERIFIED CAVITY,Verify temperature-sensor configuration in FTManager
+X02,B13,White #12 free input reserve,SPARE,WH#12,SIM,MANUFACTURER VERIFIED CAVITY,Hold for future protection input
+X02,B18,White #13 gear position,SX-016,WH#13,SIM,MANUFACTURER VERIFIED CAVITY,Populate only if gear-position sensor used
+X02,B26,Sensor ground,S-005;SX-003;SX-004;SX-006,GN/BK,SIM,MANUFACTURER VERIFIED CAVITY,Verify selected return topology with A12
 X01/02,VERIFY,Oil pressure switch,S-016,GN/Y,SIM,VERIFY,Yes
 X01/02,VERIFY,Neutral switch,S-017,TN,SIM,VERIFY,Yes
-X01/02,VERIFY,FT550 main power,E-001,VERIFY,EPM,VERIFY,Yes
-X01/02,VERIFY,FT550 main ground,E-002,VERIFY,EPM,VERIFY,Yes
 X01/02,VERIFY,Front injector control,E-004,BU,EPM,VERIFY,Yes
 X01/02,VERIFY,Rear injector control,E-006,GN,EPM,VERIFY,Yes
 X01/02,VERIFY,Front coil control,E-008,BU/WH,EPM,VERIFY,Yes
@@ -23,5 +36,3 @@ X03,VERIFY,PMU output O4 radiator fan 2,P-004,RD/GN,APM,VERIFY,If fitted
 X03,VERIFY,PMU output O5 charge-cooler pump,P-005,RD/VT,APM,VERIFY,If fitted
 X03,VERIFY,PMU output O8 warning lamp,P-007,YE/BK,APM,VERIFY,If fitted
 X03,VERIFY,PMU output O10 service/logger feed,P-008,OG/WH,APM,VERIFY,No
-X03,VERIFY,CAN H,C-001,WH/BU,COMM,VERIFY,Yes
-X03,VERIFY,CAN L,C-002,WH/GN,COMM,VERIFY,Yes
