@@ -2,58 +2,74 @@
 
 ## Role
 
-The PMU-16 is the new high-current auxiliary power-distribution backbone. It replaces conventional relay/fuse branches for non-precision loads while adding current measurement and programmable protection.
+The PMU-16 is the high-current auxiliary power-distribution backbone. It replaces conventional relay/fuse branches for non-precision loads while adding current measurement and programmable protection.
 
-```mermaid
-flowchart LR
-  B[Battery +] --> MP[Main protection / isolation VERIFY]
-  MP --> PMU[ECUMASTER PMU-16]
+## Functional allocation freeze
 
-  PMU -->|O1| FP1[Primary fuel pump]
-  PMU -->|O2| FP2[Secondary/staged fuel pump if fitted]
-  PMU -->|O3| FAN1[Radiator fan 1]
-  PMU -->|O4| FAN2[Radiator fan 2 if fitted]
-  PMU -->|O5| CCP[Charge/intercooler pump if fitted]
-  PMU -->|O6| BOOST[Boost-control solenoid supply]
-  PMU -->|O7| AUXC[Aux coolant/race pump]
-  PMU -->|O8| WARN[Warning/fault lamp]
-  PMU -->|O9| ACC[Race accessory feed]
-  PMU -->|O10| DATA[Logger/display/service feed]
-  PMU -->|O11-O16| SPARE[Reserved / future]
+The following O1-O16 functional assignments are frozen at project-design level. Exact connector cavities remain `VERIFY` until the official PMU-16 pinout table is present in repository-readable form.
 
-  FT[FuelTech FT550] <-->|CAN after verified mapping| PMU
-  KILL[Kill / master-enable hardwire] --> PMU
-```
-
-## Proposed output allocation
-
-| PMU output | Load | Control concept | Failure action | Status |
+| PMU output | Frozen function | Control concept | Failure action | Status |
 |---|---|---|---|---|
-| O1 | Primary fuel pump | FT550 request or PMU engine-running logic | engine shutdown / fuel cut strategy required | DESIGN, current limit VERIFY |
-| O2 | Secondary fuel pump | staged by boost/RPM/load request | boost/load reduction or shutdown | DESIGN, only if fitted |
-| O3 | Radiator fan 1 | ECT threshold / override | warning + temperature protection | DESIGN |
-| O4 | Radiator fan 2 | ECT threshold / staged | warning + temperature protection | DESIGN, if fitted |
-| O5 | Charge/intercooler pump | ignition/engine run | warning / boost restriction | DESIGN, if fitted |
-| O6 | Boost-control solenoid +12 V | enabled with engine-control state; low-side/PWM control strategy VERIFY | default to mechanical/base boost | DESIGN |
-| O7 | Auxiliary coolant/race pump | application-specific | application-specific | RESERVED |
-| O8 | Warning/fault lamp | PMU/FT550 fault logic | driver indication | DESIGN |
-| O9 | Race accessory | switched | isolate on fault | RESERVED |
-| O10 | Logger/display/service feed | ignition switched | non-engine-critical | DESIGN |
-| O11-O16 | spare | none | off | RESERVED |
+| O1 | Primary fuel pump | FT550 request or PMU engine-running logic | engine protection / fuel-loss response | DESIGN FROZEN; current limit VERIFY |
+| O2 | Secondary/staged fuel pump | staged by boost/RPM/load request | boost/load reduction or shutdown | DESIGN FROZEN; DNP if not fitted |
+| O3 | Radiator fan 1 | ECT threshold / override | warning + temperature protection | DESIGN FROZEN |
+| O4 | Radiator fan 2 | ECT threshold / staged | warning + temperature protection | DESIGN FROZEN; DNP if not fitted |
+| O5 | Charge/intercooler pump | ignition/engine run | warning / boost restriction | DESIGN FROZEN; DNP if not fitted |
+| O6 | Boost-control solenoid +12 V | engine-control enable; control topology VERIFY | default to mechanical/base boost | DESIGN FROZEN |
+| O7 | Auxiliary coolant / race pump | application-specific | application-specific | RESERVED |
+| O8 | Warning/fault lamp | PMU/FT550 fault logic | driver indication | DESIGN FROZEN |
+| O9 | Race accessory feed | switched | isolate on fault | RESERVED |
+| O10 | Logger/display/service feed | ignition switched | non-engine-critical | DESIGN FROZEN |
+| O11 | Spare high-side output 1 | none | off | RESERVED |
+| O12 | Spare high-side output 2 | none | off | RESERVED |
+| O13 | Spare high-side output 3 | none | off | RESERVED |
+| O14 | Spare high-side output 4 | none | off | RESERVED |
+| O15 | Spare high-side output 5 | none | off | RESERVED |
+| O16 | Spare high-side output 6 | none | off | RESERVED |
 
-## PMU input concept
+## PMU input allocation philosophy
 
-Use PMU A1-A16 only for power-system commands/status that do not contaminate or duplicate the FT550 precision sensor network. Candidate inputs include master enable, start request, kill request, fan override and service/test mode. Exact A-input assignments remain `VERIFY` until the PMU pinout is frozen into the harness schedule.
+PMU A1-A16 are reserved for power-system commands and status, not for replacing the FT550 precision sensor network.
 
-## CAN philosophy
+Working project allocation intent:
 
-CAN between FT550 and PMU is desirable for status and command exchange, but no CAN identifier or payload is defined in this repository yet. Do not invent messages. Critical safe states must exist without CAN:
+- A1 - master enable / ignition request
+- A2 - start request
+- A3 - kill request / emergency torque-disable request
+- A4 - fan manual override
+- A5 - service/test mode
+- A6-A16 - reserved for future power-system logic or verified discrete status
 
-- loss of CAN must not latch boost control in a high-boost state;
-- fuel-pump behaviour must be explicitly defined;
-- cooling defaults must be safe;
+These input-function assignments are project-defined and may be frozen only after exact cavity mapping is extracted from the official PMU-16 pinout.
+
+## CAN architecture
+
+- PMU CAN1 is the preferred FT550/vehicle control-and-status bus once exact physical pins and message compatibility are verified.
+- PMU CAN2 is reserved for expansion/logger/service use unless a later architecture decision changes this.
+- No CAN identifiers or payloads are defined until supported by verified manufacturer documentation.
+
+Critical behaviour must remain safe without CAN:
+
+- boost control defaults to base/mechanical boost;
+- fuel-pump state is explicitly defined on CAN loss;
+- cooling behaviour fails safe;
 - kill/master isolation remains hardwired.
 
 ## Protection setup
 
-For every populated output, measure and record steady current and inrush on the actual component. Then configure soft/current limits, trip threshold, retry timing and retry count from the ECUMASTER manual. Do not choose limits from generic load estimates.
+For every populated output, measure actual steady current and inrush. Then configure current limits, trip thresholds, retry timing and retry count from the ECUMASTER manual and measured load evidence. Generic current guesses are not permitted in the released configuration.
+
+## Remaining pin-level blocker
+
+The repository currently records the official PMU-16 pinout document reference but does not contain its pin table in readable text form. Therefore the following remain `VERIFY`:
+
+1. exact connector cavity for O1-O16;
+2. exact connector cavity for A1-A16;
+3. exact CAN1 H/L cavities;
+4. exact CAN2 H/L cavities;
+5. switched +12 V input cavity;
+6. PMU ground cavity/cavities;
+7. +5 V output cavity;
+8. terminal family / wire-size limits.
+
+No connector cavity is to be guessed from memory or generic PMU examples.
