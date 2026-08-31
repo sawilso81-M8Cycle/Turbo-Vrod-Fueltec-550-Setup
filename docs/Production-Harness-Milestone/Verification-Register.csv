@@ -6,10 +6,10 @@ V004,FT550,FT550 sensor/signal ground cavities,RESOLVED A12 and B26 available,Fu
 V005,FT550,OEM MAP analogue input cavity,DESIGN RESERVED A20 White #1,Verify FTManager generic-input configuration and OEM MAP calibration,YES
 V006,FT550,Oil pressure switch digital input cavity and logic,VERIFY,Verify switch polarity and FT550 input strategy,YES
 V007,FT550,Neutral switch digital input cavity and logic,VERIFY,Verify switch polarity and FT550 input strategy,YES
-V008,FT550,Front injector output cavity,VERIFY,Current FuelTech manual and final engine configuration,YES
-V009,FT550,Rear injector output cavity,VERIFY,Current FuelTech manual and final engine configuration,YES
-V010,FT550,Front coil output cavity and driver compatibility,VERIFY,Current FuelTech manual plus OEM coil electrical validation,YES
-V011,FT550,Rear coil output cavity and driver compatibility,VERIFY,Current FuelTech manual plus OEM coil electrical validation,YES
+V008,FT550,Front injector output cavity,VERIFY,Current FuelTech manual and final engine configuration plus HC-008 evidence,YES
+V009,FT550,Rear injector output cavity,VERIFY,Current FuelTech manual and final engine configuration plus HC-009 evidence,YES
+V010,FT550,Front coil output cavity and driver compatibility,VERIFY,Current FuelTech manual plus HC-010 and CC-003 evidence,YES
+V011,FT550,Rear coil output cavity and driver compatibility,VERIFY,Current FuelTech manual plus HC-011 and CC-004 evidence,YES
 V012,OEM SENSOR,CKP polarity and waveform,WORKING,Oscilloscope capture while cranking,YES
 V013,OEM SENSOR,TPS closed/WOT calibration,WORKING,Measured voltages/calibration in FT550,YES
 V014,OEM SENSOR,OEM MAP transfer curve,VERIFY,Bench pressure/voltage characterization or verified OEM data,YES
@@ -17,14 +17,14 @@ V015,OEM SENSOR,ECT thermistor curve,VERIFY,Bench characterization or verified O
 V016,OEM SENSOR,IAT thermistor curve,VERIFY,Bench characterization or verified OEM curve,YES
 V017,OEM SENSOR,VSS pulses/rev and voltage amplitude,VERIFY,Scope/log measurement,YES
 V018,OEM SENSOR,VSS preferred ground topology,VERIFY,Electrical test and manufacturer circuit confirmation,YES
-V019,OEM HARDWARE,Front/rear injector connector family and terminals,VERIFY,Physical connector identification and terminal inspection,YES
-V020,OEM HARDWARE,Front/rear coil connector family and terminals,VERIFY,Physical connector identification and terminal inspection,YES
-V021,OEM HARDWARE,Injector steady/peak current,VERIFY,Measure or verified component specification,YES
-V022,OEM HARDWARE,Coil electrical type and current profile,VERIFY,Measure or verified component specification,YES
+V019,OEM HARDWARE,Front/rear injector connector family and terminals,EVIDENCE TEMPLATE READY,Complete CC-001 and CC-002 in Hardware-Evidence pack,YES
+V020,OEM HARDWARE,Front/rear coil connector family and terminals,EVIDENCE TEMPLATE READY,Complete CC-003 and CC-004 in Hardware-Evidence pack,YES
+V021,OEM HARDWARE,Injector steady/peak current,EVIDENCE TEMPLATE READY,Complete HC-008 and HC-009 with resistance/current waveform evidence,YES
+V022,OEM HARDWARE,Coil electrical type and current profile,EVIDENCE TEMPLATE READY,Complete HC-010 and HC-011 with driver-type/current/dwell evidence,YES
 V023,PMU16,Exact connector cavities for O1-O16 A1-A16 CAN1 CAN2 switched 12V ground +5V and main stud,RESOLVED,Official PMU-16 Pinout v1.2 extracted to PMU16-Pinout-v1.2.csv,NO
-V024,PMU16,PMU O1 current limit and wire size,VERIFY,Measured primary pump current/inrush plus route length and PMU limits,YES
-V025,PMU16,PMU O3 current limit and wire size,VERIFY,Measured fan current/inrush plus route length and PMU limits,YES
-V026,PMU16,PMU optional output limits O2/O4/O5/O6/O8/O10,VERIFY,Actual fitted loads and measured currents,IF FITTED
+V024,PMU16,PMU O1 current limit and wire size,EVIDENCE TEMPLATE READY,Complete HC-001 primary pump current/inrush plus route length,YES
+V025,PMU16,PMU O3 current limit and wire size,EVIDENCE TEMPLATE READY,Complete HC-003 radiator fan current/inrush plus route length,YES
+V026,PMU16,PMU optional output limits O2/O4/O5/O6/O8/O10,EVIDENCE TEMPLATE READY,Complete applicable HC-002 HC-004 HC-005 HC-006 HC-007 evidence,IF FITTED
 V027,CAN,FT550-to-PMU physical pins,PARTLY RESOLVED,FT550 CAN A A15/A16; PMU CAN2 pins 24/37 candidate; verify common bitrate and chosen bus,YES
 V028,CAN,CAN topology and termination positions,VERIFY,Final device/bus layout; PMU CAN1 has no internal termination and PMU CAN2 has software-controlled termination,YES
 V029,POWER,Main battery protection device and rating,VERIFY,Total load/fault-current design and conductor size,YES
@@ -32,7 +32,7 @@ V030,POWER,PMU main feed conductor size,MEASUREMENT GATED,Use Wire-Size-Schedule
 V031,POWER,FT550/EPM feed conductor size and protection,PROVISIONAL 0.75mm2 CLASS,Verify FuelTech requirements engine-load evidence and branch protection,YES
 V032,GROUND,Battery-engine-PMU-FT550 star conductors,VERIFY,Measured cranking drop and final conductor sizing,YES
 V033,HARNESS,Exact branch lengths B01-B31,VERIFY,Physical bike measurement after component mounting is frozen,YES
-V034,HARNESS,Connector families terminals seals backshells,PARTLY RESOLVED,PMU Sicma/FCI family known; identify exact PMU terminal PNs and remaining OEM/project connector hardware,YES
+V034,HARNESS,Connector families terminals seals backshells,PARTLY RESOLVED,PMU Sicma/FCI family known; use CC-001 to CC-004 for OEM injector/coil connectors and identify remaining hardware,YES
 V035,HARNESS,CKP shield termination method,VERIFY,Exact FuelTech recommendation for installed harness,YES
 V036,FT550,Fuel-pressure transducer direct analogue cavity,RESOLVED A25 White #6,FuelTech PROBIKE A connector table,NO
 V037,FT550,Engine oil-pressure transducer direct analogue cavity,RESOLVED A23 White #4,FuelTech PROBIKE A connector table,NO
@@ -47,3 +47,4 @@ V045,HARNESS,Rev 1 wire-size engineering schedule,FRAMEWORK COMPLETE,Wire-Size-S
 V046,HARNESS,Rev 1 BOM framework,FRAMEWORK COMPLETE,Rev1-Harness-BOM.csv created; resolve all YES blocker rows,YES
 V047,HARNESS,Low-level wire classes,PROVISIONAL,0.35mm2 sensor/CAN/command; 0.5mm2 controls; 0.75mm2 selected ECU/aux feeds subject to verification,YES
 V048,HARNESS,Final wire product insulation/temp/chemical specification,VERIFY,Select motorsport/automotive wire series compatible with heat oil fuel vibration and terminal system,YES
+V049,TESTING,Hardware current and connector evidence pack,FRAMEWORK COMPLETE,docs/Hardware-Evidence contains load sheet connector register bench procedure and evidence register,NO
