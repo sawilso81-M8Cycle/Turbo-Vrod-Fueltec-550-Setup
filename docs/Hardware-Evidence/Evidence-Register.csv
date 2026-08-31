@@ -6,11 +6,13 @@ HC-004,Radiator fan 2,Steady current + inrush + route length + connector identif
 HC-005,Charge/intercooler pump,Steady current + inrush + route length + connector identification,IF FITTED,PENDING,
 HC-006,Boost-control solenoid,Coil resistance/current + connector + control topology,YES,PENDING,
 HC-007,Logger/service feed,Total connected steady current + route length,NO,PENDING,
-HC-008,Front injector,Resistance + current waveform + connector + driver compatibility,YES,PENDING,
-HC-009,Rear injector,Resistance + current waveform + connector + driver compatibility,YES,PENDING,
-HC-010,Front ignition coil,Connector + driver type + current/dwell waveform as required,YES,PENDING,
-HC-011,Rear ignition coil,Connector + driver type + current/dwell waveform as required,YES,PENDING,
-CC-001,Front injector connector,Family + terminals + seals + cavity functions,YES,PENDING,
-CC-002,Rear injector connector,Family + terminals + seals + cavity functions,YES,PENDING,
-CC-003,Front coil connector,Family + terminals + seals + cavity functions,YES,PENDING,
-CC-004,Rear coil connector,Family + terminals + seals + cavity functions,YES,PENDING,
+HC-008,Front injector,Resistance + current waveform + connector + driver compatibility,YES,PART NUMBER VERIFIED,"Harley 27772-06; electrical characterisation still required"
+HC-009,Rear injector,Resistance + current waveform + connector + driver compatibility,YES,PART NUMBER VERIFIED,"Harley 27772-06; electrical characterisation still required"
+HC-010,Front ignition coil,Connector + driver type + current/dwell waveform as required,YES,PART NUMBER VERIFIED,"Harley 32477-01A; electrical characterisation still required"
+HC-011,Rear ignition coil,Connector + driver type + current/dwell waveform as required,YES,PART NUMBER VERIFIED,"Harley 32477-01A; electrical characterisation still required"
+CC-001,Front injector connector,Family + terminals + seals + cavity functions,YES,PART NUMBER VERIFIED,"Injector 27772-06; connector family still required"
+CC-002,Rear injector connector,Family + terminals + seals + cavity functions,YES,PART NUMBER VERIFIED,"Injector 27772-06; connector family still required"
+CC-003,Front coil connector,Family + terminals + seals + cavity functions,YES,PART NUMBER VERIFIED,"Coil 32477-01A; connector family still required"
+CC-004,Rear coil connector,Family + terminals + seals + cavity functions,YES,PART NUMBER VERIFIED,"Coil 32477-01A; connector family still required"
+RS-001,Injector electrical public-source research,OEM impedance/current classification from authoritative source,NO,SEARCH COMPLETE,"No authoritative public impedance/current data found; see OEM-Electrical-Characterisation-Research.md"
+RS-002,Coil electrical public-source research,OEM primary resistance/driver topology from authoritative source,NO,SEARCH COMPLETE,"No authoritative public driver data found; aftermarket 3-ohm replacement claim retained as comparison only"
