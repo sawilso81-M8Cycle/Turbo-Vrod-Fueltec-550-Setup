@@ -1,0 +1,27 @@
+Priority,Channel,Signal_Type,Destination,Known_Cavity,Reason,Status
+1,CKP reference,VR trigger,FT550,A18,Core engine position,WORKING VERIFIED
+1,CKP signal,VR trigger,FT550,A19,Core engine position,WORKING VERIFIED
+1,OEM TPS,Analogue,FT550,A22,Core load/rider demand,WORKING VERIFIED
+1,OEM ECT,Temperature,FT550,A24,Core thermal protection,WORKING VERIFIED
+1,OEM VSS,Frequency,FT550,A26,Vehicle speed strategy,WORKING VERIFIED
+1,OEM IAT,Temperature,FT550,B5,OEM air-temperature reference,WORKING VERIFIED
+1,Fuel pressure,Analogue,FT550,VERIFY,Differential fuel-pressure protection,RESERVE DIRECT
+1,Engine oil pressure,Analogue,FT550,VERIFY,Direct engine protection,RESERVE DIRECT
+1,Post-intercooler IAT,Temperature/analogue,FT550,VERIFY,Charge-temperature protection,RESERVE DIRECT
+1,OEM MAP,Analogue,FT550,VERIFY,Retained OEM hardware/plausibility reference,RESERVE DIRECT
+1,Front lambda,Digital/CAN preferred,FT550 via verified interface,VERIFY,Cylinder mixture protection,SELECT HARDWARE
+1,Rear lambda,Digital/CAN preferred,FT550 via verified interface,VERIFY,Cylinder mixture protection,SELECT HARDWARE
+2,Wastegate dome pressure,Analogue,FT550 if active dome control,VERIFY,Boost control feedback,CONDITIONAL DIRECT
+2,Turbo shaft speed,Frequency/CAN,FT550 if direct overspeed control,VERIFY,Turbo overspeed protection,CONDITIONAL DIRECT
+2,Gear position,Analogue/digital,FT550 if gear-based strategy required,VERIFY,Boost/ignition strategy,CONDITIONAL DIRECT
+2,Front wheel speed,Frequency,CAN expansion/logger preferred,VERIFY,Launch/traction development,EXPANSION DEFAULT
+2,Turbo oil pressure,Analogue,CAN expansion/logger preferred,VERIFY,Turbo lubrication monitoring,EXPANSION DEFAULT
+2,Crankcase pressure,Analogue,CAN expansion/logger preferred,VERIFY,Blow-by/breather health,EXPANSION DEFAULT
+3,Front EGT,Thermocouple interface,CAN expansion/logger,VERIFY,Thermal monitoring,EXPANSION
+3,Rear EGT,Thermocouple interface,CAN expansion/logger,VERIFY,Thermal monitoring,EXPANSION
+3,EMAP,Analogue,CAN expansion/logger,VERIFY,Turbine/exhaust development,EXPANSION
+3,Intercooler coolant temperature,Temperature,CAN expansion/logger or PMU input,VERIFY,Charge-cooler health,EXPANSION
+3,IMU,CAN,CAN expansion/logger,VERIFY,Launch/pitch analysis,EXPANSION
+3,Brake pressure,Analogue,CAN expansion/logger,VERIFY,Staging analysis,EXPANSION
+3,Suspension travel,Analogue,CAN expansion/logger,VERIFY,Chassis development,EXPANSION
+3,Compressor outlet pressure,Analogue,CAN expansion/logger,VERIFY,Pressure-drop development,EXPANSION
