@@ -34,3 +34,9 @@ V032,GROUND,Battery-engine-PMU-FT550 star conductors,VERIFY,Measured cranking dr
 V033,HARNESS,Exact branch lengths B01-B16,VERIFY,Physical bike measurement after component mounting is frozen,YES
 V034,HARNESS,Connector families terminals seals backshells,VERIFY,Final component connector survey and sourcing decision,YES
 V035,HARNESS,CKP shield termination method,VERIFY,Exact FuelTech recommendation for installed harness,YES
+V036,FT550,Fuel-pressure transducer direct analogue cavity,VERIFY,Verified complete FT550 spare-input inventory,YES
+V037,FT550,Engine oil-pressure transducer direct analogue cavity,VERIFY,Verified complete FT550 spare-input inventory,YES
+V038,FT550,Post-intercooler IAT direct input cavity,VERIFY,Verified complete FT550 spare-input inventory plus selected sensor type,YES
+V039,LAMBDA,Dual front/rear wideband hardware and verified FT550 communications path,VERIFY,Select hardware and verify digital/CAN or required analogue interface,YES
+V040,EXPANSION,CAN expansion/logger module for Tier 3 instrumentation,VERIFY,Select compatible module and freeze channel/CAN architecture,NO
+V041,FT550,Decision on Tier 2 direct-control channels,VERIFY,Final boost/traction/turbo-speed control strategy,YES
