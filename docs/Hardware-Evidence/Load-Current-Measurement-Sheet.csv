@@ -1,0 +1,12 @@
+Evidence_ID,Load,PMU_Output_or_Circuit,Supply_Voltage_V,Ambient_C,Steady_Current_A,Peak_Inrush_A,Inrush_Duration_ms,Route_Length_mm,Proposed_Wire_mm2,Proposed_Terminal,PMU_Current_Limit_A,Retry_Strategy,Measurement_Method,Status,Notes
+HC-001,Primary fuel pump,O1 pin38,,,,,,,,,,,,PENDING,
+HC-002,Secondary fuel pump,O2 pin39,,,,,,,,,,,,PENDING,Only if fitted
+HC-003,Radiator fan 1,O3 pin26,,,,,,,,,,,,PENDING,
+HC-004,Radiator fan 2,O4 pin13,,,,,,,,,,,,PENDING,Only if fitted
+HC-005,Charge/intercooler pump,O5 pin12,,,,,,,,,,,,PENDING,Only if fitted
+HC-006,Boost-control solenoid supply,O6 pin11,,,,,,,,,,,,PENDING,Characterize actual solenoid/load
+HC-007,Logger/display/service feed,O10 pin4,,,,,,,,,,,,PENDING,Sum all connected loads
+HC-008,Front injector,EPM injector circuit,,,,,,,,,,,,PENDING,Measure resistance and current waveform
+HC-009,Rear injector,EPM injector circuit,,,,,,,,,,,,PENDING,Measure resistance and current waveform
+HC-010,Front ignition coil,EPM ignition circuit,,,,,,,,,,,,PENDING,Driver-type/current waveform required
+HC-011,Rear ignition coil,EPM ignition circuit,,,,,,,,,,,,PENDING,Driver-type/current waveform required
