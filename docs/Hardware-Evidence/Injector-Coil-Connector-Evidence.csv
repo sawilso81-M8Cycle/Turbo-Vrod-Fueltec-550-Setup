@@ -1,0 +1,5 @@
+Evidence_ID,Component,Position,OEM_or_Installed_Part_Number,Connector_Family,Cavity_Count,Keying_or_Index,Terminal_Family,Terminal_Part_Number,Seal_Part_Number,Wire_Range_mm2,Resistance_Ohm,Peak_Current_A,Hold_or_Steady_Current_A,Driver_Type,Polarity_or_Pin_Functions,Photo_or_Capture_Reference,Status,Notes
+CC-001,Injector,Front,,,,,,,,,,,,,,,PENDING,
+CC-002,Injector,Rear,,,,,,,,,,,,,,,PENDING,
+CC-003,Ignition coil,Front,,,,,,,,,,,,,,,PENDING,
+CC-004,Ignition coil,Rear,,,,,,,,,,,,,,,PENDING,
