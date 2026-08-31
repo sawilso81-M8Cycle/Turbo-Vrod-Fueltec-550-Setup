@@ -1,9 +1,9 @@
 Verify_ID,Area,Item,Current_State,Required_Evidence,Blocks_Release
-V001,FT550,Exact FT550 main power cavity/cavities,VERIFY,Current FuelTech manual plus installed harness confirmation,YES
-V002,FT550,Exact FT550 main ground cavity/cavities,VERIFY,Current FuelTech manual plus installed harness confirmation,YES
-V003,FT550,Exact FT550 5V reference cavity,VERIFY,Current FuelTech manual,YES
-V004,FT550,Exact FT550 sensor-ground cavity/cavities,VERIFY,Current FuelTech manual,YES
-V005,FT550,OEM MAP analogue input cavity,VERIFY,Assign verified compatible FT550 analogue input,YES
+V001,FT550,FT550 switched 12V input cavity,RESOLVED A13,FuelTech PROBIKE A-connector table,NO
+V002,FT550,FT550 power ground cavities,RESOLVED B1+B2,FuelTech PROBIKE B-connector table,NO
+V003,FT550,FT550 5V reference cavity,RESOLVED A14,FuelTech PROBIKE A-connector table,NO
+V004,FT550,FT550 sensor/signal ground cavities,RESOLVED A12 and B26 available,FuelTech PROBIKE A/B connector tables; freeze final splice topology,NO
+V005,FT550,OEM MAP analogue input cavity,DESIGN RESERVED A20 White #1,Verify FTManager generic-input configuration and OEM MAP calibration,YES
 V006,FT550,Oil pressure switch digital input cavity and logic,VERIFY,Verify switch polarity and FT550 input strategy,YES
 V007,FT550,Neutral switch digital input cavity and logic,VERIFY,Verify switch polarity and FT550 input strategy,YES
 V008,FT550,Front injector output cavity,VERIFY,Current FuelTech manual and final engine configuration,YES
@@ -25,18 +25,18 @@ V023,PMU16,Exact PMU-16 main connector cavity map,VERIFY,Repository copy of veri
 V024,PMU16,PMU O1 current limit and wire size,VERIFY,Measured primary pump current/inrush plus PMU limits,YES
 V025,PMU16,PMU O3 current limit and wire size,VERIFY,Measured fan current/inrush plus PMU limits,YES
 V026,PMU16,PMU optional output limits O2/O4/O5/O8/O10,VERIFY,Actual fitted loads and measured currents,IF FITTED
-V027,CAN,FT550 to PMU CAN physical pins,VERIFY,Manufacturer documentation in repository,YES
+V027,CAN,FT550 CAN A physical pins,RESOLVED A15 LOW + A16 HIGH; PMU side open,FuelTech PROBIKE A connector plus verified PMU connector map,YES
 V028,CAN,CAN topology and 120-ohm termination positions,VERIFY,Final device/bus layout,YES
 V029,POWER,Main battery protection device and rating,VERIFY,Total load/fault-current design and conductor size,YES
 V030,POWER,PMU main feed conductor size,VERIFY,PMU manual constraints plus total expected current,YES
 V031,POWER,FT550/EPM feed conductor size and protection,VERIFY,FuelTech requirements plus measured engine loads,YES
 V032,GROUND,Battery-engine-PMU-FT550 star conductors,VERIFY,Measured cranking drop and final conductor sizing,YES
-V033,HARNESS,Exact branch lengths B01-B16,VERIFY,Physical bike measurement after component mounting is frozen,YES
+V033,HARNESS,Exact branch lengths B01-B31,VERIFY,Physical bike measurement after component mounting is frozen,YES
 V034,HARNESS,Connector families terminals seals backshells,VERIFY,Final component connector survey and sourcing decision,YES
 V035,HARNESS,CKP shield termination method,VERIFY,Exact FuelTech recommendation for installed harness,YES
-V036,FT550,Fuel-pressure transducer direct analogue cavity,VERIFY,Verified complete FT550 spare-input inventory,YES
-V037,FT550,Engine oil-pressure transducer direct analogue cavity,VERIFY,Verified complete FT550 spare-input inventory,YES
-V038,FT550,Post-intercooler IAT direct input cavity,VERIFY,Verified complete FT550 spare-input inventory plus selected sensor type,YES
-V039,LAMBDA,Dual front/rear wideband hardware and verified FT550 communications path,VERIFY,Select hardware and verify digital/CAN or required analogue interface,YES
+V036,FT550,Fuel-pressure transducer direct analogue cavity,RESOLVED A25 White #6,FuelTech PROBIKE A connector table,NO
+V037,FT550,Engine oil-pressure transducer direct analogue cavity,RESOLVED A23 White #4,FuelTech PROBIKE A connector table,NO
+V038,FT550,Post-intercooler IAT direct input cavity,DESIGN RESERVED B12 White #11,Verify selected sensor type and FTManager temperature-input configuration,YES
+V039,LAMBDA,Dual front/rear wideband hardware and verified FT550 communications path,VERIFY,Select hardware and verify CAN A compatibility,YES
 V040,EXPANSION,CAN expansion/logger module for Tier 3 instrumentation,VERIFY,Select compatible module and freeze channel/CAN architecture,NO
-V041,FT550,Decision on Tier 2 direct-control channels,VERIFY,Final boost/traction/turbo-speed control strategy,YES
+V041,FT550,Decision on Tier 2 direct-control channels,PARTLY MAPPED,B7 dome; B18 gear; B6 crankcase candidate; turbo speed still open,YES
