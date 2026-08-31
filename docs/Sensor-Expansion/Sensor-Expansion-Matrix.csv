@@ -1,0 +1,21 @@
+Sensor_ID,Sensor,Priority,Purpose,Preferred_Input,Supply,Return,Location,Protection_Value,Status
+SX-001,Front wideband lambda,MANDATORY,Front cylinder mixture feedback and lean protection,CAN or verified FT550 lambda input,Per wideband controller,Per controller,Front exhaust primary,Lean protection and closed-loop trim,SELECT HARDWARE
+SX-002,Rear wideband lambda,MANDATORY,Rear cylinder mixture feedback and cylinder comparison,CAN or verified FT550 lambda input,Per wideband controller,Per controller,Rear exhaust primary,Lean protection and cylinder imbalance detection,SELECT HARDWARE
+SX-003,Fuel pressure transducer,MANDATORY,Monitor rail pressure and differential pressure versus MAP,FT550 analogue input VERIFY,5V sensor ref,Sensor return,Fuel rail,Low differential fuel pressure protection,SELECT RANGE
+SX-004,Engine oil pressure transducer,MANDATORY,True oil pressure versus RPM and temperature,FT550 analogue input VERIFY,5V sensor ref,Sensor return,Main engine oil gallery,Low oil pressure derate/cut,SELECT RANGE
+SX-005,FT550 internal 7-bar MAP,MANDATORY,Primary boost/load reference,Internal FT550 MAP,Internal,Internal,Short manifold reference hose,Overboost and boost control,AVAILABLE
+SX-006,Post-intercooler IAT,MANDATORY,Actual charge temperature entering engine,FT550 analogue/temp input VERIFY,Per selected sensor,Sensor return,Downstream of intercooler and upstream of cylinders,High IAT ignition/boost derate,SELECT SENSOR
+SX-007,Front EGT,RECOMMENDED,Front cylinder thermal monitoring,EGT interface/CAN VERIFY,Per EGT module,Per module,Front exhaust primary near head,High EGT warning/derate,SELECT HARDWARE
+SX-008,Rear EGT,RECOMMENDED,Rear cylinder thermal monitoring,EGT interface/CAN VERIFY,Per EGT module,Per module,Rear exhaust primary near head,High EGT warning/derate,SELECT HARDWARE
+SX-009,Turbo oil pressure,RECOMMENDED,Verify turbo feed pressure independently,FT550 analogue input VERIFY,5V sensor ref,Sensor return,Turbo feed after restrictor/filter as applicable,Turbo oil pressure warning/cut strategy,SELECT RANGE
+SX-010,Crankcase pressure,RECOMMENDED,Detect blow-by/breather restriction and ring-seal issues,FT550 analogue input VERIFY,5V sensor ref,Sensor return,Crankcase/breather reference,High crankcase pressure protection/development,SELECT RANGE
+SX-011,Intercooler coolant temp,RECOMMENDED,Verify water-to-air intercooler thermal performance,FT550 analogue/temp input or PMU input VERIFY,Per sensor,Sensor return,Intercooler coolant circuit,High charge-cooler temperature warning,IF FITTED
+SX-012,EMAP,RECOMMENDED,Measure exhaust manifold pressure before turbine,FT550 analogue input VERIFY,5V sensor ref,Sensor return,Exhaust manifold via suitable pressure line/conditioning,EMAP:MAP development limit,SELECT RANGE
+SX-013,Wastegate dome pressure,APPLICATION,Closed-loop dome boost control feedback,FT550 analogue input VERIFY,5V sensor ref,Sensor return,Wastegate dome circuit,Boost-control plausibility,IF FITTED
+SX-014,Turbo shaft speed,RECOMMENDED,Direct turbo overspeed protection and turbo sizing validation,Frequency input/controller CAN VERIFY,Per speed system,Per speed system,Turbo compressor housing speed pickup,Turbo overspeed limit,SELECT HARDWARE
+SX-015,Front wheel speed,DRAG,Wheel-slip and launch analysis,FT550 digital/frequency input VERIFY,Per sensor,Controlled return,Front wheel,Traction/launch analysis,SELECT SENSOR
+SX-016,Gear position,DRAG,Gear-based boost/ignition/shift strategies,Analogue/digital input VERIFY,Per sensor,Sensor return,Transmission/shift mechanism,Gear-dependent limits,DEFINE METHOD
+SX-017,IMU,DRAG,Acceleration pitch and wheelie analysis,CAN preferred,Per module,Per module,Chassis rigid mount,Launch and wheelie analysis,SELECT MODULE
+SX-018,Brake pressure,DRAG,Staging/brake-release analysis,Analogue input VERIFY,5V sensor ref,Sensor return,Front or relevant brake hydraulic circuit,Logging only initially,OPTIONAL
+SX-019,Suspension travel,DRAG,Chassis squat/lift development,Analogue input/logger,Per sensor,Sensor return,Front/rear suspension as required,Logging only,OPTIONAL
+SX-020,Compressor outlet pressure,DEVELOPMENT,Measure pressure drop across intercooler/throttle system,Analogue input VERIFY,5V sensor ref,Sensor return,Compressor outlet,Pressure-loss analysis,OPTIONAL
