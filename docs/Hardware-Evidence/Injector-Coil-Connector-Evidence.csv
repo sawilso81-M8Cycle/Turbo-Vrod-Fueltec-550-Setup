@@ -1,5 +1,5 @@
 Evidence_ID,Component,Position,OEM_or_Installed_Part_Number,Connector_Family,Cavity_Count,Keying_or_Index,Terminal_Family,Terminal_Part_Number,Seal_Part_Number,Wire_Range_mm2,Resistance_Ohm,Peak_Current_A,Hold_or_Steady_Current_A,Driver_Type,Polarity_or_Pin_Functions,Photo_or_Capture_Reference,Status,Notes
-CC-001,Injector,Front,,,,,,,,,,,,,,,PENDING,
-CC-002,Injector,Rear,,,,,,,,,,,,,,,PENDING,
-CC-003,Ignition coil,Front,,,,,,,,,,,,,,,PENDING,
-CC-004,Ignition coil,Rear,,,,,,,,,,,,,,,PENDING,
+CC-001,Injector,Front,"27772-06 injector; supplied in VRXSE performance injector kit 27791-05",VERIFY,VERIFY,VERIFY,VERIFY,VERIFY,VERIFY,VERIFY,VERIFY,VERIFY,VERIFY,VERIFY,VERIFY,Harley SIP VRXSE parts catalog + instruction J03928,PART NUMBER VERIFIED,"Harley VRXSE parts catalog lists injector kit 27791-05; Harley instruction J03928 identifies kit contents as two injectors 27772-06. Electrical impedance/current still requires verified specification or bench evidence."
+CC-002,Injector,Rear,"27772-06 injector; supplied in VRXSE performance injector kit 27791-05",VERIFY,VERIFY,VERIFY,VERIFY,VERIFY,VERIFY,VERIFY,VERIFY,VERIFY,VERIFY,VERIFY,VERIFY,Harley SIP VRXSE parts catalog + instruction J03928,PART NUMBER VERIFIED,"Same factory injector hardware as front; electrical characteristics remain open."
+CC-003,Ignition coil,Front,32477-01A,VERIFY,VERIFY,VERIFY,VERIFY,VERIFY,VERIFY,VERIFY,VERIFY,VERIFY,VERIFY,VERIFY,VERIFY,"Harley SIP / VRSC parts catalog; VRXSE fitment evidence",PART NUMBER VERIFIED,"OEM plug-top coil used across VRSC family and listed for VRXSE fitment. Primary resistance current waveform and FT550 driver compatibility remain release blockers."
+CC-004,Ignition coil,Rear,32477-01A,VERIFY,VERIFY,VERIFY,VERIFY,VERIFY,VERIFY,VERIFY,VERIFY,VERIFY,VERIFY,VERIFY,VERIFY,"Harley SIP / VRSC parts catalog; VRXSE fitment evidence",PART NUMBER VERIFIED,"Same OEM plug-top coil as front. Electrical characterization remains open."
