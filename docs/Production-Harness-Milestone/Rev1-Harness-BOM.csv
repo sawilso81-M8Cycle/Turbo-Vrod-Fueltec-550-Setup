@@ -1,0 +1,38 @@
+BOM_ID,Category,Item,Specification_or_Project_Requirement,Qty_Status,Selection_Status,Release_Blocker
+BOM-001,ECU,FuelTech FT550,Existing project ECU baseline,1,FROZEN,NO
+BOM-002,PDM,ECUMASTER PMU-16,Existing project PDM baseline,1,FROZEN,NO
+BOM-003,PMU Connector,39-way PMU connector housing,Exact housing per official PMU-16 pinout,1,IDENTIFIED FAMILY / PN VERIFY,YES
+BOM-004,PMU Terminals,High-current output terminals,O1/O2/O3/O4/O5/O12-O16 terminal class sized to selected conductors,AS REQUIRED,PN VERIFY,YES
+BOM-005,PMU Terminals,15A output terminals,O6-O11 terminal class sized to selected conductors,AS REQUIRED,PN VERIFY,YES
+BOM-006,PMU Terminals,Signal/input/CAN terminals,A1-A16 CAN1 CAN2 +12Vsw +5V ground as applicable,AS REQUIRED,PN VERIFY,YES
+BOM-007,PMU Seals,Wire seals/cavity plugs,Match PMU connector and selected wire OD,AS REQUIRED,PN VERIFY,YES
+BOM-008,Main Power,PMU battery feed cable,Final mm2 determined by total current/length/drop calculation,1 LENGTH,MEASUREMENT GATED,YES
+BOM-009,Main Protection,Battery-to-PMU protection device,Rating coordinated with main feed and PMU load plan,1,ENGINEERING SELECT,YES
+BOM-010,Ground,PMU ground conductor,Low-resistance path to J-P02 star; provisional 1.0mm2 minimum,1 LENGTH,PROVISIONAL,YES
+BOM-011,Wire,22 AWG / 0.35mm2 motorsport wire,Sensor signals inputs CAN and CKP conductors where compatible,TBD LENGTH,PROVISIONAL CLASS,NO
+BOM-012,Wire,20 AWG / 0.5mm2 motorsport wire,Injector controls warning and selected low-current branches,TBD LENGTH,PROVISIONAL CLASS,NO
+BOM-013,Wire,18 AWG / 0.75mm2 motorsport wire,FT550 supply selected auxiliaries and boost-control supply,TBD LENGTH,PROVISIONAL CLASS,NO
+BOM-014,Wire,High-current motorsport wire,Fuel pumps fans charge-cooler and PMU main feed,TBD LENGTH,MEASUREMENT GATED,YES
+BOM-015,CAN,CAN twisted-pair cable,120-ohm characteristic impedance suitable for motorsport harness,TBD LENGTH,PROVISIONAL SPEC,YES
+BOM-016,CKP,Shielded twisted pair,Low-capacitance shielded twisted pair for VR crank sensor,TBD LENGTH,PROVISIONAL SPEC,YES
+BOM-017,Splice,Sensor 5V splice pack,SP-S01 / X42 precision reference distribution,1,DESIGN FROZEN / HARDWARE VERIFY,YES
+BOM-018,Splice,Sensor-ground splice pack,SP-S02 / X43 precision return distribution,1,DESIGN FROZEN / HARDWARE VERIFY,YES
+BOM-019,Power Junction,Main positive junction,J-P01 / X40 insulated high-current distribution,1,DESIGN FROZEN / HARDWARE VERIFY,YES
+BOM-020,Ground Junction,Engine/battery negative star,J-P02 / X41 low-resistance star point,1,DESIGN FROZEN / HARDWARE VERIFY,YES
+BOM-021,Connectors,OEM CKP connector,Match 32313-01A sensor,1,PHYSICAL PN VERIFY,YES
+BOM-022,Connectors,OEM TPS connector,Match 27975-01 TPS,1,PHYSICAL PN VERIFY,YES
+BOM-023,Connectors,OEM MAP connector,Match 32416-10 MAP,1,PHYSICAL PN VERIFY,YES
+BOM-024,Connectors,OEM ECT connector,Match 32315-01 ECT,1,PHYSICAL PN VERIFY,YES
+BOM-025,Connectors,OEM IAT connector,Match 27388-01 IAT,1,PHYSICAL PN VERIFY,YES
+BOM-026,Connectors,OEM VSS connector,Match 74402-05B VSS,1,PHYSICAL PN VERIFY,YES
+BOM-027,Connectors,Front/rear injector connectors,Match retained OEM injectors,2,PHYSICAL PN VERIFY,YES
+BOM-028,Connectors,Front/rear ignition coil connectors,Match retained OEM coils,2,PHYSICAL PN VERIFY,YES
+BOM-029,Sensor,Fuel pressure transducer,5V compatible range to be selected for fuel system,1,SELECT RANGE,YES
+BOM-030,Sensor,Engine oil pressure transducer,5V compatible range to be selected for engine oil system,1,SELECT RANGE,YES
+BOM-031,Sensor,Post-intercooler IAT sensor,FT550-compatible temperature sensor,1,SELECT SENSOR,YES
+BOM-032,Lambda,Dual wideband system,One channel per cylinder with verified FT550 communications path,1 SYSTEM,SELECT HARDWARE,YES
+BOM-033,Protection,Heat sleeve / boots,At turbo/exhaust-adjacent branches,TBD,ROUTE DEPENDENT,YES
+BOM-034,Protection,Abrasion sleeve / braid,Full harness protection by zone,TBD,ROUTE DEPENDENT,YES
+BOM-035,Protection,Grommets/P-clips/strain relief,Secure harness against motion/abrasion,TBD,ROUTE DEPENDENT,YES
+BOM-036,Service,Service/CAN connector,X50/X51 service access and CAN junction,1 SET,CONNECTOR FAMILY VERIFY,YES
+BOM-037,Labels,Heat-shrink wire IDs / branch labels,All circuits and connector branches,1 SET,DESIGN REQUIREMENT,NO
