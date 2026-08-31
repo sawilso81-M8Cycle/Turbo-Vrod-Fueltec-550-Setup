@@ -4,72 +4,89 @@
 
 The PMU-16 is the high-current auxiliary power-distribution backbone. It replaces conventional relay/fuse branches for non-precision loads while adding current measurement and programmable protection.
 
-## Functional allocation freeze
+## Official pin-level freeze
 
-The following O1-O16 functional assignments are frozen at project-design level. Exact connector cavities remain `VERIFY` until the official PMU-16 pinout table is present in repository-readable form.
+The PMU-16 39-pin connector map is now verified from ECUMASTER PMU-16 / PMU-16 DL Pinout v1.2 (2025-04-16) and stored in `docs/ECUMASTER-PMU16/PMU16-Pinout-v1.2.csv`.
 
-| PMU output | Frozen function | Control concept | Failure action | Status |
-|---|---|---|---|---|
-| O1 | Primary fuel pump | FT550 request or PMU engine-running logic | engine protection / fuel-loss response | DESIGN FROZEN; current limit VERIFY |
-| O2 | Secondary/staged fuel pump | staged by boost/RPM/load request | boost/load reduction or shutdown | DESIGN FROZEN; DNP if not fitted |
-| O3 | Radiator fan 1 | ECT threshold / override | warning + temperature protection | DESIGN FROZEN |
-| O4 | Radiator fan 2 | ECT threshold / staged | warning + temperature protection | DESIGN FROZEN; DNP if not fitted |
-| O5 | Charge/intercooler pump | ignition/engine run | warning / boost restriction | DESIGN FROZEN; DNP if not fitted |
-| O6 | Boost-control solenoid +12 V | engine-control enable; control topology VERIFY | default to mechanical/base boost | DESIGN FROZEN |
-| O7 | Auxiliary coolant / race pump | application-specific | application-specific | RESERVED |
-| O8 | Warning/fault lamp | PMU/FT550 fault logic | driver indication | DESIGN FROZEN |
-| O9 | Race accessory feed | switched | isolate on fault | RESERVED |
-| O10 | Logger/display/service feed | ignition switched | non-engine-critical | DESIGN FROZEN |
-| O11 | Spare high-side output 1 | none | off | RESERVED |
-| O12 | Spare high-side output 2 | none | off | RESERVED |
-| O13 | Spare high-side output 3 | none | off | RESERVED |
-| O14 | Spare high-side output 4 | none | off | RESERVED |
-| O15 | Spare high-side output 5 | none | off | RESERVED |
-| O16 | Spare high-side output 6 | none | off | RESERVED |
+### Frozen output allocation
 
-## PMU input allocation philosophy
+| Output | Connector pin | Rating class | Project function | Status |
+|---|---:|---:|---|---|
+| O1 | 38 | 25 A | Primary fuel pump | VERIFIED PIN / DESIGN FUNCTION |
+| O2 | 39 | 25 A | Secondary/staged fuel pump | VERIFIED PIN / DNP if not fitted |
+| O3 | 26 | 25 A | Radiator fan 1 | VERIFIED PIN / DESIGN FUNCTION |
+| O4 | 13 | 25 A | Radiator fan 2 | VERIFIED PIN / DNP if not fitted |
+| O5 | 12 | 25 A | Charge/intercooler pump | VERIFIED PIN / DNP if not fitted |
+| O6 | 11 | 15 A | Boost-control solenoid +12 V | VERIFIED PIN / DESIGN FUNCTION |
+| O7 | 10 | 15 A | Auxiliary coolant/race pump | VERIFIED PIN / RESERVED |
+| O8 | 9 | 15 A | Warning/fault lamp | VERIFIED PIN / DESIGN FUNCTION |
+| O9 | 5 | 15 A | Race accessory feed | VERIFIED PIN / RESERVED |
+| O10 | 4 | 15 A | Logger/display/service feed | VERIFIED PIN / DESIGN FUNCTION |
+| O11 | 3 | 15 A | Spare | VERIFIED PIN / RESERVED |
+| O12 | 2 | 25 A | Spare | VERIFIED PIN / RESERVED |
+| O13 | 1 | 25 A | Spare | VERIFIED PIN / RESERVED |
+| O14 | 14 | 25 A | Spare | VERIFIED PIN / RESERVED |
+| O15 | 27 | 25 A | Spare | VERIFIED PIN / RESERVED |
+| O16 | 28 | 25 A | Spare | VERIFIED PIN / RESERVED |
 
-PMU A1-A16 are reserved for power-system commands and status, not for replacing the FT550 precision sensor network.
+## Frozen PMU input allocation
 
-Working project allocation intent:
+| Input | Connector pin | Project function | Status |
+|---|---:|---|---|
+| A1 | 29 | Master enable / ignition request | VERIFIED PIN / DESIGN FUNCTION |
+| A2 | 16 | Start request | VERIFIED PIN / DESIGN FUNCTION |
+| A3 | 30 | Kill / emergency torque-disable request | VERIFIED PIN / DESIGN FUNCTION |
+| A4 | 17 | Fan manual override | VERIFIED PIN / DESIGN FUNCTION |
+| A5 | 31 | Service/test mode | VERIFIED PIN / DESIGN FUNCTION |
+| A6 | 18 | Reserved | VERIFIED PIN |
+| A7 | 32 | Reserved | VERIFIED PIN |
+| A8 | 19 | Reserved | VERIFIED PIN |
+| A9 | 6 | Reserved | VERIFIED PIN |
+| A10 | 33 | Reserved | VERIFIED PIN |
+| A11 | 20 | Reserved | VERIFIED PIN |
+| A12 | 34 | Reserved | VERIFIED PIN |
+| A13 | 21 | Reserved | VERIFIED PIN |
+| A14 | 8 | Reserved | VERIFIED PIN |
+| A15 | 35 | Reserved | VERIFIED PIN |
+| A16 | 22 | Reserved | VERIFIED PIN |
 
-- A1 - master enable / ignition request
-- A2 - start request
-- A3 - kill request / emergency torque-disable request
-- A4 - fan manual override
-- A5 - service/test mode
-- A6-A16 - reserved for future power-system logic or verified discrete status
+## Power and communication pins
 
-These input-function assignments are project-defined and may be frozen only after exact cavity mapping is extracted from the official PMU-16 pinout.
+- Pin 7: +12 V switched input.
+- Pin 15: +5 V output, up to 500 mA.
+- Pin 25: device ground.
+- Main +12 V battery feed: centre stud, maximum constant current 150 A.
+- Pin 23: CAN1H, fixed 1 Mbps.
+- Pin 36: CAN1L, fixed 1 Mbps.
+- Pin 24: CAN2H, configurable 125/250/500/1000 kbps.
+- Pin 37: CAN2L, configurable 125/250/500/1000 kbps.
+
+CAN1 has no internal termination resistor and requires external termination. CAN2 has software-controlled termination.
 
 ## CAN architecture
 
-- PMU CAN1 is the preferred FT550/vehicle control-and-status bus once exact physical pins and message compatibility are verified.
-- PMU CAN2 is reserved for expansion/logger/service use unless a later architecture decision changes this.
-- No CAN identifiers or payloads are defined until supported by verified manufacturer documentation.
+For this project, CAN2 is the preferred candidate for FT550-to-PMU communications because its speed is configurable. CAN1 remains important for PC/peripheral communication at fixed 1 Mbps. Final bus assignment still requires verified FT550 CAN compatibility and the final topology.
 
-Critical behaviour must remain safe without CAN:
+No CAN identifiers or payloads are invented in this repository.
 
-- boost control defaults to base/mechanical boost;
-- fuel-pump state is explicitly defined on CAN loss;
-- cooling behaviour fails safe;
-- kill/master isolation remains hardwired.
+## Output electrical classes
+
+- O1-O5 and O12-O16: 25 A maximum constant current per output class.
+- O6-O11: 15 A maximum constant current per output class.
+- All outputs still require actual load-current and inrush measurement before current-limit configuration is released.
+
+These ratings are output hardware limits, not permission to size conductors or protection blindly to those values.
+
+## Terminal family
+
+Official pinout specifies a Sicma / FCI 39-position connector family with:
+
+- 1.5 mm terminal 211CC2S2160P, 14-17 AWG;
+- 2.8 mm terminal 211CC3S2120, 14-16 AWG;
+- 2.8 mm terminal 211CC3S3120, 10-12 AWG.
+
+Final terminal choice per cavity must follow the PMU pinout/device terminal arrangement and actual conductor requirement.
 
 ## Protection setup
 
-For every populated output, measure actual steady current and inrush. Then configure current limits, trip thresholds, retry timing and retry count from the ECUMASTER manual and measured load evidence. Generic current guesses are not permitted in the released configuration.
-
-## Remaining pin-level blocker
-
-The repository currently records the official PMU-16 pinout document reference but does not contain its pin table in readable text form. Therefore the following remain `VERIFY`:
-
-1. exact connector cavity for O1-O16;
-2. exact connector cavity for A1-A16;
-3. exact CAN1 H/L cavities;
-4. exact CAN2 H/L cavities;
-5. switched +12 V input cavity;
-6. PMU ground cavity/cavities;
-7. +5 V output cavity;
-8. terminal family / wire-size limits.
-
-No connector cavity is to be guessed from memory or generic PMU examples.
+For every populated output, measure actual steady current and inrush. Then configure current limits, trip thresholds, retry timing and retry count using the ECUMASTER manual and measured load evidence. Generic current guesses are not permitted in the released configuration.
