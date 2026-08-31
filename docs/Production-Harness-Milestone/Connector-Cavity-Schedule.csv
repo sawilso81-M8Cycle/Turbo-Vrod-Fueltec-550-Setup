@@ -29,10 +29,24 @@ X01/02,VERIFY,Front injector control,E-004,BU,EPM,VERIFY,Yes
 X01/02,VERIFY,Rear injector control,E-006,GN,EPM,VERIFY,Yes
 X01/02,VERIFY,Front coil control,E-008,BU/WH,EPM,VERIFY,Yes
 X01/02,VERIFY,Rear coil control,E-010,GN/WH,EPM,VERIFY,Yes
-X03,VERIFY,PMU output O1 primary fuel pump,P-001,RD/YE,APM,VERIFY,Yes
-X03,VERIFY,PMU output O2 secondary fuel pump,P-002,RD/OG,APM,VERIFY,If fitted
-X03,VERIFY,PMU output O3 radiator fan 1,P-003,RD/BU,APM,VERIFY,Yes
-X03,VERIFY,PMU output O4 radiator fan 2,P-004,RD/GN,APM,VERIFY,If fitted
-X03,VERIFY,PMU output O5 charge-cooler pump,P-005,RD/VT,APM,VERIFY,If fitted
-X03,VERIFY,PMU output O8 warning lamp,P-007,YE/BK,APM,VERIFY,If fitted
-X03,VERIFY,PMU output O10 service/logger feed,P-008,OG/WH,APM,VERIFY,No
+X03,38,PMU O1 primary fuel pump,P-001,RD/YE,APM,MANUFACTURER VERIFIED CAVITY,Measure load/inrush and freeze current limit
+X03,39,PMU O2 secondary fuel pump,P-002,RD/OG,APM,MANUFACTURER VERIFIED CAVITY,If fitted measure load/inrush
+X03,26,PMU O3 radiator fan 1,P-003,RD/BU,APM,MANUFACTURER VERIFIED CAVITY,Measure fan load/inrush
+X03,13,PMU O4 radiator fan 2,P-004,RD/GN,APM,MANUFACTURER VERIFIED CAVITY,If fitted measure fan load/inrush
+X03,12,PMU O5 charge-cooler pump,P-005,RD/VT,APM,MANUFACTURER VERIFIED CAVITY,If fitted measure pump load/inrush
+X03,11,PMU O6 boost-control solenoid supply,P-006,RD/BK,APM,MANUFACTURER VERIFIED CAVITY,Verify control topology and load current
+X03,9,PMU O8 warning lamp,P-007,YE/BK,APM,MANUFACTURER VERIFIED CAVITY,Verify lamp/load type
+X03,4,PMU O10 service/logger feed,P-008,OG/WH,APM,MANUFACTURER VERIFIED CAVITY,Verify connected load current
+X03,29,PMU A1 master enable,PMU-A1,VERIFY,APM,MANUFACTURER VERIFIED CAVITY,Freeze switch wiring
+X03,16,PMU A2 start request,PMU-A2,VERIFY,APM,MANUFACTURER VERIFIED CAVITY,Freeze start logic
+X03,30,PMU A3 kill request,PMU-A3,VERIFY,APM,MANUFACTURER VERIFIED CAVITY,Freeze fail-safe logic
+X03,17,PMU A4 fan override,PMU-A4,VERIFY,APM,MANUFACTURER VERIFIED CAVITY,Freeze switch logic
+X03,31,PMU A5 service/test mode,PMU-A5,VERIFY,APM,MANUFACTURER VERIFIED CAVITY,Define service switch
+X03,7,PMU switched +12V,PMU-PWR-SW,RD,APM,MANUFACTURER VERIFIED CAVITY,Verify protected ignition feed
+X03,25,PMU device ground,PMU-GND,BK,APM,MANUFACTURER VERIFIED CAVITY,Verify conductor size and star point
+X03,15,PMU +5V output,PMU-5V,VERIFY,APM,MANUFACTURER VERIFIED CAVITY,500mA max; PMU-local use only
+X03,23,PMU CAN1H,CAN-PMU1H,WH/BU,COMM,MANUFACTURER VERIFIED CAVITY,Fixed 1Mbps; external termination required
+X03,36,PMU CAN1L,CAN-PMU1L,WH/GN,COMM,MANUFACTURER VERIFIED CAVITY,Fixed 1Mbps; external termination required
+X03,24,PMU CAN2H,CAN-PMU2H,WH/BU,COMM,MANUFACTURER VERIFIED CAVITY,Candidate FT550 bus; verify bitrate/topology
+X03,37,PMU CAN2L,CAN-PMU2L,WH/GN,COMM,MANUFACTURER VERIFIED CAVITY,Candidate FT550 bus; verify bitrate/topology
+X03,STUD,PMU main +12V battery feed,PMU-PWR-MAIN,RD,POWER,MANUFACTURER VERIFIED,Main protection/conductor sizing still open
