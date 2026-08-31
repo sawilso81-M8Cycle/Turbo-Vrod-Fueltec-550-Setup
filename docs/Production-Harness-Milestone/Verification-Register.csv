@@ -22,17 +22,17 @@ V020,OEM HARDWARE,Front/rear coil connector family and terminals,VERIFY,Physical
 V021,OEM HARDWARE,Injector steady/peak current,VERIFY,Measure or verified component specification,YES
 V022,OEM HARDWARE,Coil electrical type and current profile,VERIFY,Measure or verified component specification,YES
 V023,PMU16,Exact connector cavities for O1-O16 A1-A16 CAN1 CAN2 switched 12V ground +5V and main stud,RESOLVED,Official PMU-16 Pinout v1.2 extracted to PMU16-Pinout-v1.2.csv,NO
-V024,PMU16,PMU O1 current limit and wire size,VERIFY,Measured primary pump current/inrush plus PMU limits,YES
-V025,PMU16,PMU O3 current limit and wire size,VERIFY,Measured fan current/inrush plus PMU limits,YES
+V024,PMU16,PMU O1 current limit and wire size,VERIFY,Measured primary pump current/inrush plus route length and PMU limits,YES
+V025,PMU16,PMU O3 current limit and wire size,VERIFY,Measured fan current/inrush plus route length and PMU limits,YES
 V026,PMU16,PMU optional output limits O2/O4/O5/O6/O8/O10,VERIFY,Actual fitted loads and measured currents,IF FITTED
 V027,CAN,FT550-to-PMU physical pins,PARTLY RESOLVED,FT550 CAN A A15/A16; PMU CAN2 pins 24/37 candidate; verify common bitrate and chosen bus,YES
 V028,CAN,CAN topology and termination positions,VERIFY,Final device/bus layout; PMU CAN1 has no internal termination and PMU CAN2 has software-controlled termination,YES
 V029,POWER,Main battery protection device and rating,VERIFY,Total load/fault-current design and conductor size,YES
-V030,POWER,PMU main feed conductor size,VERIFY,PMU manual constraints plus total expected current,YES
-V031,POWER,FT550/EPM feed conductor size and protection,VERIFY,FuelTech requirements plus measured engine loads,YES
+V030,POWER,PMU main feed conductor size,MEASUREMENT GATED,Use Wire-Size-Schedule.csv; require total current route length voltage-drop target and terminal limit,YES
+V031,POWER,FT550/EPM feed conductor size and protection,PROVISIONAL 0.75mm2 CLASS,Verify FuelTech requirements engine-load evidence and branch protection,YES
 V032,GROUND,Battery-engine-PMU-FT550 star conductors,VERIFY,Measured cranking drop and final conductor sizing,YES
 V033,HARNESS,Exact branch lengths B01-B31,VERIFY,Physical bike measurement after component mounting is frozen,YES
-V034,HARNESS,Connector families terminals seals backshells,PARTLY RESOLVED,PMU Sicma/FCI 39-position family known; identify remaining OEM/project connector hardware,YES
+V034,HARNESS,Connector families terminals seals backshells,PARTLY RESOLVED,PMU Sicma/FCI family known; identify exact PMU terminal PNs and remaining OEM/project connector hardware,YES
 V035,HARNESS,CKP shield termination method,VERIFY,Exact FuelTech recommendation for installed harness,YES
 V036,FT550,Fuel-pressure transducer direct analogue cavity,RESOLVED A25 White #6,FuelTech PROBIKE A connector table,NO
 V037,FT550,Engine oil-pressure transducer direct analogue cavity,RESOLVED A23 White #4,FuelTech PROBIKE A connector table,NO
@@ -42,4 +42,8 @@ V040,EXPANSION,CAN expansion/logger module for Tier 3 instrumentation,VERIFY,Sel
 V041,FT550,Decision on Tier 2 direct-control channels,PARTLY MAPPED,B7 dome; B18 gear; B6 crankcase candidate; turbo speed still open,YES
 V042,PMU16,Functional O1-O16 allocation,RESOLVED PROJECT DESIGN,Sheet 04 and PMU16-Functional-Allocation.csv,NO
 V043,PMU16,Functional A1-A5 command input allocation,RESOLVED PIN-LEVEL,A1 pin29 master; A2 pin16 start; A3 pin30 kill; A4 pin17 fan override; A5 pin31 service mode,NO
-V044,PMU16,PMU terminal selection by cavity and conductor gauge,VERIFY,Apply official Sicma/FCI terminal families to final conductor schedule,YES
+V044,PMU16,PMU terminal selection by cavity and conductor gauge,VERIFY,Populate exact Sicma/FCI terminal seal and cavity-plug PNs after conductor sizes are frozen,YES
+V045,HARNESS,Rev 1 wire-size engineering schedule,FRAMEWORK COMPLETE,Wire-Size-Schedule.csv created; resolve MEASUREMENT GATED rows with actual load and route evidence,YES
+V046,HARNESS,Rev 1 BOM framework,FRAMEWORK COMPLETE,Rev1-Harness-BOM.csv created; resolve all YES blocker rows,YES
+V047,HARNESS,Low-level wire classes,PROVISIONAL,0.35mm2 sensor/CAN/command; 0.5mm2 controls; 0.75mm2 selected ECU/aux feeds subject to verification,YES
+V048,HARNESS,Final wire product insulation/temp/chemical specification,VERIFY,Select motorsport/automotive wire series compatible with heat oil fuel vibration and terminal system,YES
