@@ -1,0 +1,35 @@
+Circuit_or_Group,Function,Domain,Connector_Cavity,Electrical_Class,Provisional_Wire_mm2,Provisional_AWG,Final_Size_Status,Release_Evidence
+PMU-MAIN,PMU main battery feed,POWER,X03 STUD,Main high-current feed,VERIFY,VERIFY,MEASUREMENT GATED,Total PMU load current; route length; voltage-drop target; main protection rating
+PMU-GND,PMU device ground,APM,X03 pin 25,Module ground,1.0,18,PROVISIONAL MINIMUM,PMU manual/terminal limit plus installed voltage-drop test
+PMU-SW,PMU switched +12V enable,APM,X03 pin 7,Low-current switched supply,0.5,20,PROVISIONAL,Confirm PMU switched-input current and protection
+P-001,Primary fuel pump,APM,X03 pin 38 O1,25A-capable PMU output,VERIFY,VERIFY,MEASUREMENT GATED,Measured steady/inrush current; branch length; connector rating
+P-002,Secondary fuel pump,APM,X03 pin 39 O2,25A-capable PMU output,VERIFY,VERIFY,DNP OR MEASUREMENT GATED,Populate only if fitted; measured steady/inrush current
+P-003,Radiator fan 1,APM,X03 pin 26 O3,25A-capable PMU output,VERIFY,VERIFY,MEASUREMENT GATED,Measured steady/inrush current; branch length
+P-004,Radiator fan 2,APM,X03 pin 13 O4,25A-capable PMU output,VERIFY,VERIFY,DNP OR MEASUREMENT GATED,Populate only if fitted; measured steady/inrush current
+P-005,Charge/intercooler pump,APM,X03 pin 12 O5,25A-capable PMU output,VERIFY,VERIFY,DNP OR MEASUREMENT GATED,Populate only if fitted; measured steady/inrush current
+P-006,Boost-control solenoid supply,APM,X03 pin 11 O6,15A-capable PMU output,0.75,18,PROVISIONAL,Confirm actual solenoid/controller current and conductor route
+P-007,Warning/fault lamp,APM,X03 pin 9 O8,15A-capable PMU output,0.5,20,PROVISIONAL,Confirm lamp/device current
+P-008,Logger/display/service feed,APM,X03 pin 4 O10,15A-capable PMU output,0.75,18,PROVISIONAL,Confirm aggregate connected load
+PMU-A1,Master enable input,APM,X03 pin 29 A1,Low-current command,0.35,22,PROVISIONAL,Freeze switch topology
+PMU-A2,Start request input,APM,X03 pin 16 A2,Low-current command,0.35,22,PROVISIONAL,Freeze start-request topology
+PMU-A3,Kill request input,APM,X03 pin 30 A3,Safety command,0.35,22,PROVISIONAL,Freeze fail-safe topology
+PMU-A4,Fan override input,APM,X03 pin 17 A4,Low-current command,0.35,22,PROVISIONAL,Freeze switch topology
+PMU-A5,Service/test input,APM,X03 pin 31 A5,Low-current command,0.35,22,PROVISIONAL,Freeze switch topology
+CAN-FT-PMU,CAN H/L twisted pair,COMM,FT550 A15/A16 to PMU CAN2 24/37,Differential communications,0.35,22,PROVISIONAL,Freeze bitrate; topology; termination; cable type
+S-001/S-002,CKP signal/reference,SIM,FT550 A19/A18,Low-level VR trigger,0.35,22,PROVISIONAL,Shielded twisted pair; confirm FuelTech shield termination
+SENSOR-5V,5V reference distribution,SIM,FT550 A14,Precision reference,0.35,22,PROVISIONAL,Total 5V sensor load and voltage-drop check
+SENSOR-GND,Sensor return distribution,SIM,FT550 A12/B26,Precision return,0.35,22,PROVISIONAL,Final splice topology and voltage-drop/noise test
+S-004,TPS signal,SIM,FT550 A22,Analogue signal,0.35,22,PROVISIONAL,Calibration and routing verification
+S-007,OEM MAP signal,SIM,FT550 A20,Analogue signal,0.35,22,PROVISIONAL,Input configuration and calibration
+SX-004,Engine oil-pressure signal,SIM,FT550 A23,Analogue protection signal,0.35,22,PROVISIONAL,Selected sensor and calibration
+S-009,ECT signal,SIM,FT550 A24,Temperature signal,0.35,22,PROVISIONAL,Thermistor curve
+SX-003,Fuel-pressure signal,SIM,FT550 A25,Analogue protection signal,0.35,22,PROVISIONAL,Selected sensor and calibration
+S-014,VSS signal,SIM,FT550 A26,Frequency signal,0.35,22,PROVISIONAL,Pulse amplitude and routing verification
+S-011,OEM IAT signal,SIM,FT550 B5,Temperature signal,0.35,22,PROVISIONAL,Thermistor curve
+SX-006,Post-IC IAT signal,SIM,FT550 B12,Temperature/analogue signal,0.35,22,PROVISIONAL,Selected sensor and FTManager configuration
+E-001,FT550 switched 12V input,EPM,FT550 A13,ECU supply,0.75,18,PROVISIONAL,Confirm FuelTech requirements and branch protection
+E-002,FT550 power grounds,EPM,FT550 B1/B2,ECU power return,0.75 each,18 each,PROVISIONAL,Voltage-drop test and FuelTech conductor requirements
+E-INJ-SUP,Injector +12V supply,EPM,Injector branches,Engine-critical switched load,VERIFY,VERIFY,MEASUREMENT GATED,Injector current and final supply architecture
+E-INJ-CTL,Injector control wires,EPM,FT550 outputs VERIFY,Low-side control,0.5,20,PROVISIONAL CABLE CLASS,Freeze output cavities and injector current
+E-COIL-SUP,Ignition coil +12V supply,EPM,Coil branches,Engine-critical switched load,VERIFY,VERIFY,MEASUREMENT GATED,Coil type/current and final supply architecture
+E-COIL-CTL,Ignition coil control wires,EPM,FT550 outputs VERIFY,Ignition control,0.5,20,PROVISIONAL CABLE CLASS,Verify coil driver compatibility and output cavities
