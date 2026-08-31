@@ -1,0 +1,25 @@
+PMU_Channel,Function,Domain,Control_Source,Failure_Default,Population,Pin_Cavity_Status
+O1,Primary fuel pump,APM,FT550 request or PMU run logic,Engine protection response,FITTED,VERIFY
+O2,Secondary/staged fuel pump,APM,Boost/RPM/load request,Boost/load reduction,DNP_IF_NOT_FITTED,VERIFY
+O3,Radiator fan 1,APM,ECT threshold or override,Temperature warning/protection,FITTED,VERIFY
+O4,Radiator fan 2,APM,ECT staged control,Temperature warning/protection,DNP_IF_NOT_FITTED,VERIFY
+O5,Charge/intercooler pump,APM,Ignition/engine run,Boost restriction on failure,DNP_IF_NOT_FITTED,VERIFY
+O6,Boost-control solenoid supply,APM,Engine-control enable,Base/mechanical boost,FITTED_IF_BOOST_CONTROL,VERIFY
+O7,Auxiliary coolant/race pump,APM,Application specific,Off/defined safe state,RESERVED,VERIFY
+O8,Warning/fault lamp,APM,PMU/FT550 fault logic,Driver warning,FITTED_IF_USED,VERIFY
+O9,Race accessory feed,APM,Switched,Off,RESERVED,VERIFY
+O10,Logger/display/service feed,APM,Ignition switched,Off/noncritical,FITTED_IF_USED,VERIFY
+O11,Spare output 1,APM,None,Off,RESERVED,VERIFY
+O12,Spare output 2,APM,None,Off,RESERVED,VERIFY
+O13,Spare output 3,APM,None,Off,RESERVED,VERIFY
+O14,Spare output 4,APM,None,Off,RESERVED,VERIFY
+O15,Spare output 5,APM,None,Off,RESERVED,VERIFY
+O16,Spare output 6,APM,None,Off,RESERVED,VERIFY
+A1,Master enable / ignition request,APM,Hardwired switch logic,Disable controlled loads,PLANNED,VERIFY
+A2,Start request,APM,Starter switch/request logic,No crank request,PLANNED,VERIFY
+A3,Kill / emergency torque-disable request,APM,Hardwired safety input,Safe torque removal request,PLANNED,VERIFY
+A4,Fan manual override,APM,Service/rider override,Automatic fan control remains,OPTIONAL,VERIFY
+A5,Service/test mode,APM,Service connector/switch,Normal runtime mode,OPTIONAL,VERIFY
+A6-A16,Reserved discrete/status inputs,APM,TBD,No unsafe dependency,RESERVED,VERIFY
+CAN1,FT550/vehicle control and status,COMM,Verified CAN integration,Safe local defaults,PLANNED,VERIFY
+CAN2,Expansion/logger/service bus,COMM,Expansion devices,Noncritical loss,RESERVED,VERIFY
