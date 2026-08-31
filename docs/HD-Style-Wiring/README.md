@@ -7,6 +7,7 @@ This folder defines the new wiring package for a turbo Harley-Davidson VRXSE V-R
 - FuelTech FT550 as the engine-management ECU;
 - ECUMASTER PMU-16 as the electronically protected power-distribution module;
 - original Harley-Davidson / VRXSE / common VRSC sensors and associated OEM engine hardware wherever identified in this repository;
+- additional turbo protection/development sensors defined in the Sensor Expansion package;
 - a completely new motorsport harness rather than reuse of the original race ECM/main harness architecture.
 
 The drawing style follows Harley-Davidson service-diagram conventions at a project level: circuit sheets, connector identifiers, wire-colour codes, splices, grounds, power feeds and cross-sheet references. It does not reproduce Harley copyrighted drawings.
@@ -24,7 +25,10 @@ The FT550 remains the sole engine ECU. The PMU-16 provides protected high-side p
 - [Sheet 03 - Injection and Ignition](Sheet-03-Injection-and-Ignition.md)
 - [Sheet 04 - PMU16 Power Distribution](Sheet-04-PMU16-Power-Distribution.md)
 - [Sheet 05 - Start, Kill, Cooling and Auxiliaries](Sheet-05-Start-Kill-Cooling-Aux.md)
+- [Sheet 06 - Turbo Instrumentation](Sheet-06-Turbo-Instrumentation.md)
+- [Sheet 07 - Engine Protection Logic](Sheet-07-Engine-Protection-Logic.md)
 - [Master Wire and Connector Schedule](Master-Wire-and-Connector-Schedule.csv)
+- [Sensor Expansion Package](../Sensor-Expansion/README.md)
 
 ## Drawing status legend
 
@@ -37,7 +41,8 @@ The FT550 remains the sole engine ECU. The PMU-16 provides protected high-side p
 
 1. Do not join FT550 sensor ground to PMU load ground downstream of the intended battery/engine reference point.
 2. CKP wiring must be twisted/shielded and routed away from coils, starter, PMU power outputs and pump/fan wiring.
-3. OEM analogue sensors use the FT550 sensor-reference network, not the PMU +5 V output.
+3. OEM and added precision analogue sensors use the FT550 sensor-reference network where compatible, not the PMU +5 V output by convenience.
 4. PMU-16 CAN may be used for status/logic, but engine-critical functions must have defined safe behaviour if CAN is lost.
-5. Exact PMU current limits, wire gauges and FT550 injector/ignition output cavities remain `VERIFY` until the precise installed hardware and current manual data are confirmed.
-6. No `VERIFY` item may remain on a released production harness drawing.
+5. Exact PMU current limits, wire gauges, FT550 injector/ignition output cavities and added-sensor input allocations remain `VERIFY` until precise installed hardware and current manual data are confirmed.
+6. Mandatory protection channels take priority over development-only sensors if FT550 input capacity is constrained.
+7. No `VERIFY` item may remain on a released production harness drawing.
