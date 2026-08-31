@@ -21,11 +21,11 @@ V019,OEM HARDWARE,Front/rear injector connector family and terminals,VERIFY,Phys
 V020,OEM HARDWARE,Front/rear coil connector family and terminals,VERIFY,Physical connector identification and terminal inspection,YES
 V021,OEM HARDWARE,Injector steady/peak current,VERIFY,Measure or verified component specification,YES
 V022,OEM HARDWARE,Coil electrical type and current profile,VERIFY,Measure or verified component specification,YES
-V023,PMU16,Exact PMU-16 main connector cavity map,VERIFY,Repository copy of verified PMU-16 pinout/manual data,YES
+V023,PMU16,Exact connector cavities for O1-O16 A1-A16 CAN1 CAN2 switched 12V ground and +5V,VERIFY,Add repository-readable text extraction from official PMU-16 Pinout v1.2,YES
 V024,PMU16,PMU O1 current limit and wire size,VERIFY,Measured primary pump current/inrush plus PMU limits,YES
 V025,PMU16,PMU O3 current limit and wire size,VERIFY,Measured fan current/inrush plus PMU limits,YES
-V026,PMU16,PMU optional output limits O2/O4/O5/O8/O10,VERIFY,Actual fitted loads and measured currents,IF FITTED
-V027,CAN,FT550 CAN A physical pins,RESOLVED A15 LOW + A16 HIGH; PMU side open,FuelTech PROBIKE A connector plus verified PMU connector map,YES
+V026,PMU16,PMU optional output limits O2/O4/O5/O6/O8/O10,VERIFY,Actual fitted loads and measured currents,IF FITTED
+V027,CAN,FT550 CAN A physical pins,RESOLVED A15 LOW + A16 HIGH; PMU CAN1 cavities open,FuelTech PROBIKE A connector plus verified PMU connector map,YES
 V028,CAN,CAN topology and 120-ohm termination positions,VERIFY,Final device/bus layout,YES
 V029,POWER,Main battery protection device and rating,VERIFY,Total load/fault-current design and conductor size,YES
 V030,POWER,PMU main feed conductor size,VERIFY,PMU manual constraints plus total expected current,YES
@@ -40,3 +40,5 @@ V038,FT550,Post-intercooler IAT direct input cavity,DESIGN RESERVED B12 White #1
 V039,LAMBDA,Dual front/rear wideband hardware and verified FT550 communications path,VERIFY,Select hardware and verify CAN A compatibility,YES
 V040,EXPANSION,CAN expansion/logger module for Tier 3 instrumentation,VERIFY,Select compatible module and freeze channel/CAN architecture,NO
 V041,FT550,Decision on Tier 2 direct-control channels,PARTLY MAPPED,B7 dome; B18 gear; B6 crankcase candidate; turbo speed still open,YES
+V042,PMU16,Functional O1-O16 allocation,RESOLVED PROJECT DESIGN,Sheet 04 and PMU16-Functional-Allocation.csv,NO
+V043,PMU16,Functional A1-A5 command input allocation,DESIGN FROZEN pending cavity map,A1 master enable; A2 start; A3 kill; A4 fan override; A5 service mode,YES
