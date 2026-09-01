@@ -12,7 +12,7 @@ BOM-010,Ground,PMU ground conductor,Low-resistance path to J-P02 star; provision
 BOM-011,Wire,22 AWG / 0.35mm2 motorsport wire,Sensor signals inputs CAN and CKP conductors where compatible,TBD LENGTH,PROVISIONAL CLASS,NO
 BOM-012,Wire,20 AWG / 0.5mm2 motorsport wire,Injector controls warning and selected low-current branches,TBD LENGTH,PROVISIONAL CLASS,NO
 BOM-013,Wire,18 AWG / 0.75mm2 motorsport wire,FT550 supply selected auxiliaries and boost-control supply,TBD LENGTH,PROVISIONAL CLASS,NO
-BOM-014,Wire,High-current motorsport wire,Fuel pumps fans charge-cooler and PMU main feed,TBD LENGTH,MEASUREMENT GATED,YES
+BOM-014,Wire,High-current motorsport wire,Fuel pumps fans charge-cooler PMU main feed injector supply and ignition supply,TBD LENGTH,MEASUREMENT GATED,YES
 BOM-015,CAN,CAN twisted-pair cable,120-ohm characteristic impedance suitable for motorsport harness,TBD LENGTH,PROVISIONAL SPEC,YES
 BOM-016,CKP,Shielded twisted pair,Low-capacitance shielded twisted pair for VR crank sensor,TBD LENGTH,PROVISIONAL SPEC,YES
 BOM-017,Splice,Sensor 5V splice pack,SP-S01 / X42 precision reference distribution,1,DESIGN FROZEN / HARDWARE VERIFY,YES
@@ -25,8 +25,8 @@ BOM-023,Connectors,OEM MAP connector,Match 32416-10 MAP,1,PHYSICAL PN VERIFY,YES
 BOM-024,Connectors,OEM ECT connector,Match 32315-01 ECT,1,PHYSICAL PN VERIFY,YES
 BOM-025,Connectors,OEM IAT connector,Match 27388-01 IAT,1,PHYSICAL PN VERIFY,YES
 BOM-026,Connectors,OEM VSS connector,Match 74402-05B VSS,1,PHYSICAL PN VERIFY,YES
-BOM-027,Connectors,Front/rear injector connectors,Match retained OEM injectors,2,PHYSICAL PN VERIFY,YES
-BOM-028,Connectors,Front/rear ignition coil connectors,Match retained OEM coils,2,PHYSICAL PN VERIFY,YES
+BOM-027,Connectors,Front/rear injector connectors,Match Harley 27772-06 injectors,2,PHYSICAL PN VERIFY,YES
+BOM-028,Connectors,Front/rear ignition coil connectors,Match Harley 32477-01A two-terminal coils,2,PHYSICAL PN VERIFY,YES
 BOM-029,Sensor,Fuel pressure transducer,5V compatible range to be selected for fuel system,1,SELECT RANGE,YES
 BOM-030,Sensor,Engine oil pressure transducer,5V compatible range to be selected for engine oil system,1,SELECT RANGE,YES
 BOM-031,Sensor,Post-intercooler IAT sensor,FT550-compatible temperature sensor,1,SELECT SENSOR,YES
@@ -36,3 +36,16 @@ BOM-034,Protection,Abrasion sleeve / braid,Full harness protection by zone,TBD,R
 BOM-035,Protection,Grommets/P-clips/strain relief,Secure harness against motion/abrasion,TBD,ROUTE DEPENDENT,YES
 BOM-036,Service,Service/CAN connector,X50/X51 service access and CAN junction,1 SET,CONNECTOR FAMILY VERIFY,YES
 BOM-037,Labels,Heat-shrink wire IDs / branch labels,All circuits and connector branches,1 SET,DESIGN REQUIREMENT,NO
+BOM-038,EPM Ignition Driver,Two-channel passive-coil ignition driver,FuelTech SparkPRO-class or FuelTech-approved equivalent; accepts FT550 A8/A9 and drives two 32477-01A coils,1,ARCHITECTURE FROZEN / EXACT MODEL VERIFY,YES
+BOM-039,EPM Ignition Connector,X60 ignition-driver ECU-side connector,Two command channels plus any manufacturer-required reference/power conductors,1,CONNECTOR FAMILY VERIFY,YES
+BOM-040,EPM Ignition Connector,X61 ignition-driver coil-side connector,Two driven coil channels with environmental sealing and suitable current rating,1,CONNECTOR FAMILY VERIFY,YES
+BOM-041,EPM Injector Junction,X62 injector-interface ECU-side service junction,Accepts FT550 A1/A2 and supports direct-drive bypass or Peak & Hold branch,1,ARCHITECTURE FROZEN / HARDWARE VERIFY,YES
+BOM-042,EPM Injector Junction,X63 injector-interface engine-side service junction,Feeds front/rear 27772-06 injector control paths,1,ARCHITECTURE FROZEN / HARDWARE VERIFY,YES
+BOM-043,EPM Injector Link,Direct-drive bypass link B36,Removable keyed link X62-to-X63; install only after direct-drive approval,1,DNP UNTIL HC-008/009 CLOSED,YES
+BOM-044,EPM Peak Hold,Optional FuelTech-compatible Peak & Hold driver,Required only if measured injector impedance/current demands it,1,DNP / DECISION GATED,YES
+BOM-045,EPM Peak Hold Connector,X64 Peak & Hold input connector,From X62 to optional Peak & Hold module,1,DNP / CONNECTOR VERIFY,IF FITTED
+BOM-046,EPM Peak Hold Connector,X65 Peak & Hold output connector,From optional Peak & Hold module to X63,1,DNP / CONNECTOR VERIFY,IF FITTED
+BOM-047,EPM Power,Injector common +12V branch B39,Protected EPM supply to both 27772-06 injectors; final mm2/fuse by measured current,1 LENGTH,MEASUREMENT GATED,YES
+BOM-048,EPM Power,Ignition common +12V branch B40,Protected EPM supply to both 32477-01A coils/driver topology as required; final mm2/fuse by measured current,1 LENGTH,MEASUREMENT GATED,YES
+BOM-049,EPM Ground,Ignition-driver power ground B33,Manufacturer-sized low-impedance return to J-P02 power star,1 LENGTH,MEASUREMENT/MANUFACTURER GATED,YES
+BOM-050,EPM Service,Injector mode configuration label and build record,State DIRECT_DRIVE_APPROVED or PEAK_HOLD_INSTALLED; never both,1 SET,DESIGN FROZEN,NO
