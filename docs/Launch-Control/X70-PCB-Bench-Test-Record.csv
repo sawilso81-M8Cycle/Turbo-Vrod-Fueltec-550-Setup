@@ -1,0 +1,9 @@
+Test_ID,Test,Required_Result,Measured_Result,Status,Evidence_File,Notes
+X70-PCB-001,Unpowered continuity,No O11-GND short; FT_A21-CONTACT_GND open; no unintended domain continuity,,NOT_RUN,,
+X70-PCB-002,Relay coil current,Measured current acceptable for K1 and PMU O11,,NOT_RUN,,
+X70-PCB-003,Contact operation,O11 command closes FT_A21 to CONTACT_GND at low resistance,,NOT_RUN,,
+X70-PCB-004,Release timing,Measured contact release timing accepted for launch transition,,NOT_RUN,,
+X70-PCB-005,Transient suppression,Turn-off transient inside verified PMU O11 limit with no FT_A21 false trigger,,NOT_RUN,,
+X70-PCB-006,FT550 isolation,FT_A21 never exposed to vehicle +12V; only open or ground request,,NOT_RUN,,
+X70-PCB-007,Failure-open behavior,Loss of O11/coil/board command leaves FT_A21 open and Two-Step inactive,,NOT_RUN,,
+X70-PCB-008,Endurance cycling,No contact sticking or unacceptable timing drift after defined validation cycle count,,NOT_RUN,,
