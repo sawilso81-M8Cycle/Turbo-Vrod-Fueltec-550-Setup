@@ -1,0 +1,15 @@
+Verify_ID,Area,Item,Current_State,Required_Evidence,Blocks_Release
+V138,DYNO TUNING,Higher-load/dyno framework,RESOLVED TEST FRAMEWORK,Higher-Load-Dyno-Tuning-Preparation.md plus Higher-Load-Dyno-Test-Matrix.csv define DY-001 through DY-014,NO
+V139,DYNO TUNING,Dyno setup and instrumentation readiness,WAITING ON CLOSED-LOOP RELEASE,Execute DY-001 and DY-002 with valid critical channels and revision-controlled setup,YES
+V140,DYNO TUNING,Fuel-system capacity and injector headroom,TEST REQUIRED,Execute DY-003 and freeze build-specific fuel-pressure and injector-duty margins before progression,YES
+V141,DYNO TUNING,Cylinder-specific lambda validation,TEST REQUIRED,Execute DY-004 and retain front/rear lambda evidence or document single-channel limitation,YES
+V142,DYNO TUNING,Staged load-cell progression,TEST REQUIRED,Execute DY-005 using build-specific RPM/load matrix; each cell must pass before progression,YES
+V143,DYNO TUNING,Fuel calibration discipline,TEST REQUIRED,Execute DY-006 with revision-controlled before/after evidence,YES
+V144,DYNO TUNING,Ignition calibration discipline,TEST REQUIRED,Execute DY-007 after fuel stability; retain torque/timing/thermal/combustion evidence,YES
+V145,DYNO TUNING,Knock/combustion evidence quality,TEST REQUIRED,Execute DY-008; document instrumentation source/calibration or absence and use conservative strategy,YES
+V146,DYNO TUNING,Thermal envelope,TEST REQUIRED,Execute DY-009 and define build-specific IAT/ECT/oil/electrical thermal gates and cooldown criteria,YES
+V147,DYNO TUNING,Boost-target progression,TEST REQUIRED,Execute DY-010 with target/actual MAP feed-forward correction fuel lambda timing injector duty and thermal evidence,YES
+V148,DYNO TUNING,Repeatability requirement,TEST REQUIRED,Execute DY-011; one successful run is insufficient for cell/target validation,YES
+V149,DYNO TUNING,Higher-load protection validation,TEST REQUIRED,Execute DY-012 proving overboost/MAP/CAN/fuel/lambda/thermal/O6/kill fallbacks remain safe,YES
+V150,DYNO TUNING,Post-run hardware inspection,TEST REQUIRED,Execute DY-013 after meaningful load increases and retain inspection evidence,YES
+V151,DYNO TUNING,Full-power pull readiness review,HIGHER_LOAD_TUNING_ONLY,Execute DY-014; promote only to READY_FOR_FULL_POWER_PULL_PREP when all required evidence/margins are accepted,YES
