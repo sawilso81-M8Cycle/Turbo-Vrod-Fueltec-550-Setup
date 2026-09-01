@@ -50,13 +50,14 @@ V048,HARNESS,Final wire product insulation/temp/chemical specification,VERIFY,Se
 V049,TESTING,Hardware current and connector evidence pack,FRAMEWORK COMPLETE,docs/Hardware-Evidence contains load sheet connector register bench procedure and evidence register,NO
 V050,FT550,Injector/ignition output cavity freeze,RESOLVED,A1/A2 primary injector outputs and A8/A9 ignition outputs frozen from FuelTech PROBIKE manual,NO
 V051,IGNITION,32477-01A smart-versus-passive classification,RESOLVED PASSIVE TWO-TERMINAL,Physical connector evidence plus FuelTech dumb-coil interface rule; external igniter mandatory,NO
-V052,IGNITION,External igniter hardware and dwell calibration,SPARKPRO-2 HARDWARE BASELINE,FuelTech SparkPRO-2 provides two dumb-coil channels one coil per channel; freeze harness connector details and dwell after HC-010/011,YES
+V052,IGNITION,External igniter hardware and dwell calibration,SPARKPRO-2 HARDWARE FROZEN,FuelTech SparkPRO-2 selected; only OEM coil dwell/current calibration remains open,YES
 V053,INJECTION,Injector interface architecture,CONFIGURABLE DIRECT OR PEAK-HOLD,Measure 27772-06 impedance; direct only within FuelTech limits; Peak & Hold mandatory below 7 ohms or if loading requires it,YES
 V054,EPM,EPM driver/interface architecture,RESOLVED PROJECT DESIGN,EPM-Driver-Interface-Architecture.md; X60-X65 and B32-B40 defined,NO
 V055,EPM,Injector configuration interlock,DESIGN FROZEN,Release build record must state exactly DIRECT_DRIVE_APPROVED or PEAK_HOLD_INSTALLED; B36 mutually exclusive with B37/B38,YES
-V056,EPM,X60-X65 connector families terminals seals,VERIFY,EPM-Physical-Connector-Mounting-Drawing.md freezes functions; exact SparkPRO P&H and OEM mating terminal PNs still required,YES
+V056,EPM,X60-X65 connector families terminals seals,PARTLY RESOLVED,SparkPRO six-pin cavities frozen; exact mating housing/terminal/seal PNs and X62-X65 injector-interface hardware still required,YES
 V057,EPM,B33/B34/B39/B40 wire sizes and branch protection,MEASUREMENT GATED,Close HC-008-HC-011 then calculate current route voltage drop and protection,YES
 V058,EPM,SparkPRO physical mounting architecture,RESOLVED PROJECT DESIGN,SparkPRO-2 on rigid metallic heat-spreading bracket near coils away from turbo heat and CKP routing,NO
 V059,EPM,X60-X65 functional cavity schedule,RESOLVED REV0.2,EPM-Physical-Connector-Mounting-Drawing.md defines command driven-coil and injector service junction functions,NO
 V060,EPM,Final EPM module positions and branch lengths,VERIFY,Mock up FT550 SparkPRO injector junction and optional P&H on motorcycle then measure B32-B40,YES
-V061,IGNITION,SparkPRO-2 exact harness pinout connector and terminal kit,VERIFY,Extract current FuelTech SparkPRO manual/harness details and freeze physical mating hardware,YES
+V061,IGNITION,SparkPRO-2 exact six-pin electrical pinout,RESOLVED,FuelTech SparkPRO manual v2.2; pins 1/3 inputs 2/5 grounds 4/6 outputs with 0.5/1.0mm2 wire classes,NO
+V062,IGNITION,SparkPRO-2 mating housing terminal and seal part numbers,VERIFY,Use supplied FuelTech SparkPRO-2 wiring harness or identify exact connector service kit before bare-connector harness release,YES
