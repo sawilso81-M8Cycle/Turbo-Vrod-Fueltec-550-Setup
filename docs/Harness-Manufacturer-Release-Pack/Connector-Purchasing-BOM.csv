@@ -1,0 +1,30 @@
+Connector_ID,Function,Housing_PN,Mating_Housing_PN,Terminal_PN,Seal_PN,Cavity_Plug_PN,Boot_or_Backshell,Qty,Status,Release_Blocker
+X01,FT550 connector A,FuelTech supplied / identify service PN,FuelTech FT550 A,Per FuelTech harness service terminal,Per family,Per family,As supplied,1,PARTLY_FROZEN,Freeze purchasable service parts if bare-harness build
+X02,FT550 connector B,FuelTech supplied / identify service PN,FuelTech FT550 B,Per FuelTech harness service terminal,Per family,Per family,As supplied,1,PARTLY_FROZEN,Freeze purchasable service parts if bare-harness build
+X03,ECUMASTER PMU16 39-way,Per official PMU16 connector family,PMU16 device,By wire range,By family,By family,As required,1,IDENTIFIED_FAMILY_PN_OPEN,YES
+X10,OEM CKP,Match 32313-01A sensor,Sensor body,TBD,TBD,TBD,Heat/strain protection,1,PHYSICAL_ID_REQUIRED,YES
+X11,OEM TPS,Match 27975-01 TPS,Sensor body,TBD,TBD,TBD,As required,1,PHYSICAL_ID_REQUIRED,YES
+X12,OEM MAP,Match 32416-10 MAP,Sensor body,TBD,TBD,TBD,As required,1,PHYSICAL_ID_REQUIRED,YES
+X13,OEM ECT,Match 32315-01 ECT,Sensor body,TBD,TBD,TBD,Heat protection if needed,1,PHYSICAL_ID_REQUIRED,YES
+X14,OEM IAT,Match 27388-01 IAT,Sensor body,TBD,TBD,TBD,As required,1,PHYSICAL_ID_REQUIRED,YES
+X15,OEM VSS,Match 74402-05B VSS,Sensor body,TBD,TBD,TBD,As required,1,PHYSICAL_ID_REQUIRED,YES
+X20,Front injector,Match 27772-06 injector,Injector body,TBD,TBD,TBD,Heat boot as required,1,PHYSICAL_ID_REQUIRED,YES
+X21,Rear injector,Match 27772-06 injector,Injector body,TBD,TBD,TBD,Heat boot as required,1,PHYSICAL_ID_REQUIRED,YES
+X22,Front coil,Match 32477-01A two-terminal coil,Coil body,TBD,TBD,TBD,Heat boot as required,1,PHYSICAL_ID_REQUIRED,YES
+X23,Rear coil,Match 32477-01A two-terminal coil,Coil body,TBD,TBD,TBD,Heat boot as required,1,PHYSICAL_ID_REQUIRED,YES
+X30,Primary fuel pump,Selected pump connector,Selected pump,TBD,TBD,TBD,As required,1,DEVICE_SELECTION_GATED,YES
+X32,Radiator fan 1,Selected fan connector,Selected fan,TBD,TBD,TBD,As required,1,DEVICE_SELECTION_GATED,YES
+X34,Charge-cooler pump,Selected pump connector,Selected pump,TBD,TBD,TBD,As required,1,DNP_OR_DEVICE_SELECTION_GATED,IF FITTED
+X40,J-P01 positive junction,Selected insulated junction,NA,Stud/ring terminal sized to cable,NA,NA,Insulating cover,1,HARDWARE_SELECTION_OPEN,YES
+X41,J-P02 ground star,Selected ground junction/engine star,NA,Ring terminal sized to cable,NA,NA,Protection boot as needed,1,HARDWARE_SELECTION_OPEN,YES
+X50,Service/logger connector,Deutsch DTM/DT or selected sealed family,Mating service lead,By wire range,Per family,Per family,Boot optional,1,FAMILY_TO_FREEZE,YES
+X51,CAN service connector,Sealed 4-way preferred,Mating diagnostic lead,By wire range,Per family,Per family,Cap required,1,FAMILY_TO_FREEZE,YES
+X60,SparkPRO-2 ECU-side,Use supplied SparkPRO harness connector or exact service kit,SparkPRO-2,Per FuelTech,Per FuelTech,Per FuelTech,As supplied,1,PARTLY_FROZEN,Exact bare connector service kit if not using supplied harness
+X61,SparkPRO-2 coil-side/interface,Selected sealed service connector,Mating engine-side connector,By 1.0mm2 range,Per family,Per family,Heat boot if required,1,SELECT_FAMILY,YES
+X62,Injector ECU-side junction,Selected keyed sealed 4-way minimum,Mating link/P&H branch,By 0.5mm2 range,Per family,Per family,As required,1,SELECT_FAMILY,YES
+X63,Injector engine-side junction,Selected keyed sealed 4-way minimum,Mating injector branch,By 0.5-1.0mm2 range,Per family,Per family,As required,1,SELECT_FAMILY,YES
+X64,Peak Hold input,Selected sealed connector,Peak Hold module,Per selected module,Per family,Per family,As required,1,DNP_OR_SELECT,IF FITTED
+X65,Peak Hold output,Selected sealed connector,Peak Hold module,Per selected module,Per family,Per family,As required,1,DNP_OR_SELECT,IF FITTED
+X70,Two-Step relay sub-harness,Sealed relay holder/sub-harness connector,Main harness,0.35-0.5mm2 contacts,Per family,Per family,Sealed relay holder,1,PROPOSE_BY_MANUFACTURER,YES
+X71,Clutch switch service break,Deutsch DTM04-2P,Deutsch DTM06-2S,TE 0462-201-20141 socket plus matching size-20 pin,Integral DTM sealing,Per DTM,Optional boot,1,BASELINE_FROZEN,Freeze matching pin PN and final orientation
+X72,Optional clutch Hall sensor,Per selected Honeywell RTY variant,RTY050LVNAX,Per sensor kit,Per sensor kit,Per sensor kit,As supplied,1,OPTIONAL_VERIFY,IF FITTED
