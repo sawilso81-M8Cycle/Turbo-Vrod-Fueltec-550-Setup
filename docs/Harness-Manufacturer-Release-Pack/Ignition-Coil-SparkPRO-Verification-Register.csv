@@ -1,0 +1,20 @@
+Test_ID,Category,Test,Required_Result,Evidence,Status
+IGN-001,Identification,Confirm front/rear coil part numbers and physical condition,Retained coils positively identified and serviceable,Inspection/photo,NOT_RUN
+IGN-002,Resistance,Measure front coil primary resistance,Recorded at known ambient temperature and plausible,Resistance record,NOT_RUN
+IGN-003,Resistance,Measure rear coil primary resistance,Recorded at known ambient temperature and plausible,Resistance record,NOT_RUN
+IGN-004,Comparison,Compare front/rear primary resistance,No unexplained mismatch outside accepted tolerance,Comparison record,NOT_RUN
+IGN-005,Mapping,Verify FT550 A8 to SparkPRO CH1 to front coil,Continuity and channel identity correct,Pinout/continuity report,NOT_RUN
+IGN-006,Mapping,Verify FT550 A9 to SparkPRO CH2 to rear coil,Continuity and channel identity correct,Pinout/continuity report,NOT_RUN
+IGN-007,Grounding,Verify SparkPRO ground paths,Low-resistance dedicated EPM star return with no sensor-ground contamination,Voltage-drop/continuity report,NOT_RUN
+IGN-008,Supply,Verify B40 protected +12V supply,Correct polarity/protection and no unintended shared noisy branch,Powered bench test,NOT_RUN
+IGN-009,Current Ramp,Capture front coil current versus dwell,Waveform recorded over conservative candidate dwell range,Scope/current capture,NOT_RUN
+IGN-010,Current Ramp,Capture rear coil current versus dwell,Waveform recorded over conservative candidate dwell range,Scope/current capture,NOT_RUN
+IGN-011,Saturation,Identify useful dwell region,No dwell increase beyond point of diminishing current benefit/thermal penalty,Engineering review,NOT_RUN
+IGN-012,Thermal,Repeated SparkPRO/coil operation,No abnormal SparkPRO or coil heating at approved dwell,Thermal record,NOT_RUN
+IGN-013,Trigger Integrity,Observe CKP/CAM with ignition active,No ignition-induced sync dropout/noise causing unstable trigger decoding,Scope/log,NOT_RUN
+IGN-014,Cranking,Crank test with spark enabled,Stable RPM/sync and correct front/rear firing order,FTManager/log/spark test,NOT_RUN
+IGN-015,First Idle,Initial combustion/idle ignition validation,No persistent misfire sync loss or abnormal current/temperature,FTManager/log/inspection,NOT_RUN
+IGN-016,B40 Sizing,Calculate worst credible two-coil supply load,B40 conductor/terminal/protection margin demonstrated,Calculation record,NOT_RUN
+IGN-017,B40 Drop,Measure installed ignition supply voltage drop,Within approved project target at representative load,Voltage-drop report,NOT_RUN
+IGN-018,Protection,Validate ignition branch fault handling,Protection trips safely without damaging conductor/connector,Safely simulated fault test,NOT_RUN
+IGN-REL,Release,Ignition first-start release,IGN-001 through applicable IGN-018 PASS and dwell/current/B40 decisions frozen,Release record,NOT_READY
