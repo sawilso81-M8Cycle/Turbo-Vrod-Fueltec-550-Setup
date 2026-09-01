@@ -1,0 +1,26 @@
+Test_ID,Area,Stimulus,Expected_Result,Evidence,Blocks_Release
+BT-001,Power,Apply PMU main and switched power,Safe boot no unexpected outputs,PMU log/photo,YES
+BT-002,Master Input,Toggle A1 master with CAN healthy/absent,Master input authoritative,PMU log,YES
+BT-003,Kill Priority,Assert A3 while O1/O6 active,O1/O6 off regardless of CAN,PMU log/scope,YES
+BT-004,Fuel Pump Prime,Master rising no RPM/start,O1 prime then off,Output log/current trace,YES
+BT-005,Fuel Pump Start,Assert A2 start,O1 on during start request,Output log,YES
+BT-006,Fuel Pump Run,Valid RPM >400 release start,O1 remains on,Output/CAN log,YES
+BT-007,CAN Loss,Stop RPM frame while running,RPM invalid then documented O1 fallback,PMU log,YES
+BT-008,CAN Recovery,Restore valid RPM traffic,Validity and run logic recover deterministically,PMU log,YES
+BT-009,Fan Thermostat,Sweep ECT across thresholds,O3 hysteresis correct,PMU log,YES
+BT-010,Fan Override,Assert A4 with low ECT,O3 on independently of CAN,PMU log,YES
+BT-011,ECT Loss,Stop 0x600,O3 conservative on plus warning,PMU log,YES
+BT-012,Fan2,Simulate thresholds/faults,O4 selected strategy correct,PMU log,IF FITTED
+BT-013,Charge Cooler,Run/CAN loss/service mode,O5 stable intended behavior,PMU log,IF FITTED
+BT-014,Boost Enable,Healthy RPM MAP CAN,O6 only on when all valid,PMU log,YES
+BT-015,Boost CAN Loss,Remove CAN/MAP while O6 on,O6 off minimum mechanical boost,PMU log/scope,YES
+BT-016,Warning Aggregation,Inject each warning cause,O8 aggregates without false clear,PMU log,YES
+BT-017,Service Feed,Toggle master/service,O10 follows frozen logic,PMU log,YES
+BT-018,Overcurrent,Raise test-load current above threshold,Target output protects fault contained,Current trace/PMU log,YES
+BT-019,Retry,Create transient overcurrent,Retry/latched behavior deterministic,PMU log,YES
+BT-020,Brownout,Controlled supply dip,No unsafe pulse safe recovery,Scope/PMU log,YES
+BT-021,CAN Open,Open H or L at X51,Validity expires fallbacks occur,PMU log,YES
+BT-022,Termination Fault,Remove one termination,Comms failure handled as invalid,PMU/CAN log,YES
+BT-023,Plausibility,Send impossible decoded values,Corresponding VALID false and fallback,PMU log,YES
+BT-024,Source Filter,Send frames from wrong arbitration ID,Frames ignored validity not asserted,CAN/PMU log,YES
+BT-025,Combined Fault,Assert kill and remove CAN together,Kill wins O1/O6 off immediately,Scope/PMU log,YES
