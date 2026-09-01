@@ -29,12 +29,12 @@
                     |                                |
 PMU O11 ----------->| K1 coil +                     |
 J-P02 GND ----------| K1 coil -                     |
-                    |   D1 flyback diode across K1  |
-                    |   cathode to coil +            |
-                    |   anode to ground              |
+                    | D1 bidirectional TVS /        |
+                    | verified suppression network  |
+                    | across relay coil             |
                     |                                |
 FT550 A21 ----------| K1 NO contact                 |
-GROUND -------------| K1 contact common             |
+CONTACT GND --------| K1 contact common             |
                     +--------------------------------+
                                   |
                                   | contact closes to ground
@@ -68,16 +68,22 @@ NORTH AMERICAN PINOUT
 
 K1: TE Connectivity 1393280-5, Micro Relay K, 12 VDC coil, SPST-NO, PCB through-hole.
 
-X70 shall be a sealed/potted small interface PCB, not a loose relay/socket assembly.
+X70 is a small sealed/pottable manufactured interface PCB, not a loose relay/socket assembly.
 
 | X70 cavity | Connection | Function |
 |---|---|---|
 | 1 | PMU O11 pin 3 | K1 coil positive |
 | 2 | J-P02 ground | K1 coil return |
 | 3 | FT550 A21 White #2 | switched Two-Step input |
-| 4 | ground | dry-contact ground source |
+| 4 | contact ground | dry-contact ground source |
 
-D1 flyback suppression is installed across K1 coil with cathode toward cavity 1 and anode toward cavity 2.
+Suppression is fitted only across the relay coil. Production preference is a bidirectional TVS or verified diode/zener network that limits the O11 turn-off transient while preserving rapid relay release. Exact D1 is frozen only after PMU O11 transient/clamp compatibility is verified.
+
+Do not use a plain flyback diode as the production default without measured acceptance of its increased release time.
+
+The PCB includes TP1 O11_CMD, TP2 PWR_GND, TP3 FT_A21 and TP4 CONTACT_GND.
+
+Full PCB requirements and tests are defined in `docs/Launch-Control/X70-Two-Step-Interface-PCB-Spec.md` and `docs/Launch-Control/X70-PCB-Bench-Test-Record.csv`.
 
 ## X71 clutch switch service break
 
@@ -120,8 +126,8 @@ Nominal output is approximately 0.5 V to 4.5 V ratiometric over the configured 5
 - O11 power loss: K1 releases; FT550 A21 becomes open; Two-Step request OFF.
 - X70 relay coil open: request cannot activate.
 - X70 contact open: request cannot activate.
-- D1 open: suppression lost but Two-Step request remains mechanically fail-off; repair before release.
-- D1 short: O11 output should fault/current-limit; K1 cannot energise; Two-Step remains OFF.
+- D1/suppression open: suppression is lost but the dry contact still fails open; board is not release-eligible until repaired.
+- D1/suppression short: O11 should current-limit/fault and K1 cannot energise; Two-Step remains OFF.
 - A6 invalid: PMU request OFF.
 - A7 invalid: position refinement disabled; A6 remains authoritative if independently valid.
 - Kill/master event: O11 OFF immediately.
@@ -130,15 +136,18 @@ Nominal output is approximately 0.5 V to 4.5 V ratiometric over the configured 5
 
 1. Prove A6 polarity and debounce statically.
 2. Verify O11 never applies +12 V to FT550 A21.
-3. Measure X70 operate/release timing on the assembled PCB.
-4. Confirm A21 is open when O11 is OFF and near ground only when O11 is ON.
-5. Verify kill/master removal releases X70 regardless of software launch state.
-6. Verify X71 retention/sealing and full-lock handlebar strain relief.
-7. Calibrate A7 pulled/bite/released regions if the Hall sensor is fitted.
-8. Perform stationary Two-Step validation before any launch test.
+3. Complete X70-PCB-001 through X70-PCB-008 on the assembled interface PCB.
+4. Measure X70 contact release timing with the actual production suppression component fitted.
+5. Confirm A21 is open when O11 is OFF and near ground only when O11 is ON.
+6. Verify kill/master removal releases X70 regardless of software launch state.
+7. Verify X71 retention/sealing and full-lock handlebar strain relief.
+8. Calibrate A7 pulled/bite/released regions if the Hall sensor is fitted.
+9. Perform stationary Two-Step validation before any launch test.
 
 ## Production release
 
 See `docs/Launch-Control/Two-Step-Production-Loom-Release.md`.
+
+The X70 design state is `X70_PCB_ELECTRICAL_SPEC_FROZEN` until the KiCad schematic/layout and prototype validation gates are complete.
 
 The loom state remains `TWO_STEP_CLUTCH_NOT_VALIDATED` until all production and functional tests pass.
