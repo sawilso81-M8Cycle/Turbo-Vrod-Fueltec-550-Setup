@@ -1,0 +1,19 @@
+Test_ID,Phase,Test,Required_Result,Abort_On,Evidence,Status
+TS-001,Bench,PMU A6 clutch discrete state,Stable correct active/released state with debounce,Chatter/inverted logic/unreliable state,PMU log,NOT_RUN
+TS-002,Bench,Optional A7 clutch position sweep,Monotonic repeatable range with valid endpoints,Dropout/non-monotonic/out-of-range,PMU log+calibration record,NOT_RUN
+TS-003,Bench,A6/A7 plausibility logic,Contradictory states set fault and disarm Two-Step,Two-Step remains permitted during contradiction,PMU fault-injection log,NOT_RUN
+TS-004,Bench,O11 request polarity,O11 OFF is electrically inactive at FT550 and ON produces only intended request,Inverted/default-active request,Voltage/current measurement+FTManager input state,NOT_RUN
+TS-005,Bench,Kill/master precedence,Kill or master-off forces O11 OFF immediately,Two-Step request persists,PMU log,NOT_RUN
+TS-006,Bench,Invalid gear/speed/RPM/TPS prerequisite,Any invalid required prerequisite disarms O11,Authority increases on invalid data,PMU simulated-input log,NOT_RUN
+TS-007,Bench,Post-launch lockout,Re-activation blocked after simulated launch until reset criteria met,Two-Step can re-arm unexpectedly,PMU log,NOT_RUN
+TS-008,Static,FT550 white-input setup,Selected FT550 input changes state correctly from PMU O11 and does not conflict with other sensor channels,Wrong input/cross-channel effect,FTManager diagnostic screenshot/log,NOT_RUN
+TS-009,Static,Two-Step engine-off functional check,FT550 reports intended 2-step state from launch permissive without unintended output activity,Unexpected injector/ignition/boost action,FTManager+PMU log,NOT_RUN
+TS-010,Static,Clutch-held arming sequence,Launch arm + clutch held + valid prerequisites produces TWO_STEP_PERMISSIVE,Unexpected activation or missing prerequisite,PMU+FTManager log,NOT_RUN
+TS-011,Static,Clutch release detection,Release transition removes request and latches launch event cleanly,Delayed/stuck request or repeated event,PMU log,NOT_RUN
+TS-012,Static,Timeout/rejection logic,Maximum hold/rejection logic prevents indefinite or post-launch Two-Step operation,Two-Step remains indefinitely available,PMU+FTManager log,NOT_RUN
+TS-013,Controlled engine test,Low-RPM Two-Step functional validation,Stable controlled limiter behaviour at conservative test setting,Runaway RPM/misfire anomaly/critical pressure or lambda issue,FTManager+PMU log,NOT_RUN
+TS-014,Controlled engine test,Clutch-release transition under running condition,Clean release from Two-Step with no stuck limiter or unsafe boost command,Stuck limiter/boost authority increase/fault,FTManager+PMU log,NOT_RUN
+TS-015,Track low-energy,First short clutch launch,Launch event detected once with correct O11 release and conservative authority,Unexpected wheelspin/lift/boost/request persistence,Track+FTManager+PMU log,NOT_RUN
+TS-016,Track progression,Repeat launch consistency,Clutch event timing and launch RPM behaviour are repeatable within approved envelope,Unexplained variance or fault,Multiple run overlays,NOT_RUN
+TS-017,Track fail-safe,Launch abort and kill proof,Abort/kill immediately removes Two-Step and propulsion enhancement,Any persistence,Track test log,NOT_RUN
+TS-018,Release,Two-Step clutch release gate,All required TS tests PASS and manifest updated,Any open critical anomaly,Revision-controlled release record,TWO_STEP_CLUTCH_NOT_VALIDATED
