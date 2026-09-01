@@ -8,7 +8,7 @@ B06,IAT signal/return,2x0.35,500,600,MEDIUM,Heat protect if required
 B07,VSS supply/signal/ground,3x0.35,950,1100,LOW,Rearward route highly installation dependent
 B08,Injector driven/control branch,2x0.50 control plus supply per B39,450,550,MEDIUM,Includes front/rear breakout allowance
 B09,Coil primary driven branch,2x1.00,450,550,MEDIUM,SparkPRO to coils; short as practical
-B10,Primary fuel pump feed,2.0 provisional,700,850,LOW,Freeze after measured pump steady/inrush current
+B10,Primary fuel pump feed,2.5 MINIMUM,700,850,MEDIUM,Design baseline allows up to approximately 30A; verify actual steady/inrush current and terminal/PMU margin; no downsizing below 2.5mm2
 B11,Radiator fan 1 feed,2.5 provisional,950,1100,LOW,Freeze after measured fan steady/inrush current
 B12,Charge/intercooler pump feed if fitted,2.0 provisional,850,1000,LOW,DNP if not fitted; measure pump current
 B13,Service/logger feed and service branch,0.75 power plus 0.35 signals,500,650,MEDIUM,Accessible service location assumed
