@@ -1,0 +1,18 @@
+Verify_ID,Area,Item,Current_State,Required_Evidence,Blocks_Release
+V182,TRACK VALIDATION,Launch/track framework,RESOLVED TEST FRAMEWORK,Launch-Track-Release.md plus Launch-Track-Test-Matrix.csv define LT-001 through LT-015,NO
+V183,TRACK VALIDATION,Mechanical/chassis release,WAITING ON VEHICLE VALIDATION RELEASE,Execute LT-001 before launch testing,YES
+V184,TRACK VALIDATION,Safety interlocks and abort controls,WAITING ON VEHICLE VALIDATION RELEASE,Execute LT-002 and retain input/PMU logs,YES
+V185,TRACK VALIDATION,Launch arming prerequisites,WAITING ON SAFETY PASS,Execute LT-003 and freeze build-specific logical prerequisite expression,YES
+V186,TRACK VALIDATION,Launch RPM baseline,WAITING ON LT-001 THROUGH LT-003,Execute LT-004 with minimal launch authority,YES
+V187,TRACK VALIDATION,Launch boost authority,WAITING ON LAUNCH RPM PASS,Execute LT-005 starting from lowest authorised boost authority,YES
+V188,TRACK VALIDATION,Wheel-speed/slip validation,WAITING ON VEHICLE VALIDATION RELEASE,Execute LT-006; stale/invalid wheel-speed must not increase authority,YES
+V189,TRACK VALIDATION,Front-wheel lift handling,OPTIONAL/CONFIG GATED,Execute LT-007 if lift control is used; independently validate signal and bounded response,IF USED
+V190,TRACK VALIDATION,Shift strategy validation,WAITING ON BASIC LAUNCH PASS,Execute LT-008 for each intended shift strategy,YES
+V191,TRACK VALIDATION,Short launch progression,WAITING ON LT-004 THROUGH LT-008,Execute LT-009 staged distances/load boundaries with review between stages,YES
+V192,TRACK VALIDATION,Brake/kill response under motion,WAITING ON LOW-ENERGY TRACK SETUP,Execute LT-010 under safe low-energy condition,YES
+V193,TRACK VALIDATION,Progressive partial passes,WAITING ON SHORT-LAUNCH PASS,Execute LT-011 and review every pass before progression,YES
+V194,TRACK VALIDATION,First full-pass validation,WAITING ON PARTIAL-PASS REPEATABILITY,Execute LT-012 as validation event within verified envelope,YES
+V195,TRACK VALIDATION,Repeatability and heat-soak,WAITING ON FIRST FULL PASS,Execute LT-013 and compare successive passes for drift,YES
+V196,TRACK VALIDATION,Post-session inspection,REQUIRED EACH SESSION,Execute LT-014 after every validation session,YES
+V197,TRACK VALIDATION,Competition configuration freeze,WAITING ON ALL TRACK TESTS,Execute LT-015 freezing ECU PMU boost launch traction shift hardware and wheel-scaling revisions,YES
+V198,TRACK VALIDATION,Competition release state,LAUNCH_TRACK_VALIDATION_ONLY,Promote to COMPETITION_RELEASED only when mandatory LT tests PASS and final release record is approved,YES
