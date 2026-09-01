@@ -1,0 +1,9 @@
+Output,Function,Primary_Inputs,CAN_Inputs,Normal_State,CAN_Loss_Fallback,Kill_Response,Status
+O1,Primary fuel pump,MASTER_ENABLE;START_REQUEST;KILL_REQUEST,FT_RPM/VALID,Prime then ON during start/running,Hardwired-safe continuation then OFF after grace,OFF,FROZEN LOGIC / CURRENT TEST GATED
+O2,Secondary fuel pump,MASTER_ENABLE;KILL_REQUEST,FT_RPM;FT_MAP,Staged if fitted,OFF,OFF,DNP/CONFIG GATED
+O3,Radiator fan 1,MASTER_ENABLE;FAN_OVERRIDE,FT_ECT/VALID,Thermostatic hysteresis,Conservative ON,PROJECT DECISION whether stay ON,FROZEN LOGIC / TEMP TEST GATED
+O4,Radiator fan 2,MASTER_ENABLE;FAN_OVERRIDE,FT_ECT/VALID,Staggered thermostatic if fitted,Conservative thermal strategy,PROJECT DECISION,DNP/CONFIG GATED
+O5,Charge-cooler pump,MASTER_ENABLE;SERVICE_MODE,FT_RPM/VALID,ON engine running; service bleed allowed,Conservative continuation / no chatter,PROJECT DECISION,IF FITTED
+O6,Boost solenoid supply,MASTER_ENABLE;KILL_REQUEST,FT_RPM;FT_MAP;CAN_HEALTH,ON only when healthy/running,OFF to minimum mechanical boost,OFF,FROZEN SAFETY INTENT
+O8,Warning lamp,MASTER_ENABLE,CAN health; pressure validity; ECT validity; PMU faults,OFF unless warning cause,ON fault indication,May remain ON,FROZEN AGGREGATION / THRESHOLDS GATED
+O10,Logger/service feed,MASTER_ENABLE;SERVICE_MODE,None,ON armed or service mode,Unaffected by CAN,PROJECT DECISION,FROZEN LOGIC
