@@ -1,0 +1,16 @@
+Gate_ID,Class,System,Requirement,Current_State,Release_Blocker,Required_Evidence,Final_Disposition
+BG-001,G0/G1,Fuel Pump,Verify actual pump steady/inrush/thermal performance with 4.0mm2 feed+return,OPEN,YES,Pump PN + current/inrush + voltage drop + terminal temperature,DIRECT_PMU_DRIVE_APPROVED or EXTERNAL_POWER_STAGE_REQUIRED
+BG-002,G1,Cooling/Fuel/Power,Close B11 B12 B15 B39 B40 current and protection,OPEN,YES,Measured/datasheet currents + voltage drop + protection coordination,PASS
+BG-003,G1,PMU16,Freeze correct Sicma terminal per used cavity/conductor,PARTIAL,YES,Terminal PN/cavity/wire-size/current audit,PASS
+BG-004,G1,FT550,Freeze ECU connector build method,OPEN,YES,FuelTech supplied harness or official FT550 Connector Kit decision,PASS
+BG-005,G1,OEM Sensors,Physically identify X10-X23 mating connectors or repair pigtails,PARTIAL,YES,Photos/markings/cavity count/keying/continuity,PASS
+BG-006,G0/G1,Fuel Pump,Freeze sealed 4.0mm2-capable pump connector and contacts,OPEN,YES,Connector/terminal datasheets + verified pump current,PASS
+BG-007,G1,Service/CAN,Freeze X50/X51 connector kits and CAN topology,OPEN,YES,Housing/contact/seal/cap PNs + topology check,PASS
+BG-008,G0/G1,Two-Step,Freeze X70 sealed relay holder and suppression,PARTIAL,YES,Relay/holder/suppression PNs + powered truth-table/release test,PASS
+BG-009,G0/G1,Injectors,Close injector impedance and direct-drive vs Peak-Hold architecture,OPEN,YES,Injector PN/impedance/current + FT550 compatibility evidence,DIRECT_DRIVE_APPROVED or PEAK_HOLD_REQUIRED
+BG-010,G2,Packaging,Freeze major component mounting positions,OPEN,YES,Installed photographs + D00-D10 datum positions,PASS
+BG-011,G2,Dimensions,Measure B01-B44 and disposition B20-B31,OPEN,YES,Completed dimensional worksheet,PASS
+BG-012,G0/G2,Movement,Verify steering and suspension branch movement,OPEN,YES,Full-lock/full-travel physical test,PASS
+BG-013,G0/G2,Thermal,Verify turbo/exhaust clearances and heat protection,OPEN,YES,Measured clearance + protection length + installed photos,PASS
+BG-014,G2,Formboard,Release populated 1:1 formboard,OPEN,YES,Golden Harness accepted dimensions,PASS
+BG-015,G1,Manufacturer,Complete DFM review and approve substitutions,OPEN,YES,Written manufacturer DFM response/deviation list,PASS
