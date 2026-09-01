@@ -1,0 +1,14 @@
+Test_ID,Phase,Test,Required_Result,Abort_On,Evidence,Status
+WG-001,Hardware,Identify wastegate/spring/solenoid/plumbing,All hardware and porting documented,Unknown or ambiguous hardware state,Photo+part-number+plumbing record,NOT_RUN
+WG-002,Static,Pressure-test actuator,Repeatable movement with no sticking/leakage,Sticking; leakage; non-repeatability,Pressure-test record,NOT_RUN
+WG-003,Pneumatic,Verify solenoid port states,O6 OFF equals minimum mechanical boost path,Any de-energised state that can increase boost,Pressure/plumbing proof,NOT_RUN
+WG-004,Electrical,Verify O6 fail-safe polarity,O6 remains OFF on CAN loss kill invalid MAP and reset,Any unsafe energisation,PMU log+electrical test,NOT_RUN
+WG-005,Protection,MAP/pressure/thermal protection readiness,Build-specific limits and fallbacks configured/tested,Missing or unverified critical protection,Configuration record,NOT_RUN
+WG-006,Dynamic,First spring-pressure event,Controlled minimal-energy boost event within authorised envelope,Unexpected boost rise; pressure/lambda/thermal/electrical anomaly,FTManager+PMU log,NOT_RUN
+WG-007,Dynamic,Spring-pressure repeatability,Comparable runs produce repeatable boost behaviour,Large unexplained variation,Overlay/log review,NOT_RUN
+WG-008,Control authority,Boost-creep assessment,No unresolved creep or inadequate wastegate authority,Boost continues rising beyond authorised baseline,MAP/RPM log,NOT_RUN
+WG-009,Engine systems,Fuel/oil/lambda/thermal validation,All critical engine-support channels remain credible,Pressure loss; unsafe mixture; thermal anomaly,FTManager log,NOT_RUN
+WG-010,Fail-safe,Lowest-energy live O6 removal test,System trends toward minimum mechanical boost state,Unsafe transient or no reduction in control authority,PMU+MAP log,NOT_RUN
+WG-011,Post-session,Mechanical/thermal inspection,No hose/connector/fastener/heat damage or leaks,Any damage/leak/abnormal heating,Inspection record,NOT_RUN
+WG-012,Analysis,Freeze spring-pressure baseline,Baseline record complete and revision controlled,Open unexplained anomaly,SPRING_PRESSURE_BASELINE record,NOT_RUN
+WG-REL,Release,Wastegate baseline release,Required WG tests PASS; closed-loop remains disabled,Any open critical issue,Release record,SPRING_PRESSURE_ONLY
