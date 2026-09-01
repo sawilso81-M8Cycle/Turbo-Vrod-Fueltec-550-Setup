@@ -1,0 +1,27 @@
+Gate_ID,Category,Requirement,Evidence,Status,Release_Blocker
+FP-001,Config,Harness revision identified,Build record,NOT_RUN,YES
+FP-002,Config,FTManager/PMU/SparkPRO revisions recorded,Config record,NOT_RUN,YES
+FP-003,Unpowered,100 percent continuity and isolation complete,Harness test report,NOT_RUN,YES
+FP-004,Unpowered,CAN polarity and sensor-ground topology correct,Continuity/topology record,NOT_RUN,YES
+FP-005,Unpowered,FT550 A21 isolated from +12V and X70 open inactive,Powered/unpowered relay test,NOT_RUN,YES
+FP-006,First power,PMU and FT550 boot with loads inhibited,Power-on log,NOT_RUN,YES
+FP-007,First power,No abnormal current/heat/PMU faults,Current/temp inspection,NOT_RUN,YES
+FP-008,References,5V reference and sensor grounds stable,DMM/scope record,NOT_RUN,YES
+FP-009,Controls,Master/start/kill/service hardwired controls validated,PMU test record,NOT_RUN,YES
+FP-010,Controls,O6 boost inhibited and O11 Two-Step state correct,PMU/FT550 log,NOT_RUN,YES
+FP-011,Fuel pump,Pump architecture decision accepted,Current/inrush/terminal evidence,NOT_RUN,YES
+FP-012,Fuel pump,4mm2 feed/return and protection verified,Physical/electrical inspection,NOT_RUN,YES
+FP-013,Injectors,Direct-drive or Peak-Hold decision accepted,Injector decision register,NOT_RUN,YES
+FP-014,Trigger,Dry-crank CKP/CAM waveform and sync accepted,Scope+FT550 log,NOT_RUN,YES
+FP-015,Trigger,Starter/ignition noise does not corrupt sync,Scope+log,NOT_RUN,YES
+FP-016,Fuel,Fuel prime/pressure test leak-free,Pressure/leak inspection,NOT_RUN,YES
+FP-017,Fuel,Pump current and installed voltage drop accepted,Current/voltage record,NOT_RUN,YES
+FP-018,Spark,SparkPRO/coil mapping and polarity accepted,Ignition verification record,NOT_RUN,YES
+FP-019,Spark,Commissioning dwell/current/thermal behaviour accepted,Scope/current/temp record,NOT_RUN,YES
+FP-020,Sensors,TPS/MAP/ECT/IAT/pressure/VSS plausibility accepted,FTManager+reference checks,NOT_RUN,YES
+FP-021,CAN,CAN health stable at first-power/dry-crank states,CAN log,NOT_RUN,YES
+FP-022,Limits,Boost/launch/Two-Step locked to commissioning state,Config screenshots/export,NOT_RUN,YES
+FP-023,Limits,First-start logging channels enabled,Logger configuration,NOT_RUN,YES
+FP-024,Safety,Immediate kill path proven under powered conditions,Functional test,NOT_RUN,YES
+FP-025,Release,All mandatory FP gates PASS and no open G0/G1 blockers,Signoff record,NOT_RUN,YES
+FP-REL,Release,First-start release state,FIRST_POWER_FIRST_START_MASTER_GATE_RELEASED,NOT_RUN,FIRST_START_NOT_AUTHORISED
