@@ -1,0 +1,45 @@
+Branch_ID,Function,Current_Estimate_mm,Current_First_Cut_mm,Measured_Routed_mm,Required_Service_Loop_mm,Final_Finished_mm,Wire_mm2,Heat_Protection_mm,Loom_or_Boot,Movement_Check,Tolerance_mm,Disposition
+B01,FT550 to engine sensor spine,750,900,,,,mixed 0.35,,,,,MEASURE
+B02,CKP shielded twisted pair,450,550,,,,2x0.35 shielded,,,,,MEASURE
+B03,TPS 5V/signal/return,300,400,,,,3x0.35,,,,,MEASURE
+B04,MAP 5V/signal/return,350,450,,,,3x0.35,,,,,MEASURE
+B05,ECT signal/return,450,550,,,,2x0.35,,,,,MEASURE
+B06,IAT signal/return,500,600,,,,2x0.35,,,,,MEASURE
+B07,VSS supply/signal/ground,950,1100,,,,3x0.35,,,REQUIRED,,MEASURE
+B08,Injector driven/control branch,450,550,,,,2x0.50 control,,,,,MEASURE
+B09,Coil primary driven branch,450,550,,,,2x1.00,,,,,MEASURE
+B10,Primary fuel pump feed,700,850,,,,2.0 provisional,,,,,MEASURE+CURRENT
+B11,Radiator fan 1 feed,950,1100,,,,2.5 provisional,,,,,MEASURE+CURRENT
+B12,Charge/intercooler pump feed if fitted,850,1000,,,,2.0 provisional,,,,,DNP_OR_MEASURE+CURRENT
+B13,Service/logger feed and branch,500,650,,,,0.75 power + 0.35 signals,,,,,MEASURE
+B14,FT550-PMU CAN twisted pair,500,650,,,,2x0.35 twisted,,,,,MEASURE
+B15,Main battery to PMU stud,400,500,,,,10.0 provisional,,,,,MEASURE+LOAD_CALC
+B16,Power-ground branches,300-700,850 max,,,,load-specific,,,,,DEFINE_EACH_RETURN
+B17,Fuel pressure sensor,550,650,,,,3x0.35,,,,,MEASURE
+B18,Engine oil pressure sensor,600,700,,,,3x0.35,,,,,MEASURE
+B19,Post-intercooler IAT,750,900,,,,2x0.35,,,,,MEASURE
+B20,Expansion sensor 1,TBD,TBD,,,,0.35 typical,,,,,DNP_OR_DEFINE
+B21,Expansion sensor 2,TBD,TBD,,,,0.35 typical,,,,,DNP_OR_DEFINE
+B22,Expansion sensor 3,TBD,TBD,,,,0.35 typical,,,,,DNP_OR_DEFINE
+B23,Expansion sensor 4,TBD,TBD,,,,0.35 typical,,,,,DNP_OR_DEFINE
+B24,Expansion sensor 5,TBD,TBD,,,,0.35 typical,,,,,DNP_OR_DEFINE
+B25,Expansion sensor 6,TBD,TBD,,,,0.35 typical,,,,,DNP_OR_DEFINE
+B26,Expansion sensor 7,TBD,TBD,,,,0.35 typical,,,,,DNP_OR_DEFINE
+B27,Expansion sensor 8,TBD,TBD,,,,0.35 typical,,,,,DNP_OR_DEFINE
+B28,Expansion sensor 9,TBD,TBD,,,,0.35 typical,,,,,DNP_OR_DEFINE
+B29,Expansion sensor 10,TBD,TBD,,,,0.35 typical,,,,,DNP_OR_DEFINE
+B30,Expansion sensor 11,TBD,TBD,,,,0.35 typical,,,,,DNP_OR_DEFINE
+B31,Expansion sensor 12,TBD,TBD,,,,0.35 typical,,,,,DNP_OR_DEFINE
+B32,FT550 A8/A9 to SparkPRO command,450,550,,,,2x0.50,,,,,MEASURE
+B33,SparkPRO power/grounds,400,500,,,,2x1.00 ground + supply,,,,,MEASURE
+B34,SparkPRO driven coil outputs,400,500,,,,2x1.00,,,,,MEASURE
+B35,FT550 A1/A2 to injector junction,350,450,,,,2x0.50,,,,,MEASURE
+B36,Direct-drive injector bypass link,150,220,,,,2x0.50,,,,,FIT_IF_APPROVED
+B37,Peak-Hold input branch if fitted,250,350,,,,2x0.50,,,,,DNP_OR_MEASURE
+B38,Peak-Hold output branch if fitted,250,350,,,,2x0.75 provisional,,,,,DNP_OR_MEASURE+CURRENT
+B39,Injector common +12V feed,500,650,,,,1.0 provisional,,,,,MEASURE+CURRENT
+B40,Ignition/coil common +12V feed,500,650,,,,1.5 provisional,,,,,MEASURE+CURRENT
+B41,OEM clutch switch to PMU A6,1200,1400,,,,2x0.35,,,REQUIRED,,MEASURE_3_STEERING_POSITIONS
+B42,Optional clutch Hall sensor,1200,1400,,,,3x0.35,,,REQUIRED,,DNP_OR_MEASURE
+B43,PMU O11 to sealed X70 relay,450,550,,,,0.50,,,,,MEASURE
+B44,X70 relay dry contact to FT550 A21,350,450,,,,0.35,,,,,MEASURE
