@@ -100,3 +100,15 @@ V098,COMMISSIONING,Post-run leak thermal and log review,WAITING ON FIRST_START_R
 V099,COMMISSIONING,Warm-idle progression,WAITING ON FIRST-RUN PASS,Execute IC-010 only after IC-001 through IC-009 PASS and first-run log review,YES
 V100,COMMISSIONING,Post-warm timing verification,WAITING ON WARM-IDLE PASS,Execute IC-011; any discrepancy reopens FS-G03,YES
 V101,COMMISSIONING,Idle commissioning release,IDLE_COMMISSIONING_ONLY,Promote to READY_FOR_NO_BOOST_LIGHT_LOAD_PREP only after required IC tests PASS with evidence; no boost/high-load authority,YES
+V102,COMMISSIONING,No-boost light-load procedure,RESOLVED TEST FRAMEWORK,No-Boost-Light-Load-Commissioning.md plus No-Boost-Light-Load-Test-Matrix.csv define LL-001 through LL-012,NO
+V103,COMMISSIONING,No-boost proof and light-load progression,WAITING ON IDLE RELEASE,Execute LL-003 through LL-006 with O6 disabled and build-specific load boundaries,YES
+V104,COMMISSIONING,Cooling/fuel validation under light load,WAITING ON LIGHT-LOAD TEST,Execute LL-007 and LL-008 with retained PMU/FTManager logs,YES
+V105,COMMISSIONING,Light-load protection/post-session review,WAITING ON LIGHT-LOAD TEST,Execute LL-009 through LL-012 before progression,YES
+V106,COMMISSIONING,No-boost light-load release,NO_BOOST_LIGHT_LOAD_ONLY,Promote to READY_FOR_WASTEGATE_BASELINE_PREP only after required LL tests PASS; O6 remains disabled,YES
+V107,BOOST COMMISSIONING,Wastegate/minimum-boost framework,RESOLVED TEST FRAMEWORK,Wastegate-Minimum-Boost-Baseline.md plus test matrix define WG-001 through WG-012,NO
+V108,BOOST COMMISSIONING,Wastegate hardware and static actuator proof,WAITING ON LIGHT-LOAD RELEASE,Execute WG-001 WG-002 and retain hardware/pressure evidence,YES
+V109,BOOST COMMISSIONING,Solenoid plumbing and O6 fail-safe polarity,WAITING ON LIGHT-LOAD RELEASE,Execute WG-003 WG-004; de-energised electrical state must equal minimum mechanical boost path,YES
+V110,BOOST COMMISSIONING,Boost protection readiness,WAITING ON WASTEGATE STATIC PASS,Execute WG-005 with build-specific MAP/fuel/oil/lambda/thermal/rev constraints,YES
+V111,BOOST COMMISSIONING,First spring-pressure event and repeatability,WAITING ON WG-001 THROUGH WG-005,Execute WG-006 WG-007 in controlled low-energy environment with full logs,YES
+V112,BOOST COMMISSIONING,Boost creep/fuel/thermal/fail-safe validation,WAITING ON FIRST SPRING-PRESSURE PASS,Execute WG-008 WG-009 WG-010; unresolved creep blocks progression,YES
+V113,BOOST COMMISSIONING,Spring-pressure baseline freeze and release,SPRING_PRESSURE_ONLY,Execute WG-011 WG-012; promote only to READY_FOR_OPEN_LOOP_BOOST_CONTROL_PREP; closed-loop remains prohibited,YES
