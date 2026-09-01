@@ -3,7 +3,7 @@ V001,FT550,FT550 switched 12V input cavity,RESOLVED A13,FuelTech PROBIKE A-conne
 V002,FT550,FT550 power ground cavities,RESOLVED B1+B2,FuelTech PROBIKE B-connector table,NO
 V003,FT550,FT550 5V reference cavity,RESOLVED A14,FuelTech PROBIKE A-connector table,NO
 V004,FT550,FT550 sensor/signal ground cavities,RESOLVED A12 and B26 available,FuelTech PROBIKE A/B connector tables; freeze final splice topology,NO
-V005,FT550,OEM MAP analogue input cavity,DESIGN RESERVED A20 White #1,Verify FTManager generic-input configuration and OEM MAP calibration,YES
+V005,FT550,OEM MAP analogue input cavity,DESIGN RESERVED A20 White #1,Verify FTManager input configuration and OEM MAP calibration,YES
 V006,FT550,Oil pressure switch digital input cavity and logic,VERIFY,Verify switch polarity and FT550 input strategy,YES
 V007,FT550,Neutral switch digital input cavity and logic,VERIFY,Verify switch polarity and FT550 input strategy,YES
 V008,FT550,Front injector output cavity,RESOLVED A1 Blue #1,FuelTech PROBIKE A-connector table; HC-008 still required for impedance/current interface,NO
@@ -64,5 +64,7 @@ V062,IGNITION,SparkPRO-2 mating housing terminal and seal part numbers,VERIFY,Us
 V063,INJECTION,Peak & Hold exact current-class/model,MEASUREMENT GATED,Close HC-008/HC-009 then select FuelTech driver current class if required,YES
 V064,INJECTION,X62-X65 physical connector family and terminal freeze,VERIFY,Select keyed sealed connectors after final direct/P&H mode conductor size and current are known,YES
 V065,CAN,X51 service connector family terminals and cap,VERIFY,Select sealed 4-way service connector and terminal set; no permanent termination,YES
-V066,CAN,Application-layer FT550-to-PMU frame definitions,VERIFY,Map only verified FT550 frame IDs/scaling into PMU Client; record timeout fallback per signal,YES
+V066,CAN,Application-layer FT550-to-PMU frame definitions,SIGNAL SET FROZEN,FT550-PMU16-Signal-Dictionary.md/csv freeze required signals use cases timeouts and fallback directions; exact IDs/scaling still verify,YES
 V067,CAN,CAN-loss fallback validation,TEST REQUIRED,Disconnect CAN during bench test and prove each PMU-dependent function enters documented safe state and recovers deterministically,YES
+V068,CAN,FT550 CAN frame ID byte/scaling extraction,VERIFY,Use FuelTech official CAN protocol or controlled FT550 bench capture correlated to FTManager values,YES
+V069,CAN,PMU Client CAN import implementation,NOT STARTED,Implement CAN-001 to CAN-010 with separate value/validity states timeout timers and plausibility checks,YES
