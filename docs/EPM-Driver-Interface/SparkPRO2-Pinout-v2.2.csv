@@ -1,0 +1,7 @@
+Pin,Function,Wire_Class_mm2,Project_Circuit,Project_Connection,Status
+1,Channel input 1,0.5,E-008,FT550 A8 Gray #1 ignition output #1,MANUFACTURER VERIFIED
+2,Power ground,1.0,EPM-GND-SP1,J-P02 engine/power ground star,MANUFACTURER VERIFIED
+3,Channel input 2,0.5,E-010,FT550 A9 Gray #2 ignition output #2,MANUFACTURER VERIFIED
+4,Channel output 2,1.0,E-011,Rear OEM 32477-01A coil switched primary,MANUFACTURER VERIFIED
+5,Power ground,1.0,EPM-GND-SP2,J-P02 engine/power ground star,MANUFACTURER VERIFIED
+6,Channel output 1,1.0,E-009,Front OEM 32477-01A coil switched primary,MANUFACTURER VERIFIED
