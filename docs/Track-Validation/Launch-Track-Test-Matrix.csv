@@ -1,0 +1,17 @@
+Test_ID,Phase,Test,Required_Result,Abort_On,Evidence,Status
+LT-001,Pre-session,Mechanical/chassis release,No unresolved chassis drivetrain brake tyre or mounting issue,Any unsafe mechanical condition,Inspection record,NOT_RUN
+LT-002,Safety,Kill/brake/clutch/gear interlocks,All required safety inputs verified and invalid state cannot add authority,Any unsafe interlock behavior,Input/PMU log,NOT_RUN
+LT-003,Arming,Launch prerequisite logic,Launch arms only with all required valid conditions,Launch arms with stale/invalid prerequisite,PMU/FTManager state log,NOT_RUN
+LT-004,Launch RPM,Minimal-authority launch RPM test,Repeatable controlled RPM and clean disarm,Oscillation sync loss pressure/lambda anomaly,FTManager log,NOT_RUN
+LT-005,Launch boost,Lowest launch boost authority,Predictable boost response within authorised envelope,Unexpected jump/creep pressure loss severe lambda divergence,Boost/fuel/lambda log,NOT_RUN
+LT-006,Traction,Wheel-speed/slip validation,Front/rear speed scaling and slip logic verified,Implausible/stale wheel-speed or unsafe traction response,Wheel-speed log,NOT_RUN
+LT-007,Lift,Front-wheel lift handling,Verified signal and bounded torque reduction if used,Uncontrolled lift or unsafe signal interpretation,Lift/wheel-speed log,NOT_RUN
+LT-008,Shift,Shift-strategy validation,Correct gear transition and stable post-shift engine/boost behavior,False trigger sync fault pressure/lambda anomaly,Shift/gear log,NOT_RUN
+LT-009,Progression,Short launch progression,Each limited stage accepted before longer run,Any unresolved anomaly,Track log+review,NOT_RUN
+LT-010,Abort,Brake/kill response under motion,Propulsion authority removed predictably at safe low energy,Unsafe output persistence or control failure,PMU/FTManager log,NOT_RUN
+LT-011,Track,Progressive partial passes,Repeatable staged acceleration with healthy critical channels,Boost/pressure/lambda/traction/chassis/thermal fault,Full track log,NOT_RUN
+LT-012,Full pass,First full-pass validation,Complete pass within verified envelope and no critical anomaly,Any defined critical abort condition,Full-pass log+inspection,NOT_RUN
+LT-013,Repeatability,Repeat/heat-soak validation,Successive passes remain consistent without worsening thermal or control drift,Increasing drift or fault frequency,Comparative logs,NOT_RUN
+LT-014,Post-session,Physical and electrical inspection,No damage leak hot spot abrasion or PMU/CAN fault history,Any new defect or fault,Inspection+PMU record,NOT_RUN
+LT-015,Freeze,Competition configuration freeze,ECU PMU boost launch traction shift hardware and wheel scaling revisions frozen,Any undocumented/material change,Release package,NOT_RUN
+LT-REL,Release,Competition release gate,All mandatory LT tests PASS and final release record approved,Any unresolved critical anomaly,Revision-controlled release record,LAUNCH_TRACK_VALIDATION_ONLY
