@@ -64,7 +64,10 @@ V062,IGNITION,SparkPRO-2 mating housing terminal and seal part numbers,VERIFY,Us
 V063,INJECTION,Peak & Hold exact current-class/model,MEASUREMENT GATED,Close HC-008/HC-009 then select FuelTech driver current class if required,YES
 V064,INJECTION,X62-X65 physical connector family and terminal freeze,VERIFY,Select keyed sealed connectors after final direct/P&H mode conductor size and current are known,YES
 V065,CAN,X51 service connector family terminals and cap,VERIFY,Select sealed 4-way service connector and terminal set; no permanent termination,YES
-V066,CAN,Application-layer FT550-to-PMU frame definitions,SIGNAL SET FROZEN,FT550-PMU16-Signal-Dictionary.md/csv freeze required signals use cases timeouts and fallback directions; exact IDs/scaling still verify,YES
+V066,CAN,Application-layer FT550-to-PMU frame definitions,CORE MAP FROZEN,Simple FTCAN MessageIDs 0x600-0x602 and tagged battery MeasureID 0x0012 mapped; live source ProductID still capture-gated,YES
 V067,CAN,CAN-loss fallback validation,TEST REQUIRED,Disconnect CAN during bench test and prove each PMU-dependent function enters documented safe state and recovers deterministically,YES
-V068,CAN,FT550 CAN frame ID byte/scaling extraction,VERIFY,Use FuelTech official CAN protocol or controlled FT550 bench capture correlated to FTManager values,YES
-V069,CAN,PMU Client CAN import implementation,NOT STARTED,Implement CAN-001 to CAN-010 with separate value/validity states timeout timers and plausibility checks,YES
+V068,CAN,FT550 CAN frame ID byte/scaling extraction,PROTOCOL MAP COMPLETE / LIVE ID VERIFY,FTCAN20-PMU-Frame-Map.csv defines byte positions/scaling; capture actual FT550 ProductID/unique ID and compare values to FTManager,YES
+V069,CAN,PMU Client CAN import implementation,READY TO IMPLEMENT,Create fixed-frame channels for 0x600-0x602 plus tagged battery parser; separate value/validity variables and project timeouts,YES
+V070,CAN,Live FT550 arbitration-ID/ProductID confirmation,TEST REQUIRED,Capture CAN A at 1Mbps and record actual ProductID unique identifier and observed 0x600-0x602 arbitration IDs before final PMU filter freeze,YES
+V071,CAN,Gear Note-2 decode validation,TEST REQUIRED,Verify neutral and each selected gear against FTManager before using CAN-010 for logic,YES
+V072,CAN,ECU warning/fault MeasureID,OPEN,Do not implement CAN-009 until exact public FuelTech status definition is verified,NO
