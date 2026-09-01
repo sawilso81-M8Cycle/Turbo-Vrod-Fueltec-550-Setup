@@ -10,11 +10,11 @@ V008,FT550,Front injector output cavity,RESOLVED A1 Blue #1,FuelTech PROBIKE A-c
 V009,FT550,Rear injector output cavity,RESOLVED A2 Blue #2,FuelTech PROBIKE A-connector table; HC-009 still required for impedance/current interface,NO
 V010,FT550,Front coil output cavity,RESOLVED A8 Gray #1,FuelTech PROBIKE A-connector table,NO
 V011,FT550,Rear coil output cavity,RESOLVED A9 Gray #2,FuelTech PROBIKE A-connector table,NO
-V012,OEM SENSOR,CKP polarity and waveform,WORKING,Oscilloscope capture while cranking,YES
-V013,OEM SENSOR,TPS closed/WOT calibration,WORKING,Measured voltages/calibration in FT550,YES
-V014,OEM SENSOR,OEM MAP transfer curve,VERIFY,Bench pressure/voltage characterization or verified OEM data,YES
-V015,OEM SENSOR,ECT thermistor curve,VERIFY,Bench characterization or verified OEM curve,YES
-V016,OEM SENSOR,IAT thermistor curve,VERIFY,Bench characterization or verified OEM curve,YES
+V012,OEM SENSOR,CKP polarity and waveform,VEHICLE TEST READY,Execute VP-022 during no-start crank and retain scope capture,YES
+V013,OEM SENSOR,TPS closed/WOT calibration,VEHICLE TEST READY,Execute VP-008 then calibrate in FTManager if monotonic/no-dropout,YES
+V014,OEM SENSOR,OEM MAP transfer curve,VEHICLE TEST READY,Execute VP-009 plus known vacuum/pressure characterization where available,YES
+V015,OEM SENSOR,ECT thermistor curve,VEHICLE TEST READY,Execute VP-010 and compare to known temperature/reference curve,YES
+V016,OEM SENSOR,IAT thermistor curve,VEHICLE TEST READY,Execute VP-010 and compare to known temperature/reference curve,YES
 V017,OEM SENSOR,VSS pulses/rev and voltage amplitude,VERIFY,Scope/log measurement,YES
 V018,OEM SENSOR,VSS preferred ground topology,VERIFY,Electrical test and manufacturer circuit confirmation,YES
 V019,OEM HARDWARE,Front/rear injector connector family and terminals,EVIDENCE TEMPLATE READY,Complete CC-001 and CC-002 in Hardware-Evidence pack,YES
@@ -26,11 +26,11 @@ V024,PMU16,PMU O1 current limit and wire size,EVIDENCE TEMPLATE READY,Complete H
 V025,PMU16,PMU O3 current limit and wire size,EVIDENCE TEMPLATE READY,Complete HC-003 radiator fan current/inrush plus route length,YES
 V026,PMU16,PMU optional output limits O2/O4/O5/O6/O8/O10,EVIDENCE TEMPLATE READY,Complete applicable HC-002 HC-004 HC-005 HC-006 HC-007 evidence,IF FITTED
 V027,CAN,FT550-to-PMU physical bus selection and bitrate,RESOLVED,FT550 CAN A A15/A16 to PMU CAN2 pins37/24 at 1Mbps; see CAN-Backbone document,NO
-V028,CAN,CAN topology and termination positions,RESOLVED BASELINE,Linear trunk FT550-X51-PMU; FuelTech terminator at FT550 end and PMU CAN2 software termination enabled at PMU end; X51 unterminated,NO
+V028,CAN,CAN topology and termination positions,VEHICLE TEST READY,Execute VP-004 and VP-012/013 to prove termination and live topology,YES
 V029,POWER,Main battery protection device and rating,VERIFY,Total load/fault-current design and conductor size,YES
 V030,POWER,PMU main feed conductor size,MEASUREMENT GATED,Use Wire-Size-Schedule.csv; require total current route length voltage-drop target and terminal limit,YES
 V031,POWER,FT550/EPM feed conductor size and protection,PROVISIONAL 0.75mm2 CLASS,Verify FuelTech requirements engine-load evidence and branch protection,YES
-V032,GROUND,Battery-engine-PMU-FT550 star conductors,VERIFY,Measured cranking drop and final conductor sizing,YES
+V032,GROUND,Battery-engine-PMU-FT550 star conductors,VEHICLE TEST READY,Execute VP-002 VP-003 VP-007 and VP-021; record resistance and cranking voltage drop,YES
 V033,HARNESS,Exact branch lengths B01-B40,VERIFY,Physical bike measurement after component mounting and EPM driver/junction placement are frozen,YES
 V034,HARNESS,Connector families terminals seals backshells,PARTLY RESOLVED,PMU Sicma/FCI family known; X51 and remaining OEM/EPM connector hardware still open,YES
 V035,HARNESS,CKP shield termination method,VERIFY,Exact FuelTech recommendation for installed harness,YES
@@ -53,11 +53,11 @@ V051,IGNITION,32477-01A smart-versus-passive classification,RESOLVED PASSIVE TWO
 V052,IGNITION,External igniter hardware and dwell calibration,SPARKPRO-2 HARDWARE FROZEN,FuelTech SparkPRO-2 selected; only OEM coil dwell/current calibration remains open,YES
 V053,INJECTION,Injector interface architecture,PHYSICAL ARCHITECTURE FROZEN,Peak-Hold-Interface-Freeze.md defines direct and P&H paths; HC-008/009 determine final mode and current class,YES
 V054,EPM,EPM driver/interface architecture,RESOLVED PROJECT DESIGN,EPM-Driver-Interface-Architecture.md; X60-X65 and B32-B40 defined,NO
-V055,EPM,Injector configuration interlock,DESIGN FROZEN,Release build record must state exactly DIRECT_DRIVE_APPROVED or PEAK_HOLD_INSTALLED; direct jumper and P&H path mechanically mutually exclusive,YES
+V055,EPM,Injector configuration interlock,VEHICLE TEST READY,Execute VP-020; build record must state exactly DIRECT_DRIVE_APPROVED or PEAK_HOLD_INSTALLED,YES
 V056,EPM,X60-X65 connector families terminals seals,PARTLY RESOLVED,SparkPRO six-pin cavities frozen; X62-X65 exact environmentally sealed connector hardware remains open,YES
 V057,EPM,B33/B34/B39/B40 wire sizes and branch protection,MEASUREMENT GATED,Close HC-008-HC-011 then calculate current route voltage drop and protection,YES
 V058,EPM,SparkPRO physical mounting architecture,RESOLVED PROJECT DESIGN,SparkPRO-2 on rigid metallic heat-spreading bracket near coils away from turbo heat and CKP routing,NO
-V059,EPM,X60-X65 functional cavity schedule,RESOLVED REV0.3,SparkPRO and Peak-Hold interface documents define command driven-coil and injector service junction functions,NO
+V059,EPM,X60-X65 functional cavity schedule,VEHICLE TEST READY,Execute VP-018 VP-019 VP-020 to confirm installed path matches drawings,YES
 V060,EPM,Final EPM module positions and branch lengths,VERIFY,Mock up FT550 SparkPRO injector junction and optional P&H on motorcycle then measure B32-B40,YES
 V061,IGNITION,SparkPRO-2 exact six-pin electrical pinout,RESOLVED,FuelTech SparkPRO manual v2.2; pins 1/3 inputs 2/5 grounds 4/6 outputs with 0.5/1.0mm2 wire classes,NO
 V062,IGNITION,SparkPRO-2 mating housing terminal and seal part numbers,VERIFY,Use supplied FuelTech SparkPRO-2 wiring harness or identify exact connector service kit before bare-connector harness release,YES
@@ -65,21 +65,26 @@ V063,INJECTION,Peak & Hold exact current-class/model,MEASUREMENT GATED,Close HC-
 V064,INJECTION,X62-X65 physical connector family and terminal freeze,VERIFY,Select keyed sealed connectors after final direct/P&H mode conductor size and current are known,YES
 V065,CAN,X51 service connector family terminals and cap,VERIFY,Select sealed 4-way service connector and terminal set; no permanent termination,YES
 V066,CAN,Application-layer FT550-to-PMU frame definitions,CORE MAP FROZEN,Simple FTCAN MessageIDs 0x600-0x602 and tagged battery MeasureID 0x0012 mapped; live source ProductID still capture-gated,YES
-V067,CAN,CAN-loss fallback validation,BENCH PLAN READY,Execute BT-007 BT-008 BT-011 BT-015 BT-021 BT-022 BT-025 and retain PMU/CAN logs,YES
-V068,CAN,FT550 CAN frame ID byte/scaling extraction,PROTOCOL MAP COMPLETE / LIVE ID VERIFY,FTCAN20-PMU-Frame-Map.csv defines byte positions/scaling; capture actual FT550 ProductID/unique ID and compare values to FTManager,YES
+V067,CAN,CAN-loss fallback validation,VEHICLE TEST READY,Execute VP-025 VP-026 after bench tests; retain PMU/CAN logs,YES
+V068,CAN,FT550 CAN frame ID byte/scaling extraction,VEHICLE TEST READY,Execute VP-012/013 and compare decoded values to FTManager,YES
 V069,CAN,PMU Client CAN receive-channel definition,RESOLVED IMPLEMENTATION SPEC,PMU-Client-Receive-Configuration.md freezes variables byte order scaling validity timeouts plausibility and derived-state rules,NO
-V070,CAN,Live FT550 arbitration-ID/ProductID confirmation,TEST REQUIRED,Capture CAN A at 1Mbps and record actual ProductID unique identifier and observed 0x600-0x602 arbitration IDs before final PMU filter freeze,YES
+V070,CAN,Live FT550 arbitration-ID/ProductID confirmation,VEHICLE TEST READY,Execute VP-012 and freeze actual ProductID/UID and arbitration IDs,YES
 V071,CAN,Gear Note-2 decode validation,TEST REQUIRED,Verify neutral and each selected gear against FTManager before using CAN-010 for logic,YES
 V072,CAN,ECU warning/fault MeasureID,OPEN,Do not implement CAN-009 until exact public FuelTech status definition is verified,NO
-V073,CAN,PMU Client software project implementation,NOT YET BUILT IN SOFTWARE,Enter production arbitration IDs after V070 then create receive channels validity variables and derived states in PMU Client,YES
+V073,CAN,PMU Client software project implementation,WAITING ON V070,Enter production arbitration IDs after VP-012 then create receive channels validity variables and derived states in PMU Client,YES
 V074,CAN,PMU plausibility and timeout test,BENCH PLAN READY,Execute BT-023 BT-024 plus stale-frame cases and verify each VALID flag/fallback response,YES
 V075,PMU CONTROL,Functional control architecture,RESOLVED REV0.1,PMU-Functional-Control-Logic.md and PMU-Functional-Control-Matrix.csv define O1/O2/O3/O4/O5/O6/O8/O10 behavior and safety precedence,NO
-V076,PMU CONTROL,Fuel pump prime/run commissioning,BENCH PLAN READY,Execute BT-004 through BT-008 then HC-001 with real pump/current data,YES
+V076,PMU CONTROL,Fuel pump prime/run commissioning,VEHICLE TEST READY,Execute VP-016 VP-017 with safe load then BT-004 through BT-008 and HC-001 with real pump/current data,YES
 V077,PMU CONTROL,Fan temperature thresholds and fallback,BENCH PLAN READY,Execute BT-009 BT-010 BT-011 and BT-012 if fitted then HC-003/004,YES
-V078,PMU CONTROL,Boost-solenoid fail-safe,BENCH PLAN READY,Execute BT-014 BT-015 and HC-006; then pneumatic proof that de-energised state equals minimum mechanical boost,YES
-V079,PMU CONTROL,Warning aggregation behavior,BENCH PLAN READY,Execute BT-016 with independent and simultaneous fault causes,YES
+V078,PMU CONTROL,Boost-solenoid fail-safe,VEHICLE TEST READY,Execute VP-025 with O6 unpowered safe-state then BT-014 BT-015 and HC-006; pneumatic proof still required,YES
+V079,PMU CONTROL,Warning aggregation behavior,VEHICLE TEST READY,Execute VP-014 plus BT-016 independent/simultaneous fault cases,YES
 V080,PMU CONTROL,Output retry/current-limit policy,BENCH PLAN READY,Execute BT-018 BT-019 after HC-001-HC-007 current evidence is populated,YES
 V081,TESTING,PMU bench commissioning and fault-injection plan,RESOLVED TEST FRAMEWORK,PMU-Bench-Commissioning-Test-Plan.md plus PMU-Bench-Test-Matrix.csv define BT-001 through BT-025,NO
-V082,TESTING,PMU brownout/reset safety,TEST REQUIRED,Execute BT-020 and prove no unsafe output pulse and safe recovery,YES
-V083,TESTING,Hardwired safety-input priority,TEST REQUIRED,Execute BT-002 BT-003 and BT-025 proving master/kill outrank CAN-derived states,YES
+V082,TESTING,PMU brownout/reset safety,VEHICLE TEST READY,Execute VP-021 for real cranking supply stability plus BT-020 controlled brownout,YES
+V083,TESTING,Hardwired safety-input priority,VEHICLE TEST READY,Execute VP-017 VP-024 VP-025 plus BT-002 BT-003 BT-025,YES
 V084,TESTING,PMU source-ID filtering,TEST REQUIRED,Execute BT-024 after V070 freezes production arbitration IDs,YES
+V085,COMMISSIONING,Vehicle first-power/no-start procedure,RESOLVED TEST FRAMEWORK,Vehicle-First-Power-No-Start.md plus 27-point matrix define staged no-combustion commissioning,NO
+V086,COMMISSIONING,Current-limited first vehicle power,TEST REQUIRED,Execute VP-001 through VP-007 and retain resistance/current/reference evidence,YES
+V087,COMMISSIONING,Static sensor plausibility on vehicle,TEST REQUIRED,Execute VP-008 through VP-011 before any cranking,YES
+V088,COMMISSIONING,No-start cranking validation,TEST REQUIRED,Execute VP-021 VP-022 VP-023 with fuel and ignition disabled; prove no brownout and clean CKP/RPM,YES
+V089,COMMISSIONING,No-start release gate,TEST REQUIRED,VP-027 may pass only when required VP tests are PASS and all first-start blockers remain identified,YES
