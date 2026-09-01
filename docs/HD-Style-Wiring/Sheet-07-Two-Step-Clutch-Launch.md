@@ -8,29 +8,34 @@
                                   |
                                   | B41
                                   v
-                         X71 CLUTCH SWITCH SERVICE
+                     X71 DTM 2-WAY SERVICE BREAK
+                       DTM04-2P / DTM06-2S
                                   |
                                   v
                        PMU-16 A6 / PIN 18
                        CLUTCH_DISCRETE
                                   |
-                                  |  PMU launch permissive logic
+                                  | PMU launch permissive logic
                                   v
                        PMU-16 O11 / PIN 3
                        TWO_STEP_REQUEST
                                   |
-                                  | B42  +12 V high-side command
+                                  | B42 +12 V high-side command
                                   v
-                    +-----------------------------+
-                    | X70 TWO-STEP INTERFACE      |
-                    | TE MICRO RELAY K 1393280-5 |
-                    |                             |
-PMU O11 ----------->| coil +                      |
-J-P02 GND ----------| coil -                      |
-                    |                             |
-FT550 A21 ----------| NO contact                  |
-SIGNAL GND ---------| common contact              |
-                    +-----------------------------+
+                    +--------------------------------+
+                    | X70 TWO-STEP INTERFACE PCB    |
+                    | K1 TE 1393280-5               |
+                    | Micro Relay K, 12 V, SPST-NO  |
+                    |                                |
+PMU O11 ----------->| K1 coil +                     |
+J-P02 GND ----------| K1 coil -                     |
+                    |   D1 flyback diode across K1  |
+                    |   cathode to coil +            |
+                    |   anode to ground              |
+                    |                                |
+FT550 A21 ----------| K1 NO contact                 |
+GROUND -------------| K1 contact common             |
+                    +--------------------------------+
                                   |
                                   | contact closes to ground
                                   v
@@ -42,42 +47,63 @@ SIGNAL GND ---------| common contact              |
 
 OPTIONAL CLUTCH POSITION:
 
-PMU +5 V -----------+
-                    |
-                    v
-              X72 HONEYWELL RTY050LVNAX
-              5 V HALL ROTARY SENSOR
-                    |
-                    +------ signal ------> PMU A7 / PIN 32
-                    |
-SENSOR GND ---------+
+PMU +5 V pin 15 ----+--------------------> X72 pin 1 Vcc
+PMU reference GND --+--------------------> X72 pin 2 GND
+X72 pin 3 OUTPUT ------------------------> PMU A7 / pin 32
+
+X72 SENSOR: HONEYWELL RTY050LVNAX
+NORTH AMERICAN PINOUT
 ```
 
 ## Circuit schedule
 
 | Circuit | From | To | Function | Initial wire class | Status |
 |---|---|---|---|---|---|
-| B41 | X71 OEM clutch switch | PMU A6 pin 18 | clutch discrete state | 0.35 mm2 | polarity test required |
-| B42 | PMU O11 pin 3 | X70 relay coil + | Two-Step interlocked command | 0.35-0.5 mm2 | frozen function |
-| B43 | X70 relay contact | FT550 A21 White #2 | ground-active Two-Step request | 0.35 mm2 | frozen function |
-| B44 | X72 Hall sensor | PMU A7 pin 32 | clutch position analogue signal | 0.35 mm2 | optional / calibration gated |
+| B41 | OEM clutch switch via X71 | PMU A6 pin 18 | clutch discrete state | 0.35-0.5 mm2 | production service-break architecture frozen |
+| B42 | PMU O11 pin 3 | X70 K1 coil + | Two-Step interlocked command | 0.35-0.5 mm2 | frozen function |
+| B43 | X70 K1 dry contact | FT550 A21 White #2 | ground-active Two-Step request | 0.35 mm2 | frozen function |
+| B44 | X72 Hall sensor pin 3 | PMU A7 pin 32 | clutch position analogue signal | 0.35 mm2 | optional / calibration gated |
 
-## X70 cavity schedule
+## X70 production interface
 
-| Cavity | Connection | Function |
+K1: TE Connectivity 1393280-5, Micro Relay K, 12 VDC coil, SPST-NO, PCB through-hole.
+
+X70 shall be a sealed/potted small interface PCB, not a loose relay/socket assembly.
+
+| X70 cavity | Connection | Function |
 |---|---|---|
-| 1 | PMU O11 pin 3 | relay coil positive |
-| 2 | J-P02 ground | relay coil return |
+| 1 | PMU O11 pin 3 | K1 coil positive |
+| 2 | J-P02 ground | K1 coil return |
 | 3 | FT550 A21 White #2 | switched Two-Step input |
-| 4 | signal/power reference ground | dry-contact ground source |
+| 4 | ground | dry-contact ground source |
 
-## X71 clutch switch
+D1 flyback suppression is installed across K1 coil with cathode toward cavity 1 and anode toward cavity 2.
 
-X71 retains the OEM Harley clutch-switch connector system wherever practical. Primary switch part number: 71620-08. Exact mating connector/terminal kit must be identified from the installed switch harness before a replacement connector is crimped.
+## X71 clutch switch service break
+
+The OEM switch remains Harley 71620-08. Because the accessible Harley parts data does not expose a standalone switch-body mating connector service kit, preserve the OEM pigtail and place X71 downstream as the new harness service break.
+
+Production connector family:
+
+- DTM04-2P receptacle;
+- DTM06-2S plug;
+- size-20 contacts to suit final conductor;
+- TE 0462-201-20141 nickel solid socket contact is acceptable for 0.2-0.5 mm2 where the socket side requires that contact;
+- matching DTM size-20 pin contact, wedgelocks and seals to suit final housing/wire.
 
 ## X72 clutch position
 
-Optional sensor baseline: Honeywell RTY050LVNAX, 5 V Hall-effect rotary position sensor. Verify actual clutch-lever travel falls inside the sensor operating range before final bracket manufacture.
+Optional sensor: Honeywell RTY050LVNAX.
+
+North American pinout:
+
+| Pin | Function | Project connection |
+|---|---|---|
+| 1 | Vcc | PMU +5 V pin 15 |
+| 2 | GND | PMU reference ground |
+| 3 | Output | PMU A7 pin 32 |
+
+Nominal output is approximately 0.5 V to 4.5 V ratiometric over the configured 50 degree sensing range. Verify actual lever geometry before manufacturing the sensor bracket.
 
 ## Safety truth table
 
@@ -91,19 +117,28 @@ Optional sensor baseline: Honeywell RTY050LVNAX, 5 V Hall-effect rotary position
 
 ## Failure behaviour
 
-- O11 power loss: relay releases; FT550 A21 becomes open; Two-Step request OFF.
+- O11 power loss: K1 releases; FT550 A21 becomes open; Two-Step request OFF.
 - X70 relay coil open: request cannot activate.
 - X70 contact open: request cannot activate.
+- D1 open: suppression lost but Two-Step request remains mechanically fail-off; repair before release.
+- D1 short: O11 output should fault/current-limit; K1 cannot energise; Two-Step remains OFF.
 - A6 invalid: PMU request OFF.
-- A7 invalid: position-based refinement disabled; A6 remains authoritative if independently valid.
+- A7 invalid: position refinement disabled; A6 remains authoritative if independently valid.
 - Kill/master event: O11 OFF immediately.
 
 ## Validation before track use
 
 1. Prove A6 polarity and debounce statically.
 2. Verify O11 never applies +12 V to FT550 A21.
-3. Measure X70 operate/release timing and ensure release is fast enough for launch transition.
+3. Measure X70 operate/release timing on the assembled PCB.
 4. Confirm A21 is open when O11 is OFF and near ground only when O11 is ON.
 5. Verify kill/master removal releases X70 regardless of software launch state.
-6. Calibrate A7 pulled/bite/released regions if the Hall sensor is fitted.
-7. Perform stationary Two-Step validation before any launch test.
+6. Verify X71 retention/sealing and full-lock handlebar strain relief.
+7. Calibrate A7 pulled/bite/released regions if the Hall sensor is fitted.
+8. Perform stationary Two-Step validation before any launch test.
+
+## Production release
+
+See `docs/Launch-Control/Two-Step-Production-Loom-Release.md`.
+
+The loom state remains `TWO_STEP_CLUTCH_NOT_VALIDATED` until all production and functional tests pass.
