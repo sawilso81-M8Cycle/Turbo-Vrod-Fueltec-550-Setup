@@ -2,8 +2,8 @@ Circuit_or_Group,Function,Domain,Connector_Cavity,Electrical_Class,Provisional_W
 PMU-MAIN,PMU main battery feed,POWER,X03 STUD,Main high-current feed,VERIFY,VERIFY,MEASUREMENT GATED,Total PMU load current; route length; voltage-drop target; main protection rating
 PMU-GND,PMU device ground,APM,X03 pin 25,Module ground,1.0,18,PROVISIONAL MINIMUM,PMU manual/terminal limit plus installed voltage-drop test
 PMU-SW,PMU switched +12V enable,APM,X03 pin 7,Low-current switched supply,0.5,20,PROVISIONAL,Confirm PMU switched-input current and protection
-P-001,Primary fuel pump,APM,X03 pin 38 O1,25A-capable PMU output,VERIFY,VERIFY,MEASUREMENT GATED,Measured steady/inrush current; branch length; connector rating
-P-002,Secondary fuel pump,APM,X03 pin 39 O2,25A-capable PMU output,VERIFY,VERIFY,DNP OR MEASUREMENT GATED,Populate only if fitted; measured steady/inrush current
+P-001,Primary fuel pump,APM,X03 pin 38 O1,Up to approximately 30A design basis,2.5 MINIMUM,Approx 13-14 AWG equivalent,FUEL_PUMP_MINIMUM_FROZEN,Measure steady/inrush current; branch length; terminal and PMU output margin; upsize if required
+P-002,Secondary fuel pump,APM,X03 pin 39 O2,Up to approximately 30A design basis per pump,2.5 MINIMUM,Approx 13-14 AWG equivalent,DNP OR FUEL_PUMP_MINIMUM_FROZEN,If fitted use 2.5mm2 minimum; measure steady/inrush current and terminal/output margin; upsize if required
 P-003,Radiator fan 1,APM,X03 pin 26 O3,25A-capable PMU output,VERIFY,VERIFY,MEASUREMENT GATED,Measured steady/inrush current; branch length
 P-004,Radiator fan 2,APM,X03 pin 13 O4,25A-capable PMU output,VERIFY,VERIFY,DNP OR MEASUREMENT GATED,Populate only if fitted; measured steady/inrush current
 P-005,Charge/intercooler pump,APM,X03 pin 12 O5,25A-capable PMU output,VERIFY,VERIFY,DNP OR MEASUREMENT GATED,Populate only if fitted; measured steady/inrush current
