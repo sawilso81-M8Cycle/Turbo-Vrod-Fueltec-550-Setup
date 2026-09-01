@@ -1,0 +1,10 @@
+Circuit_ID,Function,Current_Source,Steady_Current_A,Inrush_Current_A,Approx_Route_mm,Voltage_Drop_Target,Provisional_Wire_mm2,Terminal_Limit_A,Protection_Strategy,Status,Required_Closeout
+B10,Primary fuel pump,Measured HC-001,TBD,TBD,700,Define from system requirement,2.0,TBD,PMU O1 electronic protection,FIRST_PROTOTYPE_BASELINE,Measure steady/inrush current and verify drop/terminal margin
+B11,Radiator fan 1,Measured HC-003,TBD,TBD,950,Define from cooling requirement,2.5,TBD,PMU O3 electronic protection,FIRST_PROTOTYPE_BASELINE,Measure steady/inrush current and verify drop/terminal margin
+B12,Charge/intercooler pump,Measured HC-005,TBD,TBD,850,Define from pump requirement,2.0,TBD,PMU O5 electronic protection,DNP_OR_BASELINE,If fitted measure steady/inrush current and verify drop
+B15,PMU main battery feed,Aggregate PMU load,TBD,TBD,400,Low-drop main feed,10.0,PMU stud/main terminal limit,Main battery protection device,FIRST_PROTOTYPE_BASELINE,Calculate simultaneous load plus derating and protection coordination
+B39,Injector common +12V,HC-008/HC-009 injector evidence,TBD,TBD,500,Engine-critical low drop,1.0,TBD,Protected EPM supply,FIRST_PROTOTYPE_BASELINE,Close injector electrical class and supply current
+B40,Ignition/coil common +12V,HC-010/HC-011 coil evidence,TBD,TBD,500,Engine-critical low drop,1.5,TBD,Protected EPM supply,FIRST_PROTOTYPE_BASELINE,Close coil current/dwell and SparkPRO supply requirements
+PMU-GND,PMU device ground,PMU electronics current,TBD,TBD,300,Very low module-ground drop,1.0,PMU pin25 terminal limit,Direct J-P02 star,PROVISIONAL,Verify PMU current and installed voltage drop
+SP-GND,SparkPRO grounds,SparkPRO/coil current evidence,TBD,TBD,400,Low impedance ignition return,1.0 each,SparkPRO connector limit,Direct J-P02 star,MANUFACTURER_CLASS_BASELINE,Confirm FuelTech manual/current evidence
+O6,Boost solenoid supply,Selected solenoid datasheet,TBD,TBD,750,Low auxiliary drop,0.75,PMU O6 terminal/output limit,PMU O6 electronic protection,STRONG_PROVISIONAL,Freeze exact solenoid and current
