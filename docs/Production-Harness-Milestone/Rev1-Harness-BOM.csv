@@ -49,3 +49,13 @@ BOM-047,EPM Power,Injector common +12V branch B39,Protected EPM supply to both 2
 BOM-048,EPM Power,Ignition common +12V branch B40,Protected EPM supply to both 32477-01A coils/driver topology as required; final mm2/fuse by measured current,1 LENGTH,MEASUREMENT GATED,YES
 BOM-049,EPM Ground,Ignition-driver power ground B33,Manufacturer-sized low-impedance return to J-P02 power star,1 LENGTH,MEASUREMENT/MANUFACTURER GATED,YES
 BOM-050,EPM Service,Injector mode configuration label and build record,State DIRECT_DRIVE_APPROVED or PEAK_HOLD_INSTALLED; never both,1 SET,DESIGN FROZEN,NO
+BOM-051,Launch Clutch Switch,OEM VRXSE clutch switch,Harley-Davidson 71620-08,1,FROZEN OEM HARDWARE,NO
+BOM-052,Launch Clutch Hardware,OEM clutch switch spring clip,Harley-Davidson 46865-06,1,FROZEN OEM HARDWARE,NO
+BOM-053,Launch Connector,X71 OEM clutch switch mating connector,Match 71620-08 and seal for handlebar environment,1,PHYSICAL PN VERIFY,YES
+BOM-054,Launch Input,External A6 pull-up network,PMU +5V to A6 with bench-selected resistor; switch pulls signal low to PMU ground,1,VALUE BENCH GATED,YES
+BOM-055,Launch Interface,X70 protected solid-state low-side interface,Converts PMU O11 high-side request to ground-active FT550 A21; inactive state high impedance; automotive rated,1,TOPOLOGY FROZEN / EXACT PN VERIFY,YES
+BOM-056,Launch Interface Connector,X70 service connector/environmental housing,Control output ground and optional diagnostic access,1,CONNECTOR FAMILY VERIFY,YES
+BOM-057,Launch Position Sensor,Optional clutch-position sensor,Non-contact Hall rotary or short-stroke linear ratiometric 5V sensor matched to measured clutch travel,1,DNP / MECHANICAL MOCK-UP GATED,IF FITTED
+BOM-058,Launch Position Connector,X72 sealed 3-way clutch-position connector,5V signal ground suitable for steering/lever environment,1,DNP / CONNECTOR VERIFY,IF FITTED
+BOM-059,Launch Wire,Two-Step/clutch signal branches B41-B44,0.35mm2 provisional low-current class subject to terminal compatibility and final routing,TBD LENGTH,PROVISIONAL CLASS,YES
+BOM-060,Launch Labels,Two-Step/clutch configuration and interface labels,Identify A6 A7 O11 X70 A21 and release state,1 SET,DESIGN REQUIREMENT,NO
