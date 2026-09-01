@@ -1,0 +1,15 @@
+Test_ID,Phase,Test,Required_Result,Abort_On,Evidence,Status
+VT-001,Pre-session,Chassis/drivetrain readiness,Mechanical systems fit for controlled vehicle testing,Any mechanical uncertainty,Inspection record,NOT_RUN
+VT-002,Pre-session,Electrical/vibration readiness,Modules grounds CAN CKP and harness mechanically secure,Loose ground; heat risk; fouling; damaged loom,Inspection record,NOT_RUN
+VT-003,Configuration,Control-state lock,Calibration/PMU/boost/hardware revisions recorded,Unknown revision or stacked uncontrolled changes,Session header,NOT_RUN
+VT-004,Low speed,Function check,Throttle clutch brake steering and return-to-idle correct,Unsafe control response or leak,Vehicle log+inspection,NOT_RUN
+VT-005,Signals,Wheel-speed and gear validation,Logged gear/speed agree with actual state,Unstable/incorrect gear or speed signal,FTManager/CAN log,NOT_RUN
+VT-006,Boost authority,Gear-by-gear matrix,Every validated gear has bounded boost authority and safe invalid fallback,Invalid data can increase boost authority,Matrix+configuration record,NOT_RUN
+VT-007,Safety,Brake and kill validation,Kill removes torque authority and brakes remain independent,Delayed kill; brake interference; unsafe restart,Safety test log,NOT_RUN
+VT-008,Durability,Heat-soak/vibration session,No sync/CAN/current/thermal/harness anomaly,Any critical dropout or thermal/mechanical issue,Logs+inspection,NOT_RUN
+VT-009,Progression,Staged vehicle-load matrix,Each stage remains inside dyno-validated envelope with stable systems,Crossing authorised load envelope or critical anomaly,Vehicle logs,NOT_RUN
+VT-010,Traction,Wheel-speed behaviour observation,Speed data plausible and no unexplained traction behaviour,Sensor implausibility or unstable chassis response,Speed/CAN log,NOT_RUN
+VT-011,Transient,Shift and boost-recovery validation,No harmful pressure/boost/lambda/sync/drivetrain transient,Boost overshoot; pressure loss; sync fault; severe shock,FTManager+PMU log,NOT_RUN
+VT-012,Post-session,Physical inspection,No new tyre/brake/drive/fluid/harness/thermal issue,Any damage/leak/abnormal heating,Inspection record,NOT_RUN
+VT-013,Analysis,Session log/revision review,All anomalies dispositioned before progression,Unexplained critical anomaly,Review/change record,NOT_RUN
+VT-REL,Release,Vehicle validation release,Required VT tests PASS and launch remains separately locked,Any open critical anomaly,Revision-controlled release record,VEHICLE_VALIDATION_ONLY
