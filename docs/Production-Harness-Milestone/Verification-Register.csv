@@ -73,3 +73,9 @@ V071,CAN,Gear Note-2 decode validation,TEST REQUIRED,Verify neutral and each sel
 V072,CAN,ECU warning/fault MeasureID,OPEN,Do not implement CAN-009 until exact public FuelTech status definition is verified,NO
 V073,CAN,PMU Client software project implementation,NOT YET BUILT IN SOFTWARE,Enter production arbitration IDs after V070 then create receive channels validity variables and derived states in PMU Client,YES
 V074,CAN,PMU plausibility and timeout test,TEST REQUIRED,Inject out-of-range values and stale frames and verify each VALID flag and fallback response,YES
+V075,PMU CONTROL,Functional control architecture,RESOLVED REV0.1,PMU-Functional-Control-Logic.md and PMU-Functional-Control-Matrix.csv define O1/O2/O3/O4/O5/O6/O8/O10 behavior and safety precedence,NO
+V076,PMU CONTROL,Fuel pump prime/run commissioning,TEST REQUIRED,Validate 3.0s prime starting value CAN-RPM-loss grace and kill response with real pump/current data,YES
+V077,PMU CONTROL,Fan temperature thresholds and fallback,TEST REQUIRED,Validate fan on/off thresholds stagger and invalid-ECT conservative strategy on installed cooling system,YES
+V078,PMU CONTROL,Boost-solenoid fail-safe,TEST REQUIRED,Prove de-energised O6 returns pneumatic system to minimum mechanical boost and cannot increase boost on CAN loss,YES
+V079,PMU CONTROL,Warning aggregation behavior,TEST REQUIRED,Verify unknown-vs-low pressure ECT-invalid PMU-output-fault and CAN-health indications are distinguishable/logged,YES
+V080,PMU CONTROL,Output retry/current-limit policy,MEASUREMENT GATED,Close HC-001-HC-007 then freeze current limits retry counts cooldowns and latch behavior for each populated PMU output,YES
