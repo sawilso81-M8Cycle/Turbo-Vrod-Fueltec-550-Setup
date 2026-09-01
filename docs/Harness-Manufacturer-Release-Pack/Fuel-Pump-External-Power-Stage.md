@@ -1,18 +1,38 @@
-# Fuel Pump External Power Stage – Verified PMU16 Constraint
+# Fuel Pump Power Stage – 4.0 mm² Wiring Baseline and Measurement-Gated Relay Decision
 
-## Verified constraint
+## Verified PMU constraint
 
-ECUMASTER documents PMU16 O1 (pin 38) and O2 (pin 39) as 25 A maximum high-side outputs. ECUMASTER also states that connector-terminal current capacity must be derated for temperature and adjacent loaded terminals.
+ECUMASTER documents PMU16 O1 (pin 38) and O2 (pin 39) as 25 A maximum high-side outputs. Connector-terminal current capability must also be considered with temperature and adjacent loaded terminals.
 
-The project fuel-pump design basis now allows an individual pump to draw up to approximately 30 A. Therefore a 30 A-capable pump shall not be powered directly from O1 or O2.
+## Project decision
 
-## Rev 1 architecture
+Fuel-pump feed and dedicated return conductors are now **4.0 mm² production baseline per pump**.
 
-PMU O1/O2 remain logic/control outputs only for fuel-pump switching.
+This cable size is fixed for the present harness revision and is not conditional on the final pump current measurement.
 
-Recommended power path:
+The decision to drive the pump directly from PMU O1/O2 or through an external relay/SSR is **measurement gated**.
 
-`Battery / protected high-current distribution -> dedicated fuse/protection -> sealed automotive relay or approved solid-state high-current switch -> fuel pump -> dedicated power return/star ground`
+Do not assume an external relay is required until the actual installed pump is identified and its steady-state and inrush current are measured under representative operating conditions.
+
+## Direct PMU path eligibility
+
+Direct PMU drive may be considered only if all of the following are proven:
+
+- measured steady-state pump current is comfortably below the applicable PMU output continuous limit;
+- measured inrush/peak current and duration are compatible with the PMU output protection/current-limit behaviour;
+- the exact PMU terminal/contact and connector arrangement is suitable for the measured current with applicable derating;
+- 4.0 mm² conductor is compatible with the selected terminal/contact or an approved transition is used;
+- configured PMU current protection can tolerate normal pump inrush while still protecting the conductor/connector/load;
+- installed voltage-drop and thermal tests pass;
+- repeated hot-start and hot-fuel operating tests do not create nuisance trips or terminal overheating.
+
+If any of those conditions fail, use the external power-stage architecture below.
+
+## External power-stage fallback
+
+If measured pump current is too high for comfortable direct PMU operation:
+
+`Battery / protected distribution -> dedicated fuse/protection -> sealed automotive relay or approved solid-state high-current switch -> 4.0 mm² pump feed -> pump -> 4.0 mm² dedicated return/star ground`
 
 Control path:
 
@@ -22,43 +42,54 @@ The external switching device must default OFF on loss of PMU command or control
 
 ## Cable rule
 
-- 2.5 mm² remains the absolute project minimum fuel-pump conductor size.
-- For a circuit genuinely designed around 30 A, 4.0 mm² is the recommended production baseline for both feed and dedicated return, subject to actual route length, selected wire series, ambient/loom derating, connector capability and measured voltage drop.
-- Do not pass the 30 A pump current through the PMU 39-pin output terminal.
+- fuel-pump positive feed: **4.0 mm²**;
+- dedicated fuel-pump return: **4.0 mm²**;
+- applies independently to primary and any secondary/staged pump;
+- do not downsize after a low-current measurement without a formal project revision;
+- final connector/terminal selection must accept the 4.0 mm² conductor or use an approved sealed transition/power connector arrangement.
 
-## Switching hardware requirements
+## Measurement required before switching decision
 
-Select a sealed automotive relay, contactor or motorsport solid-state power switch with:
+Record for each pump:
 
-- continuous current rating comfortably above the measured pump steady current;
-- inrush capability above measured pump peak current;
-- suitable 12-14.5 V automotive environment rating;
-- sealed connector/terminal system rated for the selected conductor and current;
-- suppression compatible with PMU output control;
-- fail-OFF behaviour;
-- serviceable replacement without cutting the main loom.
+1. exact manufacturer/model/part number;
+2. test voltage;
+3. fuel type and representative system pressure/flow condition;
+4. cold-start peak/inrush current;
+5. stabilised steady current;
+6. hot pump/hot fuel steady current;
+7. restart inrush when hot;
+8. PMU output current trace if trialled directly;
+9. connector/terminal temperature rise;
+10. installed voltage drop on both positive and return paths.
 
-A nominal >=40 A automotive relay/SSR class is an initial procurement floor only. Final selection must use the actual pump current/inrush evidence and manufacturer derating data.
+## Decision states
+
+Use exactly one final state per pump:
+
+- `DIRECT_PMU_DRIVE_APPROVED`
+- `EXTERNAL_POWER_STAGE_REQUIRED`
+
+Until measurement is complete:
+
+`FUEL_PUMP_SWITCHING_ARCHITECTURE_MEASUREMENT_GATED`
 
 ## Protection
 
-The external pump power branch requires dedicated short-circuit protection coordinated to the conductor, connector and pump. Protection value is not automatically 30 A merely because the pump may draw 30 A; it must be selected from measured operating/inrush current and the selected fuse/electronic protection time-current behaviour.
+Protection settings are selected from the measured operating and inrush evidence. A 30 A design assumption does not automatically mean a 30 A fuse or PMU limit.
 
-## PMU logic retained
+## PMU logic
 
-PMU still owns:
+Whether direct or external switched, the PMU retains ownership of:
 
 - prime timing;
 - start/run permission;
 - kill/master priority;
 - CAN/RPM fallback logic;
-- warning/fault logic;
-- external relay/SSR command.
+- warning/fault logic.
 
-The PMU no longer carries the full pump load current in this architecture.
+## Current release status
 
-## Release status
+**4.0 mm² PUMP FEED/RETURN FROZEN**
 
-`FUEL_PUMP_EXTERNAL_POWER_STAGE_REQUIRED`
-
-Closeout requires exact pump model, measured steady/inrush current, relay/SSR selection, fuse/protection selection, connector/terminal selection and installed voltage-drop validation.
+**RELAY/SSR DECISION PENDING PUMP VERIFICATION**
