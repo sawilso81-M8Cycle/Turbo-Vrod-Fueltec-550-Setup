@@ -1,0 +1,14 @@
+Test_ID,Phase,Test,Required_Result,Abort_On,Evidence,Status
+FP-001,Pre-pull,Release and setup check,All revisions limits sensors cooling restraint and kill verified,Any unresolved critical condition,Pre-pull checklist,NOT_RUN
+FP-002,First full load,Controlled first full-load validation,Run stays inside approved boost/RPM/load envelope,Any FP-003 abort condition,FTManager+PMU+dyno logs,NOT_RUN
+FP-003,Abort logic,Live abort criteria validation,Operator can immediately identify and stop for critical anomalies,Delayed or ambiguous abort response,Operator checklist+logs,NOT_RUN
+FP-004,Analysis,First-pull log review,All critical channels reviewed before repeat,Unexplained critical anomaly,Review record,NOT_RUN
+FP-005,Repeatability,Repeat full-load validation,Boost lambda fuel pressure duty timing torque and thermal trends repeat within build-specific limits,Non-repeatable critical behaviour,Dyno+FTManager logs,NOT_RUN
+FP-006,Fuel system,Headroom freeze,Documented injector/pump/driver margin remains at max authorised load,Capacity at or beyond release limit,Fuel pressure+duty+pump evidence,NOT_RUN
+FP-007,Cylinder balance,Front/rear lambda validation,Each cylinder independently remains inside accepted window,One-cylinder divergence beyond accepted window,Dual-lambda logs,NOT_RUN
+FP-008,Ignition,Ignition/combustion validation,Final timing is evidence-based repeatable and conservative,Detonation evidence sync loss or unstable torque response,Logs+inspection,NOT_RUN
+FP-009,Thermal,Cooldown and heat-soak validation,Repeat pulls start from defined thermal state and remain thermally repeatable,Uncontrolled heat-soak effect,Thermal logs,NOT_RUN
+FP-010,Inspection,Mechanical and plug inspection,No distress leak loose hardware or abnormal heat damage,Any distress/damage/leak,Inspection record,NOT_RUN
+FP-011,Freeze,Final calibration freeze,FTManager PMU boost config and hardware revision archived with immutable IDs,Missing revision/evidence,Release package,NOT_RUN
+FP-012,Report,Final dyno validation report,Report contains performance protection and repeatability evidence plus limitations,Missing critical evidence,Final report,NOT_RUN
+FP-REL,Release,Full-power dyno release,FP-001 through FP-012 PASS,Any open critical anomaly,Revision-controlled release record,FULL_POWER_DYNO_VALIDATION_ONLY
