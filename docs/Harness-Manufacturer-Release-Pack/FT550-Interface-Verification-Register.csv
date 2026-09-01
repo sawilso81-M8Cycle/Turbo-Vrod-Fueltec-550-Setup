@@ -1,0 +1,21 @@
+ID,Interface,Official_Function,Project_Function,Status,Verification
+FTV-001,FT550 Connector Kit 5011100278,A+B connectors and 56 terminals,Custom ECU connector baseline,FROZEN,Confirm genuine kit received
+FTV-002,FT550 Power Ground,ECU power ground,Controlled project power ground,FROZEN,Continuity and polarity test
+FTV-003,FT550 Signal Ground,Signal ground,Sensor/reference return,FROZEN,Verify no unintended high-current return
+FTV-004,FT550 +12V,ECU switched supply,PMU-controlled ECU supply,FROZEN,Verify voltage drop and polarity
+FTV-005,FT550 +5V,Sensor reference,OEM/approved sensor reference,FROZEN,Verify unloaded and loaded voltage
+FTV-006,CAN A LOW,CAN communication,FT550-PMU CAN LOW,FROZEN,Continuity/polarity
+FTV-007,CAN A HIGH,CAN communication,FT550-PMU CAN HIGH,FROZEN,Continuity/polarity
+FTV-008,White #2 / A21,2-Step clutch switch,Two-Step request via X70,FROZEN,Ground activation only; prove no +12V
+FTV-009,White #3,TPS,TPS signal,FROZEN,Sensor calibration test
+FTV-010,White #4,Oil pressure,Engine oil pressure,FROZEN,Sensor scaling test
+FTV-011,White #5,H2O temperature,Engine coolant temperature,FROZEN,Sensor scaling test
+FTV-012,White #6,Fuel pressure,Fuel pressure,FROZEN,Sensor scaling test
+FTV-013,White #7,Speed,VSS,FROZEN,Frequency/speed validation
+FTV-014,White #8,IAT,Intake air temperature,FROZEN,Sensor scaling test
+FTV-015,Gray ignition outputs,Ignition commands,SparkPRO command channels,FROZEN,Channel-order test
+FTV-016,Blue injection outputs,Injector commands,Front/rear injector control,VERIFY,Close injector impedance/driver architecture
+FTV-017,CAM input,Cam sync,Cam sync if retained/required,VERIFY,Confirm OEM sensor type and polarity
+FTV-018,Crank/RPM input,Crank reference,OEM CKP interface,VERIFY,Scope waveform and polarity
+FTV-019,CAN termination,Bus termination,Released CAN topology,VERIFY,Measure completed powered-down network
+FTV-020,Unused cavities,Unused I/O,Sealed/reserved expansion,FROZEN,Document in as-built cavity report
