@@ -7,6 +7,7 @@ Close the remaining load-dependent cable-size and protection decisions for the T
 ## Circuits covered
 
 - B10 primary fuel pump / PMU O1
+- optional secondary/staged fuel pump / PMU O2 if fitted
 - B11 radiator fan 1 / PMU O3
 - B12 charge/intercooler pump / PMU O5 if fitted
 - B15 PMU main battery feed
@@ -16,7 +17,15 @@ Close the remaining load-dependent cable-size and protection decisions for the T
 - SparkPRO ground paths
 - O6 boost-control solenoid supply
 
-## Rule
+## Fuel-pump conductor rule
+
+Fuel-pump power feeds shall be **2.5 mm² minimum per pump**. The engineering basis is an expected possible pump draw up to approximately **30 A** depending on selected pump, fuel pressure and operating condition.
+
+This minimum does not eliminate measurement requirements. If measured current, inrush, route length, terminal capability or voltage drop requires a larger conductor, upsize. Do not reduce a fuel-pump feed below 2.5 mm² without a formally approved design revision.
+
+Where a dedicated fuel-pump return conductor is used, it should be sized to the same 2.5 mm² minimum class unless the released grounding architecture proves an equivalent or superior current path.
+
+## General rule
 
 A provisional conductor may be used for RFQ and first-prototype material planning, but no high-current circuit becomes `PRODUCTION_FROZEN` until all of the following are known:
 
@@ -42,13 +51,7 @@ Measure at realistic motorcycle electrical-system voltage and record the exact t
 
 Use a suitable DC supply or vehicle battery with current measurement capable of capturing inrush. Test the actual installed or purchased component.
 
-Record:
-
-- voltage immediately before energising;
-- peak/inrush current;
-- steady current after stabilisation;
-- component temperature/ambient where relevant;
-- whether the component was mechanically loaded in a representative way.
+Record voltage immediately before energising, peak/inrush current, steady current after stabilisation, component/ambient temperature where relevant and whether the component was mechanically loaded in a representative way.
 
 A free-running pump or fan may draw less than it does in the installed system, so final vehicle validation remains required.
 
@@ -64,16 +67,7 @@ For each 32477-01A coil record primary resistance and current-ramp evidence usin
 
 Calculate B15 from the worst credible simultaneous PMU-controlled load state, not by simply adding PMU output nameplate ratings.
 
-Create at least these states:
-
-- KEY_ON / ENGINE_OFF
-- CRANKING
-- ENGINE_RUNNING_NORMAL
-- HOT_IDLE_FANS_ON
-- BOOST_RUN
-- MAX_EXPECTED_AUXILIARY_STATE
-
-For each state sum actual measured/validated steady currents and identify short-duration inrush overlaps separately.
+Create at least these states: KEY_ON / ENGINE_OFF; CRANKING; ENGINE_RUNNING_NORMAL; HOT_IDLE_FANS_ON; BOOST_RUN; MAX_EXPECTED_AUXILIARY_STATE.
 
 ## Voltage-drop calculation
 
@@ -81,29 +75,20 @@ For a copper conductor:
 
 `Vdrop = I × R_per_m × one_way_length_m`
 
-Where the return path is a separate wire of the same size and length, calculate both legs or use total loop length.
-
-Do not assume chassis return equals zero resistance. High-current return paths require their own measured voltage-drop validation.
+Where the return path is a separate wire of the same size and length, calculate both legs or use total loop length. Do not assume chassis return equals zero resistance.
 
 Final production selection must use the actual selected wire manufacturer's conductor resistance where available rather than a generic copper table.
 
 ## Protection coordination
 
-For each PMU output:
-
-- operating current must sit below the configured continuous trip/current-limit region with sensible margin;
-- inrush must not create nuisance shutdown;
-- current limit must still protect the conductor and connector;
-- repeated auto-retry must not thermally abuse a stalled motor or shorted load;
-- protection setting must not be increased merely to hide an undersized conductor or failing component.
+For each PMU output, operating current must sit below the configured continuous trip/current-limit region with sensible margin; inrush must not create nuisance shutdown; current limit must still protect the conductor and connector; repeated auto-retry must not thermally abuse a stalled motor or shorted load; protection setting must not be increased merely to hide an undersized conductor or failing component.
 
 For B15 main feed, coordinate the upstream battery protection device with the selected main-feed conductor and downstream PMU architecture.
 
 ## Provisional conductor baselines retained
 
-Until measured evidence closes the rows:
-
-- B10 primary fuel pump: 2.0 mm²
+- B10 primary fuel pump: **2.5 mm² MINIMUM**
+- optional secondary/staged fuel pump: **2.5 mm² MINIMUM**
 - B11 radiator fan 1: 2.5 mm²
 - B12 charge/intercooler pump: 2.0 mm²
 - B15 PMU main feed: 10 mm²
@@ -117,18 +102,8 @@ These are not permission to downsize a measured load that requires more conducto
 
 ## Production freeze criteria
 
-A row may be promoted from `MEASUREMENT_GATED` to `PRODUCTION_FROZEN` only when `High-Current-Load-Test-Worksheet.csv` contains complete measured evidence and `High-Current-Sizing-Final-Decision.csv` records:
-
-- final wire size;
-- final terminal/contact PN;
-- final connector housing;
-- final PMU current limit/fuse setting;
-- calculated voltage drop;
-- measured installed voltage drop target/test result;
-- engineering disposition.
+A row may be promoted from `MEASUREMENT_GATED` to `PRODUCTION_FROZEN` only when the load worksheet contains complete measured evidence and the final-decision register records final wire size, terminal/contact PN, connector housing, PMU current limit/fuse setting, calculated voltage drop, installed voltage-drop result and engineering disposition.
 
 ## Current milestone status
 
-`HIGH_CURRENT_CLOSURE_FRAMEWORK_RELEASED / LOAD_MEASUREMENTS_PENDING`
-
-This milestone closes the engineering method. Actual component measurements remain mandatory before `MANUFACTURING_RELEASED_REV1`.
+`HIGH_CURRENT_CLOSURE_FRAMEWORK_RELEASED / FUEL_PUMP_2.5MM2_MINIMUM_FROZEN / LOAD_MEASUREMENTS_PENDING`
