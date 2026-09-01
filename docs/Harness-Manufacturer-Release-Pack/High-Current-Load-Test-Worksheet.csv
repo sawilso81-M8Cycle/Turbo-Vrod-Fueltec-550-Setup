@@ -1,0 +1,16 @@
+Test_ID,Circuit_ID,Load,Exact_Manufacturer_Model_or_Part,Test_Voltage_V,Ambient_C,Steady_Current_A,Peak_or_Inrush_A,Peak_Duration_ms,Mechanical_or_Fluid_Load_State,Measured_Route_mm,Return_Path,Terminal_or_Connector,Notes,Status
+HC-L01,B10,Primary fuel pump,,,,,,,,,,,,OPEN
+HC-L02,B11,Radiator fan 1,,,,,,,,,,,,OPEN
+HC-L03,B12,Charge/intercooler pump,,,,,,,,,,,,OPEN_OR_DNP
+HC-L04,B39,Front injector 27772-06,,,,,,,,,,,,OPEN
+HC-L05,B39,Rear injector 27772-06,,,,,,,,,,,,OPEN
+HC-L06,B40,Front coil 32477-01A through SparkPRO,,,,,,,,,,,,OPEN
+HC-L07,B40,Rear coil 32477-01A through SparkPRO,,,,,,,,,,,,OPEN
+HC-L08,O6,Boost-control solenoid,,,,,,,,,,,,OPEN
+HC-L09,PMU-GND,PMU electronics/device ground,,,,,,,,,,,,OPEN
+HC-L10,B15,KEY_ON / ENGINE_OFF aggregate PMU load,N/A,,,,,,,,,,,,OPEN
+HC-L11,B15,CRANKING aggregate PMU load,N/A,,,,,,,,,,,,OPEN
+HC-L12,B15,ENGINE_RUNNING_NORMAL aggregate PMU load,N/A,,,,,,,,,,,,OPEN
+HC-L13,B15,HOT_IDLE_FANS_ON aggregate PMU load,N/A,,,,,,,,,,,,OPEN
+HC-L14,B15,BOOST_RUN aggregate PMU load,N/A,,,,,,,,,,,,OPEN
+HC-L15,B15,MAX_EXPECTED_AUXILIARY_STATE aggregate PMU load,N/A,,,,,,,,,,,,OPEN
