@@ -1,0 +1,13 @@
+Verify_ID,Area,Item,Current_State,Required_Evidence,Blocks_Release
+V114,BOOST COMMISSIONING,Open-loop boost framework,RESOLVED TEST FRAMEWORK,Open-Loop-Boost-Control-Commissioning.md plus test matrix define OL-001 through OL-012,NO
+V115,BOOST COMMISSIONING,O6 electrical activation and fail-safe,WAITING ON SPRING-PRESSURE RELEASE,Execute OL-001 and retain PMU current/polarity/fail-safe evidence,YES
+V116,BOOST COMMISSIONING,Minimum-duty boost response,WAITING ON V115,Execute OL-002 and prove response remains near accepted spring baseline,YES
+V117,BOOST COMMISSIONING,Incremental duty progression,WAITING ON V116,Execute OL-003 and OL-004 with revision-controlled duty steps and full logs,YES
+V118,BOOST COMMISSIONING,Overshoot/creep characterization,WAITING ON DUTY MAP,Execute OL-005 and block higher duty on non-monotonic or unexplained response,YES
+V119,BOOST COMMISSIONING,Gear/load restriction fail-safe,TEST REQUIRED,Execute OL-006; invalid gear/load must fall back to lowest authorised duty or O6 OFF,YES
+V120,BOOST COMMISSIONING,Fuel-system tracking under boost,TEST REQUIRED,Execute OL-007; falling pressure or PMU current-limit event blocks progression,YES
+V121,BOOST COMMISSIONING,Thermal trend validation,TEST REQUIRED,Execute OL-008 with IAT/ECT and available EGT/EMAP evidence,YES
+V122,BOOST COMMISSIONING,Live O6 fail-safe validation,TEST REQUIRED,Execute OL-009 at low-energy accepted point and prove boost returns toward spring baseline,YES
+V123,BOOST COMMISSIONING,CAN-loss/invalid-MAP boost fail-safe,TEST REQUIRED,Execute OL-010; invalid data must never increase duty,YES
+V124,BOOST COMMISSIONING,Open-loop post-run inspection,TEST REQUIRED,Execute OL-011 and retain pneumatic/electrical/thermal inspection record,YES
+V125,BOOST COMMISSIONING,Open-loop release review,OPEN_LOOP_BOOST_ONLY,Execute OL-012; promote only to READY_FOR_CLOSED_LOOP_BOOST_CONTROL_PREP after all blockers close,YES
