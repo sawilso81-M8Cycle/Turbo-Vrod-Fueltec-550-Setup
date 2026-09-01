@@ -25,14 +25,14 @@ V023,PMU16,Exact connector cavities for O1-O16 A1-A16 CAN1 CAN2 switched 12V gro
 V024,PMU16,PMU O1 current limit and wire size,EVIDENCE TEMPLATE READY,Complete HC-001 primary pump current/inrush plus route length,YES
 V025,PMU16,PMU O3 current limit and wire size,EVIDENCE TEMPLATE READY,Complete HC-003 radiator fan current/inrush plus route length,YES
 V026,PMU16,PMU optional output limits O2/O4/O5/O6/O8/O10,EVIDENCE TEMPLATE READY,Complete applicable HC-002 HC-004 HC-005 HC-006 HC-007 evidence,IF FITTED
-V027,CAN,FT550-to-PMU physical pins,PARTLY RESOLVED,FT550 CAN A A15/A16; PMU CAN2 pins 24/37 candidate; verify common bitrate and chosen bus,YES
-V028,CAN,CAN topology and termination positions,VERIFY,Final device/bus layout; PMU CAN1 has no internal termination and PMU CAN2 has software-controlled termination,YES
+V027,CAN,FT550-to-PMU physical bus selection and bitrate,RESOLVED,FT550 CAN A A15/A16 to PMU CAN2 pins37/24 at 1Mbps; see CAN-Backbone document,NO
+V028,CAN,CAN topology and termination positions,RESOLVED BASELINE,Linear trunk FT550-X51-PMU; FuelTech terminator at FT550 end and PMU CAN2 software termination enabled at PMU end; X51 unterminated,NO
 V029,POWER,Main battery protection device and rating,VERIFY,Total load/fault-current design and conductor size,YES
 V030,POWER,PMU main feed conductor size,MEASUREMENT GATED,Use Wire-Size-Schedule.csv; require total current route length voltage-drop target and terminal limit,YES
 V031,POWER,FT550/EPM feed conductor size and protection,PROVISIONAL 0.75mm2 CLASS,Verify FuelTech requirements engine-load evidence and branch protection,YES
 V032,GROUND,Battery-engine-PMU-FT550 star conductors,VERIFY,Measured cranking drop and final conductor sizing,YES
 V033,HARNESS,Exact branch lengths B01-B40,VERIFY,Physical bike measurement after component mounting and EPM driver/junction placement are frozen,YES
-V034,HARNESS,Connector families terminals seals backshells,PARTLY RESOLVED,PMU Sicma/FCI family known; use CC-001 to CC-004 plus X60-X65 for EPM hardware,YES
+V034,HARNESS,Connector families terminals seals backshells,PARTLY RESOLVED,PMU Sicma/FCI family known; X51 and remaining OEM/EPM connector hardware still open,YES
 V035,HARNESS,CKP shield termination method,VERIFY,Exact FuelTech recommendation for installed harness,YES
 V036,FT550,Fuel-pressure transducer direct analogue cavity,RESOLVED A25 White #6,FuelTech PROBIKE A connector table,NO
 V037,FT550,Engine oil-pressure transducer direct analogue cavity,RESOLVED A23 White #4,FuelTech PROBIKE A connector table,NO
@@ -63,3 +63,6 @@ V061,IGNITION,SparkPRO-2 exact six-pin electrical pinout,RESOLVED,FuelTech Spark
 V062,IGNITION,SparkPRO-2 mating housing terminal and seal part numbers,VERIFY,Use supplied FuelTech SparkPRO-2 wiring harness or identify exact connector service kit before bare-connector harness release,YES
 V063,INJECTION,Peak & Hold exact current-class/model,MEASUREMENT GATED,Close HC-008/HC-009 then select FuelTech driver current class if required,YES
 V064,INJECTION,X62-X65 physical connector family and terminal freeze,VERIFY,Select keyed sealed connectors after final direct/P&H mode conductor size and current are known,YES
+V065,CAN,X51 service connector family terminals and cap,VERIFY,Select sealed 4-way service connector and terminal set; no permanent termination,YES
+V066,CAN,Application-layer FT550-to-PMU frame definitions,VERIFY,Map only verified FT550 frame IDs/scaling into PMU Client; record timeout fallback per signal,YES
+V067,CAN,CAN-loss fallback validation,TEST REQUIRED,Disconnect CAN during bench test and prove each PMU-dependent function enters documented safe state and recovers deterministically,YES
