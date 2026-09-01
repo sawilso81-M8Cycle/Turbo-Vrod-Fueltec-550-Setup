@@ -8,8 +8,8 @@ V006,FT550,Oil pressure switch digital input cavity and logic,VERIFY,Verify swit
 V007,FT550,Neutral switch digital input cavity and logic,VERIFY,Verify switch polarity and FT550 input strategy,YES
 V008,FT550,Front injector output cavity,RESOLVED A1 Blue #1,FuelTech PROBIKE A-connector table; HC-008 still required for impedance/current interface,NO
 V009,FT550,Rear injector output cavity,RESOLVED A2 Blue #2,FuelTech PROBIKE A-connector table; HC-009 still required for impedance/current interface,NO
-V010,FT550,Front coil output cavity,RESOLVED A8 Gray #1,FuelTech PROBIKE A-connector table; HC-010/CC-003 still required for driver topology,NO
-V011,FT550,Rear coil output cavity,RESOLVED A9 Gray #2,FuelTech PROBIKE A-connector table; HC-011/CC-004 still required for driver topology,NO
+V010,FT550,Front coil output cavity,RESOLVED A8 Gray #1,FuelTech PROBIKE A-connector table,NO
+V011,FT550,Rear coil output cavity,RESOLVED A9 Gray #2,FuelTech PROBIKE A-connector table,NO
 V012,OEM SENSOR,CKP polarity and waveform,WORKING,Oscilloscope capture while cranking,YES
 V013,OEM SENSOR,TPS closed/WOT calibration,WORKING,Measured voltages/calibration in FT550,YES
 V014,OEM SENSOR,OEM MAP transfer curve,VERIFY,Bench pressure/voltage characterization or verified OEM data,YES
@@ -18,9 +18,9 @@ V016,OEM SENSOR,IAT thermistor curve,VERIFY,Bench characterization or verified O
 V017,OEM SENSOR,VSS pulses/rev and voltage amplitude,VERIFY,Scope/log measurement,YES
 V018,OEM SENSOR,VSS preferred ground topology,VERIFY,Electrical test and manufacturer circuit confirmation,YES
 V019,OEM HARDWARE,Front/rear injector connector family and terminals,EVIDENCE TEMPLATE READY,Complete CC-001 and CC-002 in Hardware-Evidence pack,YES
-V020,OEM HARDWARE,Front/rear coil connector family and terminals,EVIDENCE TEMPLATE READY,Complete CC-003 and CC-004 in Hardware-Evidence pack,YES
-V021,OEM HARDWARE,Injector steady/peak current and impedance class,EVIDENCE TEMPLATE READY,Complete HC-008 and HC-009; determines Peak & Hold requirement,YES
-V022,OEM HARDWARE,Coil electrical type current profile and dwell,EVIDENCE TEMPLATE READY,Complete HC-010 and HC-011; determines SparkPRO/passive versus smart-coil interface,YES
+V020,OEM HARDWARE,Front/rear coil connector family and terminals,PARTLY RESOLVED,32477-01A confirmed two-terminal construction; exact connector family terminals and seals still required,YES
+V021,OEM HARDWARE,Injector steady/peak current and impedance class,EVIDENCE TEMPLATE READY,Complete HC-008 and HC-009; determines direct versus Peak & Hold path,YES
+V022,OEM HARDWARE,Coil primary resistance current profile and dwell,TOPOLOGY RESOLVED PASSIVE,External igniter required; complete HC-010/HC-011 only for dwell/current calibration and final driver rating,YES
 V023,PMU16,Exact connector cavities for O1-O16 A1-A16 CAN1 CAN2 switched 12V ground +5V and main stud,RESOLVED,Official PMU-16 Pinout v1.2 extracted to PMU16-Pinout-v1.2.csv,NO
 V024,PMU16,PMU O1 current limit and wire size,EVIDENCE TEMPLATE READY,Complete HC-001 primary pump current/inrush plus route length,YES
 V025,PMU16,PMU O3 current limit and wire size,EVIDENCE TEMPLATE READY,Complete HC-003 radiator fan current/inrush plus route length,YES
@@ -49,3 +49,6 @@ V047,HARNESS,Low-level wire classes,PROVISIONAL,0.35mm2 sensor/CAN/command; 0.5m
 V048,HARNESS,Final wire product insulation/temp/chemical specification,VERIFY,Select motorsport/automotive wire series compatible with heat oil fuel vibration and terminal system,YES
 V049,TESTING,Hardware current and connector evidence pack,FRAMEWORK COMPLETE,docs/Hardware-Evidence contains load sheet connector register bench procedure and evidence register,NO
 V050,FT550,Injector/ignition output cavity freeze,RESOLVED,A1/A2 primary injector outputs and A8/A9 ignition outputs frozen from FuelTech PROBIKE manual,NO
+V051,IGNITION,32477-01A smart-versus-passive classification,RESOLVED PASSIVE TWO-TERMINAL,Physical connector evidence plus FuelTech dumb-coil interface rule; external igniter mandatory,NO
+V052,IGNITION,External igniter hardware and dwell calibration,DESIGN BASELINE SPARKPRO-2 CLASS,Freeze exact driver PN/connector after coil resistance/current/dwell evidence,YES
+V053,INJECTION,Injector interface architecture,CONFIGURABLE DIRECT OR PEAK-HOLD,Measure 27772-06 impedance; direct only within FuelTech limits; Peak & Hold mandatory below 7 ohms or if loading requires it,YES
