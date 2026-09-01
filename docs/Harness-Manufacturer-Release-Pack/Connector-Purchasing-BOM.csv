@@ -1,7 +1,7 @@
 Connector_ID,Function,Housing_PN,Mating_Housing_PN,Terminal_PN,Seal_PN,Cavity_Plug_PN,Boot_or_Backshell,Qty,Status,Release_Blocker
 X01,FT550 connector A,FuelTech supplied / identify service PN,FuelTech FT550 A,Per FuelTech harness service terminal,Per family,Per family,As supplied,1,PARTLY_FROZEN,Freeze purchasable service parts if bare-harness build
 X02,FT550 connector B,FuelTech supplied / identify service PN,FuelTech FT550 B,Per FuelTech harness service terminal,Per family,Per family,As supplied,1,PARTLY_FROZEN,Freeze purchasable service parts if bare-harness build
-X03,ECUMASTER PMU16 39-way,Per official PMU16 connector family,PMU16 device,By wire range,By family,By family,As required,1,IDENTIFIED_FAMILY_PN_OPEN,YES
+X03,ECUMASTER PMU16 39-way,Sicma / FCI 39-position family,PMU16 device,"211CC2S2160P 1.5mm terminal family 14-17AWG; 211CC3S2120 2.8mm 14-16AWG; 211CC3S3120 2.8mm 10-12AWG",Per Sicma/FCI family,Per Sicma/FCI family,As required,1,VERIFIED_FAMILY,Exact terminal/seal variant by circuit and selected wire series
 X10,OEM CKP,Match 32313-01A sensor,Sensor body,TBD,TBD,TBD,Heat/strain protection,1,PHYSICAL_ID_REQUIRED,YES
 X11,OEM TPS,Match 27975-01 TPS,Sensor body,TBD,TBD,TBD,As required,1,PHYSICAL_ID_REQUIRED,YES
 X12,OEM MAP,Match 32416-10 MAP,Sensor body,TBD,TBD,TBD,As required,1,PHYSICAL_ID_REQUIRED,YES
@@ -12,7 +12,8 @@ X20,Front injector,Match 27772-06 injector,Injector body,TBD,TBD,TBD,Heat boot a
 X21,Rear injector,Match 27772-06 injector,Injector body,TBD,TBD,TBD,Heat boot as required,1,PHYSICAL_ID_REQUIRED,YES
 X22,Front coil,Match 32477-01A two-terminal coil,Coil body,TBD,TBD,TBD,Heat boot as required,1,PHYSICAL_ID_REQUIRED,YES
 X23,Rear coil,Match 32477-01A two-terminal coil,Coil body,TBD,TBD,TBD,Heat boot as required,1,PHYSICAL_ID_REQUIRED,YES
-X30,Primary fuel pump,Selected pump connector,Selected pump,TBD,TBD,TBD,As required,1,DEVICE_SELECTION_GATED,YES
+X30,Primary fuel pump,Selected pump connector rated for 4.0mm2 feed/return,Selected pump,TBD high-current terminal,TBD,TBD,As required,1,PUMP_VERIFICATION_GATED,Exact pump/current/mating interface required before final connector selection
+X31,Secondary fuel pump if fitted,Selected pump connector rated for 4.0mm2 feed/return,Selected pump,TBD high-current terminal,TBD,TBD,As required,1,DNP_OR_PUMP_VERIFICATION_GATED,Exact pump/current/mating interface required if fitted
 X32,Radiator fan 1,Selected fan connector,Selected fan,TBD,TBD,TBD,As required,1,DEVICE_SELECTION_GATED,YES
 X34,Charge-cooler pump,Selected pump connector,Selected pump,TBD,TBD,TBD,As required,1,DNP_OR_DEVICE_SELECTION_GATED,IF FITTED
 X40,J-P01 positive junction,Selected insulated junction,NA,Stud/ring terminal sized to cable,NA,NA,Insulating cover,1,HARDWARE_SELECTION_OPEN,YES
@@ -26,5 +27,5 @@ X63,Injector engine-side junction,Selected keyed sealed 4-way minimum,Mating inj
 X64,Peak Hold input,Selected sealed connector,Peak Hold module,Per selected module,Per family,Per family,As required,1,DNP_OR_SELECT,IF FITTED
 X65,Peak Hold output,Selected sealed connector,Peak Hold module,Per selected module,Per family,Per family,As required,1,DNP_OR_SELECT,IF FITTED
 X70,Two-Step relay sub-harness,Sealed relay holder/sub-harness connector,Main harness,0.35-0.5mm2 contacts,Per family,Per family,Sealed relay holder,1,PROPOSE_BY_MANUFACTURER,YES
-X71,Clutch switch service break,Deutsch DTM04-2P,Deutsch DTM06-2S,TE 0462-201-20141 socket plus matching size-20 pin,Integral DTM sealing,Per DTM,Optional boot,1,BASELINE_FROZEN,Freeze matching pin PN and final orientation
+X71,Clutch switch service break,Deutsch DTM04-2P,Deutsch DTM06-2S,"TE 0462-201-20141 socket; TE 0460-202-20141 matching pin for 0.5mm2 / 20AWG class",Integral DTM sealing,Per DTM,Optional boot,1,VERIFIED_PN,Final orientation and exact selected wire insulation to be checked
 X72,Optional clutch Hall sensor,Per selected Honeywell RTY variant,RTY050LVNAX,Per sensor kit,Per sensor kit,Per sensor kit,As supplied,1,OPTIONAL_VERIFY,IF FITTED
