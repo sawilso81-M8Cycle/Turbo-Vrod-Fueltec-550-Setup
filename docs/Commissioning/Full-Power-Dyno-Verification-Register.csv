@@ -1,0 +1,15 @@
+Verify_ID,Area,Item,Current_State,Required_Evidence,Blocks_Release
+V152,DYNO,Full-power dyno framework,RESOLVED TEST FRAMEWORK,Full-Power-Pull-Final-Dyno-Validation.md plus Full-Power-Pull-Test-Matrix.csv,NO
+V153,DYNO,First full-load pull readiness,WAITING ON READY_FOR_FULL_POWER_PULL_PREP,Complete FP-001 with frozen revisions limits sensors cooling restraint and kill,YES
+V154,DYNO,First full-load pull validation,TEST REQUIRED,Execute FP-002 with all critical channels logged and no FP-003 abort condition,YES
+V155,DYNO,Abort criteria and operator response,TEST REQUIRED,Execute FP-003 and retain evidence that critical anomalies are immediately actionable,YES
+V156,DYNO,First-pull log review,TEST REQUIRED,Execute FP-004 before any repeat pull,YES
+V157,DYNO,Repeatability validation,TEST REQUIRED,Execute FP-005 until boost lambda fuel pressure duty timing torque and thermal behaviour repeat within build-specific limits,YES
+V158,FUEL,Full-load injector/pump headroom freeze,TEST REQUIRED,Execute FP-006 and retain documented margin from injector pump and driver limits,YES
+V159,DYNO,Cylinder-specific full-load lambda balance,TEST REQUIRED,Execute FP-007 using dual lambda where fitted; averaged lambda cannot mask one-cylinder error,YES
+V160,IGNITION,Full-load ignition/combustion validation,TEST REQUIRED,Execute FP-008 with timing torque lambda plug/combustion evidence and available knock instrumentation,YES
+V161,THERMAL,Heat-soak and cooldown repeatability,TEST REQUIRED,Execute FP-009 with defined pre-pull thermal state and repeatability evidence,YES
+V162,MECHANICAL,Post full-power inspection,TEST REQUIRED,Execute FP-010 and resolve any leak distress loose hardware or abnormal heat damage,YES
+V163,CONFIG,Final calibration freeze,WAITING ON FP-001 THROUGH FP-010 PASS,Execute FP-011 and archive immutable FTManager PMU boost and hardware revisions,YES
+V164,REPORTING,Final dyno validation report,WAITING ON CALIBRATION FREEZE,Execute FP-012 with performance protection repeatability and limitations evidence,YES
+V165,RELEASE,Full-power dyno release,FULL_POWER_DYNO_VALIDATION_ONLY,Promote only to DYNO_CALIBRATION_FROZEN_READY_FOR_VEHICLE_VALIDATION_PREP after V153-V164 PASS,YES
