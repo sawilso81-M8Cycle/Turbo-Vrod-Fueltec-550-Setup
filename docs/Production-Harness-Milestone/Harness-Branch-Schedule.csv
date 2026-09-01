@@ -28,3 +28,7 @@ B37,X62,X64 optional Peak Hold input,Injector commands into Peak & Hold module,F
 B38,X65 optional Peak Hold output,X63 injector engine-side junction,Peak & Hold driven injector outputs,Fitted only with selected module,DNP/VERIFY,Populate only with PEAK_HOLD_INSTALLED build status
 B39,EPM protected +12V,X20/X21 injectors,Common injector +12V feed,Do not share sensor-return paths; protect to actual measured injector load,VERIFY,Size/fuse after HC-008/009
 B40,EPM protected +12V,X61/coil supply architecture,Common ignition/driver +12V feed as required by final driver topology,Keep separate from sensor supply and CKP branch,VERIFY,Size/fuse after HC-010/011 and driver selection
+B41,X71 OEM clutch switch,X03 PMU A6 pin18,Clutch discrete signal plus ground/pull-up reference,Route with handlebar movement allowance and strain relief,VERIFY,Bench switch polarity then measure steering/full-lever route
+B42,X72 optional clutch position,X03 PMU A7 pin32,5V ratiometric clutch-position signal and ground,Keep with low-level sensor wiring away from ignition/PMU high-current outputs,DNP/VERIFY,Populate after exact Hall sensor and mount are frozen
+B43,X03 PMU O11 pin3,X70 Two-Step interface,High-side Two-Step permissive command,Keep electrically separate from FT550 A21 until X70 conversion stage,VERIFY,Freeze X70 hardware and branch length
+B44,X70 low-side interface,X01 FT550 A21,Ground-active Two-Step request White #2,No +12V permitted on FT550 A21; short protected signal path,VERIFY,Bench activation/release latency and fail-safe high-impedance state
