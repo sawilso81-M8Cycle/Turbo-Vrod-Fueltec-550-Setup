@@ -1,5 +1,5 @@
 Circuit_ID,Load,Measured_Steady_A,Measured_Peak_A,Route_mm,Selected_Wire_mm2,Selected_Wire_Series,Terminal_PN,Connector_Housing,Protection_or_PMU_Limit_A,Calculated_Vdrop_V,Installed_Vdrop_V,Decision_Status,Engineering_Disposition
-B10,Primary fuel pump,,,,2.0 provisional,,,,,,,MEASUREMENT_GATED,
+B10,Primary fuel pump,UP_TO_30A_EXPECTED,,,2.5 MINIMUM,,,,,,,MEASUREMENT_GATED_MINIMUM_FROZEN,Do not downsize below 2.5mm2; upsize if measured load/route/terminal margin requires
 B11,Radiator fan 1,,,,2.5 provisional,,,,,,,MEASUREMENT_GATED,
 B12,Charge/intercooler pump,,,,2.0 provisional,,,,,,,DNP_OR_MEASUREMENT_GATED,
 B15,PMU main battery feed,,,,10.0 provisional,,,,,,,MEASUREMENT_GATED,
