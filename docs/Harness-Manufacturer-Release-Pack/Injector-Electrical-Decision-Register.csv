@@ -1,0 +1,7 @@
+Record_ID,Injector_Position,Part_Number,Ambient_C,Resistance_Ohm,Test_Voltage_V,Peak_Current_A,Hold_or_Steady_Current_A,Waveform_Evidence,Connector_Temp_Result,FT550_Direct_Drive_Limit_Evidence,Decision,Notes
+INJ-001,Front,27772-06,,,,,,,,,MEASUREMENT_GATED,
+INJ-002,Rear,27772-06,,,,,,,,,MEASUREMENT_GATED,
+INJ-003,Front-vs-Rear Comparison,27772-06 pair,,,,,,,,,PENDING,
+INJ-004,B39 Supply Sizing,NA,,,,,,,,,PENDING,Freeze after final injector architecture
+INJ-005,X62/X63 Interface,NA,,,,,,,,,PENDING,Freeze keyed sealed connector system after final current class
+INJ-006,Final Architecture,NA,,,,,,,,,INJECTOR_ARCHITECTURE_NOT_RELEASED,Allowed final values: DIRECT_DRIVE_APPROVED or PEAK_HOLD_REQUIRED
