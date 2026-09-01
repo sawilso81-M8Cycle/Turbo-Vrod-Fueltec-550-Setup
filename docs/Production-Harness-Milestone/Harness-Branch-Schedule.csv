@@ -6,8 +6,8 @@ B04,Sensor spine,X12 MAP,MAP 5V signal return,Keep with low-level sensor bundle,
 B05,Sensor spine,X13 ECT,ECT signal/return,Keep with sensor bundle and away from fan feed,VERIFY,Measure physical branch
 B06,Sensor spine,X14 IAT,IAT signal/return,Route to actual OEM sensor location without heat damage,VERIFY,Measure physical branch
 B07,Sensor spine,X15 VSS,VSS 12V signal ground,Keep speed signal away from ignition where practical,VERIFY,Measure physical branch
-B08,FT550/EPM,X20/X21 injectors,Injector supply and individual controls,Do not bundle beside CKP for long parallel runs,VERIFY,Confirm injector connector orientation and length
-B09,FT550/EPM,X22/X23 coils,Coil supply and individual controls,Physically segregate from CKP and analogue sensor branch,VERIFY,Confirm coil connector and routing
+B08,X63 injector engine junction,X20/X21 injectors,Front/rear injector control outputs after approved direct/P&H interface,Do not bundle beside CKP for long parallel runs,VERIFY,Confirm injector connector orientation and length
+B09,X61 ignition driver output,X22/X23 coils,Driven front/rear coil primary control paths,Physically segregate from CKP and analogue sensor branch,VERIFY,Confirm coil connector and routing
 B10,X03 PMU,X30 primary fuel pump,PMU O1 high-current feed,Route as high-current branch with appropriate conductor and connector,VERIFY,Measure pump current then size wire
 B11,X03 PMU,X32 radiator fan 1,PMU O3 high-current feed,Keep away from sensor-reference splice pack,VERIFY,Measure fan current/inrush then size wire
 B12,X03 PMU,X34 auxiliary pump,PMU O5 feed if fitted,High-current auxiliary branch,DNP/VERIFY,Populate only if fitted
@@ -15,3 +15,16 @@ B13,X03 PMU,X50 service/logger,PMU O10 service feed and communications,Accessibl
 B14,FT550,X03/X51,CAN H/L twisted pair,Maintain bus topology and termination rules,VERIFY,Freeze topology after manufacturer CAN details are verified
 B15,J-P01,X03 PMU,PMU main battery feed,Shortest practical protected high-current route,VERIFY,Size after PMU manual/current plan is frozen
 B16,J-P02,FT550/PMU/engine,Power-ground conductors,Short low-resistance star routing not shared through sensor-return splice,VERIFY,Measure and define conductor sizes
+B17,Sensor spine,Fuel pressure sensor,5V signal precision return,Keep in SIM precision bundle,VERIFY,Measure physical branch
+B18,Sensor spine,Engine oil pressure sensor,5V signal precision return,Keep in SIM precision bundle,VERIFY,Measure physical branch
+B19,Sensor spine,Post-intercooler IAT,Temperature signal/return,Heat protect and keep away from ignition primary wiring,VERIFY,Measure physical branch
+B20-B31,Expansion,Turbo/development sensors,Reserved per Sheet 06 sensor expansion plan,Do not displace engine-protection circuits,VERIFY/DNP,Populate only when hardware is selected
+B32,FT550 A8/A9,X60 ignition driver ECU side,Gray #1/#2 ignition command conductors,Low-current command branch kept away from driven coil primary wiring,VERIFY,Freeze connector and route after driver hardware selection
+B33,EPM/J-P02,Ignition driver,Ignition driver power and low-impedance ground,Route ground directly to J-P02 power star and follow driver manufacturer requirements,VERIFY,Size after driver selection and coil current characterization
+B34,X61 ignition driver output,X22/X23 coils,Driven front/rear ignition primary outputs,Keep maximum practical separation from CKP and analogue sensor branches,VERIFY,Size after coil current characterization
+B35,FT550 A1/A2,X62 injector ECU-side junction,Blue #1/#2 injector command conductors,Keep serviceable and electrically segregated from ignition primary branches,VERIFY,Freeze X62 connector family
+B36,X62,X63 injector engine-side junction,Removable direct-drive injector bypass link,Fitted only when HC-008/009 prove direct-drive compatibility,DNP/VERIFY,Install only with DIRECT_DRIVE_APPROVED build status
+B37,X62,X64 optional Peak Hold input,Injector commands into Peak & Hold module,Fitted only when Peak & Hold is required,DNP/VERIFY,Populate only with PEAK_HOLD_INSTALLED build status
+B38,X65 optional Peak Hold output,X63 injector engine-side junction,Peak & Hold driven injector outputs,Fitted only with selected module,DNP/VERIFY,Populate only with PEAK_HOLD_INSTALLED build status
+B39,EPM protected +12V,X20/X21 injectors,Common injector +12V feed,Do not share sensor-return paths; protect to actual measured injector load,VERIFY,Size/fuse after HC-008/009
+B40,EPM protected +12V,X61/coil supply architecture,Common ignition/driver +12V feed as required by final driver topology,Keep separate from sensor supply and CKP branch,VERIFY,Size/fuse after HC-010/011 and driver selection
