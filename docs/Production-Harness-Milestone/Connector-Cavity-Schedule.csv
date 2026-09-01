@@ -6,8 +6,8 @@ X01,A9,Rear ignition command - Ignition output #2,E-010,GY#2,EPM,MANUFACTURER VE
 X01,A12,FT550 signal ground / sensor return,S-005;S-008;S-010,BK/W,SIM,MANUFACTURER VERIFIED CAVITY,Verify final splice topology only
 X01,A13,FT550 switched 12V input,E-001,RD,EPM,MANUFACTURER VERIFIED CAVITY,Verify conductor/protection sizing
 X01,A14,FT550 5V sensor reference,S-003;S-006,R/W,SIM,MANUFACTURER VERIFIED CAVITY,Verify total 5V sensor load
-X01,A15,CAN A LOW,C-001,WH/BU,COMM,MANUFACTURER VERIFIED CAVITY,Verify final CAN topology
-X01,A16,CAN A HIGH,C-002,WH/RD,COMM,MANUFACTURER VERIFIED CAVITY,Verify final CAN topology
+X01,A15,CAN A LOW,C-001,WH/BU,COMM,PRODUCTION FROZEN 1MBPS,Route to PMU CAN2 pin37 through linear trunk; FuelTech end termination
+X01,A16,CAN A HIGH,C-002,WH/RD,COMM,PRODUCTION FROZEN 1MBPS,Route to PMU CAN2 pin24 through linear trunk; FuelTech end termination
 X01,A18,CKP reference,S-002,BK,SIM,WORKING VERIFIED,Scope polarity before release
 X01,A19,CKP signal,S-001,WH,SIM,WORKING VERIFIED,Scope polarity before release
 X01,A20,OEM MAP signal reserved,S-007,V/W,SIM,DESIGN RESERVED,Verify FTManager input configuration and MAP calibration
@@ -18,8 +18,8 @@ X01,A25,Fuel pressure transducer,SX-003,WH#6,SIM,MANUFACTURER VERIFIED CAVITY,Se
 X01,A26,VSS signal,S-014,BK/BE,SIM,WORKING VERIFIED,Verify pulse calibration
 X02,B1,FT550 power ground 1,E-002,BK/WH,EPM,MANUFACTURER VERIFIED CAVITY,Verify conductor size
 X02,B2,FT550 power ground 2,E-002,BK/WH,EPM,MANUFACTURER VERIFIED CAVITY,Verify conductor size
-X02,B3,CAN B LOW,C-003,BU/YE,COMM,MANUFACTURER VERIFIED CAVITY,Reserve unless architecture requires CAN B
-X02,B4,CAN B HIGH,C-004,WH/RD,COMM,MANUFACTURER VERIFIED CAVITY,Reserve unless architecture requires CAN B
+X02,B3,CAN B LOW,C-003,BU/YE,COMM,RESERVED,Hold for future expansion
+X02,B4,CAN B HIGH,C-004,WH/RD,COMM,RESERVED,Hold for future expansion
 X02,B5,IAT signal,S-011,LGN/Y,SIM,WORKING VERIFIED,Verify thermistor curve
 X02,B6,White #9 Pan Vac / back-pressure input,SX-010,WH#9,SIM,MANUFACTURER VERIFIED CAVITY,Conditional crankcase pressure allocation
 X02,B7,White #10 wastegate/dome pressure input,SX-013,WH#10,SIM,MANUFACTURER VERIFIED CAVITY,Populate only for dome-control strategy
@@ -45,11 +45,15 @@ X03,31,PMU A5 service/test mode,PMU-A5,VERIFY,APM,MANUFACTURER VERIFIED CAVITY,D
 X03,7,PMU switched +12V,PMU-PWR-SW,RD,APM,MANUFACTURER VERIFIED CAVITY,Verify protected ignition feed
 X03,25,PMU device ground,PMU-GND,BK,APM,MANUFACTURER VERIFIED CAVITY,Verify conductor size and star point
 X03,15,PMU +5V output,PMU-5V,VERIFY,APM,MANUFACTURER VERIFIED CAVITY,500mA max; PMU-local use only
-X03,23,PMU CAN1H,CAN-PMU1H,WH/BU,COMM,MANUFACTURER VERIFIED CAVITY,Fixed 1Mbps; external termination required
-X03,36,PMU CAN1L,CAN-PMU1L,WH/GN,COMM,MANUFACTURER VERIFIED CAVITY,Fixed 1Mbps; external termination required
-X03,24,PMU CAN2H,CAN-PMU2H,WH/BU,COMM,MANUFACTURER VERIFIED CAVITY,Candidate FT550 bus; verify bitrate/topology
-X03,37,PMU CAN2L,CAN-PMU2L,WH/GN,COMM,MANUFACTURER VERIFIED CAVITY,Candidate FT550 bus; verify bitrate/topology
+X03,23,PMU CAN1H,CAN-PMU1H,WH/BU,COMM,RESERVED,Fixed 1Mbps; hold for future ECUMASTER-native bus
+X03,36,PMU CAN1L,CAN-PMU1L,WH/GN,COMM,RESERVED,Fixed 1Mbps; hold for future ECUMASTER-native bus
+X03,24,PMU CAN2H,CAN-PMU2H,WH/RD,COMM,PRODUCTION FROZEN 1MBPS,Connect FT550 A16; PMU CAN2 termination enabled at bus end
+X03,37,PMU CAN2L,CAN-PMU2L,WH/BU,COMM,PRODUCTION FROZEN 1MBPS,Connect FT550 A15; PMU CAN2 termination enabled at bus end
 X03,STUD,PMU main +12V battery feed,PMU-PWR-MAIN,RD,POWER,MANUFACTURER VERIFIED,Main protection/conductor sizing still open
+X51,H,CAN service HIGH,C-SVC-H,WH/RD,COMM,DESIGN FROZEN,Short non-terminated stub from linear trunk; target <=0.3m
+X51,L,CAN service LOW,C-SVC-L,WH/BU,COMM,DESIGN FROZEN,Short non-terminated stub from linear trunk; target <=0.3m
+X51,G,Diagnostic ground reference,C-SVC-G,BK,COMM,DESIGN FROZEN,Exact connector hardware open
+X51,P,Protected service +12V optional,C-SVC-P,RD,COMM,OPTIONAL,Populate only if selected diagnostic adapter requires supply
 X60,1,SparkPRO-2 channel input 1,E-008,GY#1,EPM,MANUFACTURER VERIFIED CAVITY,Use 0.5mm2; final mating terminal PN if bare connector build
 X60,2,SparkPRO-2 power ground 1,EPM-GND-SP1,BK,EPM,MANUFACTURER VERIFIED CAVITY,Use 1.0mm2 to J-P02
 X60,3,SparkPRO-2 channel input 2,E-010,GY#2,EPM,MANUFACTURER VERIFIED CAVITY,Use 0.5mm2; final mating terminal PN if bare connector build
