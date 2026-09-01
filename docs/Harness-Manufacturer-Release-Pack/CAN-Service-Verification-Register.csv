@@ -1,0 +1,21 @@
+Test_ID,System,Requirement,Acceptance_Criteria,Evidence,State
+CAN-001,X51,Connector family,Deutsch DTM 4-way sealed family used or approved equivalent,Build record,OPEN
+CAN-002,X51,Cavity 1,CAN-H mapped to cavity 1 and correct circuit ID,Continuity/cavity report,OPEN
+CAN-003,X51,Cavity 2,CAN-L mapped to cavity 2 and correct circuit ID,Continuity/cavity report,OPEN
+CAN-004,X51,Cavity 3,Service ground mapped correctly and not used as high-current return,Continuity/cavity report,OPEN
+CAN-005,X51,Cavity 4,Protected service +12V fitted and labelled or explicitly DNP/sealed,Build record,OPEN
+CAN-006,X51,Stub length,Finished service stub <=300 mm unless engineering deviation approved,Dimension report,OPEN
+CAN-007,CAN,Pair construction,CAN-H/L remain twisted through trunk and service branch as far as practical,Visual/pre-cover photo,OPEN
+CAN-008,CAN,Polarity,No CAN-H/CAN-L reversal end-to-end,Continuity report,OPEN
+CAN-009,CAN,Isolation,No H/L short to each other +12V ground shield or unrelated circuits,Isolation report,OPEN
+CAN-010,CAN,FT550 termination state,Selected CAN port termination configuration documented,FT550 configuration/manual evidence,OPEN
+CAN-011,CAN,PMU termination state,PMU16 termination configuration documented,PMU configuration/manual evidence,OPEN
+CAN-012,CAN,Termination count,Every fitted 120-ohm termination explicitly identified,As-built topology record,OPEN
+CAN-013,CAN,Powered-down resistance,CAN-H to CAN-L resistance agrees with documented topology; approx 60 ohm when two 120-ohm endpoint terminators are intentionally present,DMM record,OPEN
+CAN-014,CAN,No X51 hidden termination,X51 contains no permanent undocumented termination resistor,Inspection/continuity record,OPEN
+CAN-015,CAN,Routing,CAN separated from ignition/injector/starter/pump high-current noise sources,Installed/pre-cover photos,OPEN
+CAN-016,CAN,FT550-PMU communication,Stable bidirectional/required CAN communication after configuration,FTManager/PMU log,OPEN
+CAN-017,CAN,Cranking immunity,No harness-induced CAN fault during cranking,Log capture,OPEN
+CAN-018,CAN,Ignition immunity,No harness-induced CAN fault with SparkPRO/coils operating,Log capture,OPEN
+CAN-019,Service,Backfeed protection,External service device cannot back-feed vehicle through optional X51 power,Powered bench test or DNP,OPEN
+CAN-020,Release,CAN service acceptance,CAN-001 through applicable CAN-019 PASS,Engineering signoff,CAN_SERVICE_NOT_ACCEPTED
