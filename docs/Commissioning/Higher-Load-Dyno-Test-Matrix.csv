@@ -1,0 +1,16 @@
+Test_ID,Phase,Test,Required_Result,Abort_On,Evidence,Status
+DY-001,Setup,Dyno and vehicle setup,Vehicle/dyno secured cooled ventilated and revision-controlled,Unsafe setup or unresolved mechanical issue,Setup checklist,NOT_RUN
+DY-002,Instrumentation,Critical channel readiness,RPM MAP lambda fuel/oil pressure temps voltage CAN and boost control channels valid,Missing/untrusted critical channel,Logging validation,NOT_RUN
+DY-003,Fuel system,Fuel-system capacity gate,Pressure stable and pumps/injectors retain acceptable build-specific margin,Pressure decay; pump current fault; inadequate injector headroom,FTManager+PMU logs,NOT_RUN
+DY-004,Lambda,Cylinder-specific lambda gate,Front/rear behavior understood and repeatable or single-channel limitation documented,Unexplained cylinder imbalance or unsafe mixture trend,Lambda logs+trim record,NOT_RUN
+DY-005,Load progression,Staged RPM/load cell matrix,Each cell PASS before progression,Any unaccepted cell or crossing untested region,Build-specific cell matrix,NOT_RUN
+DY-006,Fuel tuning,Revision-controlled fuel changes,Expected fuel change confirmed by repeat data,Unexplained worsening or closed-loop masking poor base map,Before/after calibration+logs,NOT_RUN
+DY-007,Ignition,Conservative ignition optimisation,Stable fueling then evidence-backed timing changes only,Adverse combustion/thermal evidence or unsupported timing increase,Dyno torque+timing logs,NOT_RUN
+DY-008,Combustion,Knock/combustion evidence,Instrumentation source/calibration documented or absence explicitly noted,Untrusted signal treated as proof,Combustion evidence record,NOT_RUN
+DY-009,Thermal,Thermal-envelope validation,IAT/ECT/oil/electrical temperatures remain within build-specific gates,Unexplained heat soak or protection event,Thermal logs+inspection,NOT_RUN
+DY-010,Boost,Boost-target progression,Each target repeatable with acceptable correction fuel lambda timing and thermal margin,Overshoot; excessive correction; pressure/mixture/thermal fault,Boost target summary,NOT_RUN
+DY-011,Repeatability,Repeated accepted runs,Key channels repeat within understood variation,Unexplained run-to-run variability,Overlay/comparison logs,NOT_RUN
+DY-012,Protection,Higher-load protection validation,Overboost/MAP/CAN/fuel/lambda/thermal/O6/kill fallbacks remain safe,Any protection that increases authority or fails safe response,Protection test record,NOT_RUN
+DY-013,Inspection,Post-run hardware inspection,No leak damage loose charge hardware terminal heating or suspected combustion damage,Any physical damage/unsafe condition,Inspection record,NOT_RUN
+DY-014,Release,Full-power readiness review,All required higher-load evidence reviewed and margins accepted,Any unresolved critical fault or capacity/thermal/boost uncertainty,Revision-controlled readiness review,NOT_RUN
+DY-REL,Release,Higher-load tuning release,DY-001 through DY-014 PASS,Any open critical anomaly,Release record,HIGHER_LOAD_TUNING_ONLY
