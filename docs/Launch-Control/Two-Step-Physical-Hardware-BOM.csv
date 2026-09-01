@@ -1,14 +1,19 @@
 BOM_ID,Category,Item,Manufacturer_or_PN,Qty,Status,Release_Blocker
 TS-BOM-001,OEM Clutch Switch,Primary clutch discrete switch,Harley-Davidson 71620-08,1,FROZEN,NO
 TS-BOM-002,OEM Switch Hardware,Clutch switch spring clip,Harley-Davidson 46865-06,1,FROZEN,NO
-TS-BOM-003,Interface Relay,X70 12V SPST-NO automotive relay,TE Connectivity 1393280-5 Micro Relay K,1,FROZEN,Verify socket/carrier and suppression
-TS-BOM-004,Interface Connector,X70 service connector/relay carrier,4-way keyed sealed service interface or protected relay carrier,1,SELECT HARDWARE,YES
-TS-BOM-005,Clutch Connector,X71 OEM clutch switch mating connector,Identify from installed OEM switch/harness,1,PHYSICAL IDENTIFICATION,YES
-TS-BOM-006,Clutch Position Sensor,Optional Hall rotary position sensor,Honeywell RTY050LVNAX,1,BASELINE FROZEN,Verify actual clutch-lever travel
-TS-BOM-007,Position Sensor Connector,X72 sensor mating connector/terminals,Per purchased Honeywell RTY050LVNAX variant,1,VERIFY,YES IF FITTED
-TS-BOM-008,Wire,B41 clutch discrete conductor,0.35 mm2 motorsport wire,TBD length,PROVISIONAL,Measure route
-TS-BOM-009,Wire,B42 PMU O11 relay command conductor,0.35-0.5 mm2 motorsport wire,TBD length,PROVISIONAL,Measure route
-TS-BOM-010,Wire,B43 FT550 A21 ground-trigger request conductor,0.35 mm2 motorsport wire,TBD length,PROVISIONAL,Measure route
-TS-BOM-011,Wire,B44 clutch position signal/reference set,3 x 0.35 mm2 motorsport wire or equivalent sensor cable,TBD length,OPTIONAL,Measure route
-TS-BOM-012,Protection,Handlebar branch strain relief and abrasion protection,Steering-motion compatible sleeve/P-clips,1 set,SELECT HARDWARE,YES
-TS-BOM-013,Labels,Two-Step branch and connector IDs,B41-B44 X70-X72,1 set,FROZEN DESIGN,NO
+TS-BOM-003,Interface Relay,X70 12V SPST-NO automotive relay,TE Connectivity 1393280-5 Micro Relay K,1,FROZEN,NO
+TS-BOM-004,Interface PCB,X70 sealed relay interface PCB,Custom small PCB for TE 1393280-5 with 4-way sealed harness connector test pads and conformal coat/potting,1,ARCHITECTURE FROZEN,PCB layout/enclosure manufacture
+TS-BOM-005,Relay Suppression,X70 coil flyback diode,Automotive-rated rectifier diode sized for 12V relay coil; cathode to O11 coil+ and anode to ground,1,FROZEN FUNCTION,Freeze exact diode PN at PCB release
+TS-BOM-006,Clutch Service Connector,X71 downstream service-break receptacle,TE Connectivity DEUTSCH DTM04-2P,1,FROZEN,NO
+TS-BOM-007,Clutch Service Connector,X71 downstream service-break plug,TE Connectivity DEUTSCH DTM06-2S,1,FROZEN,NO
+TS-BOM-008,DTM Contacts,X71 size-20 socket contact,TE Connectivity 0462-201-20141 nickel solid socket 0.2-0.5mm2 where applicable,2,FROZEN BY WIRE CLASS,Verify mating pin contact PN to final wire
+TS-BOM-009,DTM Contacts,X71 matching size-20 pin contacts,TE Connectivity DEUTSCH DTM size-20 pin contact for final 0.35-0.5mm2 conductor,2,FAMILY FROZEN / PN VERIFY,Freeze exact contact PN before crimp release
+TS-BOM-010,DTM Hardware,X71 wedgelocks/seals,Matching DTM04-2P and DTM06-2S secondary locks and environmental hardware,1 set,FAMILY FROZEN,Confirm exact colours/PNs with purchased housings
+TS-BOM-011,Clutch Position Sensor,Optional Hall rotary position sensor,Honeywell RTY050LVNAX,1,BASELINE FROZEN,Verify actual clutch-lever travel
+TS-BOM-012,Position Sensor Connector,X72 sensor mating connector/terminals,Per purchased Honeywell RTY050LVNAX North-American-pinout variant,1,VERIFY,YES IF FITTED
+TS-BOM-013,Wire,B41 clutch discrete conductor,0.35-0.5 mm2 motorsport wire,TBD length,PROVISIONAL,Measure route
+TS-BOM-014,Wire,B42 PMU O11 relay command conductor,0.35-0.5 mm2 motorsport wire,TBD length,PROVISIONAL,Measure route
+TS-BOM-015,Wire,B43 FT550 A21 ground-trigger request conductor,0.35 mm2 motorsport wire,TBD length,PROVISIONAL,Measure route
+TS-BOM-016,Wire,B44 clutch position signal/reference set,3 x 0.35 mm2 motorsport wire or equivalent sensor cable,TBD length,OPTIONAL,Measure route
+TS-BOM-017,Protection,Handlebar branch strain relief and abrasion protection,Steering-motion compatible sleeve/P-clips,1 set,SELECT HARDWARE,YES
+TS-BOM-018,Labels,Two-Step branch and connector IDs,B41-B44 X70-X72,1 set,FROZEN DESIGN,NO
