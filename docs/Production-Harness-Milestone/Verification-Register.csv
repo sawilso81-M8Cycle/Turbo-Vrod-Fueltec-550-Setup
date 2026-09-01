@@ -6,10 +6,10 @@ V004,FT550,FT550 sensor/signal ground cavities,RESOLVED A12 and B26 available,Fu
 V005,FT550,OEM MAP analogue input cavity,DESIGN RESERVED A20 White #1,Verify FTManager generic-input configuration and OEM MAP calibration,YES
 V006,FT550,Oil pressure switch digital input cavity and logic,VERIFY,Verify switch polarity and FT550 input strategy,YES
 V007,FT550,Neutral switch digital input cavity and logic,VERIFY,Verify switch polarity and FT550 input strategy,YES
-V008,FT550,Front injector output cavity,VERIFY,Current FuelTech manual and final engine configuration plus HC-008 evidence,YES
-V009,FT550,Rear injector output cavity,VERIFY,Current FuelTech manual and final engine configuration plus HC-009 evidence,YES
-V010,FT550,Front coil output cavity and driver compatibility,VERIFY,Current FuelTech manual plus HC-010 and CC-003 evidence,YES
-V011,FT550,Rear coil output cavity and driver compatibility,VERIFY,Current FuelTech manual plus HC-011 and CC-004 evidence,YES
+V008,FT550,Front injector output cavity,RESOLVED A1 Blue #1,FuelTech PROBIKE A-connector table; HC-008 still required for impedance/current interface,NO
+V009,FT550,Rear injector output cavity,RESOLVED A2 Blue #2,FuelTech PROBIKE A-connector table; HC-009 still required for impedance/current interface,NO
+V010,FT550,Front coil output cavity,RESOLVED A8 Gray #1,FuelTech PROBIKE A-connector table; HC-010/CC-003 still required for driver topology,NO
+V011,FT550,Rear coil output cavity,RESOLVED A9 Gray #2,FuelTech PROBIKE A-connector table; HC-011/CC-004 still required for driver topology,NO
 V012,OEM SENSOR,CKP polarity and waveform,WORKING,Oscilloscope capture while cranking,YES
 V013,OEM SENSOR,TPS closed/WOT calibration,WORKING,Measured voltages/calibration in FT550,YES
 V014,OEM SENSOR,OEM MAP transfer curve,VERIFY,Bench pressure/voltage characterization or verified OEM data,YES
@@ -19,8 +19,8 @@ V017,OEM SENSOR,VSS pulses/rev and voltage amplitude,VERIFY,Scope/log measuremen
 V018,OEM SENSOR,VSS preferred ground topology,VERIFY,Electrical test and manufacturer circuit confirmation,YES
 V019,OEM HARDWARE,Front/rear injector connector family and terminals,EVIDENCE TEMPLATE READY,Complete CC-001 and CC-002 in Hardware-Evidence pack,YES
 V020,OEM HARDWARE,Front/rear coil connector family and terminals,EVIDENCE TEMPLATE READY,Complete CC-003 and CC-004 in Hardware-Evidence pack,YES
-V021,OEM HARDWARE,Injector steady/peak current,EVIDENCE TEMPLATE READY,Complete HC-008 and HC-009 with resistance/current waveform evidence,YES
-V022,OEM HARDWARE,Coil electrical type and current profile,EVIDENCE TEMPLATE READY,Complete HC-010 and HC-011 with driver-type/current/dwell evidence,YES
+V021,OEM HARDWARE,Injector steady/peak current and impedance class,EVIDENCE TEMPLATE READY,Complete HC-008 and HC-009; determines Peak & Hold requirement,YES
+V022,OEM HARDWARE,Coil electrical type current profile and dwell,EVIDENCE TEMPLATE READY,Complete HC-010 and HC-011; determines SparkPRO/passive versus smart-coil interface,YES
 V023,PMU16,Exact connector cavities for O1-O16 A1-A16 CAN1 CAN2 switched 12V ground +5V and main stud,RESOLVED,Official PMU-16 Pinout v1.2 extracted to PMU16-Pinout-v1.2.csv,NO
 V024,PMU16,PMU O1 current limit and wire size,EVIDENCE TEMPLATE READY,Complete HC-001 primary pump current/inrush plus route length,YES
 V025,PMU16,PMU O3 current limit and wire size,EVIDENCE TEMPLATE READY,Complete HC-003 radiator fan current/inrush plus route length,YES
@@ -48,3 +48,4 @@ V046,HARNESS,Rev 1 BOM framework,FRAMEWORK COMPLETE,Rev1-Harness-BOM.csv created
 V047,HARNESS,Low-level wire classes,PROVISIONAL,0.35mm2 sensor/CAN/command; 0.5mm2 controls; 0.75mm2 selected ECU/aux feeds subject to verification,YES
 V048,HARNESS,Final wire product insulation/temp/chemical specification,VERIFY,Select motorsport/automotive wire series compatible with heat oil fuel vibration and terminal system,YES
 V049,TESTING,Hardware current and connector evidence pack,FRAMEWORK COMPLETE,docs/Hardware-Evidence contains load sheet connector register bench procedure and evidence register,NO
+V050,FT550,Injector/ignition output cavity freeze,RESOLVED,A1/A2 primary injector outputs and A8/A9 ignition outputs frozen from FuelTech PROBIKE manual,NO
