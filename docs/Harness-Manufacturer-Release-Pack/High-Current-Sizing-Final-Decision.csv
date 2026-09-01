@@ -1,0 +1,11 @@
+Circuit_ID,Load,Measured_Steady_A,Measured_Peak_A,Route_mm,Selected_Wire_mm2,Selected_Wire_Series,Terminal_PN,Connector_Housing,Protection_or_PMU_Limit_A,Calculated_Vdrop_V,Installed_Vdrop_V,Decision_Status,Engineering_Disposition
+B10,Primary fuel pump,,,,2.0 provisional,,,,,,,MEASUREMENT_GATED,
+B11,Radiator fan 1,,,,2.5 provisional,,,,,,,MEASUREMENT_GATED,
+B12,Charge/intercooler pump,,,,2.0 provisional,,,,,,,DNP_OR_MEASUREMENT_GATED,
+B15,PMU main battery feed,,,,10.0 provisional,,,,,,,MEASUREMENT_GATED,
+B39,Injector common +12V,,,,1.0 provisional,,,,,,,MEASUREMENT_GATED,
+B40,Ignition/coil common +12V,,,,1.5 provisional,,,,,,,MEASUREMENT_GATED,
+PMU-GND,PMU device ground,,,,1.0 minimum baseline,,,,,,,MEASUREMENT_GATED,
+SP-GND-1,SparkPRO ground 1,,,,1.0 baseline,,,,,,,MEASUREMENT_GATED,
+SP-GND-2,SparkPRO ground 2,,,,1.0 baseline,,,,,,,MEASUREMENT_GATED,
+O6,Boost-control solenoid,,,,0.75 provisional,,,,,,,MEASUREMENT_GATED,
