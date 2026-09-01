@@ -65,17 +65,21 @@ V063,INJECTION,Peak & Hold exact current-class/model,MEASUREMENT GATED,Close HC-
 V064,INJECTION,X62-X65 physical connector family and terminal freeze,VERIFY,Select keyed sealed connectors after final direct/P&H mode conductor size and current are known,YES
 V065,CAN,X51 service connector family terminals and cap,VERIFY,Select sealed 4-way service connector and terminal set; no permanent termination,YES
 V066,CAN,Application-layer FT550-to-PMU frame definitions,CORE MAP FROZEN,Simple FTCAN MessageIDs 0x600-0x602 and tagged battery MeasureID 0x0012 mapped; live source ProductID still capture-gated,YES
-V067,CAN,CAN-loss fallback validation,TEST REQUIRED,Disconnect CAN during bench test and prove each PMU-dependent function enters documented safe state and recovers deterministically,YES
+V067,CAN,CAN-loss fallback validation,BENCH PLAN READY,Execute BT-007 BT-008 BT-011 BT-015 BT-021 BT-022 BT-025 and retain PMU/CAN logs,YES
 V068,CAN,FT550 CAN frame ID byte/scaling extraction,PROTOCOL MAP COMPLETE / LIVE ID VERIFY,FTCAN20-PMU-Frame-Map.csv defines byte positions/scaling; capture actual FT550 ProductID/unique ID and compare values to FTManager,YES
 V069,CAN,PMU Client CAN receive-channel definition,RESOLVED IMPLEMENTATION SPEC,PMU-Client-Receive-Configuration.md freezes variables byte order scaling validity timeouts plausibility and derived-state rules,NO
 V070,CAN,Live FT550 arbitration-ID/ProductID confirmation,TEST REQUIRED,Capture CAN A at 1Mbps and record actual ProductID unique identifier and observed 0x600-0x602 arbitration IDs before final PMU filter freeze,YES
 V071,CAN,Gear Note-2 decode validation,TEST REQUIRED,Verify neutral and each selected gear against FTManager before using CAN-010 for logic,YES
 V072,CAN,ECU warning/fault MeasureID,OPEN,Do not implement CAN-009 until exact public FuelTech status definition is verified,NO
 V073,CAN,PMU Client software project implementation,NOT YET BUILT IN SOFTWARE,Enter production arbitration IDs after V070 then create receive channels validity variables and derived states in PMU Client,YES
-V074,CAN,PMU plausibility and timeout test,TEST REQUIRED,Inject out-of-range values and stale frames and verify each VALID flag and fallback response,YES
+V074,CAN,PMU plausibility and timeout test,BENCH PLAN READY,Execute BT-023 BT-024 plus stale-frame cases and verify each VALID flag/fallback response,YES
 V075,PMU CONTROL,Functional control architecture,RESOLVED REV0.1,PMU-Functional-Control-Logic.md and PMU-Functional-Control-Matrix.csv define O1/O2/O3/O4/O5/O6/O8/O10 behavior and safety precedence,NO
-V076,PMU CONTROL,Fuel pump prime/run commissioning,TEST REQUIRED,Validate 3.0s prime starting value CAN-RPM-loss grace and kill response with real pump/current data,YES
-V077,PMU CONTROL,Fan temperature thresholds and fallback,TEST REQUIRED,Validate fan on/off thresholds stagger and invalid-ECT conservative strategy on installed cooling system,YES
-V078,PMU CONTROL,Boost-solenoid fail-safe,TEST REQUIRED,Prove de-energised O6 returns pneumatic system to minimum mechanical boost and cannot increase boost on CAN loss,YES
-V079,PMU CONTROL,Warning aggregation behavior,TEST REQUIRED,Verify unknown-vs-low pressure ECT-invalid PMU-output-fault and CAN-health indications are distinguishable/logged,YES
-V080,PMU CONTROL,Output retry/current-limit policy,MEASUREMENT GATED,Close HC-001-HC-007 then freeze current limits retry counts cooldowns and latch behavior for each populated PMU output,YES
+V076,PMU CONTROL,Fuel pump prime/run commissioning,BENCH PLAN READY,Execute BT-004 through BT-008 then HC-001 with real pump/current data,YES
+V077,PMU CONTROL,Fan temperature thresholds and fallback,BENCH PLAN READY,Execute BT-009 BT-010 BT-011 and BT-012 if fitted then HC-003/004,YES
+V078,PMU CONTROL,Boost-solenoid fail-safe,BENCH PLAN READY,Execute BT-014 BT-015 and HC-006; then pneumatic proof that de-energised state equals minimum mechanical boost,YES
+V079,PMU CONTROL,Warning aggregation behavior,BENCH PLAN READY,Execute BT-016 with independent and simultaneous fault causes,YES
+V080,PMU CONTROL,Output retry/current-limit policy,BENCH PLAN READY,Execute BT-018 BT-019 after HC-001-HC-007 current evidence is populated,YES
+V081,TESTING,PMU bench commissioning and fault-injection plan,RESOLVED TEST FRAMEWORK,PMU-Bench-Commissioning-Test-Plan.md plus PMU-Bench-Test-Matrix.csv define BT-001 through BT-025,NO
+V082,TESTING,PMU brownout/reset safety,TEST REQUIRED,Execute BT-020 and prove no unsafe output pulse and safe recovery,YES
+V083,TESTING,Hardwired safety-input priority,TEST REQUIRED,Execute BT-002 BT-003 and BT-025 proving master/kill outrank CAN-derived states,YES
+V084,TESTING,PMU source-ID filtering,TEST REQUIRED,Execute BT-024 after V070 freezes production arbitration IDs,YES
