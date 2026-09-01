@@ -1,0 +1,40 @@
+Branch_ID,Function,Recommended_Wire_mm2,Approx_Length_mm,Prototype_Cut_Length_mm,Confidence,Notes
+B01,FT550 to engine sensor spine,mixed 0.35,750,900,MEDIUM,Main low-level trunk; final breakout positions bike-measured
+B02,CKP shielded twisted pair,2x0.35 shielded,450,550,MEDIUM,Keep away from ignition/starter
+B03,TPS 5V/signal/return,3x0.35,300,400,MEDIUM,Sensor branch
+B04,MAP 5V/signal/return,3x0.35,350,450,MEDIUM,Sensor branch
+B05,ECT signal/return,2x0.35,450,550,MEDIUM,Sensor branch
+B06,IAT signal/return,2x0.35,500,600,MEDIUM,Heat protect if required
+B07,VSS supply/signal/ground,3x0.35,950,1100,LOW,Rearward route highly installation dependent
+B08,Injector driven/control branch,2x0.50 control plus supply per B39,450,550,MEDIUM,Includes front/rear breakout allowance
+B09,Coil primary driven branch,2x1.00,450,550,MEDIUM,SparkPRO to coils; short as practical
+B10,Primary fuel pump feed,2.0 provisional,700,850,LOW,Freeze after measured pump steady/inrush current
+B11,Radiator fan 1 feed,2.5 provisional,950,1100,LOW,Freeze after measured fan steady/inrush current
+B12,Charge/intercooler pump feed if fitted,2.0 provisional,850,1000,LOW,DNP if not fitted; measure pump current
+B13,Service/logger feed and service branch,0.75 power plus 0.35 signals,500,650,MEDIUM,Accessible service location assumed
+B14,FT550-PMU CAN twisted pair,2x0.35 twisted,500,650,MEDIUM,Linear trunk; service stub separate
+B15,Main battery/J-P01 to PMU stud,10.0 provisional,400,500,LOW,Short-route planning baseline only; final total load/protection calculation mandatory
+B16,Power-ground branches,mixed 0.75/1.0 and load-specific,300-700,850 max cut,LOW,Each device/load return individually sized; do not treat as one conductor
+B17,Fuel pressure sensor 5V/signal/return,3x0.35,550,650,MEDIUM,Precision sensor branch
+B18,Engine oil pressure sensor 5V/signal/return,3x0.35,600,700,MEDIUM,Precision sensor branch
+B19,Post-intercooler IAT signal/return,2x0.35,750,900,LOW,Turbo plumbing location dependent
+B20-B31,Expansion turbo/development sensors,0.35 typical,TBD,TBD,OPEN,Do not cut until sensor and mounting position selected
+B32,FT550 A8/A9 to SparkPRO command,2x0.50,450,550,MEDIUM,Low-current ignition command
+B33,SparkPRO power/grounds,2x1.00 ground plus supply per manufacturer,400,500,MEDIUM,Direct to J-P02 / protected supply as released
+B34,SparkPRO driven coil outputs,2x1.00,400,500,MEDIUM,Keep short and segregated from CKP
+B35,FT550 A1/A2 to injector junction,2x0.50,350,450,MEDIUM,Blue injector command pair
+B36,Direct-drive injector bypass link,2x0.50,150,220,MEDIUM,Fit only DIRECT_DRIVE_APPROVED
+B37,Peak-Hold input branch if fitted,2x0.50,250,350,LOW,DNP unless Peak & Hold selected
+B38,Peak-Hold output branch if fitted,2x0.75 provisional,250,350,LOW,Final size to selected driver/injector current
+B39,Injector common +12V feed,1.0 provisional,500,650,LOW,Final confirmation after HC-008/009 current evidence
+B40,Ignition/coil common +12V feed,1.5 provisional,500,650,LOW,Final confirmation after HC-010/011 and SparkPRO supply requirements
+B41,OEM clutch switch to PMU A6,2x0.35,1200,1400,LOW,Must allow full steering lock and lever service loop
+B42,Optional clutch Hall position sensor,3x0.35,1200,1400,LOW,DNP until sensor/bracket final; same steering-motion allowance
+B43,PMU O11 to sealed X70 relay sub-harness,0.50,450,550,MEDIUM,High-side relay-coil command
+B44,X70 relay dry contact to FT550 A21,0.35,350,450,MEDIUM,Ground-active request; absolutely no +12V on A21
+X51_STUB,CAN service stub,2x0.35 twisted plus optional 0.75 power,250,300,HIGH,Keep <=300 mm where practical
+PMU_SW,PMU switched enable,0.50,450,550,MEDIUM,Low-current switched feed
+PMU_A1_A5,Master/start/kill/fan/service commands,0.35 each,700 avg,850 avg,LOW,Actual switch positions determine individual lengths
+O8_WARNING,Warning lamp output,0.50,800,950,LOW,Final location dependent
+O10_SERVICE,Logger/display supply,0.75,500,650,MEDIUM,Aggregate load to be checked
+O6_BOOST,Boost solenoid supply,0.75,750,900,LOW,Final solenoid location/current to verify
