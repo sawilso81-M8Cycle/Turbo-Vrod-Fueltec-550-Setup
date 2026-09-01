@@ -1,0 +1,29 @@
+Measurement_ID,Area,Start_Datum,End_Datum_or_Device,Measure_With,Required_Condition,Measured_mm,Service_Loop_mm,Heat_Protection_mm,Notes,Status
+M001,Main trunk,D00,D01 FT550,Tape/string,Final FT550 mount fixed,,,,,OPEN
+M002,Main trunk,D00,D02 PMU16,Tape/string,Final PMU mount fixed,,,,,OPEN
+M003,Ignition,D00,D03 SparkPRO-2,Tape/string,Final SparkPRO mount fixed,,,,,OPEN
+M004,Engine,D00,D04 Front-cylinder breakout,Tape/string,Normal installed routing,,,,,OPEN
+M005,Engine,D00,D05 Rear-cylinder breakout,Tape/string,Normal installed routing,,,,,OPEN
+M006,Handlebar,D00,D06 Headstock loop entry,Tape/string,Bars centred,,,,,OPEN
+M007,Handlebar,D06,Clutch switch,Tape/string,Bars full left lock,,,,,OPEN
+M008,Handlebar,D06,Clutch switch,Tape/string,Bars centred,,,,,OPEN
+M009,Handlebar,D06,Clutch switch,Tape/string,Bars full right lock,,,,,OPEN
+M010,Rear,D00,D07 Rear-frame/fuel-pump breakout,Tape/string,Suspension normal ride position,,,,,OPEN
+M011,Rear,D07,VSS,Tape/string,Check full suspension movement,,,,,OPEN
+M012,Cooling,D00,D08 Radiator/fan breakout,Tape/string,Final radiator/fan installed,,,,,OPEN
+M013,Turbo,D00,D09 Turbo/boost breakout,Tape/string,Turbo/exhaust final position,,,,,OPEN
+M014,Service,D00,D10 CAN/service connector,Tape/string,Service-access location fixed,,,,,OPEN
+M015,Power,Battery positive,D02 PMU main stud,Tape/string,Final battery/PMU routing,,,,,OPEN
+M016,Fuel,D07,Primary fuel pump,Tape/string,Final pump/connector installed,,,,,OPEN
+M017,Cooling,D08,Radiator fan,Tape/string,Final fan connector installed,,,,,OPEN
+M018,Cooling,D00,Charge/intercooler pump,Tape/string,If fitted; final pump location,,,,,OPEN
+M019,Turbo,D09,Boost-control solenoid,Tape/string,Final solenoid mounted,,,,,OPEN
+M020,Sensor,D00,Fuel pressure sensor,Tape/string,Final sensor location,,,,,OPEN
+M021,Sensor,D00,Oil pressure sensor,Tape/string,Final sensor location,,,,,OPEN
+M022,Sensor,D09,Post-intercooler IAT,Tape/string,Final charge pipe/sensor location,,,,,OPEN
+M023,Two-Step,D02,X70 relay sub-harness,Tape/string,Final relay service location,,,,,OPEN
+M024,Two-Step,X70,FT550 A21 route,Tape/string,Final relay and FT550 positions,,,,,OPEN
+M025,Clearance,Nearest harness,Turbo/exhaust,Rule/caliper,Hot system clearance review,,,,,OPEN
+M026,Movement,D06,Clutch branch,Physical sweep,Full left-to-right steering sweep,,,,,OPEN
+M027,Movement,D07,VSS/rear branches,Physical sweep,Full expected suspension travel,,,,,OPEN
+M028,Service,All major connectors,Removal clearance,Physical check,Connector can be unplugged without harness damage,,,,,OPEN
