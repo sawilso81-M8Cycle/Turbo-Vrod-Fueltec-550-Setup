@@ -1,0 +1,13 @@
+Test_ID,Phase,Test,Required_Result,Abort_On,Evidence,Status
+IC-001,Pre-crank,Static live-data snapshot,All critical values plausible and O6 OFF,Any critical fault or implausible critical sensor,FTManager+PMU snapshot,NOT_RUN
+IC-002,Fuel prime,Prime and leak check,Fuel pressure established and no leaks,Any fuel leak or gross pressure fault,Pressure+PMU O1 record,NOT_RUN
+IC-003,First combustion,Controlled first start,Engine fires without uncontrolled RPM and critical pressures establish,No oil pressure; leak; runaway RPM; severe noise; electrical fault,FTManager+PMU logs,NOT_RUN
+IC-004,0-10s,Immediate inspection,Stable controlled state and no leak/fault,Any abort condition,Observer checklist+logs,NOT_RUN
+IC-005,10-30s,Early idle validation,Lambda/MAP/ECT/CAN become plausible and stable,Unsafe lambda once valid; pressure loss; CAN/critical fault,Logs+inspection,NOT_RUN
+IC-006,30-60s,Short idle validation,Pressures/temp/electrical states remain credible,Leak; pressure failure; thermal/electrical fault; uncontrolled idle,Logs+inspection,NOT_RUN
+IC-007,Shutdown,Normal controlled shutdown,Ignition/injection intent removed and pump stops correctly,Output remains unintentionally active,PMU+FTManager log,NOT_RUN
+IC-008,Post-run,Leak and thermal inspection,No fluid leak or abnormal connector/module heating,Any leak/damage/abnormal heating,Inspection record,NOT_RUN
+IC-009,Analysis,First-run log review,All mandatory channels reviewed before another start,Unexplained critical anomaly,Review record,NOT_RUN
+IC-010,Warm idle,Progressive warm-idle session,Stable pressures/lambda/charging/fan/CAN with no current-limit events,Any critical trend/fault,Warm-idle logs,NOT_RUN
+IC-011,Timing,Post-warm timing verification,Observed timing remains synchronised with command,Timing discrepancy,Timing-light+FTManager record,NOT_RUN
+IC-REL,Release,Idle commissioning release,IC-001 through required IC-011 PASS and evidence retained,Any open critical anomaly,Revision-controlled release record,IDLE_COMMISSIONING_ONLY
