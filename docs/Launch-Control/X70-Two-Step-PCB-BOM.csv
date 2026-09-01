@@ -1,0 +1,12 @@
+Ref,Category,Component,Manufacturer_or_PN,Qty,Status,Release_Blocker
+K1,Relay,12V SPST-NO Micro Relay K,TE Connectivity 1393280-5,1,FROZEN,NO
+D1,Suppression,Bidirectional TVS across relay coil,TBD exact PN,1,VERIFY PMU clamp compatibility,YES
+J1,Connector,4-way keyed sealed automotive connector,TBD family,1,SELECT HARDWARE,YES
+TP1,Test Point,O11 command test pad,PCB test pad,1,FROZEN DESIGN,NO
+TP2,Test Point,Power ground test pad,PCB test pad,1,FROZEN DESIGN,NO
+TP3,Test Point,FT550 A21 test pad,PCB test pad,1,FROZEN DESIGN,NO
+TP4,Test Point,Contact ground test pad,PCB test pad,1,FROZEN DESIGN,NO
+PCB1,PCB,2-layer FR-4 1.6mm 1oz copper,Custom <=45x35mm target,1,FROZEN CLASS,Layout dimensions open
+ENC1,Enclosure,Sealed or pottable X70 enclosure,TBD,1,SELECT HARDWARE,YES
+COAT1,Protection,Automotive-compatible conformal coating,TBD,AR,SELECT HARDWARE,YES
+LABEL1,Identification,X70 Two-Step interface revision label,Project controlled,1,FROZEN DESIGN,NO
