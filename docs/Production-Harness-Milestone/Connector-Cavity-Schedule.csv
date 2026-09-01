@@ -1,8 +1,8 @@
 Connector_ID,Cavity,Function,Circuit_ID,Wire_Colour,Domain,Status,Release_Blocker
 X01,A1,Front injector control - Injection output #1,E-004,BU#1,EPM,MANUFACTURER VERIFIED CAVITY,Verify injector impedance/current class and Peak & Hold requirement
 X01,A2,Rear injector control - Injection output #2,E-006,BU#2,EPM,MANUFACTURER VERIFIED CAVITY,Verify injector impedance/current class and Peak & Hold requirement
-X01,A8,Front ignition command - Ignition output #1,E-008,GY#1,EPM,MANUFACTURER VERIFIED CAVITY,Verify OEM coil driver topology and required ignition driver
-X01,A9,Rear ignition command - Ignition output #2,E-010,GY#2,EPM,MANUFACTURER VERIFIED CAVITY,Verify OEM coil driver topology and required ignition driver
+X01,A8,Front ignition command - Ignition output #1,E-008,GY#1,EPM,MANUFACTURER VERIFIED CAVITY,None at cavity level; dwell calibration remains open
+X01,A9,Rear ignition command - Ignition output #2,E-010,GY#2,EPM,MANUFACTURER VERIFIED CAVITY,None at cavity level; dwell calibration remains open
 X01,A12,FT550 signal ground / sensor return,S-005;S-008;S-010,BK/W,SIM,MANUFACTURER VERIFIED CAVITY,Verify final splice topology only
 X01,A13,FT550 switched 12V input,E-001,RD,EPM,MANUFACTURER VERIFIED CAVITY,Verify conductor/protection sizing
 X01,A14,FT550 5V sensor reference,S-003;S-006,R/W,SIM,MANUFACTURER VERIFIED CAVITY,Verify total 5V sensor load
@@ -50,3 +50,9 @@ X03,36,PMU CAN1L,CAN-PMU1L,WH/GN,COMM,MANUFACTURER VERIFIED CAVITY,Fixed 1Mbps; 
 X03,24,PMU CAN2H,CAN-PMU2H,WH/BU,COMM,MANUFACTURER VERIFIED CAVITY,Candidate FT550 bus; verify bitrate/topology
 X03,37,PMU CAN2L,CAN-PMU2L,WH/GN,COMM,MANUFACTURER VERIFIED CAVITY,Candidate FT550 bus; verify bitrate/topology
 X03,STUD,PMU main +12V battery feed,PMU-PWR-MAIN,RD,POWER,MANUFACTURER VERIFIED,Main protection/conductor sizing still open
+X60,1,SparkPRO-2 channel input 1,E-008,GY#1,EPM,MANUFACTURER VERIFIED CAVITY,Use 0.5mm2; final mating terminal PN if bare connector build
+X60,2,SparkPRO-2 power ground 1,EPM-GND-SP1,BK,EPM,MANUFACTURER VERIFIED CAVITY,Use 1.0mm2 to J-P02
+X60,3,SparkPRO-2 channel input 2,E-010,GY#2,EPM,MANUFACTURER VERIFIED CAVITY,Use 0.5mm2; final mating terminal PN if bare connector build
+X61,4,SparkPRO-2 channel output 2 - rear coil,E-011,VERIFY,EPM,MANUFACTURER VERIFIED CAVITY,Use 1.0mm2; final OEM coil terminal PN still required
+X60,5,SparkPRO-2 power ground 2,EPM-GND-SP2,BK,EPM,MANUFACTURER VERIFIED CAVITY,Use 1.0mm2 to J-P02
+X61,6,SparkPRO-2 channel output 1 - front coil,E-009,VERIFY,EPM,MANUFACTURER VERIFIED CAVITY,Use 1.0mm2; final OEM coil terminal PN still required
