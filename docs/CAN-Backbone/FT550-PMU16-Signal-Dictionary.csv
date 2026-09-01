@@ -1,11 +1,11 @@
 Signal_ID,Signal,Source,PMU_Use,Priority,Timeout_ms,Timeout_Fallback,Frame_ID,Scaling_Status
-CAN-001,Engine RPM,FT550,Engine running state pump/fan logic logging,CRITICAL,250,Treat invalid/zero and fall back to hardwired-safe logic,VERIFY,VERIFY
-CAN-002,TPS throttle position,FT550,Staged auxiliary logic logging,HIGH,250,Ignore TPS-dependent enhancements,VERIFY,VERIFY
-CAN-003,Coolant temperature,FT550,Fan control thermal escalation,CRITICAL,1000,Enter conservative fan strategy,VERIFY,VERIFY
-CAN-004,Fuel pressure,FT550,Fuel warning/protection support logging,CRITICAL,250,Mark invalid do not infer healthy pressure,VERIFY,VERIFY
-CAN-005,Engine oil pressure,FT550,Oil warning/protection support logging,CRITICAL,250,Mark invalid do not infer healthy pressure,VERIFY,VERIFY
-CAN-006,MAP boost,FT550,Boost-dependent auxiliary/staging logic logging,HIGH,250,Disable boost-dependent enhancements,VERIFY,VERIFY
-CAN-007,Battery voltage,FT550,Diagnostics load-shed context,MEDIUM,1000,Use PMU-local supply measurement if available,VERIFY,VERIFY
-CAN-008,Engine-running derived state,PMU DERIVED,Fuel-pump continuation/state logic,CRITICAL,250,FALSE or UNKNOWN on RPM timeout,N/A,DERIVED
-CAN-009,ECU fault warning state,FT550,Warning lamp/logging,MEDIUM,1000,Mark ECU status unknown,VERIFY,VERIFY
-CAN-010,Gear position,FT550 if configured,Gear staged auxiliaries/logging,LOW,1000,Ignore gear-based enhancements,VERIFY,VERIFY
+CAN-001,Engine RPM,FT550,Engine running state pump/fan logic logging,CRITICAL,250,Treat invalid/zero and fall back to hardwired-safe logic,Simple MessageID 0x602 expected arb 0x14080602 bytes2-3,VERIFIED 1 rpm big-endian; confirm live FT550 ProductID
+CAN-002,TPS throttle position,FT550,Staged auxiliary logic logging,HIGH,250,Ignore TPS-dependent enhancements,Simple MessageID 0x600 expected arb 0x14080600 bytes0-1,VERIFIED 0.1 percent big-endian; confirm live FT550 ProductID
+CAN-003,Coolant temperature,FT550,Fan control thermal escalation,CRITICAL,1000,Enter conservative fan strategy,Simple MessageID 0x600 expected arb 0x14080600 bytes6-7,VERIFIED 0.1 degC big-endian; confirm live FT550 ProductID
+CAN-004,Fuel pressure,FT550,Fuel warning/protection support logging,CRITICAL,250,Mark invalid do not infer healthy pressure,Simple MessageID 0x601 expected arb 0x14080601 bytes2-3,VERIFIED 0.001 bar big-endian; confirm live FT550 ProductID
+CAN-005,Engine oil pressure,FT550,Oil warning/protection support logging,CRITICAL,250,Mark invalid do not infer healthy pressure,Simple MessageID 0x601 expected arb 0x14080601 bytes0-1,VERIFIED 0.001 bar big-endian; confirm live FT550 ProductID
+CAN-006,MAP boost,FT550,Boost-dependent auxiliary/staging logic logging,HIGH,250,Disable boost-dependent enhancements,Simple MessageID 0x600 expected arb 0x14080600 bytes2-3,VERIFIED 0.001 bar big-endian; confirm live FT550 ProductID
+CAN-007,Battery voltage,FT550,Diagnostics load-shed context,MEDIUM,1000,Use PMU-local supply measurement if available,Tagged MeasureID 0x0012,VERIFIED 0.01 V big-endian; tagged parser/source filter required
+CAN-008,Engine-running derived state,PMU DERIVED,Fuel-pump continuation/state logic,CRITICAL,250,FALSE or UNKNOWN on RPM timeout,Derived from CAN-001 plus hardwired state,DERIVED
+CAN-009,ECU fault warning state,FT550,Warning lamp/logging,MEDIUM,1000,Mark ECU status unknown,VERIFY exact tagged MeasureID/status,OPEN do not implement yet
+CAN-010,Gear position,FT550 if configured,Gear staged auxiliaries/logging,LOW,1000,Ignore gear-based enhancements,Simple MessageID 0x601 expected arb 0x14080601 bytes6-7,PROTOCOL VERIFIED FuelTech Note 2 encoding; confirm live configuration
