@@ -1,0 +1,19 @@
+Test_ID,Area,Verification,Method,Acceptance_Criteria,Evidence,Status
+TRG-001,CKP,Sensor type confirmation,Official data + physical inspection,Sensor technology and pin functions confirmed,Photo/spec record,OPEN
+TRG-002,CAM,Sensor type confirmation if used,Official data + physical inspection,Sensor technology and pin functions confirmed,Photo/spec record,OPEN
+TRG-003,CKP,Cranking waveform ignition disabled,Oscilloscope,Clean repeatable waveform with no false teeth,Scope capture,OPEN
+TRG-004,CKP,Polarity / edge selection,Oscilloscope + FT550 sync data,Selected polarity produces correct stable edge/zero-crossing behaviour,Scope capture + config,OPEN
+TRG-005,CAM,Cranking waveform if used,Oscilloscope,Clean repeatable cam waveform,Scope capture,OPEN
+TRG-006,Phase,CKP/CAM phase relationship if sequential,2-channel oscilloscope,Repeatable phase relationship documented,Scope capture,OPEN
+TRG-007,Sync,Repeated cranking sync,FT550 logging,Stable sync and RPM across repeated crank cycles,FTManager log,OPEN
+TRG-008,Noise,SparkPRO powered coils disabled,Oscilloscope + FT550 log,No material trigger corruption,Scope/log,OPEN
+TRG-009,Noise,Coils enabled cranking/first-fire,Oscilloscope + FT550 log,No false edges RPM spikes or sync loss,Scope/log,OPEN
+TRG-010,Routing,CKP/CAM segregation,Physical inspection,No unacceptable parallel routing with ignition/injector/starter/pump/fan branches,Photo/inspection,OPEN
+TRG-011,Shield,CKP shield termination,Continuity/inspection,Shield matches released single-authority termination and carries no sensor current,Continuity record,OPEN
+TRG-012,Ground,Trigger return isolation,Continuity/voltage-drop review,No shared high-current return path,Inspection/test,OPEN
+TRG-013,Idle,First-idle waveform,Oscilloscope,Clean waveform and stable sync at accepted idle,Scope capture,OPEN
+TRG-014,RPM,Controlled RPM increase waveform,Oscilloscope + FT550 log,No clipping false edges or sync loss across authorised range,Scope/log,OPEN
+TRG-015,Loads,Electrical load immunity,Operate fan/pump/other loads where safe,No trigger corruption or sync loss,Scope/log,OPEN
+TRG-016,Config,FT550 trigger configuration freeze,Revision review,Pattern edge filter sensitivity and phase settings documented and revision-controlled,Config record,OPEN
+TRG-017,Archive,Evidence package,Document review,All required captures/config/logs archived with test voltage and RPM,Release dossier,OPEN
+TRG-REL,Release,First-start trigger release,Engineering review,TRG-001 through applicable TRG-017 PASS,Signoff,TRIGGER_NOT_RELEASED
