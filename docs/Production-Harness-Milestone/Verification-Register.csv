@@ -94,3 +94,9 @@ V092,COMMISSIONING,Fuel pressure and leak integrity,FIRST-START GATE,Complete FS
 V093,COMMISSIONING,Base calibration sanity review,FIRST-START GATE,Complete FS-G06 including trigger injector ignition sensor start enrichment protections and boost-disabled state,YES
 V094,COMMISSIONING,Mechanical readiness,FIRST-START GATE,Complete FS-G08 before FIRST_START_READY,YES
 V095,COMMISSIONING,First-start release state,FIRST_START_NO_GO,Change to FIRST_START_READY only after FS-G01 through FS-G09 are PASS with retained evidence,YES
+V096,COMMISSIONING,First-start and initial-idle procedure,RESOLVED TEST FRAMEWORK,First-Start-Initial-Idle-Commissioning.md plus Initial-Idle-Test-Matrix.csv define IC-001 through IC-011,NO
+V097,COMMISSIONING,Immediate first-start abort monitoring,WAITING ON FIRST_START_READY,Execute IC-003 through IC-006 with oil/fuel/RPM/electrical/leak monitoring and retained logs,YES
+V098,COMMISSIONING,Post-run leak thermal and log review,WAITING ON FIRST_START_READY,Execute IC-007 IC-008 IC-009 before authorising another run,YES
+V099,COMMISSIONING,Warm-idle progression,WAITING ON FIRST-RUN PASS,Execute IC-010 only after IC-001 through IC-009 PASS and first-run log review,YES
+V100,COMMISSIONING,Post-warm timing verification,WAITING ON WARM-IDLE PASS,Execute IC-011; any discrepancy reopens FS-G03,YES
+V101,COMMISSIONING,Idle commissioning release,IDLE_COMMISSIONING_ONLY,Promote to READY_FOR_NO_BOOST_LIGHT_LOAD_PREP only after required IC tests PASS with evidence; no boost/high-load authority,YES
