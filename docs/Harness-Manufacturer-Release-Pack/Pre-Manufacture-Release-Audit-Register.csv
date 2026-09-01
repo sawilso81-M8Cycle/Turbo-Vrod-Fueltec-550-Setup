@@ -1,0 +1,31 @@
+Audit_ID,Class,System,Release_Requirement,Current_State,Required_Before_Functional_Build,Required_Evidence,Disposition
+PMA-001,G0/G1,Fuel Pump,Actual pump model identified and steady/inrush current verified,OPEN,YES,Pump PN datasheet and measured current/inrush,OPEN
+PMA-002,G0/G1,Fuel Pump,4.0mm2 feed and dedicated return retained,FROZEN,YES,Wire schedule and build audit,PASS
+PMA-003,G0/G1,Fuel Pump,Direct PMU vs external power-stage decision closed,OPEN,YES,Exact PMU HW plus pump current terminal thermal and voltage-drop evidence,OPEN
+PMA-004,G1,Cooling,B11 radiator fan conductor/protection closed,OPEN,YES,Fan PN current/inrush voltage-drop protection decision,OPEN
+PMA-005,G1,Cooling,B12 charge-cooler pump disposition closed,OPEN,YES,DNP or pump PN current/inrush/protection decision,OPEN
+PMA-006,G1,PMU Power,B15 main PMU feed sizing/protection closed,OPEN,YES,Aggregate load calculation route voltage drop and protection,OPEN
+PMA-007,G1,Injectors,B39 injector supply sizing/protection closed,OPEN,YES,Injector electrical data aggregate current and protection,OPEN
+PMA-008,G1,Ignition,B40 coil/SparkPRO supply sizing/protection closed,OPEN,YES,Coil current/dwell evidence aggregate current and protection,OPEN
+PMA-009,G1,PMU16,Every used cavity has correct terminal PN and conductor range,PARTIAL,YES,Cavity-terminal-wire-current audit,OPEN
+PMA-010,G1,FT550,Official connector-kit/custom-harness build strategy,FROZEN,YES,FT550 interface freeze,PASS
+PMA-011,G1,OEM Sensors,X10-X23 connectors or repair pigtails physically identified,PARTIAL,YES,Photos markings keying cavity count continuity,OPEN
+PMA-012,G0/G1,Fuel Pump,Sealed pump connector accepts 4.0mm2 and final current,OPEN,YES,Connector and terminal datasheets plus current evidence,OPEN
+PMA-013,G1,CAN,X50/X51 connector kits frozen,OPEN,YES,Housing contacts seals caps and cavity schedule,OPEN
+PMA-014,G1,CAN,Completed-network topology and termination verified,OPEN,YES,Topology drawing resistance/termination audit,OPEN
+PMA-015,G0/G1,Two-Step,X70 relay holder and suppression frozen,OPEN,YES,PNs datasheets and bench truth-table/release test,OPEN
+PMA-016,G0/G1,Injectors,Injector direct-drive vs Peak-and-Hold decision closed,OPEN,YES,Resistance current waveform and FT550 compatibility evidence,OPEN
+PMA-017,G1,Ignition,SparkPRO architecture and channel mapping,FROZEN,YES,Released ignition architecture,PASS
+PMA-018,G1,Ignition,First-start dwell strategy remains measurement gated,FROZEN_GATE,YES,Conservative configuration plus current-ramp verification before operational release,PASS_WITH_GATE
+PMA-019,G1,Trigger,CKP/CAM routing shielding and polarity verification process,FROZEN,YES,Trigger Integrity Freeze,PASS
+PMA-020,G2,Packaging,FT550 PMU SparkPRO relay service and boost component positions frozen,OPEN,CONDITIONAL,Installed photos and D00-D10 datum record,OPEN
+PMA-021,G2,Dimensions,B01-B44 physical routed lengths measured,OPEN,CONDITIONAL,Completed dimensional freeze worksheet,OPEN
+PMA-022,G2,Expansion,B20-B31 each explicitly DNP or defined,OPEN,CONDITIONAL,Dimensional/electrical schedule disposition,OPEN
+PMA-023,G0/G2,Movement,Handlebar clutch branch passes full steering lock,OPEN,YES_BEFORE_INSTALL_ACCEPTANCE,Physical sweep measurement and photos,OPEN
+PMA-024,G0/G2,Movement,VSS/rear branches pass full expected suspension travel,OPEN,YES_BEFORE_INSTALL_ACCEPTANCE,Physical sweep measurement and photos,OPEN
+PMA-025,G0/G2,Thermal,Turbo/exhaust harness clearance and protection verified,OPEN,YES_BEFORE_INSTALL_ACCEPTANCE,Clearance dimensions heat protection lengths and photos,OPEN
+PMA-026,G2,Formboard,1:1 formboard populated with accepted dimensions,OPEN,NO_FOR_FIRST_MEASUREMENT_BUILD,Golden Harness dimensions,OPEN
+PMA-027,G1,Manufacturer,Builder completes DFM review,OPEN,YES,Written DFM response,RFI_PENDING
+PMA-028,G1,Manufacturer,All substitutions/deviations approved,OPEN,YES,Deviation register and engineering disposition,RFI_PENDING
+PMA-029,G0,Commissioning,First-power/first-start master release gate exists,FROZEN,NO_FOR_HARNESS_BUILD,Commissioning master gate,PASS
+PMA-030,Release,Engineering manufacturing release signed,OPEN,YES,All applicable G0/G1 PASS plus controlled G2 exceptions,REV1_PROTOTYPE_BUILD_NOT_YET_AUTHORISED
