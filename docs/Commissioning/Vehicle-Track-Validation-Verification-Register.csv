@@ -1,0 +1,17 @@
+Verify_ID,Area,Item,Current_State,Required_Evidence,Blocks_Release
+V166,VEHICLE VALIDATION,Vehicle/track validation framework,RESOLVED TEST FRAMEWORK,Vehicle-Track-Validation-Preparation.md plus test matrix define VT-001 through VT-013,NO
+V167,VEHICLE VALIDATION,Chassis/drivetrain readiness,WAITING ON DYNO FREEZE,Execute VT-001 and retain inspection record,YES
+V168,VEHICLE VALIDATION,Electrical/vibration readiness,WAITING ON DYNO FREEZE,Execute VT-002 and retain mounting/harness inspection,YES
+V169,VEHICLE VALIDATION,Configuration/revision lock,WAITING ON DYNO FREEZE,Execute VT-003 before every session,YES
+V170,VEHICLE VALIDATION,Low-speed control validation,WAITING ON V167-V169,Execute VT-004 before staged load testing,YES
+V171,VEHICLE VALIDATION,Gear and wheel-speed validation,WAITING ON LOW-SPEED PASS,Execute VT-005; do not use gear-based boost authority until proven,YES
+V172,VEHICLE VALIDATION,Gear-by-gear boost authority,WAITING ON V171,Execute VT-006 with bounded targets/duty and safe invalid fallback,YES
+V173,VEHICLE VALIDATION,Brake and kill response,WAITING ON LOW-SPEED PASS,Execute VT-007 and retain safety test log,YES
+V174,VEHICLE VALIDATION,Heat-soak/vibration durability,WAITING ON LOW-SPEED PASS,Execute VT-008 and inspect CAN/CKP/current/thermal stability,YES
+V175,VEHICLE VALIDATION,Staged vehicle-load progression,WAITING ON V170-V174,Execute VT-009 inside dyno-validated envelope,YES
+V176,VEHICLE VALIDATION,Traction/wheel-speed observation,WAITING ON STAGED LOAD,Execute VT-010; observation only unless separate intervention logic is later commissioned,YES
+V177,VEHICLE VALIDATION,Shift/transient behaviour,WAITING ON STAGED LOAD,Execute VT-011 and review boost/fuel/lambda/sync/drivetrain response,YES
+V178,VEHICLE VALIDATION,Post-session inspection,WAITING ON VEHICLE SESSION,Execute VT-012 after each significant session,YES
+V179,VEHICLE VALIDATION,Session log and revision review,WAITING ON VEHICLE SESSION,Execute VT-013 before progression,YES
+V180,VEHICLE VALIDATION,Launch/competition lockout,LAUNCH_NOT_AUTHORISED,Remain locked until separate launch/track-release milestone passes,YES
+V181,VEHICLE VALIDATION,Vehicle validation release,VEHICLE_VALIDATION_ONLY,Promote to READY_FOR_LAUNCH_AND_TRACK_RELEASE_PREP only after required VT tests PASS,YES
