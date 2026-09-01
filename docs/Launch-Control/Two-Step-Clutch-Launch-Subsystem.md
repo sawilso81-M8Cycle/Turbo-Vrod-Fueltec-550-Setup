@@ -8,51 +8,76 @@ The subsystem is intentionally separated from the normal engine rev limiter and 
 
 ## Official FuelTech behaviour used by this design
 
-FuelTech's FT450/FT550/FT550LITE/FT600 manual provides a dedicated 2-step rev limiter with programmable ignition retard, fuel enrichment, maximum electronic-throttle position, minimum TPS for launch corrections, activation by button or input sensor, and post-launch rejection logic. FuelTech also documents a clutch-button strategy where the clutch input marks the actual launch event after the 2-step has been armed.
+FuelTech's FT450/FT550/FT550LITE/FT600 manual provides a dedicated 2-step rev limiter and documents the clutch-button strategy. On the PROBIKE harness, **FT550 connector A cavity A21 / White input #2** is the dedicated **2-Step / clutch switch** input.
 
-The master repository shall preserve the distinction between:
+FuelTech's electrical diagram shows the 2-Step/Clutch input is **ground activated**: the switch closes the White input to battery negative/chassis.
 
-- normal rev limiter;
-- Two-Step launch limiter;
-- optional staging/3-step functions;
-- boost-control strategy.
+Therefore **PMU O11 MUST NOT be connected directly to FT550 A21** because O11 is a high-side +12 V output. A low-side/open-drain interface is mandatory between O11 and A21.
 
 ## Hardware architecture
 
+### OEM clutch discrete input
+
+Primary discrete clutch hardware is the OEM VRXSE clutch switch:
+
+- Harley-Davidson **71620-08 — SWITCH, clutch — VRXSE**;
+- Harley-Davidson **46865-06 — clutch switch spring clip**.
+
+The OEM switch is used as the authoritative launch-interlock state, subject to bench continuity/polarity confirmation before wiring release.
+
 ### PMU input allocation
 
-- **PMU A6** = `CLUTCH_DISCRETE`
-- **PMU A7** = `CLUTCH_POSITION` optional analogue position sensor
+- **PMU A6 / pin 18** = `CLUTCH_DISCRETE`
+- **PMU A7 / pin 32** = `CLUTCH_POSITION` optional analogue position sensor
 
 A6 is the authoritative hard launch-interlock input.
+
+A6 shall be implemented as a 0-5 V discrete circuit. Until internal-pullup behaviour is proven for the installed PMU project, use an external pull-up to the PMU 5 V reference and let the clutch switch pull A6 toward PMU ground. Final pull-up resistance and switch polarity are bench-test gated.
 
 A7 is recommended for development/race logging because it allows bite-point and release-rate analysis. A7 does not replace the hard A6 safety state until the analogue sensor and plausibility logic have been independently validated.
 
 ### PMU output allocation
 
-- **PMU O11** = `TWO_STEP_REQUEST_TO_FT550`
+- **PMU O11 / pin 3** = `TWO_STEP_REQUEST_HIGH_SIDE`
 
-O11 shall drive a dedicated FT550 white digital input configured for positive/switched-12-V activation, subject to final confirmation of the selected FT550 white input cavity and electrical interface.
+O11 drives only the control side of the Two-Step low-side interface module X70.
 
-If the final FT550 white-input configuration requires ground activation instead, insert an approved low-side/open-drain interface stage. Do not assume polarity at harness build without verification.
+### X70 low-side interface
 
-### FT550 input allocation
+X70 converts the PMU O11 high-side request into the ground-active signal required by FT550 A21.
 
-Reserve one otherwise-unused FT550 White input as:
+Required interface behaviour:
 
-`FT_TWO_STEP_REQUEST`
+- O11 OFF -> X70 output high impedance -> FT550 A21 inactive;
+- O11 ON -> X70 pulls FT550 A21 to clean ECU/signal ground -> Two-Step request active;
+- loss of PMU power, interface power or command -> A21 returns inactive/high impedance;
+- interface must not source +12 V into A21;
+- interface switching/release delay must be characterised during bench validation;
+- use an automotive-rated protected solid-state low-side/open-drain stage in the production build; exact semiconductor/module PN remains a component-selection gate.
 
-Exact connector cavity remains **VERIFY** until reconciled against the final project FT550 input map. Do not displace MAP, oil pressure, fuel pressure, IAT, gear or other already-reserved project channels without an explicit revision.
+A mechanical relay may be used only for temporary bench proving, not as the production baseline, unless latency/bounce/endurance are explicitly validated and accepted.
+
+### FT550 input allocation — FROZEN
+
+- **FT550 X01/A21 / White #2** = `FT_TWO_STEP_REQUEST`
+- Function = dedicated `2-Step / clutch switch` input
+- Electrical activation = **pull to ground**
+
+This cavity is now frozen and does not displace MAP, oil pressure, fuel pressure, TPS, ECT, IAT, VSS, gear or expansion inputs.
 
 ### Optional clutch-position sensor
 
 Preferred final race architecture:
 
-- mechanically independent clutch-position sensor;
-- 5 V supply from a verified sensor-reference source;
-- precision sensor return;
-- analogue signal to PMU A7;
-- environmental sealing and strain relief suitable for clutch-lever vibration and steering movement.
+- non-contact Hall-effect rotary or short-stroke linear position sensor;
+- 5 V supply from PMU +5 V pin 15 if current budget permits;
+- PMU ground/reference return;
+- analogue signal to PMU A7 pin 32;
+- nominal ratiometric output compatible with the PMU 0-5 V input range;
+- mechanically independent from the discrete switch;
+- environmental sealing and strain relief suitable for steering movement, vibration and clutch-lever operation.
+
+Exact sensor model is **mechanical-mock-up gated**. The project shall freeze the sensor only after confirming stroke/angle, mounting, connector clearance and full lever travel without side loading.
 
 The position sensor is primarily for state estimation/logging:
 
@@ -94,16 +119,9 @@ PMU O11 may become active in this state.
 
 ### TS-STATE-3 TWO_STEP_ACTIVE
 
-O11 = ON and FT550 confirms/behaves as configured Two-Step.
+O11 = ON, X70 pulls A21 to ground, and FT550 confirms/behaves as configured Two-Step.
 
-FT550 owns:
-
-- launch RPM target;
-- ignition-cut strategy;
-- launch ignition retard;
-- launch fuel enrichment;
-- optional electronic-throttle limit;
-- internal 2-step rejection rules.
+FT550 owns launch RPM target, ignition-cut strategy, launch ignition retard, launch fuel enrichment, optional electronic-throttle limit and internal 2-step rejection rules.
 
 PMU continues monitoring clutch, kill/master, gear, speed, CAN validity and faults.
 
@@ -111,7 +129,7 @@ PMU continues monitoring clutch, kill/master, gear, speed, CAN validity and faul
 
 Detected on validated clutch release / clutch-position transition.
 
-Immediately remove O11 Two-Step request unless the final FT550 clutch-button workflow explicitly requires a different release sequencing proven during validation.
+Immediately remove O11 request unless the final FT550 clutch-button workflow explicitly requires a different release sequencing proven during validation.
 
 Launch event timestamp is latched for logging and time-based launch functions.
 
@@ -123,65 +141,27 @@ Re-arm requires the defined reset conditions such as low speed, clutch reset, ex
 
 ## PMU Two-Step permissive
 
-Conceptual logic:
-
 `TWO_STEP_PERMISSIVE = LAUNCH_ARMED AND MASTER_OK AND KILL_OK AND CLUTCH_DISCRETE AND GEAR_VALID AND SPEED_ARM_OK AND RPM_ARM_OK AND TPS_ARM_OK AND FAULT_FREE AND POST_LAUNCH_LOCKOUT_FALSE`
 
 `O11 = TWO_STEP_PERMISSIVE`
 
-Every signal used to increase launch authority must have an explicit validity flag.
-
-Invalid gear, speed, clutch, RPM or launch-arm state must make O11 OFF.
+Every signal used to increase launch authority must have an explicit validity flag. Invalid gear, speed, clutch, RPM or launch-arm state makes O11 OFF.
 
 ## Clutch signal plausibility
 
-Where A7 clutch position is fitted, compare A6 and A7.
-
-Examples:
-
-- A6 says clutch pulled but A7 reports released region for longer than debounce tolerance -> `CLUTCH_PLAUSIBILITY_FAULT`.
-- A6 says released while A7 remains fully pulled -> fault.
-- A7 out-of-range/open/short -> position invalid; A6 remains authoritative if independently healthy.
-
-A clutch plausibility fault disarms Two-Step.
+Where A7 clutch position is fitted, compare A6 and A7. A clutch plausibility fault disarms Two-Step.
 
 ## Debounce and timing
 
-The build-specific PMU project shall define and record:
+The build-specific PMU project shall define and record clutch-switch debounce, launch-arm debounce, minimum active time, launch-release confirmation, maximum Two-Step dwell, post-launch lockout and re-arm conditions. Do not use copied timing values without vehicle test evidence.
 
-- clutch switch debounce;
-- launch-arm debounce;
-- minimum active time before Two-Step request;
-- launch-release transition confirmation;
-- maximum Two-Step dwell time;
-- post-launch lockout time/state;
-- re-arm conditions.
+## Launch RPM and boost interaction
 
-Do not use generic copied timing values without vehicle test evidence.
+Launch RPM remains a calibration variable in FT550 and must remain independently lower than the normal engine rev limiter.
 
-## Launch RPM
-
-Launch RPM is a calibration variable in FT550 and shall be incremented only under the Launch & Track validation process.
-
-The first clutch Two-Step validation shall use the lowest practical controlled launch RPM that safely demonstrates function.
-
-Launch RPM must remain independently lower than the normal engine rev limiter.
-
-## Boost interaction
-
-Two-Step activation does not automatically grant full boost authority.
-
-Launch boost requires its own permissive and validated limit.
-
-Recommended authority chain:
-
-`TWO_STEP_ACTIVE` -> may permit only the currently validated staging/launch boost target.
-
-Any loss of clutch/gear/speed/CAN/MAP validity must reduce boost authority and de-energise the boost-control path as defined by the existing fail-safe architecture.
+Two-Step activation does not automatically grant full boost authority. Launch boost retains its own permissive and validated limit.
 
 ## Safety precedence
-
-Highest priority to lowest:
 
 1. hardwired kill;
 2. master/run disable;
@@ -196,47 +176,18 @@ Two-Step must never defeat the normal engine rev limiter.
 
 ## Logging channels
 
-Minimum channels:
-
-- `LAUNCH_ARMED`
-- `CLUTCH_DISCRETE`
-- `CLUTCH_POSITION`
-- `CLUTCH_POSITION_VALID`
-- `CLUTCH_PLAUSIBILITY_FAULT`
-- `TWO_STEP_PERMISSIVE`
-- `TWO_STEP_REQUEST_O11`
-- FT550 Two-Step active status where available
-- RPM
-- TPS
-- MAP
-- gear
-- vehicle speed / front and rear wheel speed where available
-- launch event timestamp
-- post-launch lockout
-- boost target
-- boost duty
-- lambda front/rear
-- fuel pressure
-- oil pressure
+Minimum channels: `LAUNCH_ARMED`, `CLUTCH_DISCRETE`, `CLUTCH_POSITION`, `CLUTCH_POSITION_VALID`, `CLUTCH_PLAUSIBILITY_FAULT`, `TWO_STEP_PERMISSIVE`, `TWO_STEP_REQUEST_O11`, FT550 Two-Step active status where available, RPM, TPS, MAP, gear, vehicle/front/rear wheel speed, launch event timestamp, lockout, boost target/duty, lambda front/rear, fuel pressure and oil pressure.
 
 ## Release states
 
-Initial state: `TWO_STEP_CLUTCH_NOT_VALIDATED`
-
-Progression:
-
-`TWO_STEP_CLUTCH_NOT_VALIDATED`
--> `TWO_STEP_CLUTCH_BENCH_VALIDATED`
--> `TWO_STEP_CLUTCH_STATIC_VALIDATED`
--> `TWO_STEP_CLUTCH_TRACK_VALIDATED`
+`TWO_STEP_CLUTCH_NOT_VALIDATED` -> `TWO_STEP_CLUTCH_BENCH_VALIDATED` -> `TWO_STEP_CLUTCH_STATIC_VALIDATED` -> `TWO_STEP_CLUTCH_TRACK_VALIDATED`
 
 Only the final state may be included in a competition-release manifest.
 
-## Open hardware gates
+## Remaining hardware gates
 
-- exact FT550 white-input connector cavity for `FT_TWO_STEP_REQUEST`;
-- final O11-to-FT550 electrical polarity/interface confirmation;
-- clutch discrete switch hardware and connector;
-- optional clutch-position sensor model and calibration;
-- final A6/A7 terminal assignments in the harness schedule;
-- final wire sizes/connector hardware.
+- X70 exact automotive protected low-side interface component/module;
+- OEM 71620-08 switch continuity/polarity and physical connector/terminal identification;
+- optional clutch-position sensor exact model and calibration;
+- final wire lengths and sealed service connector hardware;
+- bench verification of A6 pull-up value and X70 activation/release timing.
