@@ -1,0 +1,14 @@
+Test_ID,Phase,Test,Required_Result,Abort_On,Evidence,Status
+OL-001,Electrical,O6 activation check,Deterministic activation current normal and OFF fail-safe,Unexpected energisation overcurrent or wrong polarity,PMU O6 log+inspection,NOT_RUN
+OL-002,Baseline,Minimum-duty boost run,Boost remains near spring baseline and protections stable,Unexpected boost jump or protection anomaly,FTManager+PMU log,NOT_RUN
+OL-003,Progression,First approved duty increment,Monotonic predictable boost response,Excess overshoot pressure loss unsafe lambda misfire thermal or CAN/PMU fault,FTManager+PMU log,NOT_RUN
+OL-004,Mapping,Open-loop duty-response map,Repeatable duty-to-boost relationship across tested low-duty points,Non-repeatable or unexplained response,Revision-controlled run logs,NOT_RUN
+OL-005,Stability,Overshoot/creep assessment,Overshoot creep and drift characterised inside approved envelope,Unexplained/non-monotonic behaviour,MAP/RPM thermal analysis,NOT_RUN
+OL-006,Restriction,Gear/load signal validation,Invalid signal falls back to lowest duty or O6 OFF,Invalid data increases duty,CAN/PMU test record,NOT_RUN
+OL-007,Fuel,Fuel-system tracking under boost,Fuel pressure and pump current remain acceptable,Falling pressure or PMU current-limit event,Fuel pressure+PMU log,NOT_RUN
+OL-008,Thermal,Thermal trend review,IAT/ECT and available EGT/EMAP remain within build-specific envelope,Cumulative/unexplained thermal rise,Run comparison log,NOT_RUN
+OL-009,Fail-safe,Live O6 command removal at low energy,O6 OFF and boost returns toward spring baseline without unsafe transient,Boost does not reduce or unsafe transient occurs,FTManager+PMU log,NOT_RUN
+OL-010,Fail-safe,CAN-loss/invalid-MAP test,Invalid data cannot command increased boost,Any higher duty on invalid data,PMU/CAN fault-injection record,NOT_RUN
+OL-011,Inspection,Post-run pneumatic/electrical inspection,No hose fitting wiring fuel or thermal defect,Any damage/leak/abnormal heating,Inspection record,NOT_RUN
+OL-012,Review,Open-loop release review,Repeatable map protections/fail-safes and hardware all accepted,Any unresolved critical anomaly,Review record,NOT_RUN
+OL-REL,Release,Open-loop boost release,Required OL tests PASS before closed-loop prep,Any open critical anomaly,Revision-controlled release record,OPEN_LOOP_BOOST_ONLY
