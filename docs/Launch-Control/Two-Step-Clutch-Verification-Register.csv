@@ -1,0 +1,15 @@
+Verify_ID,Area,Item,Current_State,Required_Evidence,Blocks_Release
+V199,LAUNCH CONTROL,Two-Step clutch subsystem architecture,RESOLVED DESIGN,Two-Step-Clutch-Launch-Subsystem.md defines PMU-owned permissive and FT550-owned limiter strategy,NO
+V200,LAUNCH CONTROL,PMU A6 clutch discrete assignment,DESIGN RESERVED,Execute TS-001 and freeze exact switch hardware/terminal mapping,YES
+V201,LAUNCH CONTROL,PMU A7 clutch-position assignment,OPTIONAL DESIGN RESERVED,Execute TS-002/003 if analogue clutch position is fitted,NO
+V202,LAUNCH CONTROL,PMU O11 Two-Step request assignment,DESIGN RESERVED,Execute TS-004/005 and confirm electrical polarity to FT550,YES
+V203,FT550,Dedicated white input for Two-Step request,VERIFY,Select an unused FT550 White input and freeze exact connector cavity without conflicting with existing project channels,YES
+V204,FT550,FT550 Two-Step activation configuration,TEST REQUIRED,Execute TS-008 through TS-010 and retain FTManager diagnostic evidence,YES
+V205,LAUNCH CONTROL,Clutch plausibility and invalid-data fail-safe,TEST REQUIRED,Execute TS-003/006 proving contradictions or invalid prerequisites disarm Two-Step,YES
+V206,LAUNCH CONTROL,Post-launch lockout and re-arm strategy,TEST REQUIRED,Execute TS-007/012; no unexpected Two-Step reactivation permitted,YES
+V207,LAUNCH CONTROL,Clutch-release event detection,TEST REQUIRED,Execute TS-011 and TS-014; single clean launch event and request removal required,YES
+V208,LAUNCH CONTROL,Conservative running Two-Step validation,WAITING ON STATIC PASS,Execute TS-013 with build-specific conservative RPM/ignition/fuel settings and full monitoring,YES
+V209,LAUNCH CONTROL,Launch boost interaction,LOCKED TO VALIDATED AUTHORITY,Two-Step may permit only separately validated launch boost; invalid required signal reduces authority,YES
+V210,LAUNCH CONTROL,Low-energy track launch validation,WAITING ON RUNNING PASS,Execute TS-015/016 with progressive launch authority and retained overlays,YES
+V211,LAUNCH CONTROL,Launch abort/kill fail-safe,TEST REQUIRED,Execute TS-017 proving immediate removal of Two-Step and propulsion enhancement,YES
+V212,LAUNCH CONTROL,Two-Step clutch release state,TWO_STEP_CLUTCH_NOT_VALIDATED,Promote only through BENCH_VALIDATED -> STATIC_VALIDATED -> TRACK_VALIDATED with required evidence,YES
