@@ -1,0 +1,21 @@
+Test_ID,System,Requirement,Acceptance_Criteria,Evidence,State
+X70-001,Relay,Relay PN,TE 1393292-5 or engineering-approved equivalent matching 12V SPST-NO resistor-suppressed Micro-ISO function,Build record,OPEN
+X70-002,Relay,Socket/holder,Traceable Micro-ISO automotive holder positively retains relay and is serviceable,Manufacturer BOM/photo,OPEN
+X70-003,Relay,Coil resistance,Measured value plausible for selected relay at recorded ambient temperature,DMM record,OPEN
+X70-004,Relay,Coil current,Measured current at representative 12-14.5V supply recorded and within PMU O11 capability,Current record,OPEN
+X70-005,Relay,Truth table O11 OFF,A21 contact open and Two-Step request OFF,Powered bench test,OPEN
+X70-006,Relay,Truth table O11 ON,A21 pulled to approved ground only through NO contact and Two-Step request ON,Powered bench test,OPEN
+X70-007,Safety,A21 +12V exclusion,No operating/fault state applies +12V to FT550 A21,Voltage test,OPEN
+X70-008,Safety,Fail-off loss of command,Removal of O11 command opens A21 request circuit,Scope/DMM record,OPEN
+X70-009,Safety,Fail-off relay removed,Relay removal leaves A21 open and Two-Step OFF,Powered bench test,OPEN
+X70-010,Safety,Kill/master response,Kill/master removal promptly removes Two-Step request,Scope/log record,OPEN
+X70-011,Relay,Suppression,Selected relay uses intended resistor suppression; no unapproved parallel diode fitted,Visual/BOM audit,OPEN
+X70-012,Relay,Release time,Measured release delay documented and accepted for launch transition,Oscilloscope record,OPEN
+X70-013,Relay,Closed contact resistance,Contact resistance stable and appropriate for low-current ground request,DMM four-wire/validated method,OPEN
+X70-014,Harness,B43 conductor,PMU O11 to coil uses 0.50mm2 circuit 2STEP-CMD,Continuity/build record,OPEN
+X70-015,Harness,B44 conductor,Relay NO to FT550 A21 uses 0.35mm2 circuit 2STEP-REQ,Continuity/build record,OPEN
+X70-016,Harness,Contact ground,Relay common terminates only to approved ground architecture,Continuity/build record,OPEN
+X70-017,Mechanical,Retention,Relay cannot vibrate loose from socket/holder during manual retention test,Physical inspection,OPEN
+X70-018,Mechanical,Environment,Relay holder located away from direct turbo/exhaust heat and protected from spray,Installed photo/clearance record,OPEN
+X70-019,Durability,Prototype cycling,At least 100 bench operations without sticking/intermittency,Cycle record,OPEN
+X70-020,Release,X70 acceptance,X70-001 through X70-019 PASS and socket PN captured in final BOM,Engineering signoff,X70_NOT_ACCEPTED
