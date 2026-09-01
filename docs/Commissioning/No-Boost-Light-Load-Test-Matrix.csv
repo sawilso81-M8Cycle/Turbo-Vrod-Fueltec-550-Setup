@@ -1,0 +1,14 @@
+Test_ID,Phase,Test,Required_Result,Abort_On,Evidence,Status
+LL-001,Pre-session,Mechanical/electrical inspection,No leaks loose hardware harness damage or unresolved faults,Any unsafe physical condition,Inspection record,NOT_RUN
+LL-002,Baseline,Static/idle comparison,Critical channels agree with accepted idle baseline,Unexplained critical drift,FTManager+PMU logs,NOT_RUN
+LL-003,Boost lockout,Prove O6 disabled and minimum-energy pneumatic state,No active boost command and MAP remains inside authorised region,Unexpected boost or O6 activation,PMU+MAP log,NOT_RUN
+LL-004,Very light load,First controlled load point,Stable pressures lambda temperature electrical and CAN state,Pressure loss; severe mixture anomaly; fault; unexpected boost,FTManager+PMU log,NOT_RUN
+LL-005,Transient,Small throttle open/close,Clean TPS/MAP response and controlled return to idle,Severe transient; breakup; pressure loss; fault,FTManager log,NOT_RUN
+LL-006,Progression,Light-load cell matrix,Each predefined cell accepted before progression,Any unaccepted cell or crossing authorised boundary,Build-specific cell sheet+logs,NOT_RUN
+LL-007,Cooling,Fan/ECT validation,Verified fan threshold hysteresis current and temperature response,Uncontrolled temperature rise; PMU fan fault,PMU+ECT log,NOT_RUN
+LL-008,Fuel system,Highest authorised light-load fuel validation,Stable pressure and acceptable pump current/protection,Unexplained pressure decay or PMU current fault,Fuel pressure+PMU log,NOT_RUN
+LL-009,Ignition,Sync/misfire/thermal review,No unexplained sync loss misfire or abnormal ignition heating,Sync loss; persistent misfire; abnormal heating,FTManager+inspection,NOT_RUN
+LL-010,Protection,Controlled fallback simulation,CAN/pressure/fan/boost fail-safe logic behaves as designed,Any unsafe fallback,PMU/CAN test record,NOT_RUN
+LL-011,Post-session,Leak/thermal/electrical inspection,No new leak damage hot spot or PMU retry event,Any damage/leak/abnormal heating,Inspection+PMU record,NOT_RUN
+LL-012,Analysis,Session log review,All progression data reviewed and changes revision-controlled,Unexplained critical anomaly,Review/change record,NOT_RUN
+LL-REL,Release,No-boost light-load release,Required LL tests PASS and separate boost plan reviewed,Any open critical anomaly,Revision-controlled release record,NO_BOOST_LIGHT_LOAD_ONLY
