@@ -1,4 +1,8 @@
 Connector_ID,Cavity,Function,Circuit_ID,Wire_Colour,Domain,Status,Release_Blocker
+X01,A1,Front injector control - Injection output #1,E-004,BU#1,EPM,MANUFACTURER VERIFIED CAVITY,Verify injector impedance/current class and Peak & Hold requirement
+X01,A2,Rear injector control - Injection output #2,E-006,BU#2,EPM,MANUFACTURER VERIFIED CAVITY,Verify injector impedance/current class and Peak & Hold requirement
+X01,A8,Front ignition command - Ignition output #1,E-008,GY#1,EPM,MANUFACTURER VERIFIED CAVITY,Verify OEM coil driver topology and required ignition driver
+X01,A9,Rear ignition command - Ignition output #2,E-010,GY#2,EPM,MANUFACTURER VERIFIED CAVITY,Verify OEM coil driver topology and required ignition driver
 X01,A12,FT550 signal ground / sensor return,S-005;S-008;S-010,BK/W,SIM,MANUFACTURER VERIFIED CAVITY,Verify final splice topology only
 X01,A13,FT550 switched 12V input,E-001,RD,EPM,MANUFACTURER VERIFIED CAVITY,Verify conductor/protection sizing
 X01,A14,FT550 5V sensor reference,S-003;S-006,R/W,SIM,MANUFACTURER VERIFIED CAVITY,Verify total 5V sensor load
@@ -25,10 +29,6 @@ X02,B18,White #13 gear position,SX-016,WH#13,SIM,MANUFACTURER VERIFIED CAVITY,Po
 X02,B26,Sensor ground,S-005;SX-003;SX-004;SX-006,GN/BK,SIM,MANUFACTURER VERIFIED CAVITY,Verify selected return topology with A12
 X01/02,VERIFY,Oil pressure switch,S-016,GN/Y,SIM,VERIFY,Yes
 X01/02,VERIFY,Neutral switch,S-017,TN,SIM,VERIFY,Yes
-X01/02,VERIFY,Front injector control,E-004,BU,EPM,VERIFY,Yes
-X01/02,VERIFY,Rear injector control,E-006,GN,EPM,VERIFY,Yes
-X01/02,VERIFY,Front coil control,E-008,BU/WH,EPM,VERIFY,Yes
-X01/02,VERIFY,Rear coil control,E-010,GN/WH,EPM,VERIFY,Yes
 X03,38,PMU O1 primary fuel pump,P-001,RD/YE,APM,MANUFACTURER VERIFIED CAVITY,Measure load/inrush and freeze current limit
 X03,39,PMU O2 secondary fuel pump,P-002,RD/OG,APM,MANUFACTURER VERIFIED CAVITY,If fitted measure load/inrush
 X03,26,PMU O3 radiator fan 1,P-003,RD/BU,APM,MANUFACTURER VERIFIED CAVITY,Measure fan load/inrush
