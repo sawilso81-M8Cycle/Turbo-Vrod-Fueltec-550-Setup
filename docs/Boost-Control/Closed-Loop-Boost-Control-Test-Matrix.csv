@@ -1,0 +1,14 @@
+Test_ID,Phase,Test,Required_Result,Abort_On,Evidence,Status
+CL-001,Feed-forward,Freeze accepted open-loop duty table,Only validated cells become feed-forward baseline,Any unvalidated duty region included,Revision-controlled table,NOT_RUN
+CL-002,Targets,Define conservative target table,Targets stay within proven envelope,Target exceeds validated region,Target table review,NOT_RUN
+CL-003,Gains,Initial conservative gains,Closed-loop correction authority limited and bounded,Large/unbounded correction authority,Controller config snapshot,NOT_RUN
+CL-004,Limits,Define correction/slew/integral limits,All limits explicitly bounded,Any unconstrained increase path,Controller config record,NOT_RUN
+CL-005,Overboost,Independent overshoot/hard-cut protection,Hard protection removes boost authority above build-specific threshold,Protection depends only on normal PID loop,Protection test record,NOT_RUN
+CL-006,Caps,Gear/RPM/TPS/CAN caps,Invalid/stale inputs force lowest safe target or fallback,Invalid input holds high target active,PMU/FTManager logic record,NOT_RUN
+CL-007,Activation,First low-energy closed-loop run,Target converges without overshoot oscillation or fault,Unexpected overshoot/oscillation/fuel/lambda/CAN fault,FTManager+PMU logs,NOT_RUN
+CL-008,Tuning,Controlled gain progression,One parameter family changed at a time with measurable improvement,Multiple unrelated changes or worse control,Revision/change log,NOT_RUN
+CL-009,Transient,Controlled load/throttle transitions,No target/duty spike and clean boost decay,Spike into unvalidated duty or unsafe transient,FTManager log,NOT_RUN
+CL-010,Fail-safe,Controlled sensor/protection simulations,MAP/CAN/gear/fuel/lambda/temp faults reduce authority correctly,Any fault increases boost authority,Fault-injection record,NOT_RUN
+CL-011,Repeatability,Repeat cells across temperature/ambient variation,Correction remains consistent and explainable,Large unexplained duty drift,Repeated logs,NOT_RUN
+CL-012,Review,Post-session analysis,Tracking/overshoot/correction/fuel/lambda/temp/CAN all reviewed,Unexplained critical anomaly,Review record,NOT_RUN
+CL-REL,Release,Closed-loop commissioning release,Required CL tests PASS and higher-load plan separately reviewed,Any open critical anomaly,Revision-controlled release record,CLOSED_LOOP_BOOST_COMMISSIONING_ONLY
