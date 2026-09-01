@@ -11,6 +11,7 @@ X01,A16,CAN A HIGH,C-002,WH/RD,COMM,PRODUCTION FROZEN 1MBPS,Route to PMU CAN2 pi
 X01,A18,CKP reference,S-002,BK,SIM,WORKING VERIFIED,Scope polarity before release
 X01,A19,CKP signal,S-001,WH,SIM,WORKING VERIFIED,Scope polarity before release
 X01,A20,OEM MAP signal reserved,S-007,V/W,SIM,DESIGN RESERVED,Verify FTManager input configuration and MAP calibration
+X01,A21,Two-Step / clutch request input,TS-004,WH#2,LAUNCH,MANUFACTURER VERIFIED CAVITY / GROUND ACTIVE,Must be driven only through X70 low-side/open-drain interface; never apply +12V directly
 X01,A22,TPS signal,S-004,GY/V,SIM,WORKING VERIFIED,Calibrate TPS
 X01,A23,Engine oil pressure transducer,SX-004,WH#4,SIM,MANUFACTURER VERIFIED CAVITY,Select sensor range and calibrate
 X01,A24,ECT signal,S-009,PK/Y,SIM,WORKING VERIFIED,Verify thermistor curve
@@ -37,14 +38,17 @@ X03,12,PMU O5 charge-cooler pump,P-005,RD/VT,APM,MANUFACTURER VERIFIED CAVITY,If
 X03,11,PMU O6 boost-control solenoid supply,P-006,RD/BK,APM,MANUFACTURER VERIFIED CAVITY,Verify control topology and load current
 X03,9,PMU O8 warning lamp,P-007,YE/BK,APM,MANUFACTURER VERIFIED CAVITY,Verify lamp/load type
 X03,4,PMU O10 service/logger feed,P-008,OG/WH,APM,MANUFACTURER VERIFIED CAVITY,Verify connected load current
+X03,3,PMU O11 Two-Step request high-side,TS-003,VT/WH,LAUNCH,MANUFACTURER VERIFIED CAVITY,Drive X70 control only; output is high-side 12V and must not connect directly to FT550 A21
 X03,29,PMU A1 master enable,PMU-A1,VERIFY,APM,MANUFACTURER VERIFIED CAVITY,Freeze switch wiring
 X03,16,PMU A2 start request,PMU-A2,VERIFY,APM,MANUFACTURER VERIFIED CAVITY,Freeze start logic
 X03,30,PMU A3 kill request,PMU-A3,VERIFY,APM,MANUFACTURER VERIFIED CAVITY,Freeze fail-safe logic
 X03,17,PMU A4 fan override,PMU-A4,VERIFY,APM,MANUFACTURER VERIFIED CAVITY,Freeze switch logic
 X03,31,PMU A5 service/test mode,PMU-A5,VERIFY,APM,MANUFACTURER VERIFIED CAVITY,Define service switch
+X03,18,PMU A6 clutch discrete,TS-001,BN/WH,LAUNCH,MANUFACTURER VERIFIED CAVITY,OEM 71620-08 switch polarity and pull-up value bench verify
+X03,32,PMU A7 clutch position optional,TS-002,GN/WH,LAUNCH,MANUFACTURER VERIFIED CAVITY,Exact Hall sensor model and calibration mechanical-mock-up gated
 X03,7,PMU switched +12V,PMU-PWR-SW,RD,APM,MANUFACTURER VERIFIED CAVITY,Verify protected ignition feed
 X03,25,PMU device ground,PMU-GND,BK,APM,MANUFACTURER VERIFIED CAVITY,Verify conductor size and star point
-X03,15,PMU +5V output,PMU-5V,VERIFY,APM,MANUFACTURER VERIFIED CAVITY,500mA max; PMU-local use only
+X03,15,PMU +5V output,PMU-5V,VERIFY,APM,MANUFACTURER VERIFIED CAVITY,500mA max; PMU-local use only including optional clutch sensor if current budget allows
 X03,23,PMU CAN1H,CAN-PMU1H,WH/BU,COMM,RESERVED,Fixed 1Mbps; hold for future ECUMASTER-native bus
 X03,36,PMU CAN1L,CAN-PMU1L,WH/GN,COMM,RESERVED,Fixed 1Mbps; hold for future ECUMASTER-native bus
 X03,24,PMU CAN2H,CAN-PMU2H,WH/RD,COMM,PRODUCTION FROZEN 1MBPS,Connect FT550 A16; PMU CAN2 termination enabled at bus end
@@ -60,3 +64,11 @@ X60,3,SparkPRO-2 channel input 2,E-010,GY#2,EPM,MANUFACTURER VERIFIED CAVITY,Use
 X61,4,SparkPRO-2 channel output 2 - rear coil,E-011,VERIFY,EPM,MANUFACTURER VERIFIED CAVITY,Use 1.0mm2; final OEM coil terminal PN still required
 X60,5,SparkPRO-2 power ground 2,EPM-GND-SP2,BK,EPM,MANUFACTURER VERIFIED CAVITY,Use 1.0mm2 to J-P02
 X61,6,SparkPRO-2 channel output 1 - front coil,E-009,VERIFY,EPM,MANUFACTURER VERIFIED CAVITY,Use 1.0mm2; final OEM coil terminal PN still required
+X70,CTRL,Two-Step interface control from PMU O11,TS-003,VT/WH,LAUNCH,DESIGN FROZEN,Exact protected solid-state low-side interface PN open
+X70,OUT,Ground-active Two-Step output to FT550 A21,TS-004,WH/VT,LAUNCH,DESIGN FROZEN,Must pull A21 to clean ground only; high impedance when inactive
+X70,GND,Two-Step interface ground,TS-GND,BK,LAUNCH,DESIGN FROZEN,Connect to clean ECU/PMU reference ground as validated
+X71,1,OEM VRXSE clutch switch signal to PMU A6,TS-001,BN/WH,LAUNCH,OEM PART 71620-08 FROZEN,Exact mating connector/terminal identification still required
+X71,2,OEM VRXSE clutch switch ground,TS-GND,BK,LAUNCH,OEM PART 71620-08 FROZEN,Switch continuity/polarity bench verify
+X72,1,Optional clutch position +5V,TS-5V,RD/WH,LAUNCH,OPTIONAL SENSOR CLASS FROZEN,Exact sensor model/connector open
+X72,2,Optional clutch position signal to PMU A7,TS-002,GN/WH,LAUNCH,OPTIONAL SENSOR CLASS FROZEN,Mechanical calibration required
+X72,3,Optional clutch position ground,TS-GND,BK,LAUNCH,OPTIONAL SENSOR CLASS FROZEN,Use PMU sensor/reference ground
