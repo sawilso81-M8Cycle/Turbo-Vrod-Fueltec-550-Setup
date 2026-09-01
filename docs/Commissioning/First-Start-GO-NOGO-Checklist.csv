@@ -1,0 +1,11 @@
+Gate,Area,Required_Result,Evidence,Status
+FS-G01,Injector interface,27772-06 electrical class proven and exactly one direct/P&H configuration frozen,HC-008;HC-009;X62-X65 inspection,OPEN
+FS-G02,Ignition interface,32477-01A electrical evidence captured and initial SparkPRO-2 dwell/current strategy frozen,HC-010;HC-011;SparkPRO inspection,OPEN
+FS-G03,Base timing,Commanded fixed timing agrees with measured cranking timing and trigger offset is frozen,Timing-light record;FTManager log,OPEN
+FS-G04,Fuel system,Pressure verified and complete fuel system passes leak/decay inspection,Fuel-pressure record;leak inspection,OPEN
+FS-G05,Lambda,Wideband hardware configured healthy and cylinder/channel assignment verified,FTManager/wideband status,OPEN
+FS-G06,Base calibration,Independent sanity review completed with boost control disabled,Calibration review record,OPEN
+FS-G07,Protection,Kill/pressure/temp/current protections reviewed and logger active,PMU/FTManager configuration record,OPEN
+FS-G08,Mechanical readiness,Oil coolant fuel throttle plumbing neutral restraint ventilation and fire safety checked,Physical inspection checklist,OPEN
+FS-G09,No-start commissioning,VP-027 release gate PASS with required VP evidence,Vehicle first-power record,OPEN
+FS-REL,Release,FS-G01 through FS-G09 all PASS; build explicitly marked FIRST_START_READY,Signed/revision-controlled checklist,FIRST_START_NO_GO
