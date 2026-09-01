@@ -1,0 +1,13 @@
+Verify_ID,Area,Item,Current_State,Required_Evidence,Blocks_Release
+V126,BOOST CONTROL,Closed-loop framework,RESOLVED TEST FRAMEWORK,Closed-Loop-Boost-Control-Commissioning.md plus test matrix define CL-001 through CL-012,NO
+V127,BOOST CONTROL,Feed-forward baseline freeze,WAITING ON OPEN-LOOP RELEASE,Execute CL-001 using only accepted open-loop cells,YES
+V128,BOOST CONTROL,Closed-loop target table,WAITING ON FEED-FORWARD FREEZE,Execute CL-002 with targets inside validated envelope,YES
+V129,BOOST CONTROL,Controller gains and correction limits,WAITING ON TARGET FREEZE,Execute CL-003 CL-004 with bounded correction/slew/integral authority,YES
+V130,BOOST CONTROL,Independent overboost protection,WAITING ON CONTROLLER CONFIG,Execute CL-005; hard protection must remove boost authority independent of normal control loop,YES
+V131,BOOST CONTROL,Gear/RPM/TPS/CAN target caps,WAITING ON CONTROLLER CONFIG,Execute CL-006; invalid/stale input must force lowest safe target/fallback,YES
+V132,BOOST CONTROL,First closed-loop activation,WAITING ON CL-001 THROUGH CL-006,Execute CL-007 in low-energy validated region with full logs,YES
+V133,BOOST CONTROL,Gain progression and transient validation,WAITING ON FIRST CLOSED-LOOP PASS,Execute CL-008 CL-009 with one change family at a time,YES
+V134,BOOST CONTROL,Closed-loop fail-safe validation,WAITING ON CONTROLLER STABILITY,Execute CL-010 using controlled fault simulation; no fault may increase boost authority,YES
+V135,BOOST CONTROL,Closed-loop repeatability,WAITING ON FAIL-SAFE PASS,Execute CL-011 across temperature/ambient variation,YES
+V136,BOOST CONTROL,Closed-loop post-session review,WAITING ON REPEATABILITY PASS,Execute CL-012 and retain tracking/overshoot/correction/fuel/lambda/temp/CAN evidence,YES
+V137,BOOST CONTROL,Closed-loop release state,CLOSED_LOOP_BOOST_COMMISSIONING_ONLY,Promote only to READY_FOR_HIGHER_LOAD_TUNING_PREP after required CL tests PASS and higher-load plan is separately reviewed,YES
