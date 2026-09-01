@@ -1,0 +1,28 @@
+Test_ID,Stage,Test,Initial_State,Stimulus_or_Action,Expected_Result,Evidence,Pass_Fail
+VP-001,1,Battery positive to ground short check,Battery disconnected,Measure resistance J-P01 to J-P02,No unexpected low-resistance short,DMM reading,OPEN
+VP-002,1,Engine ground continuity,Battery disconnected,Measure J-P02 to engine case,Very low resistance,DMM reading,OPEN
+VP-003,1,SparkPRO ground continuity,Battery disconnected,Measure pins 2 and 5 independently to J-P02,Both low resistance independent paths,DMM readings,OPEN
+VP-004,1,CAN termination,Battery disconnected both terminations enabled,Measure CAN H to CAN L,Approximately 60 ohms,DMM reading,OPEN
+VP-005,2,Current-limited first power,Injectors coils starter PMU outputs disabled,Apply current-limited power,FT550 and PMU power normally no heating/current anomaly,Supply current photo/log,OPEN
+VP-006,3,FT550 5V reference,Powered low-risk state,Measure A14 to sensor return,Stable within manufacturer tolerance,DMM reading,OPEN
+VP-007,3,Sensor return integrity,Powered low-risk state,Measure sensor return to J-P02 and under sensor connection,No actuator-current-induced shift,DMM readings,OPEN
+VP-008,4,TPS plausibility,Engine off,Sweep throttle closed to WOT,Smooth monotonic signal no dropout,FTManager log,OPEN
+VP-009,4,MAP atmosphere plausibility,Engine off,Compare MAP to local atmospheric pressure,Plausible atmosphere reading,FTManager screenshot,OPEN
+VP-010,4,ECT/IAT plausibility,Engine off,Compare temperatures and warm gently,Plausible values correct direction,FTManager log,OPEN
+VP-011,4,Oil/fuel pressure zero state,Engine off no system pressure,Read transducer channels,Near expected zero/reference state,FTManager screenshot,OPEN
+VP-012,5,Live FTCAN identity,CAN2 1Mbps,Capture FT550 CAN A,Actual ProductID/UID and 0x600-0x602 arbitration IDs recorded,CAN capture,OPEN
+VP-013,5,FTCAN decode correlation,CAN active,Compare PMU decoded signals with FTManager,TPS MAP ECT pressures agree within expected resolution,PMU+FTManager logs,OPEN
+VP-014,6,O8 warning output test,Low-current load fitted,Command O8,Correct switching/current/fault reporting,PMU log,OPEN
+VP-015,6,O10 service feed test,Low-current load fitted,Command O10,Correct switching/current/fault reporting,PMU log,OPEN
+VP-016,7,O1 prime logic safe-load test,Pump replaced by safe test load,Toggle MASTER_ENABLE,O1 primes only then turns off without start/RPM,PMU log/video,OPEN
+VP-017,7,O1 start/kill priority safe-load test,Safe load on O1,Assert START then KILL,O1 on for start and immediately off on kill,PMU log/video,OPEN
+VP-018,8,SparkPRO command-path continuity,Coils disconnected,Continuity A8->pin1 A9->pin3,No cross-channel connection,DMM map,OPEN
+VP-019,8,SparkPRO output-path continuity,Coils disconnected,Continuity pin6 front branch pin4 rear branch,Correct cylinder routing no CKP/sensor continuity,DMM map,OPEN
+VP-020,9,Injector interface configuration interlock,Injectors disabled,Inspect X62-X65 configuration,Exactly one mode installed and labelled,Photos/build record,OPEN
+VP-021,10,Cranking power stability,Fuel/ignition disabled,Crank briefly,FT550/PMU remain powered no resets,Voltage/scope log,OPEN
+VP-022,10,CKP waveform and polarity,Fuel/ignition disabled,Crank briefly,Clean waveform correct polarity stable RPM,Scope capture,OPEN
+VP-023,10,FTCAN RPM during crank,Fuel/ignition disabled,Crank briefly,FT_RPM/VALID and ENGINE_CRANKING correct,PMU+FTManager log,OPEN
+VP-024,11,Vehicle kill priority,Starter inhibited or no-start state,Assert KILL,O1/O2/O6 off regardless CAN,PMU log,OPEN
+VP-025,11,Vehicle CAN-loss fallback,No-start state,Disconnect CAN,Defined pump/fan/boost/warning fallback occurs,PMU log/video,OPEN
+VP-026,11,CAN recovery,After VP-025,Restore CAN,Validity and outputs recover deterministically,PMU log,OPEN
+VP-027,12,No-start release review,All prior tests completed,Review evidence pack,All required VP tests PASS before first-start prep,Signed checklist,OPEN
