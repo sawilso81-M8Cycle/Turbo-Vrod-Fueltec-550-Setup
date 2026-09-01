@@ -9,7 +9,7 @@ O7,Auxiliary coolant/race pump,APM,Application specific,Off/defined safe state,R
 O8,Warning/fault lamp,APM,PMU/FT550 fault logic,Driver warning,FITTED_IF_USED,VERIFY
 O9,Race accessory feed,APM,Switched,Off,RESERVED,VERIFY
 O10,Logger/display/service feed,APM,Ignition switched,Off/noncritical,FITTED_IF_USED,VERIFY
-O11,Spare output 1,APM,None,Off,RESERVED,VERIFY
+O11,Two-Step request high-side,LAUNCH,PMU launch permissive logic,Off / Two-Step inactive,FITTED,VERIFIED PIN3; requires X70 low-side interface
 O12,Spare output 2,APM,None,Off,RESERVED,VERIFY
 O13,Spare output 3,APM,None,Off,RESERVED,VERIFY
 O14,Spare output 4,APM,None,Off,RESERVED,VERIFY
@@ -20,6 +20,8 @@ A2,Start request,APM,Starter switch/request logic,No crank request,PLANNED,VERIF
 A3,Kill / emergency torque-disable request,APM,Hardwired safety input,Safe torque removal request,PLANNED,VERIFY
 A4,Fan manual override,APM,Service/rider override,Automatic fan control remains,OPTIONAL,VERIFY
 A5,Service/test mode,APM,Service connector/switch,Normal runtime mode,OPTIONAL,VERIFY
-A6-A16,Reserved discrete/status inputs,APM,TBD,No unsafe dependency,RESERVED,VERIFY
+A6,Clutch discrete,LAUNCH,OEM VRXSE 71620-08 clutch switch through 0-5V pull-up circuit,Two-Step disarmed,FITTED,VERIFIED PIN18; switch polarity bench verify
+A7,Clutch position analogue,LAUNCH,Optional non-contact Hall clutch position sensor,Position invalid / A6 remains authoritative,OPTIONAL,VERIFIED PIN32; exact sensor mechanical-mock-up gated
+A8-A16,Reserved discrete/status inputs,APM,TBD,No unsafe dependency,RESERVED,VERIFY
 CAN1,FT550/vehicle control and status,COMM,Verified CAN integration,Safe local defaults,PLANNED,VERIFY
 CAN2,Expansion/logger/service bus,COMM,Expansion devices,Noncritical loss,RESERVED,VERIFY
