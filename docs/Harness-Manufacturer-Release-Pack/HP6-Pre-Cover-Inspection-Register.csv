@@ -1,0 +1,31 @@
+HP6_ID,System,Inspection_Requirement,Acceptance_Criteria,State,Photo_or_Evidence,Nonconformance_ID,Rework_Required,Inspector,Date,Notes
+HP6-001,CONFIGURATION,Harness serial/revision confirmed,Serial and all controlled revisions match traveller,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP6-002,WIRE,Pump1 feed conductor,>=4.0mm2 and released spec,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP6-003,WIRE,Pump1 dedicated return,>=4.0mm2 and released spec,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP6-004,WIRE,Pump2 feed conductor,>=4.0mm2 and released spec,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP6-005,WIRE,Pump2 dedicated return,>=4.0mm2 and released spec,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP6-006,WIRE,B15 conductor,Matches final released B15 size/spec,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP6-007,WIRE,B39/B40 segregation,Separate released circuits preserved,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP6-008,CONNECTORS,Housings/cavities,All visible connector population matches cavity schedule,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP6-009,CONNECTORS,Terminal/wire compatibility,Every inspected terminal accepts installed conductor,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP6-010,CONNECTORS,Seals/secondary locks,Correct seals locks and cavity plugs installed,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP6-011,SPLICES,Splice construction,All production splices match released method/count,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP6-012,SPLICES,Splice locations,All hidden splice positions match released schedule,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP6-013,GROUNDS,Sensor ground segregation,No precision/reference ground merged into high-current return,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP6-014,JUNCTION,J-P01 positive distribution,Construction/hardware matches released schedule,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP6-015,JUNCTION,J-P02 high-current ground,Construction/hardware matches released schedule,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP6-016,CAN,CAN twisted pair,Twist and branch construction match release,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP6-017,CAN,X51 service stub,Short stub/no undocumented star or termination,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP6-018,TRIGGER,CKP construction,Polarity routing twist/shielding match release,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP6-019,TRIGGER,CAM construction if used,Polarity routing twist/shielding match release or DNP,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP6-020,X70,A21 dry-contact isolation construction,No +12V path on FT550 A21 contact side,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP6-021,X70,Relay/socket construction,Released relay socket terminals and suppression used,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP6-022,ROUTING,Breakout positions,Match released formboard/dimension schedule,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP6-023,ROUTING,Service loops,Released allowances present and not excessive,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP6-024,ROUTING,Strain relief/bend radius,No connector carries loom weight or prohibited bend,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP6-025,THERMAL,Heat-protection preparation,Heat zones/protection positions match release,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP6-026,EVIDENCE,Full formboard photos,Complete harness documented before covering,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP6-027,EVIDENCE,Hidden construction photos,All splices/junctions/critical paths documented,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP6-028,DEVIATIONS,Approved deviations incorporated,Only approved serial-applicable deviations present,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP6-029,OVERALL,No undocumented construction,No unexplained wire splice terminal or component,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP6-030,RELEASE,HP6 engineering acceptance,All applicable HP6 rows PASS,NOT_RELEASED,TBD,TBD,NO,TBD,TBD,HP6_PRE_COVER_ACCEPTED only after complete pass
