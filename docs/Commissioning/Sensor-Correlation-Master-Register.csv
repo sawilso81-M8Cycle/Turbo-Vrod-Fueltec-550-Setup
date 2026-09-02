@@ -1,0 +1,16 @@
+Correlation_ID,Sensor_or_Signal,ECU_or_PMU_Channel,Test_State,Logged_Value,Logged_Units,Independent_Reference,Reference_Value,Reference_Units,Difference,Acceptance_Source,Acceptance_Limit,Reference_Instrument,Evidence,Result,Calibration_Change_Required,Wiring_Check_Required,Approved_By,Date,Notes
+SC-001,TPS,TBD,CLOSED,TBD,percent_or_V,Mechanical closed stop,TBD,NA,TBD,Verified FT550/sensor procedure,TBD,NA,TBD,OPEN,TBD,TBD,TBD,TBD,TBD
+SC-002,TPS,TBD,SWEEP,TBD,percent,Physical throttle sweep,TBD,NA,TBD,Verified FT550/sensor procedure,TBD,NA,TBD,OPEN,TBD,TBD,TBD,TBD,Check monotonicity/repeatability
+SC-003,MAP,TBD,ENGINE_OFF,TBD,kPa,Barometric reference,TBD,kPa,TBD,Sensor datasheet/verified calibration,TBD,TBD,TBD,OPEN,TBD,TBD,TBD,TBD,TBD
+SC-004,IAT,TBD,COLD_SOAK,TBD,C,Independent temperature,TBD,C,TBD,Sensor datasheet/verified calibration,TBD,TBD,TBD,OPEN,TBD,TBD,TBD,TBD,TBD
+SC-005,ENGINE_TEMP,TBD,COLD_SOAK,TBD,C,Independent temperature,TBD,C,TBD,Sensor datasheet/verified calibration,TBD,TBD,TBD,OPEN,TBD,TBD,TBD,TBD,TBD
+SC-006,ENGINE_TEMP,TBD,HOT_STABLE,TBD,C,Independent temperature/location-defined,TBD,C,TBD,Verified correlation method,TBD,TBD,TBD,OPEN,TBD,TBD,TBD,TBD,Record reference measurement location
+SC-007,FUEL_PRESSURE,TBD,KEY_ON_PRIME,TBD,kPa_or_bar,Trusted gauge/transducer,TBD,kPa_or_bar,TBD,Verified fuel-system requirement,TBD,TBD,TBD,OPEN,TBD,TBD,TBD,TBD,Record base-pressure reference condition
+SC-008,FUEL_PRESSURE,TBD,HOT_RUNNING,TBD,kPa_or_bar,Trusted gauge/transducer,TBD,kPa_or_bar,TBD,Verified fuel-system requirement,TBD,TBD,TBD,OPEN,TBD,TBD,TBD,TBD,TBD
+SC-009,OIL_PRESSURE,TBD,HOT_RUNNING,TBD,kPa_or_bar,Trusted gauge/transducer,TBD,kPa_or_bar,TBD,Verified engine requirement,TBD,TBD,TBD,OPEN,TBD,TBD,TBD,TBD,TBD
+SC-010,BATTERY_VOLTAGE,FT550,KEY_ON,TBD,V,DMM at defined point,TBD,V,TBD,Instrument/wiring correlation,TBD,TBD,TBD,OPEN,TBD,TBD,TBD,TBD,Record DMM location
+SC-011,BATTERY_VOLTAGE,PMU16,ENGINE_RUNNING,TBD,V,DMM at PMU/B15,TBD,V,TBD,Instrument/wiring correlation,TBD,TBD,TBD,OPEN,TBD,TBD,TBD,TBD,TBD
+SC-012,AFR_LAMBDA,TBD,IDLE_WARM,TBD,lambda_or_AFR,Controller validity/independent reference if available,TBD,lambda_or_AFR,TBD,Wideband documentation/TBD dyno correlation,TBD,TBD,TBD,OPEN,TBD,TBD,TBD,TBD,Repeat under load later
+SC-013,VSS,TBD,STATIONARY,TBD,km_h,Physical stationary state,0,km_h,TBD,Verified VSS setup,TBD,NA,TBD,OPEN,TBD,TBD,TBD,TBD,TBD
+SC-014,5V_REFERENCE,FT550,KEY_ON,TBD,V,DMM,TBD,V,TBD,FT550 documentation/TBD,TBD,TBD,TBD,OPEN,TBD,TBD,TBD,TBD,TBD
+SC-015,SENSOR_GROUND,FT550,KEY_ON,TBD,mV,DMM offset measurement,TBD,mV,TBD,Released grounding design/TBD,TBD,TBD,TBD,OPEN,TBD,TBD,TBD,TBD,TBD
