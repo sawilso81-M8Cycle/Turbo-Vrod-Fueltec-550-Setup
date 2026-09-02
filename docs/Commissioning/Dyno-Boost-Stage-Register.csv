@@ -1,0 +1,7 @@
+Stage_ID,Run_ID,Calibration_Revision,Fuel,Wastegate_Config,Boost_Control_State,Boost_Ceiling,Boost_Units,RPM_Ceiling,Run_Duration_s,Target_Lambda_or_AFR,AFR_Abort_Low,AFR_Abort_High,Fuel_Pressure_Min,Fuel_Differential_Min,Oil_Pressure_Min,Engine_Temp_Max,IAT_Max,Injector_Duty_Max_pct,Turbo_Speed_Max_rpm,Achieved_Boost,Peak_RPM,Peak_Injector_Duty_pct,Result,Evidence,Approved_By,Date,Notes
+DL1,RUN-001,TBD,TBD,TBD,DISABLED_OR_MINIMUM,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,DNP_OR_TBD,TBD,TBD,TBD,OPEN,TBD,TBD,TBD,Low-load validation only
+DL2,RUN-002,TBD,TBD,TBD,BASE_BOOST_VERIFICATION,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,DNP_OR_TBD,TBD,TBD,TBD,OPEN,TBD,TBD,TBD,Mechanical wastegate/base boost
+BS1,RUN-003,TBD,TBD,TBD,STAGED,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,DNP_OR_TBD,TBD,TBD,TBD,OPEN,TBD,TBD,TBD,First approved boost stage
+BS2,RUN-004,TBD,TBD,TBD,STAGED,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,DNP_OR_TBD,TBD,TBD,TBD,LOCKED,TBD,TBD,TBD,Unlock only after BS1 accepted
+BS3,RUN-005,TBD,TBD,TBD,STAGED,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,DNP_OR_TBD,TBD,TBD,TBD,LOCKED,TBD,TBD,TBD,Unlock only after BS2 accepted
+BS4,RUN-006,TBD,TBD,TBD,STAGED,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,DNP_OR_TBD,TBD,TBD,TBD,LOCKED,TBD,TBD,TBD,Optional further stage by engineering approval
