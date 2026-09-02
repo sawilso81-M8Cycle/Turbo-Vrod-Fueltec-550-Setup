@@ -1,0 +1,18 @@
+Gate_ID,System,Requirement,Acceptance_Criteria,State,Evidence,Blocker_or_Retest,Decision,Approved_By,Date,Notes
+TRV-001,ENTRY,Two-Step commissioning,TWO_STEP_LAUNCH_CONTROL_COMMISSIONED,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+TRV-002,ENTRY,Dyno/boost release,DYNO_LOAD_COMMISSIONING_ACCEPTED and CONTROLLED_BOOST_OPERATION_RELEASED current,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+TRV-003,TRACK,Pre-track baseline,Configuration tyre/ambient/launch parameters recorded,OPEN,TBD,TBD,TR0_TRACK_BASELINE_ACCEPTED,TBD,TBD,TBD
+TRV-004,LAUNCH_CHAIN,Static recheck,Clutch PMU X70 A21 chain verified at track,OPEN,TBD,TBD,TR1_STATIC_LAUNCH_CHAIN_ACCEPTED,TBD,TBD,TBD
+TRV-005,LAUNCH,Reduced-energy launch,Reduced first launch passes approved limits,LOCKED,TBD,TBD,TR2_REDUCED_LAUNCH_ACCEPTED,TBD,TBD,Unlock after TRV-004
+TRV-006,CLUTCH,Release behaviour,RPM/boost/clutch/wheel behaviour understood and acceptable,LOCKED,TBD,TBD,TR3_CLUTCH_RELEASE_BEHAVIOUR_ACCEPTED,TBD,TBD,TBD
+TRV-007,LAUNCH,Progressive launch stage 1,Stage limits accepted,LOCKED,TBD,TBD,TRACK_LAUNCH_STAGE_1_ACCEPTED,TBD,TBD,TBD
+TRV-008,LAUNCH,Progressive launch stage 2,Stage limits accepted,LOCKED,TBD,TBD,TRACK_LAUNCH_STAGE_2_ACCEPTED,TBD,TBD,TBD
+TRV-009,SPEED,Wheel-speed/RPM correlation,Slip/clutch/sensor divergence classified and accepted,LOCKED,TBD,TBD,TR5_SPEED_RPM_CORRELATION_ACCEPTED,TBD,TBD,TBD
+TRV-010,BOOST,Boost recovery,Release-to-target boost behaviour accepted,LOCKED,TBD,TBD,TR6_BOOST_RECOVERY_ACCEPTED,TBD,TBD,TBD
+TRV-011,ELECTRICAL,Track electrical stability,B15 pumps B39 B40 PMU CAN trigger X70 remain stable,LOCKED,TBD,TBD,TR7_TRACK_ELECTRICAL_ACCEPTED,TBD,TBD,TBD
+TRV-012,REPEATABILITY,Repeat launch,Same configuration repeats without unexplained drift,LOCKED,TBD,TBD,TR8_REPEATABILITY_ACCEPTED,TBD,TBD,TBD
+TRV-013,ACCELERATION,Shift/acceleration transition,Subsequent acceleration within approved envelope accepted,LOCKED,TBD,TBD,TR9_ACCELERATION_TRANSITION_ACCEPTED,TBD,TBD,TBD
+TRV-014,INSPECTION,Post-run inspection,Mechanical/electrical/thermal inspection accepted,LOCKED,TBD,TBD,TR10_POST_TRACK_INSPECTION_ACCEPTED,TBD,TBD,TBD
+TRV-015,CONFIG,Final race configuration,FT550 PMU SparkPRO launch boost limits and protections frozen,NOT_RELEASED,TBD,TBD,FINAL_RACE_CONFIGURATION_FROZEN,TBD,TBD,TBD
+TRV-016,VALIDATION,Frozen-config repeatability,Required number of accepted track passes completed,NOT_RELEASED,TBD,TBD,FINAL_RACE_VALIDATION_ACCEPTED,TBD,TBD,TBD
+TRV-017,OVERALL,Track launch validation,All applicable TRV checks PASS,NOT_RELEASED,TBD,TBD,TRACK_LAUNCH_VALIDATED,TBD,TBD,TBD
