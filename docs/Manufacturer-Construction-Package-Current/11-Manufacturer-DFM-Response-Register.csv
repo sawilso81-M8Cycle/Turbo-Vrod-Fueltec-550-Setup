@@ -1,0 +1,21 @@
+DFM_ID,System,Manufacturer_Action,Required_Return,Engineering_State,Manufacturer_Response,Proposed_PN_or_Method,Datasheet_or_Evidence,Availability,MOQ,Lead_Time,Cost_Impact,Engineering_Disposition,Notes
+DFM-001,X70,Nominate repeatable sealed/protected Micro-ISO socket/carrier for frozen TE relay,Housing/socket terminals seals/retention details,OPEN,TBD,TBD,TBD,TBD,TBD,TBD,TBD,PENDING,TBD
+DFM-002,X50,Nominate exact sealed service connector after final cavity review,Housing pair terminals locks plugs boots and cavity count,OPEN,TBD,TBD,TBD,TBD,TBD,TBD,TBD,PENDING,TBD
+DFM-003,X51,Confirm exact Deutsch DTM 4-way procurement set,Housing pair size-20 contacts plugs cap,OPEN,TBD,TBD,TBD,TBD,TBD,TBD,TBD,PENDING,TBD
+DFM-004,Fuel Pumps,Confirm HDSCS/MCP service-interface procurement,Exact housings 4-6mm2 contacts seals/locks/tooling,OPEN,TBD,TBD,TBD,TBD,TBD,TBD,TBD,PENDING,TBD
+DFM-005,PMU16,Confirm terminal families and tooling for every used cavity,Terminal PN wire range current class crimp tool,OPEN,TBD,TBD,TBD,TBD,TBD,TBD,TBD,PENDING,TBD
+DFM-006,FT550,Confirm official connector-kit build/tooling method,Terminal tooling seals boots and workmanship method,OPEN,TBD,TBD,TBD,TBD,TBD,TBD,TBD,PENDING,TBD
+DFM-007,X10-X23,Identify exact retained OEM connector solutions,Exact housing/terminal/seal or verified repair-pigtail solution per interface,OPEN,TBD,TBD,TBD,TBD,TBD,TBD,TBD,PENDING,TBD
+DFM-008,Wire,Nominate automotive/motorsport wire family,Datasheet sizes temp rating insulation OD colour availability,OPEN,TBD,TBD,TBD,TBD,TBD,TBD,TBD,PENDING,TBD
+DFM-009,Thermal,Nominate turbo/exhaust heat-protection system,Sleeve/boot products temp ratings installation method,OPEN,TBD,TBD,TBD,TBD,TBD,TBD,TBD,PENDING,TBD
+DFM-010,Splices,Nominate production splice method,Crimp/ultrasonic method sealing and size limits,OPEN,TBD,TBD,TBD,TBD,TBD,TBD,TBD,PENDING,TBD
+DFM-011,Strain Relief,Nominate branch breakout and connector strain-relief method,Boots transitions adhesives/clamps where used,OPEN,TBD,TBD,TBD,TBD,TBD,TBD,TBD,PENDING,TBD
+DFM-012,Identification,Nominate wire/connector labelling method,Heatshrink labels print durability scheme,OPEN,TBD,TBD,TBD,TBD,TBD,TBD,TBD,PENDING,TBD
+DFM-013,Testing,Confirm continuity/isolation test capability,Test equipment limits report format,OPEN,TBD,TBD,TBD,TBD,TBD,TBD,TBD,PENDING,TBD
+DFM-014,Testing,Confirm crimp pull-test capability,Equipment sampling plan and recorded units,OPEN,TBD,TBD,TBD,TBD,TBD,TBD,TBD,PENDING,TBD
+DFM-015,Formboard,Describe Golden Harness/formboard process,Measurement capture drawing control repeat-build method,OPEN,TBD,TBD,TBD,TBD,TBD,TBD,TBD,PENDING,TBD
+DFM-016,Document Control,Describe revision/serial traceability process,Build traveller revision serial/date traceability,OPEN,TBD,TBD,TBD,TBD,TBD,TBD,TBD,PENDING,TBD
+DFM-017,Substitutions,Describe substitution approval process,Method ensuring no unapproved substitutions,OPEN,TBD,TBD,TBD,TBD,TBD,TBD,TBD,PENDING,TBD
+DFM-018,Commercial,Provide quotation,NRE prototype repeat price MOQ and lead time,OPEN,TBD,TBD,TBD,TBD,TBD,TBD,TBD,PENDING,TBD
+DFM-019,Packaging,Review serviceability and mounting,DFM comments on connector access strain relief and branch exits,OPEN,TBD,TBD,TBD,TBD,TBD,TBD,TBD,PENDING,TBD
+DFM-020,Overall,Confirm ability to build to controlled hold points,Signed acknowledgement of HP-1 through HP-7,OPEN,TBD,TBD,TBD,TBD,TBD,TBD,TBD,PENDING,TBD
