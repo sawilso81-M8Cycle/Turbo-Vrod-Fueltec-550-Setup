@@ -1,0 +1,52 @@
+Stage,Check_ID,System,Test_or_Inspection,Expected_Result,Measured_or_Observed,State,Evidence,Stop_Condition,Retest_Required,Technician,Date,Notes
+FP0,FP0-01,INSTALLATION,Harness routing/clamps,Matches released routing with no interference,TBD,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FP0,FP0-02,INSTALLATION,Steering movement,No tension pinch or rub full-left/full-right,TBD,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FP0,FP0-03,INSTALLATION,Thermal clearance,Released turbo/exhaust protection/clearance present,TBD,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FP0,FP0-04,POWER,J-P01/J-P02/B15 mechanical check,Secure correct protected construction,TBD,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FP1,FP1-01,POWER,B+ to power-ground sanity,No unexplained hard short,TBD,OPEN,TBD,YES,YES,TBD,TBD,Use electronics-safe method
+FP1,FP1-02,X70,FT550 A21 to +12V isolation,No +12V continuity path,TBD,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FP1,FP1-03,CAN,CAN to B+/ground isolation,No unintended short,TBD,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FP1,FP1-04,SENSOR,5V/reference to B+ isolation,No unintended path,TBD,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FP1,FP1-05,GROUNDS,Sensor/power ground architecture,No uncontrolled high-current return via sensor ground,TBD,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FP2,FP2-01,POWER,First controlled energisation,Normal current draw/no heat/smoke/uncommanded loads,TBD,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FP2,FP2-02,FT550,ECU boot,Normal boot/no repeated reset,TBD,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FP2,FP2-03,PMU,PMU boot,Normal boot/no unexpected trip,TBD,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FP3,FP3-01,POWER,Battery/source voltage,Within suitable operating range,TBD,OPEN,TBD,YES,YES,TBD,TBD,Record V
+FP3,FP3-02,B15,PMU input voltage,Within device range and acceptable drop,TBD,OPEN,TBD,YES,YES,TBD,TBD,Record V
+FP3,FP3-03,FT550,ECU supply voltage,Within device range,TBD,OPEN,TBD,YES,YES,TBD,TBD,Record V
+FP3,FP3-04,B39,Injector supply,Correct only when intended/enabled,TBD,OPEN,TBD,YES,YES,TBD,TBD,No injection command
+FP3,FP3-05,B40,SparkPRO supply,Correct only when intended/enabled,TBD,OPEN,TBD,YES,YES,TBD,TBD,Ignition command disabled
+FP4,FP4-01,SENSOR,5V reference magnitude,Stable and within released/device expectation,TBD,OPEN,TBD,YES,YES,TBD,TBD,Record V
+FP4,FP4-02,SENSOR,Sensor-ground offset,Acceptable low offset to ECU reference,TBD,OPEN,TBD,YES,YES,TBD,TBD,Record mV where practical
+FP5,FP5-01,TPS,Closed reading,Plausible and calibratable without rail fault,TBD,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FP5,FP5-02,TPS,Sweep,Smooth monotonic response,TBD,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FP5,FP5-03,MAP,Engine-off MAP,Plausible near ambient pressure,TBD,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FP5,FP5-04,IAT,Engine-off temperature,Plausible for ambient,TBD,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FP5,FP5-05,ECT,Engine temperature,Plausible for engine state,TBD,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FP5,FP5-06,VSS,Stationary speed,Zero/plausible stationary state,TBD,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FP6,FP6-01,CAN,Bus communication,Expected FT550/PMU communication present,TBD,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FP6,FP6-02,CAN,Error state,No unexplained bus-off/severe errors,TBD,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FP6,FP6-03,X51,Service access,Diagnostic/service connection operates as designed,TBD,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FP6,FP6-04,CAN,Termination topology,Matches released topology,TBD,OPEN,TBD,YES,YES,TBD,TBD,Measure unpowered as appropriate
+FP7,FP7-01,PUMP1,Output command,Controlled command/current feedback correct,TBD,OPEN,TBD,YES,YES,TBD,TBD,Minimum duration required
+FP7,FP7-02,PUMP2,Output command,Controlled command/current feedback correct,TBD,OPEN,TBD,YES,YES,TBD,TBD,Minimum duration required
+FP7,FP7-03,B11,Fan command,Controlled command/current feedback correct,TBD,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FP7,FP7-04,B12,Cooler pump command,Correct if fitted or DNP,TBD,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FP7,FP7-05,B39,Injector supply enable,Supply architecture behaves as released without injection,TBD,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FP7,FP7-06,B40,Ignition supply enable,Supply architecture behaves as released with ignition energy disabled,TBD,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FP8,FP8-01,X70,PMU O11 command,Correct state transition,TBD,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FP8,FP8-02,X70,Relay operation,Correct energised/de-energised state,TBD,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FP8,FP8-03,X70,FT550 A21 state,A21 changes only via dry contact,TBD,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FP8,FP8-04,X70,Fail state,Relay de-energised state matches released fail-safe logic,TBD,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FP9,FP9-01,SAFETY,No-start inhibition,Both required fuel/ignition inhibition controls positively confirmed,TBD,OPEN,TBD,YES,YES,TBD,TBD,Required before crank
+FP9,FP9-02,CRANK,Battery minimum voltage,Acceptable during short crank,TBD,OPEN,TBD,YES,YES,TBD,TBD,Record V
+FP9,FP9-03,B15,PMU minimum voltage,No unacceptable sag/reset,TBD,OPEN,TBD,YES,YES,TBD,TBD,Record V
+FP9,FP9-04,FT550,ECU reset behaviour,No reset during crank,TBD,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FP9,FP9-05,TRIGGER,RPM signal,Stable plausible cranking RPM,TBD,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FP9,FP9-06,TRIGGER,Sync/error state,Expected sync/no unexplained trigger faults,TBD,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FP9,FP9-07,CAN,Cranking bus stability,No unexplained bus-off/errors,TBD,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FP9,FP9-08,SAFETY,Fuel/spark activity,No unintended injection or ignition energy,TBD,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FP10,FP10-01,THERMAL,B15/J-P01/J-P02 inspection,No abnormal heating/distress,TBD,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FP10,FP10-02,THERMAL,Pump high-current paths,No abnormal heating/distress,TBD,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FP10,FP10-03,THERMAL,B39/B40/PMU paths,No abnormal heating/distress,TBD,OPEN,TBD,YES,YES,TBD,TBD,TBD
+RELEASE,FPR-01,OVERALL,FP0 through FP10 complete,All applicable checks PASS,TBD,NOT_RELEASED,TBD,YES,YES,TBD,TBD,FIRST_POWER_COMMISSIONING_ACCEPTED only after engineering review
