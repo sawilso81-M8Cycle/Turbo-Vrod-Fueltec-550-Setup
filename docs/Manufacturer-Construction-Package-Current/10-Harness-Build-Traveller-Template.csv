@@ -1,0 +1,13 @@
+Traveller_ID,Harness_Serial,Stage,Operation,Controlled_Document_or_Revision,Material_or_Component,Tool_or_Method,Measured_or_Verified_Value,Acceptance_Criteria,Operator,QA,Date,Photo_or_Report,State,Notes
+BT-001,TBD,BT-01,Issue controlled document set,TBD,TBD,TBD,TBD,All revisions current and acknowledged,TBD,TBD,TBD,TBD,OPEN,TBD
+BT-002,TBD,BT-02,Issue wire/material batch,TBD,TBD,TBD,TBD,Matches released BOM/specification,TBD,TBD,TBD,TBD,OPEN,TBD
+BT-003,TBD,BT-03,Cut/prepare conductors,TBD,TBD,TBD,TBD,Lengths and preparation match released schedule,TBD,TBD,TBD,TBD,OPEN,TBD
+BT-004,TBD,BT-04,Crimp terminal sample validation,TBD,TBD,TBD,TBD,Crimp/pull-test requirements pass,TBD,TBD,TBD,TBD,OPEN,TBD
+BT-005,TBD,BT-05,Populate connectors,TBD,TBD,TBD,TBD,Cavity map/locks/plugs correct,TBD,TBD,TBD,TBD,OPEN,TBD
+BT-006,TBD,BT-06,Build splices/junctions,TBD,TBD,TBD,TBD,Matches released splice schedule,TBD,TBD,TBD,TBD,OPEN,TBD
+BT-007,TBD,BT-07,Assemble on formboard,TBD,TBD,TBD,TBD,Dimensions/breakouts/service loops correct,TBD,TBD,TBD,TBD,OPEN,TBD
+BT-008,TBD,BT-08,HP6 pre-cover inspection,TBD,TBD,TBD,TBD,Pre-cover checklist and photos accepted,TBD,TBD,TBD,TBD,HOLD,TBD
+BT-009,TBD,BT-09,Apply final covering/labels,TBD,TBD,TBD,TBD,Sleeving/labels/strain relief correct,TBD,TBD,TBD,TBD,OPEN,TBD
+BT-010,TBD,BT-10,Final electrical test,TBD,TBD,TBD,TBD,Continuity/polarity/isolation/CAN/X70 checks pass,TBD,TBD,TBD,TBD,OPEN,TBD
+BT-011,TBD,BT-11,Final dimensional inspection,TBD,TBD,TBD,TBD,Released branch geometry and connector orientation pass,TBD,TBD,TBD,TBD,OPEN,TBD
+BT-012,TBD,BT-12,Release to installation,TBD,TBD,TBD,TBD,Complete build record and QA release,TBD,TBD,TBD,TBD,NOT_RELEASED,TBD
