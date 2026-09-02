@@ -1,0 +1,26 @@
+Test_ID,System,Requirement,Acceptance_Criteria,Evidence,State
+CAP-001,B11,Radiator fan PN,Exact fan manufacturer/model recorded,Datasheet/photo/build record,OPEN
+CAP-002,B11,Steady current,Measured at representative system voltage and temperature,Current log,OPEN
+CAP-003,B11,Inrush current,Cold/hot start peak captured with suitable instrument,Current waveform/log,OPEN
+CAP-004,B11,Wire size,Final feed conductor passes current/voltage-drop/derating calculation,Calculation record,OPEN
+CAP-005,B11,Return size,Dedicated return matches required current class,Calculation/build record,OPEN
+CAP-006,B11,Connector current,Selected connector/terminals exceed measured continuous current with margin,Datasheet + test,OPEN
+CAP-007,B11,Connector inrush,Selected terminals tolerate measured start current,Datasheet/test,OPEN
+CAP-008,B11,PMU output,O3 direct drive proven within exact output/terminal thermal capability or external stage selected,PMU evidence/test,OPEN
+CAP-009,B11,Protection,Current limit/fuse/power-stage protection coordinates with fan start and conductor rating,Protection calculation/test,OPEN
+CAP-010,B11,Voltage drop,Installed fan voltage drop accepted at steady load,Installed measurement,OPEN
+CAP-011,B11,Thermal,Connector and conductor temperature acceptable after hot operating cycle,Thermal record,OPEN
+CAP-012,B11,Fail behavior,Loss of command/power gives intended safe fan state,Functional test,OPEN
+CAP-013,B12,Fitment decision,Charge/intercooler pump explicitly FITTED or DNP,Build record,OPEN
+CAP-014,B12,Pump PN,If fitted exact manufacturer/model recorded,Datasheet/photo,OPEN
+CAP-015,B12,Steady current,If fitted measured at representative voltage/temperature,Current log,OPEN
+CAP-016,B12,Inrush current,If fitted start peak captured,Current waveform/log,OPEN
+CAP-017,B12,Wire size,If fitted final conductor passes current/voltage-drop/derating calculation,Calculation record,OPEN
+CAP-018,B12,Connector,If fitted sealed service connector matches wire and current class,Datasheet/build record,OPEN
+CAP-019,B12,PMU output,O5 direct drive proven or external power stage selected,PMU evidence/test,OPEN
+CAP-020,B12,Protection,Protection coordinates with pump inrush/conductor/connector capability,Calculation/test,OPEN
+CAP-021,B12,Voltage drop,Installed pump voltage drop accepted at steady load,Installed measurement,OPEN
+CAP-022,B12,Thermal,Connector/conductor temperatures acceptable,Inspection/thermal record,OPEN
+CAP-023,Grounding,No fan/pump load current through sensor/reference grounds,Continuity/topology audit,OPEN
+CAP-024,Serviceability,B11/B12 device can be changed without cutting main loom,Physical inspection,OPEN
+CAP-025,Release,Cooling auxiliary power acceptance,Applicable CAP-001 through CAP-024 PASS,Engineering signoff,COOLING_AUX_POWER_NOT_ACCEPTED
