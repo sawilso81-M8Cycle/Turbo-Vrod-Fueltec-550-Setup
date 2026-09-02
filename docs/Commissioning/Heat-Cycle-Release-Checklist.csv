@@ -1,0 +1,20 @@
+Gate_ID,System,Requirement,Acceptance_Criteria,State,Evidence,Blocker_or_Retest,Decision,Approved_By,Date,Notes
+HCR-001,ENTRY,First-start commissioning accepted,FIRST_START_COMMISSIONING_ACCEPTED,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+HCR-002,CONFIG,Configuration control,FT550 PMU SparkPRO baseline revisions preserved,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+HCR-003,HC0,Cold sensor baseline,Ambient/IAT/engine temp/MAP/TPS/reference rails plausibly correlated,OPEN,TBD,TBD,HC0_COLD_BASELINE_ACCEPTED,TBD,TBD,TBD
+HCR-004,HC1,Start stability,Pressure AFR trigger charging and PMU state accepted,OPEN,TBD,TBD,HC1_START_STABLE,TBD,TBD,TBD
+HCR-005,HC2,Warm-up time series,Required channels logged through controlled warm-up,OPEN,TBD,TBD,HC2_WARMUP_CORRELATION_ACCEPTED,TBD,TBD,TBD
+HCR-006,HC3,Cooling control,B11 and B12 if fitted behave as released without unsafe temperature,OPEN,TBD,TBD,HC3_COOLING_CONTROL_ACCEPTED,TBD,TBD,TBD
+HCR-007,HC4,Low-load response,TPS MAP RPM pressure AFR electrical behaviour remain stable,OPEN,TBD,TBD,HC4_LOW_LOAD_RESPONSE_ACCEPTED,TBD,TBD,TBD
+HCR-008,HC5,Heat soak,Post-shutdown thermal/fuel/harness behaviour accepted,OPEN,TBD,TBD,HC5_HEAT_SOAK_ACCEPTED,TBD,TBD,TBD
+HCR-009,HC6,Hot restart,Crank voltage pressure sync and electrical behaviour accepted,OPEN,TBD,TBD,HC6_HOT_RESTART_ACCEPTED,TBD,TBD,TBD
+HCR-010,HC7,Repeatability,Required mechanical heat cycles show no adverse drift,OPEN,TBD,TBD,HC7_REPEATABILITY_ACCEPTED,TBD,TBD,TBD
+HCR-011,SENSORS,TPS correlation,TPS closed/sweep/repeatability accepted,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+HCR-012,SENSORS,MAP correlation,Engine-off and running response accepted,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+HCR-013,SENSORS,Temperature correlation,IAT/engine-temp cold/hot trends accepted,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+HCR-014,SENSORS,Fuel pressure correlation,Logged pressure correlated to trusted reference where applicable,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+HCR-015,SENSORS,Oil pressure correlation,Logged/protection signal correlated to trusted reference where applicable,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+HCR-016,SENSORS,Voltage correlation,FT550/PMU voltage compared with DMM at defined points,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+HCR-017,ELECTRICAL,Hot thermal inspection,B15 grounds pumps B39 B40 B11/B12 X70 and turbo-area harness accepted,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+HCR-018,DATA,Logs archived,All heat-cycle logs/photos/reference data retained,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+HCR-019,OVERALL,Engineering review,All applicable HCR checks PASS,NOT_RELEASED,TBD,TBD,LOW_LOAD_HEAT_CYCLE_VALIDATED,TBD,TBD,Required before dyno/load commissioning
