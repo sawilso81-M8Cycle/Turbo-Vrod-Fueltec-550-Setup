@@ -1,0 +1,8 @@
+Load_Case,Operating_State,FT550_A,PMU_Self_A,B39_Injector_A,B40_Ignition_A,Pump1_A,Pump2_A,B11_Fan_A,B12_Cooler_A,Other_A,Calculated_Total_A,Measured_B15_A,Source_V,PMU_V,B15_Drop_V,Duration_s,Temperature_C,State,Evidence,Notes
+LC-01,Key On Engine Off,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,OPEN,TBD,Populate only loads active in this state
+LC-02,Cranking,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,OPEN,TBD,Capture minimum PMU voltage
+LC-03,Idle Low Load,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,OPEN,TBD,TBD
+LC-04,High RPM High Fuel Demand,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,OPEN,TBD,Controlled test environment only
+LC-05,High RPM Both Pumps Cooling,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,OPEN,TBD,Credible simultaneous state
+LC-06,Hot Restart,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,OPEN,TBD,TBD
+LC-07,Credible Worst Continuous,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,OPEN,TBD,Do not sum impossible simultaneous inrush events
