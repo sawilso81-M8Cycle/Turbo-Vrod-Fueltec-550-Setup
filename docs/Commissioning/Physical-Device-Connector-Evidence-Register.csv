@@ -1,0 +1,19 @@
+Evidence_ID,Interface_or_Device,Expected_Device,Installed_PN,Manufacturer,Markings,Cavity_Count,Native_Wire_Colours,Native_Wire_mm2,Connector_Keying_Captured,Mating_Face_Photo,Wire_Entry_Photo,Latch_Photo,Markings_Photo,Scale_Photo,Mating_Pigtail_Photo,Continuity_Evidence,Physical_Access,Final_Connector_Strategy,State,Notes
+PDE-001,PUMP1,Fuel Pump 1,TBD,TBD,TBD,TBD,TBD,TBD,NO,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,OPEN,4.0mm2 feed/return architecture locked
+PDE-002,PUMP2,Fuel Pump 2,TBD,TBD,TBD,TBD,TBD,TBD,NO,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,OPEN,4.0mm2 feed/return architecture locked
+PDE-003,X10,CKP,32313-01A,TBD,TBD,TBD,TBD,TBD,NO,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,OPEN,Preserve trigger polarity/shield evidence
+PDE-004,X11,CAM if fitted/used,TBD,TBD,TBD,TBD,TBD,TBD,NO,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,OPEN,Confirm fitted status
+PDE-005,X12,TPS,TBD,TBD,TBD,TBD,TBD,TBD,NO,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,OPEN,Identify 5V ground signal only from evidence
+PDE-006,X13,MAP,32416-10,TBD,TBD,TBD,TBD,TBD,NO,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,OPEN,Identify 5V ground signal only from evidence
+PDE-007,X14,Engine Temperature,TBD,TBD,TBD,TBD,TBD,TBD,NO,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,OPEN,TBD
+PDE-008,X15,IAT,TBD,TBD,TBD,TBD,TBD,TBD,NO,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,OPEN,TBD
+PDE-009,X16,VSS,74402-05B,TBD,TBD,TBD,TBD,TBD,NO,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,OPEN,TBD
+PDE-010,X17,OEM Sensor Spare 1,TBD,TBD,TBD,TBD,TBD,TBD,NO,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,OPEN,Reconcile against final interface schedule
+PDE-011,X18,OEM Sensor Spare 2,TBD,TBD,TBD,TBD,TBD,TBD,NO,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,OPEN,Reconcile against final interface schedule
+PDE-012,X19,Front Injector,27772-06,TBD,TBD,TBD,TBD,TBD,NO,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,OPEN,Electrical verification separate
+PDE-013,X20,Rear Injector,27772-06,TBD,TBD,TBD,TBD,TBD,NO,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,OPEN,Electrical verification separate
+PDE-014,X21,Front Coil,32477-01A,TBD,TBD,TBD,TBD,TBD,NO,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,OPEN,SparkPRO verification separate
+PDE-015,X22,Rear Coil,32477-01A,TBD,TBD,TBD,TBD,TBD,NO,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,OPEN,SparkPRO verification separate
+PDE-016,X23,OEM Interface Spare,TBD,TBD,TBD,TBD,TBD,TBD,NO,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,OPEN,Reconcile against final interface schedule
+PDE-017,B11,Radiator Fan,TBD,TBD,TBD,TBD,TBD,TBD,NO,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,OPEN,Cooling electrical verification separate
+PDE-018,B12,Charge Cooler Pump if fitted,TBD,TBD,TBD,TBD,TBD,TBD,NO,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,OPEN,Mark DNP if not fitted
