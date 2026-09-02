@@ -1,0 +1,59 @@
+Stage,Check_ID,Objective,Required_Action,Pass_Evidence,State,Technician,Date,Evidence_Reference,Notes
+BOM,MAN-001,Core hardware,FT550 PMU16 SparkPRO and exact revisions physically verified,Photos/PN/revision recorded,OPEN,TBD,TBD,TBD,TBD
+BOM,MAN-002,Connector set,All used connectors terminals seals and plugs verified,Procurement/physical ID evidence,OPEN,TBD,TBD,TBD,TBD
+BOM,MAN-003,Pumps,Pump1/Pump2 exact hardware identified,PN and manufacturer evidence,OPEN,TBD,TBD,TBD,TBD
+BOM,MAN-004,Injectors,Exact front/rear injector hardware identified,PN/resistance/source data,OPEN,TBD,TBD,TBD,TBD
+BOM,MAN-005,Ignition,Exact coils/SparkPRO hardware verified,PN/revision evidence,OPEN,TBD,TBD,TBD,TBD
+LAYOUT,MAN-010,Component locations,FT550 PMU SparkPRO J-P01 J-P02 X50 X51 X70 pumps sensors positions frozen,Photos/datum evidence,OPEN,TBD,TBD,TBD,TBD
+LAYOUT,MAN-011,Dimensions,B01-B44 bike measurements complete,Dimensional freeze worksheet,OPEN,TBD,TBD,TBD,TBD
+LAYOUT,MAN-012,Movement,Steering and rear movement routes accepted,Movement photos/checks,OPEN,TBD,TBD,TBD,TBD
+LAYOUT,MAN-013,Thermal,Turbo/exhaust heat zones and protection accepted,Thermal route evidence,OPEN,TBD,TBD,TBD,TBD
+POWER,MAN-020,J-P01/J-P02,Primary positive and ground hardware installed/verified,Mechanical and continuity evidence,OPEN,TBD,TBD,TBD,TBD
+POWER,MAN-021,B15,10mm2 baseline PMU feed installed,Route/terminal evidence,OPEN,TBD,TBD,TBD,TBD
+POWER,MAN-022,Ground segregation,Precision sensor ground isolated from high-current returns,Continuity/topology check PASS,OPEN,TBD,TBD,TBD,TBD
+PMU,MAN-030,PMU pin map,Installed wiring agrees with verified pinout,Point-to-point evidence,OPEN,TBD,TBD,TBD,TBD
+PMU,MAN-031,Inputs,A1-A6 polarity/function bench verified,PMU bench record,OPEN,TBD,TBD,TBD,TBD
+PMU,MAN-032,Outputs,O1-O11 applicable function mapping bench verified,PMU bench record,OPEN,TBD,TBD,TBD,TBD
+PMU,MAN-033,Kill logic,A3 kill overrides fuel/boost logic,Function test PASS,OPEN,TBD,TBD,TBD,TBD
+PMU,MAN-034,Current limits,Final limits based on measured loads not estimates,Protection freeze register,OPEN,TBD,TBD,TBD,TBD
+SENSOR,MAN-040,CKP,Routing polarity and crank sync verified,Scope/crank log evidence,OPEN,TBD,TBD,TBD,TBD
+SENSOR,MAN-041,TPS,5V ground signal and smooth sweep verified,FT550/DMM evidence,OPEN,TBD,TBD,TBD,TBD
+SENSOR,MAN-042,MAP,Engine-off pressure plausibility verified,Barometric correlation,OPEN,TBD,TBD,TBD,TBD
+SENSOR,MAN-043,Temperature,IAT/ECT cold soak plausibility verified,Independent temperature correlation,OPEN,TBD,TBD,TBD,TBD
+SENSOR,MAN-044,VSS,Stationary zero and later scaling verified,FT550/dyno evidence,OPEN,TBD,TBD,TBD,TBD
+SENSOR,MAN-045,Pressure sensors,Fuel/oil pressure correlated to independent reference,Correlation register,OPEN,TBD,TBD,TBD,TBD
+INJECTOR,MAN-050,Driver mode,Direct drive or Peak Hold decision frozen,Injector final decision,OPEN,TBD,TBD,TBD,TBD
+INJECTOR,MAN-051,B39,B39 supply conductor/protection verified,Protection decision,OPEN,TBD,TBD,TBD,TBD
+IGNITION,MAN-060,SparkPRO,Channel mapping and both power grounds verified,Continuity/physical evidence,OPEN,TBD,TBD,TBD,TBD
+IGNITION,MAN-061,Dwell,Dwell baseline supported by verified evidence,Coil dwell decision,OPEN,TBD,TBD,TBD,TBD
+IGNITION,MAN-062,B40,B40 current/protection verified,Protection decision,OPEN,TBD,TBD,TBD,TBD
+PUMP,MAN-070,Pump1 load,Cold/hot steady and transient evidence accepted,Electrical test results,OPEN,TBD,TBD,TBD,TBD
+PUMP,MAN-071,Pump2 load,Cold/hot steady and transient evidence accepted or DNP,Electrical test results,OPEN,TBD,TBD,TBD,TBD
+PUMP,MAN-072,Pump wiring,4mm2 feed and 4mm2 dedicated return each pump verified,Physical/continuity evidence,OPEN,TBD,TBD,TBD,TBD
+PUMP,MAN-073,Switching,PMU direct or external stage architecture frozen,Power stage decision register,OPEN,TBD,TBD,TBD,TBD
+COOLING,MAN-080,Fan1,Fan inrush steady current and protection verified,Cooling verification,OPEN,TBD,TBD,TBD,TBD
+COOLING,MAN-081,Other cooling,Fan2/charge pump verified or DNP,Cooling verification,OPEN,TBD,TBD,TBD,TBD
+CAN,MAN-090,Physical bus,FT550 A16/A15 to PMU CAN2 24/37 and X51 topology verified,Continuity/polarity evidence,OPEN,TBD,TBD,TBD,TBD
+CAN,MAN-091,Termination,Exactly two end terminations and approx 60ohm powered-off result,Resistance evidence,OPEN,TBD,TBD,TBD,TBD
+CAN,MAN-092,Communication,1Mbps communication and signal agreement verified,CAN log evidence,OPEN,TBD,TBD,TBD,TBD
+TWOSTEP,MAN-100,Clutch input,A6 clutch truth table verified,Truth table register,OPEN,TBD,TBD,TBD,TBD
+TWOSTEP,MAN-101,X70,TE relay coil and dry contact wiring verified,Bench test evidence,OPEN,TBD,TBD,TBD,TBD
+TWOSTEP,MAN-102,A21 isolation,FT550 A21 isolated from +12V,A21 isolation PASS,OPEN,TBD,TBD,TBD,TBD
+HARNESS,MAN-110,HP6,Pre-cover construction inspection passed,HP6_PRE_COVER_ACCEPTED,OPEN,TBD,TBD,TBD,TBD
+HARNESS,MAN-111,HP7,Final harness electrical/dimensional acceptance passed,HP7_FINAL_HARNESS_ACCEPTED,OPEN,TBD,TBD,TBD,TBD
+FIRST_POWER,MAN-120,FP0-FP8,Installation isolation rails references sensors CAN outputs and Two-Step passed,First power register,LOCKED,TBD,TBD,TBD,TBD
+FIRST_POWER,MAN-121,Dead-engine crank,No-start crank trigger voltage and CAN tests passed,FP9_DEAD_ENGINE_CRANK_ACCEPTED,LOCKED,TBD,TBD,TBD,TBD
+FIRST_POWER,MAN-122,First power release,FP0-FP10 complete,FIRST_POWER_COMMISSIONING_ACCEPTED,LOCKED,TBD,TBD,TBD,TBD
+FIRST_START,MAN-130,Pre-start,Calibration fuel oil cooling and emergency stop ready,First start GO/NOGO PASS,LOCKED,TBD,TBD,TBD,TBD
+FIRST_START,MAN-131,Initial combustion,FS0-FS4 accepted,Initial run register,LOCKED,TBD,TBD,TBD,TBD
+FIRST_START,MAN-132,Warm-up/log,FS5-FS8 accepted,FIRST_START_COMMISSIONING_ACCEPTED,LOCKED,TBD,TBD,TBD,TBD
+HEAT,MAN-140,Heat cycles,HC0-HC7 accepted,LOW_LOAD_HEAT_CYCLE_VALIDATED,LOCKED,TBD,TBD,TBD,TBD
+DYNO,MAN-150,No boost,Light-load/no-boost validation passed,No-boost verification,LOCKED,TBD,TBD,TBD,TBD
+DYNO,MAN-151,Base boost,Mechanical wastegate/base boost verified,DL2_BASE_BOOST_VERIFIED,LOCKED,TBD,TBD,TBD,TBD
+DYNO,MAN-152,Fuel delivery,Fuel pressure differential and pump behavior accepted,DL3_FUEL_DELIVERY_ACCEPTED,LOCKED,TBD,TBD,TBD,TBD
+DYNO,MAN-153,Progressive boost,Approved boost stages completed,Dyno boost stage register,LOCKED,TBD,TBD,TBD,TBD
+DYNO,MAN-154,High-load electrical,B15 pumps B39 B40 PMU/charging stable,DL7_HIGH_LOAD_ELECTRICAL_ACCEPTED,LOCKED,TBD,TBD,TBD,TBD
+DYNO,MAN-155,Dyno release,DL0-DL9 complete,DYNO_LOAD_COMMISSIONING_ACCEPTED,LOCKED,TBD,TBD,TBD,TBD
+FINAL_DYNO,MAN-160,Full-power precheck,FP-001 release check complete,Full-power matrix,LOCKED,TBD,TBD,TBD,TBD
+FINAL_DYNO,MAN-161,Full-power run,FP-002 through FP-010 evidence repeatable,Full-power logs/report,LOCKED,TBD,TBD,TBD,TBD
+FINAL_DYNO,MAN-162,Calibration freeze,FP-011/012 archive and report complete,DYNO_CALIBRATION_FROZEN_READY_FOR_VEHICLE_VALIDATION_PREP,LOCKED,TBD,TBD,TBD,TBD
