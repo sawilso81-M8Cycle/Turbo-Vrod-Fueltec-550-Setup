@@ -1,0 +1,51 @@
+Gate,Check_ID,System,Requirement,Required_State,Evidence_or_Register,Current_State,Blocker,Engineering_Disposition,Approved_By,Date,Notes
+HP1,HP1-01,Manufacturer,Controlled Rev2 package issued,PASS,ZIP checksum/transmittal,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP1,HP1-02,Manufacturer,DFM response complete,PASS,Harness-Manufacturer-DFM-Response-Register.csv,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP1,HP1-03,Manufacturer,Wire/splice/sleeving/strain-relief methods accepted,PASS,DFM response/evidence,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP1,HP1-04,Manufacturer,Test/pull-test/formboard/document-control accepted,PASS,DFM response/evidence,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP1,HP1-05,RFI,Blocking RFIs closed,PASS,Harness-Manufacturer-RFI-Register.csv,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP1,HP1-06,Deviation,All deviations dispositioned,PASS,Harness-Manufacturer-Deviation-Register.csv,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP2,HP2-01,FT550,Connector/terminal/tooling accepted,PASS,FT550 interface/DFM evidence,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP2,HP2-02,PMU16,Exact hardware revision verified,PASS,PMU audit,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP2,HP2-03,PMU16,Used cavity-terminal-wire audit complete,PASS,PMU16-Cavity-Terminal-Wire-Audit.csv,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP2,HP2-04,Fuel Pump,HDSCS/MCP production hardware accepted,PASS,DFM return,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP2,HP2-05,X50,Exact connector/cavity configuration accepted,PASS,X50 cavity register,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP2,HP2-06,X51,Exact DTM procurement set accepted,PASS,CAN service verification/DFM,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP2,HP2-07,X70,Relay socket/carrier/terminal set accepted,PASS,X70 verification/DFM,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP2,HP2-08,X10-X23,Every used OEM interface resolved,PASS,OEM-Connector-Physical-ID-Register.csv,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP2,HP2-09,Terminals,All conductor-terminal combinations valid,PASS,Terminal schedule/datasheets,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP3,HP3-01,Fuel Pumps,Pump electrical evidence accepted,PASS,Electrical-Test-Campaign-Master-Results.csv,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP3,HP3-02,Fuel Pumps,Switching architecture frozen,PASS,Fuel-Pump-Switching-Decision-Register.csv,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP3,HP3-03,Injectors,Electrical class/driver architecture frozen,PASS,Injector-Driver-Final-Decision.csv,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP3,HP3-04,Ignition,SparkPRO/coil electrical evidence accepted,PASS,Coil-Dwell-B40-Final-Decision.csv,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP3,HP3-05,B11,Radiator fan final decision frozen,PASS,Cooling-Load-Final-Decision.csv,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP3,HP3-06,B12,Charge-cooler state/decision frozen,PASS,Cooling-Load-Final-Decision.csv,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP3,HP3-07,B15,Primary protection frozen,PASS,B15-B39-B40-Final-Protection-Decision-Register.csv,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP3,HP3-08,B39,Injector protection frozen,PASS,B15-B39-B40-Final-Protection-Decision-Register.csv,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP3,HP3-09,B40,Ignition protection frozen,PASS,B15-B39-B40-Final-Protection-Decision-Register.csv,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP3,HP3-10,CAN,Termination configuration verified,PASS,CAN-Service-Verification-Register.csv,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP3,HP3-11,X70,A21 dry-contact truth table verified,PASS,X70-Two-Step-Relay-Verification-Register.csv,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP4,HP4-01,Datums,Physical datums accepted,PASS,Physical evidence closeout,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP4,HP4-02,Modules,FT550/PMU/SparkPRO locations accepted,PASS,Harness-Physical-Dimension-Capture-Register.csv,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP4,HP4-03,Power,J-P01/J-P02 and B15 route accepted,PASS,Harness-Physical-Dimension-Capture-Register.csv,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP4,HP4-04,Branches,All applicable major branch dimensions released,PASS,Harness-Physical-Dimension-Capture-Register.csv,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP4,HP4-05,Movement,Steering/rear movement accepted,PASS,Physical evidence closeout,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP4,HP4-06,Thermal,Heat zones/routes accepted,PASS,Physical evidence closeout,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP4,HP4-07,Service,X50/X51/X70 positions accepted,PASS,Harness-Physical-Dimension-Capture-Register.csv,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP5,HP5-01,Wire,Final circuit/wire schedule released,PASS,As-built/master wire schedule,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP5,HP5-02,Cavities,Final connector/cavity schedule released,PASS,Cavity schedule,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP5,HP5-03,Splices,Final splice schedule released,PASS,Splice schedule,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP5,HP5-04,Dimensions,Final branch-dimension schedule released,PASS,Dimension schedule,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP5,HP5-05,Protection,Final protection schedule released,PASS,Protection decision register,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP5,HP5-06,Terminals,Final connector/terminal/seal schedule released,PASS,Terminal schedule,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP5,HP5-07,Crimp,Tooling and pull-test plan accepted,PASS,Manufacturer DFM return,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP5,HP5-08,CAN_TRIGGER,CAN/CKP/CAM production instructions frozen,PASS,Freeze documents/build traveller,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP5,HP5-09,Thermal,Heat-protection/sleeving schedule frozen,PASS,Manufacturer DFM/as-built schedule,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP5,HP5-10,Identification,Label schedule frozen,PASS,Manufacturer DFM/as-built schedule,OPEN,TBD,PENDING,TBD,TBD,TBD
+HP5,HP5-11,Inspection,Pre-cover HP6 requirements in build traveller,PASS,Manufacturer build traveller,OPEN,TBD,PENDING,TBD,TBD,TBD
+RELEASE,REL-01,Overall,HP1 complete,HP1_DFM_ACCEPTED,This register,OPEN,TBD,PENDING,TBD,TBD,TBD
+RELEASE,REL-02,Overall,HP2 complete,HP2_CONNECTOR_PROCUREMENT_ACCEPTED,This register,OPEN,TBD,PENDING,TBD,TBD,TBD
+RELEASE,REL-03,Overall,HP3 complete,HP3_ELECTRICAL_BLOCKERS_CLOSED,This register,OPEN,TBD,PENDING,TBD,TBD,TBD
+RELEASE,REL-04,Overall,HP4 complete,HP4_DIMENSIONAL_RELEASED,This register,OPEN,TBD,PENDING,TBD,TBD,TBD
+RELEASE,REL-05,Overall,HP5 complete,HP5_CRIMP_RELEASED,This register,OPEN,TBD,PENDING,TBD,TBD,TBD
+RELEASE,REL-06,Overall,Functional Rev1 manufacturing release,MANUFACTURING_RELEASED_REV1,Manufacturing release authorisation,NOT_RELEASED,TBD,PENDING,TBD,TBD,Only after REL-01 through REL-05 PASS
