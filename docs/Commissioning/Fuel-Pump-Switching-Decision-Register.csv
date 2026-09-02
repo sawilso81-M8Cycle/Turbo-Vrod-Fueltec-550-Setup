@@ -1,0 +1,3 @@
+Decision_ID,Pump_ID,Pump_PN,Wire_Feed_mm2,Wire_Return_mm2,PMU_HW_Version,PMU_Output,PMU_Continuous_Rating_A,Measured_Max_Steady_A,Measured_Max_Inrush_A,Inrush_Duration_ms,Max_Total_Drop_V,Max_Switch_Drop_V,Max_Connector_Temp_C,Max_Terminal_Temp_C,Protection_Config,Repeated_Start_Test,Simultaneous_Load_Test,Direct_PMU_Compatible,External_Stage_PN,Final_Disposition,Engineering_Signoff,Date,Notes
+FPSD-001,PUMP-1,TBD,4.0,4.0,TBD,O1/TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,OPEN,OPEN,UNDECIDED,TBD,FUEL_PUMP_VERIFICATION_PENDING,TBD,TBD,TBD
+FPSD-002,PUMP-2,TBD,4.0,4.0,TBD,O2/TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,OPEN,OPEN,UNDECIDED,TBD,FUEL_PUMP_VERIFICATION_PENDING,TBD,TBD,TBD
