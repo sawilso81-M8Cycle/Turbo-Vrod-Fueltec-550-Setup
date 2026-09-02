@@ -1,0 +1,19 @@
+Label_ID,Label_Target,Required_Text,Preferred_Method,Location_Rule,Durability_Rule,Release_State,Notes
+LBL-001,Main Harness,TVR-FT550 / R1 / SERIAL / GH-REV / BUILD-DATE,Durable heatshrink or industrial automotive label,Accessible central trunk location away from high heat,Automotive heat/oil/moisture resistant,WORKING_BASELINE,Populate exact serial/revisions per build
+LBL-002,X10,CKP,Heatshrink or durable wrap label,Near connector without obstructing latch/seal,Legible after service handling,WORKING_BASELINE,TBD
+LBL-003,X13,MAP,Heatshrink or durable wrap label,Near connector without obstructing latch/seal,Legible after service handling,WORKING_BASELINE,TBD
+LBL-004,X19,FRONT INJECTOR,Heatshrink or durable wrap label,Near connector without obstructing latch/seal,Legible after service handling,WORKING_BASELINE,TBD
+LBL-005,X20,REAR INJECTOR,Heatshrink or durable wrap label,Near connector without obstructing latch/seal,Legible after service handling,WORKING_BASELINE,TBD
+LBL-006,X21,FRONT COIL,Heatshrink or durable wrap label,Near connector without obstructing latch/seal,Legible after service handling,WORKING_BASELINE,TBD
+LBL-007,X22,REAR COIL,Heatshrink or durable wrap label,Near connector without obstructing latch/seal,Legible after service handling,WORKING_BASELINE,TBD
+LBL-008,X30,PUMP 1,Heatshrink or durable wrap label,Near HDSCS service connector,Heat/oil/moisture resistant,WORKING_BASELINE,TBD
+LBL-009,X31,PUMP 2,Heatshrink or durable wrap label,Near HDSCS service connector,Heat/oil/moisture resistant,WORKING_BASELINE,TBD
+LBL-010,X50,ENGINEERING / SERVICE,Heatshrink or durable wrap label,Near connector but not over latch,Legible after repeated service,WORKING_BASELINE,TBD
+LBL-011,X51,CAN SERVICE,Heatshrink or durable wrap label,Near connector but not over latch,Legible after repeated service,WORKING_BASELINE,Optional service power label separately if fitted
+LBL-012,X62,INJECTOR DRIVER IN,Heatshrink or durable wrap label,Near connector,Legible after repeated service,WORKING_BASELINE,Preserve front/rear mapping
+LBL-013,X63,INJECTOR DRIVER OUT,Heatshrink or durable wrap label,Near connector,Legible after repeated service,WORKING_BASELINE,Preserve front/rear mapping
+LBL-014,X70,TWO-STEP RELAY,Heatshrink or durable wrap label,Near relay/socket,Heat/moisture resistant,WORKING_BASELINE,A21 dry-contact architecture
+LBL-015,CAN PAIR,CAN-H / CAN-L or circuit IDs,Printed wire ID or endpoint heatshrink,Both ends and service branch,Legible without excessive untwist,WORKING_BASELINE,TBD
+LBL-016,SENSOR GROUND,SENSOR GND / circuit ID,Printed wire ID or endpoint heatshrink,At serviceable endpoint/transition,Must distinguish from power ground,WORKING_BASELINE,TBD
+LBL-017,POWER GROUND,POWER GND / circuit ID,Printed wire ID or endpoint heatshrink,At serviceable endpoint/transition,Must distinguish from sensor ground,WORKING_BASELINE,TBD
+LBL-018,SERVICE 12V,SERVICE 12V / MAX LOAD TBD,Heatshrink or durable connector label,X50/X51 if fitted,Voltage/load text must remain legible,WORKING_BASELINE,DNP if service power omitted
