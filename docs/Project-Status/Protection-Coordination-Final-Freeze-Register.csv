@@ -1,0 +1,9 @@
+Protection_ID,Circuit,Load_Device,Switching_Device,Measured_Continuous_A,Measured_Transient_A,Conductor_mm2,Conductor_Rating_Source,Connector_Terminal_Rating_A,Device_Max_or_Requirement_A,PMU_Channel,PMU_Continuous_Capability_A,PMU_Transient_Capability,Selected_Fuse_A,Selected_PMU_Limit_A,External_Relay_or_Power_Stage,Fault_Containment_Domain,Coordination_Rationale,Evidence,State,Approved_By,Date,Notes
+PCF-001,B15,Primary system feed,Primary protection,TBD,TBD,TBD,TBD,TBD,TBD,NA,NA,NA,TBD,NA,TBD,PRIMARY,TBD,TBD,OPEN,TBD,TBD,TBD
+PCF-002,PUMP1,Fuel Pump 1,TBD,TBD,TBD,4.0,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,AUX_FUEL_1,TBD,TBD,OPEN,TBD,TBD,PMU direct vs external stage unresolved until measured
+PCF-003,PUMP2,Fuel Pump 2,TBD,TBD,TBD,4.0,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,AUX_FUEL_2,TBD,TBD,OPEN,TBD,TBD,PMU direct vs external stage unresolved until measured
+PCF-004,B39,Injector supply,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,ENGINE_INJECTION,TBD,TBD,OPEN,TBD,TBD,Keep segregated from precision sensor supplies
+PCF-005,B40,SparkPRO ignition supply,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,ENGINE_IGNITION,TBD,TBD,OPEN,TBD,TBD,Freeze only after coil/dwell verification
+PCF-006,B11,Radiator fan,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,AUX_COOLING,TBD,TBD,OPEN,TBD,TBD,TBD
+PCF-007,B12,Charge cooler pump if fitted,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,AUX_COOLING,TBD,TBD,OPEN,TBD,TBD,DNP if not fitted
+PCF-008,X70,Two-Step relay coil,PMU O11,TBD,TBD,TBD,TBD,TBD,TBD,O11,TBD,TBD,TBD,TBD,NONE,CONTROL,TBD,TBD,OPEN,TBD,TBD,A21 remains isolated dry-contact side
