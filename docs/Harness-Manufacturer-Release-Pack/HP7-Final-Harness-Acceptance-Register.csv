@@ -1,0 +1,41 @@
+HP7_ID,System,Acceptance_Requirement,Acceptance_Criteria,State,Test_or_Evidence,Nonconformance_ID,Retest_Required,Inspector,Date,Notes
+HP7-001,CONFIGURATION,Harness identity,Serial/config/formboard/build revisions match released record,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP7-002,VISUAL,Final covering,Complete undamaged and correctly terminated,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP7-003,VISUAL,Boots/seals,Correctly seated with no visible damage,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP7-004,LABELS,Harness identification,Serial/revision/manufacturer/date label readable,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP7-005,LABELS,Connector/branch labels,Match released identification schedule,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP7-006,ELECTRICAL,100 percent point-to-point continuity,Every production circuit matches released wire/cavity schedule,OPEN,TBD,TBD,YES,TBD,TBD,TBD
+HP7-007,ELECTRICAL,No unintended cross-circuit continuity,All isolation checks PASS,OPEN,TBD,TBD,YES,TBD,TBD,TBD
+HP7-008,ELECTRICAL,No unintended +12V-to-ground path,Isolation PASS with sensitive devices disconnected as required,OPEN,TBD,TBD,YES,TBD,TBD,TBD
+HP7-009,GROUNDS,Sensor/power ground segregation,No prohibited continuity path,OPEN,TBD,TBD,YES,TBD,TBD,TBD
+HP7-010,CAN,CAN-H/CAN-L polarity,Correct end-to-end mapping,OPEN,TBD,TBD,YES,TBD,TBD,TBD
+HP7-011,CAN,No harness hidden termination,Released topology verified,OPEN,TBD,TBD,YES,TBD,TBD,TBD
+HP7-012,TRIGGER,CKP polarity/continuity,Matches released schedule,OPEN,TBD,TBD,YES,TBD,TBD,TBD
+HP7-013,TRIGGER,CAM polarity/continuity if used,Matches released schedule or DNP,OPEN,TBD,TBD,YES,TBD,TBD,TBD
+HP7-014,X70,A21 isolation,No +12V continuity to FT550 A21 dry-contact side,OPEN,TBD,TBD,YES,TBD,TBD,TBD
+HP7-015,X70,Two-Step contact path,Released relay contact mapping correct,OPEN,TBD,TBD,YES,TBD,TBD,TBD
+HP7-016,INJECTORS,Front/rear injector circuits,No reversal/cross-wire,OPEN,TBD,TBD,YES,TBD,TBD,TBD
+HP7-017,IGNITION,Front/rear SparkPRO/coil command circuits,No reversal/cross-wire,OPEN,TBD,TBD,YES,TBD,TBD,TBD
+HP7-018,DIMENSION,B15 branch,Within released tolerance,OPEN,TBD,TBD,YES,TBD,TBD,TBD
+HP7-019,DIMENSION,FT550 branch,Within released tolerance,OPEN,TBD,TBD,YES,TBD,TBD,TBD
+HP7-020,DIMENSION,PMU16 branch,Within released tolerance,OPEN,TBD,TBD,YES,TBD,TBD,TBD
+HP7-021,DIMENSION,SparkPRO branch,Within released tolerance,OPEN,TBD,TBD,YES,TBD,TBD,TBD
+HP7-022,DIMENSION,Pump1 feed/return branches,Within released tolerance,OPEN,TBD,TBD,YES,TBD,TBD,TBD
+HP7-023,DIMENSION,Pump2 feed/return branches,Within released tolerance,OPEN,TBD,TBD,YES,TBD,TBD,TBD
+HP7-024,DIMENSION,Injector/coil branches,Within released tolerance,OPEN,TBD,TBD,YES,TBD,TBD,TBD
+HP7-025,DIMENSION,CKP/CAM branches,Within released tolerance,OPEN,TBD,TBD,YES,TBD,TBD,TBD
+HP7-026,DIMENSION,B11/B12 branches,Within released tolerance or DNP,OPEN,TBD,TBD,YES,TBD,TBD,TBD
+HP7-027,DIMENSION,X50/X51/X70 branches,Within released tolerance,OPEN,TBD,TBD,YES,TBD,TBD,TBD
+HP7-028,DIMENSION,VSS/rear branch,Within released tolerance,OPEN,TBD,TBD,YES,TBD,TBD,TBD
+HP7-029,MECHANICAL,Connector/terminal retention,No push-back loose lock or abnormal retention,OPEN,TBD,TBD,YES,TBD,TBD,TBD
+HP7-030,MECHANICAL,Pull-test evidence,Manufacturer sampling/test plan passed,OPEN,TBD,TBD,YES,TBD,TBD,TBD
+HP7-031,THERMAL,Heat protection,Matches released sleeve/barrier schedule,OPEN,TBD,TBD,YES,TBD,TBD,TBD
+HP7-032,PROTECTION,Installed fuse/relay hardware,Matches released protection schedule,OPEN,TBD,TBD,YES,TBD,TBD,TBD
+HP7-033,DOCUMENTS,Build traveller complete,All required operations/signoffs complete,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP7-034,DOCUMENTS,HP6 record complete,Pre-cover acceptance evidence attached,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP7-035,DOCUMENTS,Electrical test report complete,Continuity/isolation results traceable to serial,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP7-036,DOCUMENTS,Dimensional report complete,Controlled dimensions traceable to serial,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP7-037,DOCUMENTS,Photo evidence complete,Pre-cover/final photos traceable to serial,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP7-038,DOCUMENTS,Deviations/RFIs closed,No unresolved build deviation remains,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP7-039,AS_BUILT,As-built BOM/build record complete,Final supplied configuration documented,OPEN,TBD,TBD,NO,TBD,TBD,TBD
+HP7-040,RELEASE,HP7 engineering acceptance,All applicable HP7 rows PASS,NOT_RELEASED,TBD,TBD,NO,TBD,TBD,HP7_FINAL_HARNESS_ACCEPTED only after complete pass
