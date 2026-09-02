@@ -1,0 +1,28 @@
+Evidence_ID,Work_Package,System,Device_or_Branch,Evidence_Required,Measured_or_Observed_Value,Manufacturer,Part_Number,Photo_IDs,Source_or_Instrument,Status,Reviewer,Date,Notes
+PBE-001,A,ECU,FT550,Location/orientation/connector exit,,,,,,OPEN,TBD,TBD,
+PBE-002,A,PMU,PMU16,Location/orientation/connector exit,,,,,,OPEN,TBD,TBD,
+PBE-003,A,IGNITION,SparkPRO,Location/orientation/connector exit + revision,,,,,,OPEN,TBD,TBD,
+PBE-004,A,LAUNCH,X70,Location/orientation/socket identity,,,,,,OPEN,TBD,TBD,
+PBE-005,A,FUEL,Pump 1,Location/orientation/label identity,,,,,,OPEN,TBD,TBD,
+PBE-006,A,FUEL,Pump 2,Location/orientation/label identity,,,,,,OPEN,TBD,TBD,
+PBE-007,A,CAN,X50,Engineering connector location/access,,,,,,OPEN,TBD,TBD,
+PBE-008,A,CAN,X51,CAN/service connector location/access,,,,,,OPEN,TBD,TBD,
+PBE-009,C,OEM,OEM connector set,Manufacturer/moulded PN/keying/mating face/terminal/seal,,,,,,OPEN,TBD,TBD,One row may be duplicated per connector ID during capture
+PBE-010,D,FUEL,Pump 1,Exact manufacturer and PN,,,,,,OPEN,TBD,TBD,4.0 mm2 feed/return baseline retained
+PBE-011,D,FUEL,Pump 2,Exact manufacturer and PN,,,,,,OPEN,TBD,TBD,4.0 mm2 feed/return baseline retained
+PBE-012,D,INJECTOR,Injector set,Exact manufacturer/PN/quantity,,,,,,OPEN,TBD,TBD,
+PBE-013,D,IGNITION,Coil set,Exact manufacturer/PN/quantity,,,,,,OPEN,TBD,TBD,
+PBE-014,D,IGNITION,SparkPRO,Exact manufacturer/PN/revision,,,,,,OPEN,TBD,TBD,
+PBE-015,D,BOOST,Boost solenoid,Exact manufacturer/PN,,,,,,OPEN,TBD,TBD,
+PBE-016,D,WIDEBAND,Wideband controller/sensor,Exact manufacturer/PN,,,,,,OPEN,TBD,TBD,
+PBE-017,D,LAUNCH,Clutch input device,Exact device/PN and physical actuation evidence,,,,,,OPEN,TBD,TBD,
+PBE-018,D,LAUNCH,X70 relay/socket,Exact manufacturer/PN/terminal ratings,,,,,,OPEN,TBD,TBD,
+PBE-019,E,POWER,Battery positive take-off,Location/stud/terminal evidence,,,,,,OPEN,TBD,TBD,
+PBE-020,E,GROUND,Battery negative,Location/stud/terminal evidence,,,,,,OPEN,TBD,TBD,
+PBE-021,E,GROUND,Engine ground,Location/stud/terminal evidence,,,,,,OPEN,TBD,TBD,
+PBE-022,E,GROUND,FT550 grounds,Physical route/termination evidence,,,,,,OPEN,TBD,TBD,
+PBE-023,E,GROUND,PMU grounds,Physical route/termination evidence,,,,,,OPEN,TBD,TBD,
+PBE-024,E,GROUND,SparkPRO ground,Physical route/termination evidence,,,,,,OPEN,TBD,TBD,
+PBE-025,E,GROUND,Pump returns,Physical route/termination evidence,,,,,,OPEN,TBD,TBD,
+PBE-026,E,SENSOR,Sensor ground/reference boundary,Physical route and segregation evidence,,,,,,OPEN,TBD,TBD,
+PBE-027,F,CAN,CAN trunk,Physical route/endpoints/termination/stubs,,,,,,OPEN,TBD,TBD,
