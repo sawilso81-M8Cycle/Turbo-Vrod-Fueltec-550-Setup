@@ -1,0 +1,21 @@
+Check_ID,System,Requirement,Acceptance_Criteria,State,Evidence,Blocker,Disposition,Approved_By,Date,Notes
+PMS-001,Primary Power,B15 protection defined,Load cases and downstream coordination support final device/value,OPEN,TBD,TBD,PENDING,TBD,TBD,TBD
+PMS-002,Fuel Pump 1,Pump1 protection defined,Measured current/inrush and switching architecture support setting,OPEN,TBD,TBD,PENDING,TBD,TBD,TBD
+PMS-003,Fuel Pump 2,Pump2 protection defined,Measured current/inrush and switching architecture support setting,OPEN,TBD,TBD,PENDING,TBD,TBD,TBD
+PMS-004,Fuel Pumps,4.0mm2 minimum preserved,No released pump feed/return below 4.0mm2,OPEN,TBD,TBD,PENDING,TBD,TBD,TBD
+PMS-005,B11,Radiator fan protection defined,Measured load and terminal/output capability support setting,OPEN,TBD,TBD,PENDING,TBD,TBD,TBD
+PMS-006,B12,Charge-cooler branch defined,DNP or measured/protected branch released,OPEN,TBD,TBD,PENDING,TBD,TBD,TBD
+PMS-007,B39,Injector protection defined,Injector architecture/current evidence supports final setting,OPEN,TBD,TBD,PENDING,TBD,TBD,TBD
+PMS-008,B40,Ignition protection defined,SparkPRO/coil/dwell evidence supports final setting,OPEN,TBD,TBD,PENDING,TBD,TBD,TBD
+PMS-009,EPM,B39/B40 remain independent,No unapproved common branch protection,OPEN,TBD,TBD,PENDING,TBD,TBD,TBD
+PMS-010,X50,Service power protected or DNP,No unfused service 12V/backfeed risk,OPEN,TBD,TBD,PENDING,TBD,TBD,TBD
+PMS-011,X51,Service power protected or DNP,No unfused service 12V/backfeed risk,OPEN,TBD,TBD,PENDING,TBD,TBD,TBD
+PMS-012,X70,Relay coil current-limit documented,PMU O11 setting compatible with relay coil and hardware,OPEN,TBD,TBD,PENDING,TBD,TBD,TBD
+PMS-013,FT550,ECU supply protection documented,Source/protection consistent with released ECU power architecture,OPEN,TBD,TBD,PENDING,TBD,TBD,TBD
+PMS-014,PMU16,Exact hardware/channel capability verified,Every PMU-driven row tied to correct HW/output capability,OPEN,TBD,TBD,PENDING,TBD,TBD,TBD
+PMS-015,Terminals,Protection does not exceed terminal capability,All protected paths pass terminal/connector audit,OPEN,TBD,TBD,PENDING,TBD,TBD,TBD
+PMS-016,Coordination,Upstream/downstream selectivity reviewed,Branch faults clear locally where practical before master protection,OPEN,TBD,TBD,PENDING,TBD,TBD,TBD
+PMS-017,Thermal,Protection device/path thermal evidence accepted,No unresolved abnormal heating,OPEN,TBD,TBD,PENDING,TBD,TBD,TBD
+PMS-018,Voltage Drop,Protected paths voltage-drop evidence accepted,No unresolved excessive drop,OPEN,TBD,TBD,PENDING,TBD,TBD,TBD
+PMS-019,Documentation,Every powered production circuit mapped,No undocumented powered branch remains,OPEN,TBD,TBD,PENDING,TBD,TBD,TBD
+PMS-020,HP5,Protection master schedule release,All applicable PMS-001 through PMS-019 PASS,OPEN,TBD,TBD,PROTECTION_MASTER_SCHEDULE_NOT_RELEASED,TBD,TBD,TBD
