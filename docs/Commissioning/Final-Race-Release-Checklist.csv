@@ -1,0 +1,21 @@
+Gate_ID,System,Requirement,Acceptance_Criteria,State,Evidence,Blocker_or_Retest,Decision,Approved_By,Date,Notes
+FRR-001,ENTRY,Track validation,TRACK_LAUNCH_VALIDATED and FINAL_RACE_VALIDATION_ACCEPTED,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+FRR-002,FT550,Calibration archive,Exact accepted calibration file/revision archived,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+FRR-003,PMU16,Configuration archive,Exact accepted PMU configuration archived,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+FRR-004,SPARKPRO,Ignition configuration,Hardware/dwell/wiring revision recorded,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+FRR-005,TWO_STEP,Launch configuration,Clutch/O11/X70/A21/RPM/duration/boost/release logic recorded,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+FRR-006,BOOST,Boost configuration,Turbo/wastegate/solenoid/tables/limits recorded,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+FRR-007,FUEL,Fuel system baseline,Fuel pressure injector pump data and switching recorded,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+FRR-008,PROTECTION,Protection baseline,B15 B39 B40 pump cooling service and race-critical protection recorded,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+FRR-009,SENSORS,Sensor calibration,Final sensor scaling/correlation state recorded,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+FRR-010,LOGS,Dyno evidence,Accepted dyno logs archived and linked,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+FRR-011,LOGS,Track evidence,Accepted track/race logs archived and linked,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+FRR-012,HASHES,File integrity,SHA-256 recorded for every archived configuration file,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+FRR-013,ROLLBACK,Last Known Good Race,Complete recoverable rollback copy available,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+FRR-014,ROLLBACK,Last Known Good Dyno,Complete recoverable rollback copy available,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+FRR-015,ROLLBACK,First Start Baseline,Original baseline retained,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+FRR-016,ENVELOPE,Race operating envelope,Maximum approved RPM boost launch settings fuel and restrictions documented,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+FRR-017,NONCONFORMANCE,Blocking issues,No unresolved race-critical nonconformance remains,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+FRR-018,CHANGE_CONTROL,Release immutability,New development occurs from a copy/new revision not by overwriting release,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+FRR-019,ARCHIVE,Archive review,Manifest complete and all required artifacts present,NOT_RELEASED,TBD,TBD,FINAL_RACE_CONFIGURATION_ARCHIVED,TBD,TBD,TBD
+FRR-020,ACTIVE,Installed configuration verification,Motorcycle configuration matches archived release hashes/settings,NOT_RELEASED,TBD,TBD,FINAL_RACE_CONFIGURATION_ACTIVE,TBD,TBD,TBD
