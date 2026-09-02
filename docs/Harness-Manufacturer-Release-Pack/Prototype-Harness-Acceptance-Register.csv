@@ -1,0 +1,41 @@
+Acceptance_ID,Stage,System,Requirement,Acceptance_Criteria,Evidence,State,Correction_ID,Signoff,Date,Notes
+PHA-001,GH-1,Overall,Pre-cover harness layout documented,Complete labelled pre-cover photo set,Photo set,OPEN,TBD,TBD,TBD,TBD
+PHA-002,GH-1,Splices,Splice positions/methods match released schedule,All splices identifiable and approved,Photo/splice schedule,OPEN,TBD,TBD,TBD,TBD
+PHA-003,GH-1,CAN,CAN twisted pair preserved,Correct twist/routing with minimal untwist,Photo/inspection,OPEN,TBD,TBD,TBD,TBD
+PHA-004,GH-1,Trigger,CKP/CAM routing/shielding preserved,Matches Trigger Integrity Freeze,Photo/inspection,OPEN,TBD,TBD,TBD,TBD
+PHA-005,GH-1,Fuel Pump,4.0mm2 feed and return verified,No conductor below locked minimum,Wire/build audit,OPEN,TBD,TBD,TBD,TBD
+PHA-006,GH-1,B15,10mm2 baseline verified,Matches final released B15 size,Wire/build audit,OPEN,TBD,TBD,TBD,TBD
+PHA-007,GH-2,Continuity,100 percent point-to-point test,All circuits match released cavity schedule,Test report,OPEN,TBD,TBD,TBD,TBD
+PHA-008,GH-2,Isolation,No unintended circuit shorts,All isolation checks PASS,Test report,OPEN,TBD,TBD,TBD,TBD
+PHA-009,GH-2,Grounds,Sensor/power grounds remain segregated,No prohibited ground merge,Test report,OPEN,TBD,TBD,TBD,TBD
+PHA-010,GH-2,CAN,CAN H/L polarity correct,No reversal/short/hidden termination,Test report,OPEN,TBD,TBD,TBD,TBD
+PHA-011,GH-2,X70,A21 dry-contact side isolated from +12V,No +12V path to A21 contact side,Test report,OPEN,TBD,TBD,TBD,TBD
+PHA-012,GH-2,Service,No service-power backfeed,External service supply cannot backfeed vehicle,Test report,OPEN,TBD,TBD,TBD,TBD
+PHA-013,GH-3,ECU,FT550 branch fit,No tension/crush and serviceable,Installed photo/dimension,OPEN,TBD,TBD,TBD,TBD
+PHA-014,GH-3,PMU,PMU16 branch fit,No tension/crush and serviceable,Installed photo/dimension,OPEN,TBD,TBD,TBD,TBD
+PHA-015,GH-3,Ignition,SparkPRO branch fit,No tension and adequate heat/noise separation,Installed photo/dimension,OPEN,TBD,TBD,TBD,TBD
+PHA-016,GH-3,Fuel Pump,Pump branches fit,No tension/chafe and service connectors accessible,Installed photo/dimension,OPEN,TBD,TBD,TBD,TBD
+PHA-017,GH-3,Steering,Full steering-lock sweep,No branch tension pinch or rub,Video/photo/measurement,OPEN,TBD,TBD,TBD,TBD
+PHA-018,GH-3,Suspension,Rear/VSS movement sweep,No branch tension pinch or rub through expected travel,Video/photo/measurement,OPEN,TBD,TBD,TBD,TBD
+PHA-019,GH-3,Thermal,Turbo/exhaust clearance,Released clearance/protection achieved,Photo/dimension,OPEN,TBD,TBD,TBD,TBD
+PHA-020,GH-3,Bodywork,Bodywork installation,No loom crush under tank/seat/covers,Photo/inspection,OPEN,TBD,TBD,TBD,TBD
+PHA-021,GH-4,Power,First-power current draw,No unexplained draw or heating,Commissioning log,OPEN,TBD,TBD,TBD,TBD
+PHA-022,GH-4,Reference,5V reference stability,Stable and within released equipment requirements,Logger/DMM,OPEN,TBD,TBD,TBD,TBD
+PHA-023,GH-4,CAN,CAN communication stable,No harness-induced errors/resets,Log,OPEN,TBD,TBD,TBD,TBD
+PHA-024,GH-4,Sensors,Sensor plausibility,All connected sensors plausible/no cross-wiring,FTManager log,OPEN,TBD,TBD,TBD,TBD
+PHA-025,GH-4,X70,Two-Step truth table,Matches frozen truth table and fail-off behaviour,Test record,OPEN,TBD,TBD,TBD,TBD
+PHA-026,GH-5,Cranking,Cranking voltage integrity,FT550/PMU remain within accepted operating envelope,Log,OPEN,TBD,TBD,TBD,TBD
+PHA-027,GH-5,Trigger,Cranking sync,Stable CKP/CAM sync/no harness-induced loss,FTManager/scope,OPEN,TBD,TBD,TBD,TBD
+PHA-028,GH-5,Ignition,Ignition noise immunity,No harness-induced CAN/trigger/reference instability,Scope/log,OPEN,TBD,TBD,TBD,TBD
+PHA-029,GH-5,B39,B39 voltage/thermal performance,Within released limits,Measurement log,OPEN,TBD,TBD,TBD,TBD
+PHA-030,GH-5,B40,B40 voltage/thermal performance,Within released limits,Measurement log,OPEN,TBD,TBD,TBD,TBD
+PHA-031,GH-5,Fuel Pump,Pump electrical performance,Matches released switching/protection decision,Measurement log,OPEN,TBD,TBD,TBD,TBD
+PHA-032,GH-6,Thermal,Hot high-current connector inspection,No abnormal rise/discolouration/relaxation,Thermal log/photos,OPEN,TBD,TBD,TBD,TBD
+PHA-033,GH-6,Thermal,Heat-exposed loom inspection,No thermal damage and clearance retained,Photos/measurement,OPEN,TBD,TBD,TBD,TBD
+PHA-034,GH-6,Movement,Post-operation chafe inspection,No new rub/chafe/tension evidence,Photos,OPEN,TBD,TBD,TBD,TBD
+PHA-035,GH-6,PMU,PMU fault log review,No unexplained harness-related faults,PMU log,OPEN,TBD,TBD,TBD,TBD
+PHA-036,GH-7,Connectors,Terminal/seal retention inspection,No push-back/fretting/seal displacement,Inspection/photos,OPEN,TBD,TBD,TBD,TBD
+PHA-037,GH-7,Junctions,Primary junction torque/condition,No loosening/heating,Inspection record,OPEN,TBD,TBD,TBD,TBD
+PHA-038,GH-7,X70,Relay/socket condition,No abnormal heating/fretting/retention issue,Inspection/photos,OPEN,TBD,TBD,TBD,TBD
+PHA-039,Release,Documents,As-built pack updated,Final BOM cavity splice dimensions protection and deviations incorporated,Document review,OPEN,TBD,TBD,TBD,TBD
+PHA-040,Release,Golden Harness,Golden Harness qualification,All applicable PHA rows PASS and corrections incorporated,Engineering approval,NOT_VALIDATED,TBD,TBD,TBD,TBD
