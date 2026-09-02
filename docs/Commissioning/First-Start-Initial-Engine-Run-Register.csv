@@ -1,0 +1,48 @@
+Stage,Check_ID,System,Requirement_or_Measurement,Expected_or_Source,Measured_or_Observed,Units,State,Evidence,Abort_If_Failed,Retest_Required,Technician,Date,Notes
+ENTRY,FSE-001,RELEASE,First power commissioning accepted,FIRST_POWER_COMMISSIONING_ACCEPTED,TBD,NA,OPEN,TBD,YES,YES,TBD,TBD,TBD
+ENTRY,FSE-002,CONFIG,FT550/PMU/SparkPRO revisions recorded,Configuration evidence record complete,TBD,NA,OPEN,TBD,YES,YES,TBD,TBD,TBD
+ENTRY,FSE-003,SAFETY,Emergency shutdown available,Immediate engine/power shutdown available,TBD,NA,OPEN,TBD,YES,YES,TBD,TBD,TBD
+ENTRY,FSE-004,FUEL,Fuel pressure monitoring available,Verified measurement available,TBD,NA,OPEN,TBD,YES,YES,TBD,TBD,TBD
+ENTRY,FSE-005,OIL,Oil pressure monitoring available,Verified measurement available,TBD,NA,OPEN,TBD,YES,YES,TBD,TBD,TBD
+ENTRY,FSE-006,WIDEBAND,AFR system operational,Valid configured wideband evidence,TBD,NA,OPEN,TBD,YES,YES,TBD,TBD,TBD
+ENTRY,FSE-007,CALIBRATION,Baseline calibration recorded,File/revision and critical setup recorded,TBD,NA,OPEN,TBD,YES,YES,TBD,TBD,TBD
+ENTRY,FSE-008,CONTROL,Boost/Two-Step state,Disabled/inhibited for first start,TBD,NA,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FS0,FS0-01,FUEL,Fuel fittings/lines/rails inspection,Secure/no visible leak,TBD,NA,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FS0,FS0-02,OIL,Oil/turbo oil plumbing inspection,Secure/prepared per build procedure,TBD,NA,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FS0,FS0-03,COOLING,Cooling system inspection,Complete/filled sufficiently/no visible leak,TBD,NA,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FS0,FS0-04,THROTTLE,Throttle return,Positive smooth return,TBD,NA,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FS0,FS0-05,ELECTRICAL,Main electrical connections,Secure/locked,TBD,NA,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FS1,FS1-01,POWER,Battery voltage during prime,Within approved operating range,TBD,V,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FS1,FS1-02,FUEL,Pump state during prime,Matches released strategy,TBD,NA,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FS1,FS1-03,FUEL,Fuel pressure after prime,Per verified fuel-system target,TBD,kPa_or_bar,OPEN,TBD,YES,YES,TBD,TBD,Do not invent threshold
+FS1,FS1-04,FUEL,Pressure stability,No unexplained rapid decay,TBD,NA,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FS1,FS1-05,FUEL,Leak inspection,No leak/odour indicating escape,TBD,NA,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FS2,FS2-01,OIL,Oil system preparation,Completed per engine/turbo build procedure,TBD,NA,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FS2,FS2-02,OIL,Pre-combustion oil-pressure evidence if applicable,Per verified mechanical procedure,TBD,kPa_or_bar,OPEN,TBD,YES,YES,TBD,TBD,Applicable only where procedure supports it
+FS3,FS3-01,ENGINE,First combustion response,Starts promptly enough for controlled observation,TBD,NA,OPEN,TBD,YES,YES,TBD,TBD,Stop and diagnose repeated no-start
+FS3,FS3-02,OIL,Oil pressure response,Within verified safe requirement,TBD,kPa_or_bar,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FS3,FS3-03,FUEL,Fuel pressure running,Within verified safe requirement,TBD,kPa_or_bar,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FS3,FS3-04,TRIGGER,Sync/trigger state,Stable/no damaging error condition,TBD,NA,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FS3,FS3-05,POWER,Charging voltage,Plausible/stable for installed charging system,TBD,V,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FS3,FS3-06,ENGINE,Abnormal noise,None indicating mechanical distress,TBD,NA,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FS4,FS4-01,ENGINE,RPM,Low controlled no-load operation,TBD,rpm,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FS4,FS4-02,OIL,Oil pressure,Within verified safe requirement,TBD,kPa_or_bar,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FS4,FS4-03,FUEL,Fuel pressure,Within verified safe requirement,TBD,kPa_or_bar,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FS4,FS4-04,WIDEBAND,AFR validity,Sensor valid/no confirmed unsafe mixture,TBD,lambda_or_AFR,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FS4,FS4-05,PMU,Fault/trip state,No unexplained trip/current-limit event,TBD,NA,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FS5,FS5-01,ENGINE,Early warm-up data,Logged at controlled intervals,TBD,NA,OPEN,TBD,YES,YES,TBD,TBD,Use separate time-series log
+FS5,FS5-02,TEMP,Engine/coolant temperature trend,Controlled/plausible,TBD,C,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FS5,FS5-03,IAT,IAT trend,Plausible,TBD,C,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FS5,FS5-04,MAP,MAP at no-load,Plausible,TBD,kPa,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FS6,FS6-01,B11,Radiator fan function,Command/operation matches strategy,TBD,NA,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FS6,FS6-02,B12,Charge cooler pump function,Correct if fitted or DNP,TBD,NA,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FS6,FS6-03,COOLING,Cooling leaks,None,TBD,NA,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FS7,FS7-01,THERMAL,B15/J-P01/J-P02,No abnormal heating/distress,TBD,NA,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FS7,FS7-02,THERMAL,B39/B40/PMU,No abnormal heating/distress,TBD,NA,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FS7,FS7-03,THERMAL,Pump paths,No abnormal heating/distress,TBD,NA,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FS7,FS7-04,THERMAL,Harness near turbo/exhaust,No thermal damage/chafe/movement,TBD,NA,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FS8,FS8-01,DATA,First-start log saved,Original log retained before calibration changes,TBD,NA,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FS8,FS8-02,DATA,Trigger/cranking review,No unexplained trigger/sync issue,TBD,NA,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FS8,FS8-03,DATA,Pressure/AFR/temperature review,Trends reviewed against verified requirements,TBD,NA,OPEN,TBD,YES,YES,TBD,TBD,TBD
+FS8,FS8-04,DATA,PMU review,No unexplained faults/trips,TBD,NA,OPEN,TBD,YES,YES,TBD,TBD,TBD
+RELEASE,FSR-01,OVERALL,FS0 through FS8 complete,All applicable checks PASS,TBD,NA,NOT_RELEASED,TBD,YES,YES,TBD,TBD,FIRST_START_COMMISSIONING_ACCEPTED only after engineering review
