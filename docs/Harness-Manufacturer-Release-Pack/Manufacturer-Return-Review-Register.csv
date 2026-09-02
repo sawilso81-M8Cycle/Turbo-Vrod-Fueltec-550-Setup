@@ -1,0 +1,32 @@
+Review_ID,Class,System,Returned_Item,Requirement,Manufacturer_Response,Engineering_Check,Disposition,Document_Update_Required,Affected_Documents,Release_Blocker,Owner,Due_Date,Closed_Date,Notes
+MRR-001,1,Commercial,Quotation,NRE prototype repeat pricing MOQ and lead time,TBD,Commercial completeness,PENDING,NO,TBD,NO,TBD,TBD,TBD,TBD
+MRR-002,2,Wire,Wire family,Automotive/motorsport wire family meets conductor/temp/OD requirements,TBD,Verify datasheet and availability,PENDING,YES,Wire schedule/BOM,YES,TBD,TBD,TBD,TBD
+MRR-003,2,Thermal,Heat protection,Turbo/exhaust sleeving/boot system adequate,TBD,Verify temperature rating and installation method,PENDING,YES,Thermal/branch docs,YES,TBD,TBD,TBD,TBD
+MRR-004,2,Splices,Splice method,Production splice method compatible with wire sizes/environment,TBD,Verify process/tooling/sealing,PENDING,YES,Splice schedule,YES,TBD,TBD,TBD,TBD
+MRR-005,2,X50,X50 connector,Exact housing/contact/plug/boot/cavity count frozen,TBD,Verify current/wire ranges and serviceability,PENDING,YES,X50 docs/BOM,YES,TBD,TBD,TBD,TBD
+MRR-006,2,X51,X51 connector,Exact DTM 4-way procurement set frozen,TBD,Verify contacts cap cavity mapping,PENDING,YES,CAN docs/BOM,YES,TBD,TBD,TBD,TBD
+MRR-007,3,PMU16,PMU cavity audit,Every used cavity terminal and wire combination verified,TBD,Authoritative pinout + terminal range + current class,PENDING,YES,PMU audit/BOM,YES,TBD,TBD,TBD,TBD
+MRR-008,3,Fuel Pump,4mm2 interface,Fuel pump service connector accepts 4.0mm2 and current duty,TBD,Verify terminal/contact/thermal evidence,PENDING,YES,Fuel pump BOM/docs,YES,TBD,TBD,TBD,TBD
+MRR-009,3,Fuel Pump,Switching architecture,Direct PMU or external stage closed from measurements,TBD,Review current/inrush/thermal/PMU evidence,PENDING,YES,Fuel pump decision docs,YES,TBD,TBD,TBD,TBD
+MRR-010,3,Injectors,Driver architecture,Direct FT550 or Peak & Hold decision closed,TBD,Review impedance/current/waveform evidence,PENDING,YES,Injector decision docs,YES,TBD,TBD,TBD,TBD
+MRR-011,3,Ignition,Dwell and B40,Coil current/dwell and B40 acceptance closed,TBD,Review waveform/thermal/protection evidence,PENDING,YES,Ignition/B40 docs,YES,TBD,TBD,TBD,TBD
+MRR-012,3,Cooling,B11 fan,B11 direct PMU/external stage and protection closed,TBD,Review current/inrush/thermal evidence,PENDING,YES,Cooling docs,YES,TBD,TBD,TBD,TBD
+MRR-013,3,Cooling,B12 charge pump,B12 DNP or switching/protection closed,TBD,Review disposition/current evidence,PENDING,YES,Cooling docs,YES,TBD,TBD,TBD,TBD
+MRR-014,3,Primary Power,B15 protection,Master protection and B15 accepted,TBD,Review simultaneous-load and voltage-drop evidence,PENDING,YES,Primary power docs,YES,TBD,TBD,TBD,TBD
+MRR-015,3,Injectors,B39 protection,B39 conductor/protection accepted,TBD,Review injector load and voltage drop,PENDING,YES,EPM power docs,YES,TBD,TBD,TBD,TBD
+MRR-016,3,Two-Step,X70 socket and truth table,Socket/carrier frozen and powered logic test passes,TBD,Verify relay retention terminals suppression and A21 isolation,PENDING,YES,X70 docs/BOM,YES,TBD,TBD,TBD,TBD
+MRR-017,3,CAN,Termination/topology,FT550/PMU termination state and completed network accepted,TBD,Review topology and powered-down resistance,PENDING,YES,CAN docs,YES,TBD,TBD,TBD,TBD
+MRR-018,3,OEM Connectors,X10-X23,Every used OEM interface exact connector or verified pigtail frozen,TBD,Review photos/keying/cavity map/PNs,PENDING,YES,OEM connector register/BOM,YES,TBD,TBD,TBD,TBD
+MRR-019,3,Trigger,CKP/CAM DFM,Manufacturer routing/shielding preserves trigger integrity,TBD,Review routes transitions shielding and heat exposure,PENDING,YES,Trigger docs,YES,TBD,TBD,TBD,TBD
+MRR-020,2,Formboard,Measurement/build method,Golden Harness/formboard method accepted,TBD,Review dimensional control and repeatability,PENDING,YES,Formboard docs,NO_CONDITIONAL,TBD,TBD,TBD,TBD
+MRR-021,2,Testing,Continuity/isolation,Manufacturer test method/report accepted,TBD,Review capability and report fields,PENDING,YES,Acceptance docs,YES,TBD,TBD,TBD,TBD
+MRR-022,2,Testing,Crimp pull test,Manufacturer tooling and pull-test process accepted,TBD,Review tool IDs sampling and traceability,PENDING,YES,Acceptance docs,YES,TBD,TBD,TBD,TBD
+MRR-023,2,Document Control,Traceability,Serial/revision/build traveller process accepted,TBD,Review repeat-build traceability,PENDING,YES,Release docs,YES,TBD,TBD,TBD,TBD
+MRR-024,2,Deviations,Deviation register,Every proposed deviation dispositioned,TBD,No OPEN/PENDING safety-critical deviations,PENDING,YES,Deviation register,YES,TBD,TBD,TBD,TBD
+MRR-025,2,RFI,RFI register,Every release-blocking RFI closed,TBD,No unresolved critical ambiguity,PENDING,YES,RFI register,YES,TBD,TBD,TBD,TBD
+MRR-026,Release,HP-1,DFM return accepted,MRR applicable DFM items PASS,TBD,Gate review,PENDING,NO,Release authorisation,YES,TBD,TBD,TBD,TBD
+MRR-027,Release,HP-2,Connector procurement accepted,All production connector/tooling rows PASS,TBD,Gate review,PENDING,NO,Release authorisation,YES,TBD,TBD,TBD,TBD
+MRR-028,Release,HP-3,Electrical blocker closure,All applicable Class 3 rows PASS,TBD,Gate review,PENDING,NO,Release authorisation,YES,TBD,TBD,TBD,TBD
+MRR-029,Release,HP-4,Dimensional release,Dimensions frozen or approved measurement exception,TBD,Gate review,PENDING,NO,Release authorisation,YES,TBD,TBD,TBD,TBD
+MRR-030,Release,HP-5,Crimp release,Every cavity/terminal/wire combination signed off,TBD,Gate review,PENDING,NO,Release authorisation,YES,TBD,TBD,TBD,TBD
+MRR-031,Release,Final,Manufacturing release,HP-1 through HP-5 PASS,TBD,Final engineering review,FUNCTIONAL_BUILD_NOT_YET_AUTHORISED,NO,Manufacturing-Release-Authorisation-Rev1.md,YES,TBD,TBD,TBD,TBD
