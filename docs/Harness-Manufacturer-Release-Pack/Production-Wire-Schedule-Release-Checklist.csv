@@ -1,0 +1,21 @@
+Check_ID,Requirement,Acceptance_Criteria,State,Evidence,Blocker,Owner,Date,Notes
+PWS-001,Unique circuit IDs,Every populated production conductor has one unique ID,OPEN,TBD,TBD,TBD,TBD,TBD
+PWS-002,Source mapping,Every circuit has source connector and cavity,OPEN,TBD,TBD,TBD,TBD,TBD
+PWS-003,Destination mapping,Every circuit has destination connector and cavity,OPEN,TBD,TBD,TBD,TBD,TBD
+PWS-004,Wire size,Every circuit has released conductor size or explicit evidence gate,OPEN,TBD,TBD,TBD,TBD,TBD
+PWS-005,Wire specification,Final automotive/motorsport wire family assigned,OPEN,TBD,TBD,TBD,TBD,TBD
+PWS-006,Identification,Colour/print scheme assigned for production,OPEN,TBD,TBD,TBD,TBD,TBD
+PWS-007,Signal class,Every circuit classified for routing/segregation,OPEN,TBD,TBD,TBD,TBD,TBD
+PWS-008,Protection,Every protected circuit references final device/current limit,OPEN,TBD,TBD,TBD,TBD,TBD
+PWS-009,Twist/shield,CAN and trigger requirements explicitly assigned,OPEN,TBD,TBD,TBD,TBD,TBD
+PWS-010,Splices,Every production splice has controlled splice ID,OPEN,TBD,TBD,TBD,TBD,TBD
+PWS-011,Lengths,Controlled branch/cut lengths linked to released dimension schedule,OPEN,TBD,TBD,TBD,TBD,TBD
+PWS-012,Terminal compatibility,Source/destination terminal PNs accept released conductor sizes,OPEN,TBD,TBD,TBD,TBD,TBD
+PWS-013,Fuel pump minimums,All pump feeds/returns remain >=4.0mm2,OPEN,TBD,TBD,TBD,TBD,TBD
+PWS-014,B15 baseline,B15 remains >=10mm2 unless approved engineering change,OPEN,TBD,TBD,TBD,TBD,TBD
+PWS-015,Ground segregation,Sensor ground not merged with high-current return,OPEN,TBD,TBD,TBD,TBD,TBD
+PWS-016,A21 safety,No +12V path exists on FT550 A21 dry-contact leg,OPEN,TBD,TBD,TBD,TBD,TBD
+PWS-017,CAN topology,Wire schedule preserves linear backbone and short X51 stub,OPEN,TBD,TBD,TBD,TBD,TBD
+PWS-018,OEM connectors,X10-X23 exact cavities/terminals verified or controlled pigtails frozen,OPEN,TBD,TBD,TBD,TBD,TBD
+PWS-019,DFM review,Manufacturer confirms manufacturability/tooling,OPEN,TBD,TBD,TBD,TBD,TBD
+PWS-020,HP5 release,All applicable checks PASS and schedule promoted,OPEN,TBD,TBD,TBD,TBD,Final state HP5_RELEASED
