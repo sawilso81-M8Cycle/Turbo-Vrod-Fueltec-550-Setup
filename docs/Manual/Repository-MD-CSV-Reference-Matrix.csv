@@ -1,0 +1,281 @@
+Repository_Path,Discipline,Manual_Role,Control_Note
+README.md,Project,Project overview,Supporting
+ROADMAP.md,Project,Roadmap and milestone context,Supporting
+docs/Project-Master-Release-Dashboard.md,Project,Master release status,Controlling status
+docs/Project-Master-Completion-Matrix.csv,Project,Milestone completion matrix,Controlling status
+docs/Boost-Control/Closed-Loop-Boost-Control-Commissioning.md,Boost,Dyno closed-loop boost procedure,Commissioning
+docs/Boost-Control/Closed-Loop-Boost-Control-Test-Matrix.csv,Boost,Closed-loop test matrix,Verification
+docs/Boost-Control/Closed-Loop-Boost-Verification-Register.csv,Boost,Closed-loop evidence register,Verification
+docs/CAN-Backbone/FT550-PMU16-CAN-Backbone.md,CAN,Physical CAN topology and termination,Controlling architecture
+docs/CAN-Backbone/FT550-PMU16-Signal-Dictionary.csv,CAN,Signal dictionary,Verification required for values
+docs/CAN-Backbone/FT550-PMU16-Signal-Dictionary.md,CAN,Signal dictionary explanation,Supporting
+docs/CAN-Backbone/FTCAN20-PMU-Frame-Map.csv,CAN,FTCAN frame mapping,Implementation evidence
+docs/CAN-Backbone/FTCAN20-PMU-Implementation.md,CAN,Application-layer implementation,Implementation
+docs/CAN-Backbone/PMU-Client-Receive-Configuration.md,CAN,PMU receive setup,Commissioning
+docs/Commissioning/B15-B39-B40-Final-Protection-Decision-Register.csv,Commissioning,Final critical branch protection,Release gate
+docs/Commissioning/B15-B39-B40-Protection-Load-Coordination-Pack.md,Commissioning,Protection coordination method,Controlling procedure
+docs/Commissioning/Coil-Dwell-B40-Final-Decision.csv,Commissioning,Ignition final decision,Release gate
+docs/Commissioning/Coil-SparkPRO-Verification-Pack.md,Commissioning,Ignition electrical verification,Procedure
+docs/Commissioning/Coil-SparkPRO-Verification-Worksheet.csv,Commissioning,Ignition test worksheet,Verification
+docs/Commissioning/Cooling-Load-Final-Decision.csv,Commissioning,Cooling final decision,Release gate
+docs/Commissioning/Cooling-Load-Verification-Pack.md,Commissioning,Cooling load verification,Procedure
+docs/Commissioning/Cooling-Load-Verification-Worksheet.csv,Commissioning,Cooling test worksheet,Verification
+docs/Commissioning/Dyno-Boost-Stage-Register.csv,Commissioning,Progressive boost stage limits,Commissioning record
+docs/Commissioning/Dyno-Load-Commissioning-Boost-Enablement-Pack.md,Commissioning,Progressive dyno and boost procedure,Controlling procedure
+docs/Commissioning/Dyno-Load-Commissioning-Release-Checklist.csv,Commissioning,Dyno release checklist,Release gate
+docs/Commissioning/Dyno-Loaded-Run-Data-Register.csv,Commissioning,Loaded run data capture,Record
+docs/Commissioning/Electrical-Test-Campaign-Closeout.csv,Commissioning,Electrical campaign closeout,Verification
+docs/Commissioning/Electrical-Test-Campaign-Master-Results.csv,Commissioning,Electrical measured results,Verification
+docs/Commissioning/Electrical-Test-Instrument-Register.csv,Commissioning,Test instrument traceability,Record
+docs/Commissioning/Final-Calibration-Release-Race-Configuration-Archive.md,Commissioning,Final configuration archive,Post-dyno control
+docs/Commissioning/Final-Race-Configuration-Manifest.csv,Commissioning,Race configuration manifest,Post-dyno control
+docs/Commissioning/Final-Race-Operating-Envelope.csv,Commissioning,Released race envelope,Post-dyno control
+docs/Commissioning/Final-Race-Release-Checklist.csv,Commissioning,Race release checklist,Post-dyno control
+docs/Commissioning/First-Power-Configuration-Evidence-Record.csv,Commissioning,Pre-first-power config identity,Record
+docs/Commissioning/First-Power-Dead-Engine-Commissioning-Pack.md,Commissioning,First-power dead-engine sequence,Controlling procedure
+docs/Commissioning/First-Power-Dead-Engine-Commissioning-Register.csv,Commissioning,First-power test record,Verification
+docs/Commissioning/First-Power-First-Start-Master-Release-Gate.md,Commissioning,First power/start release logic,Release gate
+docs/Commissioning/First-Power-First-Start-Verification-Register.csv,Commissioning,First power/start verification,Verification
+docs/Commissioning/First-Start-Baseline-Configuration-Record.csv,Commissioning,Initial ECU/PMU baseline,Record
+docs/Commissioning/First-Start-GO-NOGO-Checklist.csv,Commissioning,First-start go/no-go,Release gate
+docs/Commissioning/First-Start-Initial-Engine-Run-Pack.md,Commissioning,Initial combustion procedure,Controlling procedure
+docs/Commissioning/First-Start-Initial-Engine-Run-Register.csv,Commissioning,Initial run record,Verification
+docs/Commissioning/First-Start-Initial-Idle-Commissioning.md,Commissioning,Initial idle detail,Supporting procedure
+docs/Commissioning/First-Start-Preparation-Gate.md,Commissioning,Preparation gate,Release gate
+docs/Commissioning/Fuel-Pump-Switching-Decision-Register.csv,Commissioning,Pump direct/relay decision,Release gate
+docs/Commissioning/Fuel-Pump-Verification-Pack.md,Commissioning,Pump electrical test procedure,Controlling procedure
+docs/Commissioning/Fuel-Pump-Verification-Worksheet.csv,Commissioning,Pump test worksheet,Verification
+docs/Commissioning/Full-Power-Dyno-Verification-Register.csv,Commissioning,Final full-load dyno evidence,Verification
+docs/Commissioning/Full-Power-Pull-Final-Dyno-Validation.md,Commissioning,Final full-power dyno procedure,Controlling final dyno procedure
+docs/Commissioning/Full-Power-Pull-Test-Matrix.csv,Commissioning,Full-power dyno test matrix,Verification
+docs/Commissioning/Harness-Physical-Dimension-Capture-Register.csv,Harness,Physical harness measurements,Verification
+docs/Commissioning/Heat-Cycle-Release-Checklist.csv,Commissioning,Heat-cycle release checklist,Release gate
+docs/Commissioning/Heat-Cycle-Time-Series-Register.csv,Commissioning,Heat-cycle log,Record
+docs/Commissioning/Higher-Load-Dyno-Test-Matrix.csv,Commissioning,Higher-load dyno matrix,Verification
+docs/Commissioning/Higher-Load-Dyno-Tuning-Preparation.md,Commissioning,Higher-load preparation,Procedure
+docs/Commissioning/Higher-Load-Dyno-Verification-Register.csv,Commissioning,Higher-load verification,Verification
+docs/Commissioning/Initial-Idle-Test-Matrix.csv,Commissioning,Initial idle test matrix,Verification
+docs/Commissioning/Injector-Driver-Final-Decision.csv,Commissioning,Injector driver decision,Release gate
+docs/Commissioning/Injector-Electrical-Verification-Pack.md,Commissioning,Injector verification procedure,Procedure
+docs/Commissioning/Injector-Electrical-Verification-Worksheet.csv,Commissioning,Injector test worksheet,Verification
+docs/Commissioning/Low-Load-Heat-Cycle-Sensor-Correlation-Pack.md,Commissioning,Heat-cycle/sensor correlation,Controlling procedure
+docs/Commissioning/No-Boost-Light-Load-Commissioning.md,Commissioning,No-boost light-load dyno,Procedure
+docs/Commissioning/No-Boost-Light-Load-Test-Matrix.csv,Commissioning,No-boost test matrix,Verification
+docs/Commissioning/Open-Loop-Boost-Control-Commissioning.md,Commissioning,Open-loop boost procedure,Procedure
+docs/Commissioning/Open-Loop-Boost-Control-Test-Matrix.csv,Commissioning,Open-loop boost matrix,Verification
+docs/Commissioning/Open-Loop-Boost-Verification-Register.csv,Commissioning,Open-loop verification,Verification
+docs/Commissioning/Physical-Device-Connector-Evidence-Register.csv,Harness,Physical component ID evidence,Verification
+docs/Commissioning/Physical-Evidence-Session-Closeout.csv,Harness,Physical evidence closeout,Release gate
+docs/Commissioning/Physical-Measurement-Evidence-Capture-Master-Pack.md,Harness,Measurement procedure,Procedure
+docs/Commissioning/Primary-Power-Load-Case-Register.csv,Power,Primary load cases,Verification
+docs/Commissioning/Protection-Coordination-Closeout.csv,Power,Protection closeout,Release gate
+docs/Commissioning/Sensor-Correlation-Master-Register.csv,Sensors,Sensor correlation,Verification
+docs/Commissioning/Single-Session-Electrical-Test-Campaign-Pack.md,Commissioning,Consolidated electrical test session,Procedure
+docs/Commissioning/Track-Launch-Final-Race-Validation-Pack.md,Track,Track validation after dyno,Post-dyno procedure
+docs/Commissioning/Track-Launch-Run-Register.csv,Track,Track launch data,Record
+docs/Commissioning/Track-Race-Validation-Release-Checklist.csv,Track,Track/race release,Post-dyno release
+docs/Commissioning/Two-Step-Clutch-Launch-Control-Commissioning-Pack.md,Launch,Two-Step combustion commissioning,Separate post-dyno gate
+docs/Commissioning/Two-Step-Launch-Control-Release-Checklist.csv,Launch,Two-Step release checklist,Separate gate
+docs/Commissioning/Two-Step-Launch-Stage-Register.csv,Launch,Launch RPM/boost stage record,Separate gate
+docs/Commissioning/Two-Step-Truth-Table-Register.csv,Launch,Clutch/O11/X70/A21 truth table,Installation verification
+docs/Commissioning/Vehicle-First-Power-No-Start-Matrix.csv,Commissioning,Legacy/parallel first-power matrix,Supporting
+docs/Commissioning/Vehicle-First-Power-No-Start.md,Commissioning,Legacy/parallel no-start procedure,Supporting
+docs/Commissioning/Vehicle-Track-Validation-Preparation.md,Track,Vehicle track prep,Post-dyno supporting
+docs/Commissioning/Vehicle-Track-Validation-Test-Matrix.csv,Track,Vehicle track matrix,Post-dyno supporting
+docs/Commissioning/Vehicle-Track-Validation-Verification-Register.csv,Track,Vehicle track verification,Post-dyno supporting
+docs/Commissioning/Wastegate-Minimum-Boost-Baseline.md,Boost,Wastegate mechanical baseline,Controlling boost baseline
+docs/Commissioning/Wastegate-Minimum-Boost-Test-Matrix.csv,Boost,Wastegate test matrix,Verification
+docs/ECUMASTER-PMU16/PMU16-Functional-Allocation.csv,PMU,PMU channel function allocation,Controlling initial allocation
+docs/ECUMASTER-PMU16/PMU16-Pinout-v1.2.csv,PMU,Verified physical PMU pin map,Controlling hardware map
+docs/ECUMASTER-PMU16/PMU16-Turbo-VRod-Evaluation.md,PMU,PMU suitability/evaluation,Supporting
+docs/ECUMASTER-PMU16/README.md,PMU,PMU reference index,Supporting
+docs/EPM-Driver-Interface/EPM-Driver-Interface-Architecture.md,Injection-Ignition,Driver interface architecture,Controlling architecture
+docs/EPM-Driver-Interface/EPM-Physical-Connector-Mounting-Drawing.md,Injection-Ignition,Physical service-interface layout,Supporting
+docs/EPM-Driver-Interface/Peak-Hold-Interface-Freeze.md,Injection,Peak and Hold interface,Conditional controlling
+docs/EPM-Driver-Interface/Physical-Hardware-Freeze.md,Injection-Ignition,Interface physical hardware,Control
+docs/EPM-Driver-Interface/SparkPRO2-Pinout-v2.2.csv,Ignition,SparkPRO pinout,Controlling hardware map
+docs/FuelTech-Official-Manuals/FT550-Connector-Kit.md,FuelTech,Official connector reference index,External authority helper
+docs/FuelTech-Official-Manuals/FT550-ECU-Manual.md,FuelTech,Official FT550 manual reference,External authority helper
+docs/FuelTech-Official-Manuals/PROBIKE-Harness-Manual.md,FuelTech,Official harness reference,External authority helper
+docs/FuelTech-Official-Manuals/README.md,FuelTech,Official manual index,Supporting
+docs/HD-Style-Wiring/Master-Wire-and-Connector-Schedule.csv,Wiring,Legacy/master harness mapping,Supporting; later production schedules win
+docs/HD-Style-Wiring/README.md,Wiring,Wiring-sheet index,Supporting
+docs/HD-Style-Wiring/Sheet-01-Master-Power-and-Grounds.md,Wiring,Master power and grounds,Controlling concept
+docs/HD-Style-Wiring/Sheet-02-OEM-Sensors-to-FT550.md,Wiring,OEM sensors to FT550,Controlling concept with cavity verification
+docs/HD-Style-Wiring/Sheet-03-Injection-and-Ignition.md,Wiring,Injector/SparkPRO architecture,Controlling concept
+docs/HD-Style-Wiring/Sheet-04-PMU16-Power-Distribution.md,Wiring,PMU output distribution,Supporting; project allocation supersedes reserved O11/A6 notes
+docs/HD-Style-Wiring/Sheet-05-Start-Kill-Cooling-Aux.md,Wiring,Start/kill/cooling logic,Controlling concept
+docs/HD-Style-Wiring/Sheet-06-Turbo-Instrumentation.md,Wiring,Sensor expansion hierarchy,Controlling concept
+docs/HD-Style-Wiring/Sheet-07-Engine-Protection-Logic.md,Wiring,Protection strategy,Controlling concept
+docs/HD-Style-Wiring/Sheet-07-Two-Step-Clutch-Launch.md,Wiring,Older Two-Step implementation,HISTORICAL where PCB conflicts with relay freeze
+docs/Handover/Handover-Spare-Parts-Maintenance-Register.csv,Handover,Spares and service items,Post-build support
+docs/Handover/Project-Completion-Handover-Pack.md,Handover,Final handover,Post-build support
+docs/Handover/Project-Final-Release-Index.csv,Handover,Final release index,Post-build control
+docs/Handover/Project-Handover-Acceptance-Register.csv,Handover,Handover acceptance,Post-build control
+docs/Hardware-Evidence/Bench-Test-Procedure.md,Evidence,Bench electrical test,Supporting procedure
+docs/Hardware-Evidence/Driver-Interface-Decision.md,Evidence,Driver decision evidence,Supporting
+docs/Hardware-Evidence/Evidence-Register.csv,Evidence,Hardware evidence register,Verification
+docs/Hardware-Evidence/Injector-Coil-Connector-Evidence.csv,Evidence,Injector/coil physical evidence,Verification
+docs/Hardware-Evidence/Load-Current-Measurement-Sheet.csv,Evidence,Current measurements,Verification
+docs/Hardware-Evidence/OEM-Diagnostic-Manual-Milestone.md,Evidence,OEM diagnostic evidence,Supporting
+docs/Hardware-Evidence/OEM-Electrical-Characterisation-Research.md,Evidence,OEM electrical characterization,Supporting
+docs/Hardware-Evidence/OEM-Injector-Coil-Research.md,Evidence,Injector/coil research,Supporting
+docs/Hardware-Evidence/OEM-Specs-Freeze.md,Evidence,OEM specs freeze,Control
+docs/Hardware-Evidence/README.md,Evidence,Evidence index,Supporting
+docs/Harley-VRXSE-Official-References/README.md,OEM,Official Harley reference index,Authority helper
+docs/Harness-Manufacturer-Release-Pack/00-Manufacturer-Release-Index-Rev2.md,Harness,Manufacturer release front door,Controlling manufacturer status
+docs/Harness-Manufacturer-Release-Pack/As-Built-Harness-Master-Register.csv,Harness,As-built harness record,Post-build control
+docs/Harness-Manufacturer-Release-Pack/B01-B44-Dimensional-Freeze-Worksheet.csv,Harness,Final dimensions,Release gate
+docs/Harness-Manufacturer-Release-Pack/Bike-Side-Measurement-Worksheet.csv,Harness,Bike measurements,Verification
+docs/Harness-Manufacturer-Release-Pack/CAN-Service-Interface-Production-Freeze.md,Harness,CAN service construction,Controlling
+docs/Harness-Manufacturer-Release-Pack/CAN-Service-Verification-Register.csv,Harness,CAN service verification,Verification
+docs/Harness-Manufacturer-Release-Pack/Cable-Sizing-Baseline.md,Harness,Cable-sizing methodology,Supporting; current pump correction applies
+docs/Harness-Manufacturer-Release-Pack/Connector-Cavity-Master-Schedule-Release-Checklist.csv,Harness,Cavity schedule release,Release gate
+docs/Harness-Manufacturer-Release-Pack/Connector-Cavity-Master-Schedule.csv,Harness,Production cavity map,Controlling production schedule
+docs/Harness-Manufacturer-Release-Pack/Connector-Cavity-Master-Schedule.md,Harness,Cavity schedule explanation,Controlling
+docs/Harness-Manufacturer-Release-Pack/Connector-Purchasing-BOM.csv,Harness,Connector procurement BOM,Controlling procurement
+docs/Harness-Manufacturer-Release-Pack/Connector-Terminal-Procurement-Freeze.md,Harness,Connector/terminal freeze,Release control
+docs/Harness-Manufacturer-Release-Pack/Cooling-Aux-Power-Interface-Freeze.md,Harness,Cooling power construction,Controlling
+docs/Harness-Manufacturer-Release-Pack/Cooling-Aux-Power-Verification-Register.csv,Harness,Cooling power verification,Verification
+docs/Harness-Manufacturer-Release-Pack/Engine-Critical-EPM-Power-Distribution-Freeze.md,Harness,B39/B40 architecture,Controlling
+docs/Harness-Manufacturer-Release-Pack/Engine-Critical-EPM-Power-Verification-Register.csv,Harness,B39/B40 verification,Verification
+docs/Harness-Manufacturer-Release-Pack/FT550-Harness-Interface-Freeze.md,Harness,FT550 production interface,Controlling
+docs/Harness-Manufacturer-Release-Pack/FT550-Interface-Verification-Register.csv,Harness,FT550 interface verification,Verification
+docs/Harness-Manufacturer-Release-Pack/Final-As-Built-Harness-Configuration-Pack.md,Harness,As-built package,Post-build control
+docs/Harness-Manufacturer-Release-Pack/Fuel-Pump-External-Power-Stage.md,Harness,External pump-stage option,Conditional
+docs/Harness-Manufacturer-Release-Pack/Fuel-Pump-Power-Interface-Freeze.md,Harness,Pump interface 4mm rules,Controlling
+docs/Harness-Manufacturer-Release-Pack/Fuel-Pump-Power-Interface-Verification-Register.csv,Harness,Pump interface verification,Verification
+docs/Harness-Manufacturer-Release-Pack/G0-G1-Blocker-Burn-Down-Review.md,Harness,Build blockers,Status control
+docs/Harness-Manufacturer-Release-Pack/G0-G1-Burn-Down-Register.csv,Harness,Build blocker register,Status control
+docs/Harness-Manufacturer-Release-Pack/Golden-Harness-Correction-Register.csv,Harness,Golden harness corrections,Post-build
+docs/Harness-Manufacturer-Release-Pack/Golden-Harness-Final-Validation-Register.csv,Harness,Golden harness validation,Post-build
+docs/Harness-Manufacturer-Release-Pack/HP1-HP5-Manufacturing-Release-Readiness-Gate.md,Harness,Manufacturing readiness,Release gate
+docs/Harness-Manufacturer-Release-Pack/HP1-HP5-Manufacturing-Release-Readiness-Register.csv,Harness,Manufacturing readiness register,Release gate
+docs/Harness-Manufacturer-Release-Pack/HP6-HP7-Pre-Cover-Final-Harness-Acceptance-Pack.md,Harness,Production inspection,Controlling acceptance
+docs/Harness-Manufacturer-Release-Pack/HP6-Pre-Cover-Inspection-Register.csv,Harness,Pre-cover inspection,Verification
+docs/Harness-Manufacturer-Release-Pack/HP7-Final-Harness-Acceptance-Register.csv,Harness,Final harness acceptance,Verification
+docs/Harness-Manufacturer-Release-Pack/Harness-Acceptance-Test.csv,Harness,Electrical harness acceptance,Verification
+docs/Harness-Manufacturer-Release-Pack/Harness-Build-Record.csv,Harness,Build record,Record
+docs/Harness-Manufacturer-Release-Pack/Harness-Build-Release-Gate-Review.md,Harness,Build release review,Release gate
+docs/Harness-Manufacturer-Release-Pack/Harness-Build-Traveller-Template.csv,Harness,Production traveller,Manufacturing control
+docs/Harness-Manufacturer-Release-Pack/Harness-Formboard-Specification.md,Harness,Formboard requirements,Manufacturing control
+docs/Harness-Manufacturer-Release-Pack/Harness-Label-Identification-Schedule.csv,Harness,Identification schedule,Manufacturing control
+docs/Harness-Manufacturer-Release-Pack/Harness-Label-Wire-Identification-Build-Traveller-Master-Pack.md,Harness,Build/label process,Manufacturing control
+docs/Harness-Manufacturer-Release-Pack/Harness-Manufacturer-DFM-Release-Pack-Rev2.md,Harness,DFM package,Manufacturer control
+docs/Harness-Manufacturer-Release-Pack/Harness-Manufacturer-DFM-Response-Register.csv,Harness,Manufacturer DFM return,Manufacturer record
+docs/Harness-Manufacturer-Release-Pack/Harness-Manufacturer-Deviation-Register.csv,Harness,Manufacturer deviations,Change control
+docs/Harness-Manufacturer-Release-Pack/Harness-Manufacturer-RFI-Register.csv,Harness,Manufacturer questions,Change control
+docs/Harness-Manufacturer-Release-Pack/Harness-Serial-Build-Record.csv,Harness,Harness serial traceability,Record
+docs/Harness-Manufacturer-Release-Pack/High-Current-Load-Closure.md,Harness,High-current closeout,Release procedure
+docs/Harness-Manufacturer-Release-Pack/High-Current-Load-Test-Worksheet.csv,Harness,High-current test,Verification
+docs/Harness-Manufacturer-Release-Pack/High-Current-Sizing-Calculation-Register.csv,Harness,High-current sizing calculations,Verification
+docs/Harness-Manufacturer-Release-Pack/High-Current-Sizing-Final-Decision.csv,Harness,High-current final sizing,Release gate
+docs/Harness-Manufacturer-Release-Pack/Ignition-Coil-SparkPRO-Electrical-Freeze.md,Harness,Ignition construction freeze,Controlling
+docs/Harness-Manufacturer-Release-Pack/Ignition-Coil-SparkPRO-Verification-Register.csv,Harness,Ignition interface verification,Verification
+docs/Harness-Manufacturer-Release-Pack/Injector-Electrical-Architecture-Freeze.md,Harness,Injector architecture freeze,Controlling
+docs/Harness-Manufacturer-Release-Pack/Injector-Electrical-Decision-Register.csv,Harness,Injector decision register,Release gate
+docs/Harness-Manufacturer-Release-Pack/Manufacturer-RFQ.csv,Harness,Manufacturer quotation scope,Commercial
+docs/Harness-Manufacturer-Release-Pack/Manufacturer-Release-Document-Register-Rev2.csv,Harness,Manufacturer release file index,Document control
+docs/Harness-Manufacturer-Release-Pack/Manufacturer-Return-Review-Engineering-Release-Gate.md,Harness,DFM return review,Release gate
+docs/Harness-Manufacturer-Release-Pack/Manufacturer-Return-Review-Register.csv,Harness,Manufacturer-return review,Verification
+docs/Harness-Manufacturer-Release-Pack/Manufacturing-Release-Authorisation-Rev1-TEMPLATE.md,Harness,Functional manufacture authorization,Release gate
+docs/Harness-Manufacturer-Release-Pack/Manufacturing-Requirements.md,Harness,Workmanship requirements,Manufacturing control
+docs/Harness-Manufacturer-Release-Pack/Master-Build-Blocker-Register.csv,Harness,Build blockers,Status control
+docs/Harness-Manufacturer-Release-Pack/Master-Circuit-Wire-ID-Schedule.csv,Harness,Wire ID schedule,Production control
+docs/Harness-Manufacturer-Release-Pack/OEM-Connector-Identification-Service-Pigtail-Freeze.md,Harness,OEM pigtail policy,Controlling
+docs/Harness-Manufacturer-Release-Pack/OEM-Connector-Physical-ID-Register.csv,Harness,OEM connector ID,Verification
+docs/Harness-Manufacturer-Release-Pack/OEM-Connector-Physical-Identification-Pack.md,Harness,OEM ID procedure,Procedure
+docs/Harness-Manufacturer-Release-Pack/OEM-Pigtail-Verification-Register.csv,Harness,OEM pigtail verification,Verification
+docs/Harness-Manufacturer-Release-Pack/PMU16-Cavity-Terminal-Wire-Audit.csv,Harness,PMU wire/terminal audit,Verification
+docs/Harness-Manufacturer-Release-Pack/PMU16-Cavity-Terminal-Wire-Audit.md,Harness,PMU audit explanation,Supporting
+docs/Harness-Manufacturer-Release-Pack/PMU16-Connector-Terminal-Production-Freeze.md,Harness,PMU connector production freeze,Controlling
+docs/Harness-Manufacturer-Release-Pack/Physical-Harness-Measurement-Dimensional-Freeze.md,Harness,Dimensional-freeze procedure,Controlling
+docs/Harness-Manufacturer-Release-Pack/Pre-Manufacture-Release-Audit-Register.csv,Harness,Pre-manufacture audit,Release gate
+docs/Harness-Manufacturer-Release-Pack/Pre-Manufacture-Release-Audit.md,Harness,Pre-manufacture audit method,Release gate
+docs/Harness-Manufacturer-Release-Pack/Primary-Power-Distribution-Freeze.md,Harness,Primary power freeze,Controlling
+docs/Harness-Manufacturer-Release-Pack/Primary-Power-Verification-Register.csv,Harness,Primary power verification,Verification
+docs/Harness-Manufacturer-Release-Pack/Production-Wire-Circuit-Master-Schedule.csv,Harness,Current conductor-level master,Controlling production schedule
+docs/Harness-Manufacturer-Release-Pack/Production-Wire-Circuit-Master-Schedule.md,Harness,Wire master explanation,Controlling
+docs/Harness-Manufacturer-Release-Pack/Production-Wire-Schedule-Release-Checklist.csv,Harness,Wire master release,Release gate
+docs/Harness-Manufacturer-Release-Pack/Project-Final-Validation-Golden-Harness-Repeat-Build-Release.md,Harness,Golden/repeat-build release,Post-build
+docs/Harness-Manufacturer-Release-Pack/Protection-Fuse-PMU-Current-Limit-Master-Schedule.csv,Harness,Protection master,Controlling once values frozen
+docs/Harness-Manufacturer-Release-Pack/Protection-Fuse-PMU-Current-Limit-Master-Schedule.md,Harness,Protection master explanation,Controlling
+docs/Harness-Manufacturer-Release-Pack/Protection-Master-Schedule-Release-Checklist.csv,Harness,Protection release,Release gate
+docs/Harness-Manufacturer-Release-Pack/Prototype-Cable-Size-Length-Schedule.csv,Harness,Older prototype dimensions,Supporting only; current Manufacturer package pump correction supersedes old 2.5mm note
+docs/Harness-Manufacturer-Release-Pack/Prototype-Harness-Acceptance-Golden-Harness-Qualification.md,Harness,Prototype qualification,Post-build
+docs/Harness-Manufacturer-Release-Pack/Prototype-Harness-Acceptance-Register.csv,Harness,Prototype acceptance record,Post-build verification
+docs/Harness-Manufacturer-Release-Pack/README.md,Harness,Harness package overview,Supporting
+docs/Harness-Manufacturer-Release-Pack/Repeat-Build-Release-Record.csv,Harness,Repeat-build authorization,Post-build
+docs/Harness-Manufacturer-Release-Pack/Rev2-Package-Generator-Release.md,Harness,Package-generation process,Document control
+docs/Harness-Manufacturer-Release-Pack/Splice-Junction-Master-Schedule-Release-Checklist.csv,Harness,Splice schedule release,Release gate
+docs/Harness-Manufacturer-Release-Pack/Splice-Junction-Master-Schedule.csv,Harness,Production splice/junction master,Controlling production schedule
+docs/Harness-Manufacturer-Release-Pack/Splice-Junction-Master-Schedule.md,Harness,Splice master explanation,Controlling
+docs/Harness-Manufacturer-Release-Pack/Trigger-Integrity-Freeze.md,Harness,CKP/CAM integrity,Controlling
+docs/Harness-Manufacturer-Release-Pack/Trigger-Integrity-Verification-Register.csv,Harness,Trigger verification,Verification
+docs/Harness-Manufacturer-Release-Pack/X50-Master-Engineering-Service-Connector-Freeze.md,Harness,X50 architecture,Controlling
+docs/Harness-Manufacturer-Release-Pack/X50-Service-Connector-Cavity-Register.csv,Harness,X50 cavity record,Verification
+docs/Harness-Manufacturer-Release-Pack/X70-Two-Step-Relay-Hardware-Freeze.md,Harness,Current relay-based Two-Step hardware,CONTROLLING; supersedes PCB physical build
+docs/Harness-Manufacturer-Release-Pack/X70-Two-Step-Relay-Verification-Register.csv,Harness,X70 relay verification,Verification
+docs/Launch-Control/Two-Step-Clutch-Launch-Subsystem.md,Launch,Launch functional architecture,Supporting current logic
+docs/Launch-Control/Two-Step-Clutch-Test-Matrix.csv,Launch,Clutch launch tests,Verification
+docs/Launch-Control/Two-Step-Clutch-Verification-Register.csv,Launch,Clutch verification,Verification
+docs/Launch-Control/Two-Step-Component-Freeze.md,Launch,Component selection history,Supporting
+docs/Launch-Control/Two-Step-Physical-Hardware-BOM.csv,Launch,Clutch/launch BOM,Procurement helper
+docs/Launch-Control/Two-Step-Physical-IO-Hardware-Freeze.md,Launch,Physical I/O freeze,Supporting current A6/A7 data
+docs/Launch-Control/Two-Step-Production-Loom-Release.md,Launch,Production loom launch branch,Supporting
+docs/Launch-Control/X70-PCB-Bench-Test-Record.csv,Launch,Old PCB test record,HISTORICAL; PCB currently bypassed
+docs/Launch-Control/X70-Two-Step-Interface-PCB-Spec.md,Launch,Old X70 PCB specification,SUPERSEDED for current physical implementation
+docs/Launch-Control/X70-Two-Step-PCB-BOM.csv,Launch,Old X70 PCB BOM,SUPERSEDED for current physical implementation
+docs/Manufacturer-Construction-Package-Current/00-READ-ME-FIRST.md,Harness,Current manufacturer conflict rules,Highest current manufacturer guidance
+docs/Manufacturer-Construction-Package-Current/01-Production-Wire-Circuit-Master-Schedule.csv,Harness,Current manufacturer wire master,Controlling duplicate
+docs/Manufacturer-Construction-Package-Current/02-Connector-Cavity-Master-Schedule.csv,Harness,Current manufacturer cavity master,Controlling duplicate
+docs/Manufacturer-Construction-Package-Current/03-Splice-Junction-Master-Schedule.csv,Harness,Current manufacturer splice master,Controlling duplicate
+docs/Manufacturer-Construction-Package-Current/04-Protection-Fuse-PMU-Current-Limit-Master-Schedule.csv,Harness,Current manufacturer protection master,Controlling duplicate
+docs/Manufacturer-Construction-Package-Current/05-Prototype-Cable-Size-Length-Schedule.csv,Harness,Corrected 4mm pump prototype dimensions,Current pre-measurement helper
+docs/Manufacturer-Construction-Package-Current/06-Connector-Purchasing-BOM.csv,Harness,Current connector procurement,Procurement
+docs/Manufacturer-Construction-Package-Current/07-PMU16-Cavity-Terminal-Wire-Audit.csv,Harness,Current PMU audit,Verification
+docs/Manufacturer-Construction-Package-Current/08-Manufacturing-Requirements.md,Harness,Current workmanship requirements,Manufacturing control
+docs/Manufacturer-Construction-Package-Current/09-Harness-Formboard-Specification.md,Harness,Current formboard helper,Manufacturing control
+docs/Manufacturer-Construction-Package-Current/10-Harness-Build-Traveller-Template.csv,Harness,Current traveller,Manufacturing control
+docs/Manufacturer-Construction-Package-Current/11-Manufacturer-DFM-Response-Register.csv,Harness,DFM return,Manufacturer record
+docs/Manufacturer-Construction-Package-Current/12-Manufacturer-RFI-Register.csv,Harness,RFI return,Change control
+docs/Manufacturer-Construction-Package-Current/13-Manufacturer-Deviation-Register.csv,Harness,Deviation return,Change control
+docs/Manufacturer-Construction-Package-Current/14-Construction-Package-Manifest.csv,Harness,Current construction package manifest,Document control
+docs/PMU-Control/PMU-Bench-Commissioning-Test-Plan.md,PMU,PMU bench procedure,Controlling bench procedure
+docs/PMU-Control/PMU-Bench-Test-Matrix.csv,PMU,PMU bench test matrix,Verification
+docs/PMU-Control/PMU-Functional-Control-Logic.md,PMU,Initial PMU logic/parameters,Controlling initial logic
+docs/PMU-Control/PMU-Functional-Control-Matrix.csv,PMU,PMU function matrix,Supporting
+docs/Production-Harness-Milestone/Connector-Cavity-Schedule.csv,Harness,Earlier cavity schedule,Supporting; later master schedule wins
+docs/Production-Harness-Milestone/Connector-Index.md,Harness,Connector index,Supporting
+docs/Production-Harness-Milestone/Harness-Branch-Schedule.csv,Harness,Branch schedule,Supporting/reference
+docs/Production-Harness-Milestone/README.md,Harness,Production milestone index,Supporting
+docs/Production-Harness-Milestone/Release-Checklist.md,Harness,Production release checklist,Supporting release
+docs/Production-Harness-Milestone/Rev1-Harness-BOM.csv,Harness,Primary project harness BOM,Chapter 1 base with current supersessions
+docs/Production-Harness-Milestone/Splice-Ground-Reference.md,Harness,Ground/splice guidance,Controlling concept
+docs/Production-Harness-Milestone/Terminal-Selection-Gate.md,Harness,Terminal selection gate,Release control
+docs/Production-Harness-Milestone/Verification-Register.csv,Harness,Production verification evidence,Verification
+docs/Production-Harness-Milestone/Wire-Size-Schedule.csv,Harness,Wire sizing schedule,Supporting; later 4mm pump rule wins
+docs/Project-Status/B01-B44-Physical-Dimension-Capture.csv,Project Status,Current physical dimension capture,Verification
+docs/Project-Status/Electrical-Load-Test-Master-Register.csv,Project Status,Current electrical load tests,Verification
+docs/Project-Status/Electrical-Load-Verification-and-Protection-Freeze.md,Project Status,Load/protection closure milestone,Controlling next-work procedure
+docs/Project-Status/Fuel-Pump-Power-Stage-Decision-Register.csv,Project Status,Current pump stage decision,Release gate
+docs/Project-Status/Physical-Bike-Evidence-Master-Register.csv,Project Status,Current physical evidence,Verification
+docs/Project-Status/Physical-Bike-Measurement-and-Hardware-ID-Milestone.md,Project Status,Physical hardware closure,Controlling current milestone
+docs/Project-Status/Physical-Build-Readiness-Punchlist.csv,Project Status,Open physical blockers,Controlling status
+docs/Project-Status/Physical-Evidence-Session-Plan.md,Project Status,Physical measurement session,Procedure
+docs/Project-Status/Protection-Coordination-Final-Freeze-Register.csv,Project Status,Final protection freeze,Release gate
+docs/Project-Status/Repository-Master-Index-and-Build-Readiness-Audit.md,Project Status,Repository/build readiness index,Controlling project audit
+docs/Release/Maintenance-Event-Log.csv,Release,In-service maintenance log,Post-build
+docs/Release/Master-Release-Maintenance-Package.md,Release,Master in-service release,Post-build
+docs/Release/Master-Release-Manifest.csv,Release,Release manifest,Post-build
+docs/Sensor-Expansion/FT550-Input-Allocation.csv,Sensors,FT550 input assignment,Controlling allocation when verified
+docs/Sensor-Expansion/FT550-Input-Capacity-Audit.md,Sensors,Input capacity review,Supporting
+docs/Sensor-Expansion/FT550-Verified-Cavity-Map.md,Sensors,Verified FT550 cavities,Controlling cavity source
+docs/Sensor-Expansion/README.md,Sensors,Sensor expansion index,Supporting
+docs/Sensor-Expansion/Sensor-Expansion-Matrix.csv,Sensors,Sensor hardware/input matrix,Verification/planning
+docs/Track-Validation/Launch-Track-Release.md,Track,Track launch procedure,Post-dyno
+docs/Track-Validation/Launch-Track-Test-Matrix.csv,Track,Track test matrix,Post-dyno verification
+docs/Track-Validation/Launch-Track-Verification-Register.csv,Track,Track verification,Post-dyno verification
+docs/VRXSE-FT550/Electrical-Architecture-and-Grounding.md,Architecture,Power/ground domains,Controlling concept
+docs/VRXSE-FT550/Trigger-and-MAP-Strategy.md,Architecture,Trigger/MAP strategy,Controlling concept
+docs/VRXSE-FT550/VRXSE-to-FT550-Sensor-Matrix.md,Architecture,OEM sensor integration,Supporting/verification
