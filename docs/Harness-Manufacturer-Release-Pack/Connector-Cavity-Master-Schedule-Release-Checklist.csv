@@ -1,0 +1,25 @@
+Check_ID,Requirement,Acceptance_Criteria,State,Evidence,Blocker,Owner,Date,Notes
+CCM-001,FT550 known functions,Known A1 A2 A8 A9 A21 functions match released architecture,OPEN,TBD,TBD,TBD,TBD,TBD
+CCM-002,FT550 remaining cavities,Every used FT550 cavity verified from authoritative source,OPEN,TBD,TBD,TBD,TBD,TBD
+CCM-003,PMU hardware,Exact PMU16 hardware revision recorded,OPEN,TBD,TBD,TBD,TBD,TBD
+CCM-004,PMU used cavities,Every used PMU cavity mapped exactly once,OPEN,TBD,TBD,TBD,TBD,TBD
+CCM-005,PMU terminals,Terminal PNs match cavity and conductor range,OPEN,TBD,TBD,TBD,TBD,TBD
+CCM-006,X10-X23 physical ID,Every used OEM connector resolved to exact connector or pigtail,OPEN,TBD,TBD,TBD,TBD,TBD
+CCM-007,X10-X23 cavity map,Every used OEM cavity function verified,OPEN,TBD,TBD,TBD,TBD,TBD
+CCM-008,X30/X31 pump polarity,Pump feed/return cavities explicit and correct,OPEN,TBD,TBD,TBD,TBD,4.0mm2 both feed and dedicated return
+CCM-009,X30/X31 contacts,Selected contacts accept 4.0mm2 conductor and final current,OPEN,TBD,TBD,TBD,TBD,TBD
+CCM-010,X50 exact hardware,Final housing contacts seals and cavity count accepted,OPEN,TBD,TBD,TBD,TBD,TBD
+CCM-011,X50 high-current exclusion,No prohibited high-current circuit routed through X50,OPEN,TBD,TBD,TBD,TBD,TBD
+CCM-012,X51 function map,Cavities 1-4 match CAN service freeze,OPEN,TBD,TBD,TBD,TBD,TBD
+CCM-013,X51 no termination,No hidden termination resistor in X51,OPEN,TBD,TBD,TBD,TBD,TBD
+CCM-014,X62/X63 channel integrity,Front/rear injector paths cannot be reversed by ambiguous mapping,OPEN,TBD,TBD,TBD,TBD,TBD
+CCM-015,X70 A21 isolation,No +12V source reaches A21 dry-contact side,OPEN,TBD,TBD,TBD,TBD,TBD
+CCM-016,CAN polarity,CAN-H/L polarity consistent across every connector,OPEN,TBD,TBD,TBD,TBD,TBD
+CCM-017,Sensor grounds,No connector map merges sensor ground into uncontrolled power ground,OPEN,TBD,TBD,TBD,TBD,TBD
+CCM-018,Trigger polarity,CKP/CAM polarity controlled and supported by evidence,OPEN,TBD,TBD,TBD,TBD,TBD
+CCM-019,No duplicate cavities,No cavity assigned to unrelated circuits,OPEN,TBD,TBD,TBD,TBD,TBD
+CCM-020,DNP state,Every unused sealed cavity explicitly DNP and plugged as required,OPEN,TBD,TBD,TBD,TBD,TBD
+CCM-021,Wire schedule cross-check,Every cavity row matches Production Wire Circuit Master Schedule circuit ID,OPEN,TBD,TBD,TBD,TBD,TBD
+CCM-022,Terminal schedule cross-check,Every populated cavity has an approved contact/terminal PN,OPEN,TBD,TBD,TBD,TBD,TBD
+CCM-023,Manufacturer DFM,Manufacturer confirms buildability and tooling,OPEN,TBD,TBD,TBD,TBD,TBD
+CCM-024,Engineering release,All applicable CCM checks PASS,OPEN,TBD,TBD,TBD,TBD,Required for CONNECTOR_CAVITY_MASTER_SCHEDULE_HP5_RELEASED
