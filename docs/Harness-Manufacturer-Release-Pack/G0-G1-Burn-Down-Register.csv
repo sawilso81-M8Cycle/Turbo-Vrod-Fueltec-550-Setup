@@ -1,0 +1,17 @@
+Burn_ID,Priority,System,Closure_Item,Architecture_State,Evidence_State,Required_Evidence,Final_Disposition
+BD-001,1,Fuel Pump,Actual pump PN and electrical load evidence,FROZEN_HARNESS_INTERFACE,OPEN,Pump PN steady current cold/hot inrush voltage drop connector temperature,DIRECT_PMU_DRIVE_APPROVED or EXTERNAL_POWER_STAGE_REQUIRED
+BD-002,1,Injectors,Injector electrical class and FT550 drive method,FROZEN_SWITCHABLE_HARNESS,OPEN,PN resistance at known temp current waveform FT550 compatibility,DIRECT_DRIVE_APPROVED or PEAK_HOLD_REQUIRED
+BD-003,1,Ignition,Coil current ramp dwell and B40 aggregate load,FROZEN_ARCHITECTURE,OPEN,Coil PN current ramp thermal evidence conservative first-start dwell,B40_PROTECTION_APPROVED
+BD-004,1,Cooling,Radiator fan load and B11 decision,FROZEN_INTERFACE_ARCHITECTURE,OPEN,Fan PN steady/inrush voltage drop connector thermal,B11_DIRECT_PMU_DRIVE_APPROVED or B11_EXTERNAL_POWER_STAGE_REQUIRED
+BD-005,1,Cooling,Charge-cooler pump disposition,FROZEN_INTERFACE_ARCHITECTURE,OPEN,DNP or pump PN steady/inrush voltage drop protection,B12_DNP or B12_DIRECT_PMU_DRIVE_APPROVED or B12_EXTERNAL_POWER_STAGE_REQUIRED
+BD-006,2,PMU16,Used-cavity terminal audit,VERIFIED_FAMILY,PARTIAL,Exact terminal PN wire range insulation OD current and tooling per used cavity,PASS
+BD-007,2,OEM Interfaces,X10-X23 connectors or controlled repair pigtails,SERVICE_PIGTAIL_STRATEGY_FROZEN,PARTIAL,Physical connector photos markings cavity count keying continuity and exact PN where available,PASS
+BD-008,2,Two-Step,X70 exact relay socket/carrier,RELAY_PN_FROZEN,OPEN,Socket carrier terminal and wire-range PNs plus mounting and powered test,PASS
+BD-009,2,Service,X50 general engineering/service connector,FUNCTION_OPEN,OPEN,Circuit count location housing contacts seals cap boot,PASS
+BD-010,3,Primary Power,B15 master protection and J-P01 rating,ARCHITECTURE_FROZEN,OPEN,Simultaneous load model cable/terminal rating protection coordination,PASS
+BD-011,3,Injectors,B39 protection value,ARCHITECTURE_FROZEN,DEPENDENT,Injector load decision voltage drop protection coordination,PASS
+BD-012,3,Ignition,B40 protection value,ARCHITECTURE_FROZEN,DEPENDENT,Coil/SparkPRO load decision voltage drop protection coordination,PASS
+BD-013,3,CAN,Completed-network termination,ARCHITECTURE_FROZEN,OPEN,FT550 state PMU state external terminators and powered-down H-L resistance,PASS
+BD-014,4,Manufacturer,DFM review,RFQ_READY,OPEN,Written review on materials connectors tooling branches relay carrier tolerances substitutions,PASS
+BD-015,4,Manufacturer,Deviation closure,CONTROL_PROCESS_FROZEN,OPEN,Unique deviation IDs and engineering dispositions,PASS
+BD-REL,Release,Rev1 Harness,Manufacturing release,NOT_RELEASED,OPEN,BD-001 through applicable BD-015 closed plus controlled physical G2 exceptions,MANUFACTURING_RELEASED_REV1
