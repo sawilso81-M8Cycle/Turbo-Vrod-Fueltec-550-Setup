@@ -1,0 +1,21 @@
+Release_ID,Category,Controlled_Item,Required_Revision_or_State,Current_Revision_or_State,File_or_Record,Owner,Recipient,Verification,State,Approved_By,Date,Notes
+PRI-001,PROJECT,Final race validation,FINAL_RACE_VALIDATION_ACCEPTED,TBD,TBD,Engineering,Tuner/Race Crew,Evidence reviewed,OPEN,TBD,TBD,TBD
+PRI-002,CONFIG,Final race archive,FINAL_RACE_CONFIGURATION_ARCHIVED,TBD,Final-Race-Configuration-Manifest.csv,Engineering,Tuner/Race Crew,SHA256 manifest verified,OPEN,TBD,TBD,TBD
+PRI-003,HARNESS,Golden Harness,GOLDEN_HARNESS_VALIDATED,TBD,Golden-Harness-Final-Validation-Register.csv,Engineering,Harness Manufacturer,Physical/as-built match,OPEN,TBD,TBD,TBD
+PRI-004,HARNESS,Repeat build release,REPEAT_BUILD_RELEASED,TBD,Repeat-Build-Release-Record.csv,Engineering,Harness Manufacturer,Qualification article accepted,OPEN,TBD,TBD,TBD
+PRI-005,WIRING,Production Wire Circuit Master Schedule,RELEASED,TBD,TBD,Engineering,Harness Manufacturer/Maintenance,Revision checked,OPEN,TBD,TBD,TBD
+PRI-006,CONNECTORS,Connector Cavity Master Schedule,RELEASED,TBD,TBD,Engineering,Harness Manufacturer/Maintenance,Revision checked,OPEN,TBD,TBD,TBD
+PRI-007,SPLICES,Splice Junction Master Schedule,HP5_RELEASED,TBD,Splice-Junction-Master-Schedule.csv,Engineering,Harness Manufacturer/Maintenance,Revision checked,OPEN,TBD,TBD,TBD
+PRI-008,PROTECTION,Protection Master Schedule,HP5_RELEASED,TBD,Protection-Fuse-PMU-Current-Limit-Master-Schedule.csv,Engineering,Tuner/Harness/Maintenance,Revision checked,OPEN,TBD,TBD,TBD
+PRI-009,BUILD,Build Traveller,RELEASED,TBD,Harness-Build-Traveller-Template.csv,Engineering,Harness Manufacturer,Revision checked,OPEN,TBD,TBD,TBD
+PRI-010,QUALITY,HP6 pre-cover inspection,REQUIRED,TBD,HP6-Pre-Cover-Inspection-Register.csv,Quality,Harness Manufacturer,Acceptance method acknowledged,OPEN,TBD,TBD,TBD
+PRI-011,QUALITY,HP7 final acceptance,REQUIRED,TBD,HP7-Final-Harness-Acceptance-Register.csv,Quality,Harness Manufacturer,Acceptance method acknowledged,OPEN,TBD,TBD,TBD
+PRI-012,ECU,FT550 final race calibration,ACTIVE_RELEASE,TBD,TBD,Tuner/Engineering,Tuner/Race Crew,Hash/revision verified,OPEN,TBD,TBD,TBD
+PRI-013,PMU,PMU16 final configuration,ACTIVE_RELEASE,TBD,TBD,Engineering,Tuner/Race Crew,Hash/revision verified,OPEN,TBD,TBD,TBD
+PRI-014,IGNITION,SparkPRO/dwell configuration,ACTIVE_RELEASE,TBD,TBD,Tuner/Engineering,Tuner,Revision/source verified,OPEN,TBD,TBD,TBD
+PRI-015,BOOST,Boost operating envelope,CONTROLLED_BOOST_OPERATION_RELEASED,TBD,Final-Race-Operating-Envelope.csv,Tuner/Engineering,Race Crew,Limits reviewed,OPEN,TBD,TBD,TBD
+PRI-016,TWO_STEP,Two-Step launch envelope,TWO_STEP_LAUNCH_CONTROL_COMMISSIONED,TBD,Final-Race-Operating-Envelope.csv,Tuner/Engineering,Race Crew,Limits reviewed,OPEN,TBD,TBD,TBD
+PRI-017,SENSORS,Sensor correlation record,ACCEPTED,TBD,Sensor-Correlation-Master-Register.csv,Engineering,Tuner/Maintenance,Correlation evidence reviewed,OPEN,TBD,TBD,TBD
+PRI-018,SERVICE,Field repair rules,ISSUED,TBD,Project-Completion-Handover-Pack.md,Engineering,Race Crew/Maintenance,Rules acknowledged,OPEN,TBD,TBD,TBD
+PRI-019,SERVICE,Spare parts register,ISSUED,TBD,Handover-Spare-Parts-Maintenance-Register.csv,Engineering,Race Crew/Maintenance,Stock/PN review,OPEN,TBD,TBD,TBD
+PRI-020,HANDOVER,Stakeholder handover,COMPLETE,TBD,Project-Handover-Acceptance-Register.csv,Engineering,All,Recipient acknowledgement,NOT_RELEASED,TBD,TBD,PROJECT_HANDOVER_COMPLETE after all applicable rows pass
