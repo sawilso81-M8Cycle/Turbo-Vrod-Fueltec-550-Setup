@@ -1,0 +1,25 @@
+Test_ID,Circuit,Requirement,Acceptance_Criteria,Evidence,State
+EPM-001,B39,Injector architecture decision,DIRECT_DRIVE_APPROVED or PEAK_HOLD_REQUIRED recorded,Injector decision register,OPEN
+EPM-002,B39,Aggregate injector supply current,Measured or manufacturer-supported maximum supply current documented,Current record,OPEN
+EPM-003,B39,Conductor sizing,1.0mm2 baseline verified or upsized from current/length/derating calculation,Sizing calculation,OPEN
+EPM-004,B39,Protection value,Independent protection selected from measured pulsed/current evidence and conductor/terminal limits,Protection calculation,OPEN
+EPM-005,B39,Voltage drop,Installed B39 drop acceptable at maximum intended injector load,Voltage-drop record,OPEN
+EPM-006,B39,Connector thermal margin,No unacceptable connector/terminal heating at maximum test load,Thermal record,OPEN
+EPM-007,B39,Fault containment,B39 short/fault does not unintentionally back-feed B40 or sensor/reference supplies,Fault test,OPEN
+EPM-008,B39,Kill/master response,Injector supply removed by released kill/master strategy,Powered functional test,OPEN
+EPM-009,B40,Coil/SparkPRO architecture,Released FT550->SparkPRO->coil architecture matches build,Build audit,OPEN
+EPM-010,B40,Dwell evidence,Accepted dwell backed by coil current-ramp and thermal evidence,Scope/current record,OPEN
+EPM-011,B40,Aggregate ignition current,Maximum credible SparkPRO/coil supply current documented,Current record,OPEN
+EPM-012,B40,Conductor sizing,1.5mm2 baseline verified or upsized from current/length/derating calculation,Sizing calculation,OPEN
+EPM-013,B40,Protection value,Independent protection selected from measured current and transient behaviour,Protection calculation,OPEN
+EPM-014,B40,Cranking voltage,B40 maintains acceptable voltage during cranking without nuisance protection trip,Cranking log,OPEN
+EPM-015,B40,Voltage drop,Installed B40 drop acceptable at maximum intended ignition load,Voltage-drop record,OPEN
+EPM-016,B40,Connector thermal margin,No unacceptable connector/terminal heating at maximum test load,Thermal record,OPEN
+EPM-017,B40,Ground integrity,SparkPRO grounds verify low impedance to released J-P02 ground architecture,Resistance/voltage-drop record,OPEN
+EPM-018,B40,Fault containment,B40 fault does not back-feed B39 or precision sensor supplies,Fault test,OPEN
+EPM-019,B40,Kill/master response,Ignition energy removed by released kill/master strategy,Powered functional test,OPEN
+EPM-020,Combined,Independent protection,B39 and B40 protection can be identified and serviced separately,Visual/build record,OPEN
+EPM-021,Combined,Simultaneous load,Injector and ignition simultaneous operation does not destabilise J-P01/B15/PMU supply,Powered load test,OPEN
+EPM-022,Combined,Launch/Two-Step immunity,Protection remains stable under intended Two-Step/launch operating state,Log/current record,OPEN
+EPM-023,Release,B39 acceptance,EPM-001 through applicable B39 tests PASS,Engineering signoff,B39_NOT_ACCEPTED
+EPM-024,Release,B40 acceptance,EPM-009 through applicable B40 tests PASS,Engineering signoff,B40_NOT_ACCEPTED
