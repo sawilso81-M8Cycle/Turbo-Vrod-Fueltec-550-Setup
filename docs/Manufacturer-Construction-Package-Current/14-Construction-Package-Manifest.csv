@@ -1,0 +1,16 @@
+Pack_ID,File,Source_or_Purpose,Authority,Current_State,Manufacturer_Action,Notes
+MCP-001,00-READ-ME-FIRST.md,Package control/conflict resolution,HIGHEST_WITHIN_FOLDER,ACTIVE,Read first,Defines 4.0mm2 pump correction and release state
+MCP-002,01-Production-Wire-Circuit-Master-Schedule.csv,Current conductor schedule,CONTROLLED,WORKING_BASELINE,Review/DFM,Primary construction wire reference
+MCP-003,02-Connector-Cavity-Master-Schedule.csv,Current cavity/interface schedule,CONTROLLED,WORKING_BASELINE,Review/DFM,Do not infer VERIFY_REQUIRED cavities
+MCP-004,03-Splice-Junction-Master-Schedule.csv,Current splice/junction schedule,CONTROLLED,WORKING_BASELINE,Review/DFM,Exact methods/locations require closure
+MCP-005,04-Protection-Fuse-PMU-Current-Limit-Master-Schedule.csv,Current protection schedule,CONTROLLED,EVIDENCE_GATED,Review only,Do not invent pending values
+MCP-006,05-Prototype-Cable-Size-Length-Schedule.csv,Current manufacturer copy of approximate branch lengths,CONTROLLED_COPY,MEASUREMENT_GATED,Use for planning only,Pump wiring corrected to 4.0mm2 minimum
+MCP-007,06-Connector-Purchasing-BOM.csv,Connector/terminal procurement baseline,CONTROLLED,DFM_GATED,Return exact PNs/datasheets,Unresolved OEM parts remain blocked
+MCP-008,07-PMU16-Cavity-Terminal-Wire-Audit.csv,PMU verification register,CONTROLLED,VERIFY_REQUIRED,Return terminal/tooling comments,Exact PMU cavities require verification
+MCP-009,08-Manufacturing-Requirements.md,Workmanship/process requirements,CONTROLLED,ACTIVE,Acknowledge,No silent substitutions
+MCP-010,09-Harness-Formboard-Specification.md,Formboard requirements,CONTROLLED,DIMENSIONAL_DRAFT,Review/quote,Final board waits for bike dimensions
+MCP-011,10-Harness-Build-Traveller-Template.csv,Production build traveller,CONTROLLED,TEMPLATE,Review process,Used after manufacturing release
+MCP-012,11-Manufacturer-DFM-Response-Register.csv,Manufacturer return register,RETURN_FORM,OPEN,Complete and return,Required for HP1
+MCP-013,12-Manufacturer-RFI-Register.csv,Questions/ambiguities,RETURN_FORM,OPEN,Complete as required,Raise instead of assuming
+MCP-014,13-Manufacturer-Deviation-Register.csv,Proposed deviations,RETURN_FORM,OPEN,Complete as required,Deviation needs engineering approval
+MCP-015,14-Construction-Package-Manifest.csv,Package inventory,CONTROLLED,ACTIVE,Check completeness,Standalone current manufacturer folder
