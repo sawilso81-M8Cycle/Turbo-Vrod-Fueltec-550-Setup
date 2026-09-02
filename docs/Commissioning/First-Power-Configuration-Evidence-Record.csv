@@ -1,0 +1,8 @@
+Record_ID,Item,Manufacturer_or_System,Hardware_PN,Hardware_Revision,Firmware_Version,Configuration_File,Configuration_Revision,Hash_or_Checksum,Backup_File,Evidence,State,Technician,Date,Notes
+FPC-001,Harness,Turbo V-Rod Harness,TBD,TBD,NA,NA,TBD,TBD,TBD,TBD,OPEN,TBD,TBD,Record harness serial in notes
+FPC-002,ECU,FuelTech FT550,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,OPEN,TBD,TBD,Save pre-first-power configuration export
+FPC-003,PMU,ECUMASTER PMU16,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,OPEN,TBD,TBD,Save pre-first-power configuration export
+FPC-004,Ignition,SparkPRO,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,OPEN,TBD,TBD,Record exact installed hardware/configuration where applicable
+FPC-005,CAN,CAN topology/configuration,NA,NA,NA,TBD,TBD,TBD,TBD,TBD,OPEN,TBD,TBD,Record termination/endpoints/bitrate
+FPC-006,Two-Step,X70/FT550/PMU chain,NA,TBD,TBD,TBD,TBD,TBD,TBD,TBD,OPEN,TBD,TBD,Record PMU O11 and FT550 A21 logic revisions
+FPC-007,Protection,B15/B39/B40/aux protection,NA,TBD,NA,TBD,TBD,TBD,TBD,TBD,OPEN,TBD,TBD,Reference final protection schedule
