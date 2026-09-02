@@ -1,0 +1,17 @@
+Closeout_ID,Requirement,Acceptance_Criteria,State,Evidence,Decision_Output,Retest_or_Blocker,Owner,Date,Notes
+ETC-001,Instrument register complete,All used instruments identified and suitable,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+ETC-002,Pump1 identity,Exact PN/connector captured,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+ETC-003,Pump1 electrical evidence,Cold/hot current and voltage-drop evidence accepted,OPEN,TBD,DIRECT_PMU_OR_EXTERNAL_STAGE,TBD,TBD,TBD,TBD
+ETC-004,Pump2 identity,Exact PN/connector captured,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+ETC-005,Pump2 electrical evidence,Cold/hot current and voltage-drop evidence accepted,OPEN,TBD,DIRECT_PMU_OR_EXTERNAL_STAGE,TBD,TBD,TBD,TBD
+ETC-006,Injector identity,Front/rear exact PNs captured,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+ETC-007,Injector electrical class,Resistance/data sufficient for driver decision,OPEN,TBD,DIRECT_OR_PEAK_HOLD_OR_FURTHER_TEST,TBD,TBD,TBD,TBD
+ETC-008,SparkPRO/coil identity,Exact hardware captured,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+ETC-009,B40 evidence,Supply current/thermal evidence sufficient to freeze protection,OPEN,TBD,B40_PROTECTION_FROZEN_OR_FURTHER_TEST,TBD,TBD,TBD,TBD
+ETC-010,Dwell evidence,Evidence sufficient for safe baseline or explicitly remains open,OPEN,TBD,DWELL_BASELINE_RELEASED_OR_FURTHER_TEST,TBD,TBD,TBD,TBD
+ETC-011,Radiator fan identity,Exact PN/connector captured,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+ETC-012,B11 electrical evidence,Inrush/steady/hot evidence accepted,OPEN,TBD,B11_FINAL_DECISION,TBD,TBD,TBD,TBD
+ETC-013,B12 fitted status,FITTED or DNP explicitly recorded,OPEN,TBD,FITTED_OR_DNP,TBD,TBD,TBD,TBD
+ETC-014,B12 electrical evidence,If fitted current/inrush evidence accepted,OPEN,TBD,B12_FINAL_DECISION_OR_DNP,TBD,TBD,TBD,TBD
+ETC-015,Raw evidence archived,All screenshots/photos/logs named and retained,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+ETC-016,Engineering review,BD-001 through BD-004 decisions updated from accepted evidence,OPEN,TBD,HP3_PASS_OR_REMAIN_OPEN,TBD,TBD,TBD,TBD
