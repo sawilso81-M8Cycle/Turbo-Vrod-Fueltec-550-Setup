@@ -1,0 +1,31 @@
+Doc_ID,Document,Category,Manufacturer_Action,Return_Required,Release_Authority,Status,Notes
+MFR-001,00-Manufacturer-Release-Index-Rev2.md,TRANSMITTAL,READ,NO,REV2,RELEASED,Front door to manufacturer pack
+MFR-002,Harness-Manufacturer-DFM-Release-Pack-Rev2.md,DFM_CONTROL,READ_AND_ACKNOWLEDGE,YES,REV2,RELEASED,Defines build classes and hold points
+MFR-003,Harness-Manufacturer-DFM-Response-Register.csv,DFM_RETURN,COMPLETE,YES,REV2,OPEN_RETURN,Manufacturer to complete applicable rows
+MFR-004,Harness-Manufacturer-RFI-Register.csv,RFI,COMPLETE_AS_REQUIRED,YES,REV2,OPEN_RETURN,No undocumented assumptions
+MFR-005,Harness-Manufacturer-Deviation-Register.csv,DEVIATION,COMPLETE_AS_REQUIRED,YES,REV2,OPEN_RETURN,Deviation requires approval
+MFR-006,Pre-Manufacture-Release-Audit.md,RELEASE_GATE,READ,NO,REV2,RELEASED,Defines manufacturing release logic
+MFR-007,Pre-Manufacture-Release-Audit-Register.csv,RELEASE_GATE,READ,NO,REV2,ACTIVE,Open gates remain
+MFR-008,G0-G1-Blocker-Burn-Down-Review.md,RELEASE_GATE,READ,NO,REV2,ACTIVE,Prioritised closure path
+MFR-009,G0-G1-Burn-Down-Register.csv,RELEASE_GATE,READ,NO,REV2,ACTIVE,Engineering blocker status
+MFR-010,Master-Build-Blocker-Register.csv,RELEASE_GATE,READ,NO,REV2,ACTIVE,Historical/master gate register
+MFR-011,PMU16-Connector-Terminal-Production-Freeze.md,PMU16,READ_AND_DFM,YES,REV2,FROZEN_WITH_GATES,Terminal architecture
+MFR-012,PMU16-Cavity-Terminal-Wire-Audit.md,PMU16,READ_AND_DFM,YES,REV2,FROZEN_WITH_GATES,Exact cavity verification required
+MFR-013,PMU16-Cavity-Terminal-Wire-Audit.csv,PMU16,REVIEW_AND_RETURN,YES,REV2,OPEN_RETURN,Cavity terminal wire audit
+MFR-014,Fuel-Pump-Power-Interface-Freeze.md,FUEL_PUMP,READ_AND_DFM,YES,REV2,FROZEN_WITH_GATES,4mm2 architecture locked
+MFR-015,Fuel-Pump-Power-Interface-Verification-Register.csv,FUEL_PUMP,READ,NO,REV2,ACTIVE,Build/commissioning checks
+MFR-016,Cooling-Aux-Power-Interface-Freeze.md,COOLING,READ_AND_DFM,YES,REV2,FROZEN_WITH_GATES,B11/B12 measurement gated
+MFR-017,Primary-Power-Distribution-Freeze.md,PRIMARY_POWER,READ_AND_DFM,YES,REV2,FROZEN_WITH_GATES,B15 10mm2 baseline
+MFR-018,Engine-Critical-EPM-Power-Distribution-Freeze.md,EPM_POWER,READ_AND_DFM,YES,REV2,FROZEN_WITH_GATES,B39/B40 independent protection
+MFR-019,Injector-Electrical-Architecture-Freeze.md,INJECTOR,READ,NO,REV2,FROZEN_WITH_GATES,X62/X63 dual-path architecture
+MFR-020,Ignition-Coil-SparkPRO-Electrical-Freeze.md,IGNITION,READ,NO,REV2,FROZEN_WITH_GATES,Dwell measurement gated
+MFR-021,Trigger-Integrity-Freeze.md,TRIGGER,READ_AND_DFM,YES,REV2,FROZEN_WITH_GATES,Routing/shielding critical
+MFR-022,CAN-Service-Interface-Production-Freeze.md,CAN,READ_AND_DFM,YES,REV2,FROZEN_WITH_GATES,X51 service architecture
+MFR-023,CAN-Service-Verification-Register.csv,CAN,READ,NO,REV2,ACTIVE,Termination verification gated
+MFR-024,X70-Two-Step-Relay-Hardware-Freeze.md,TWO_STEP,READ_AND_DFM,YES,REV2,FROZEN_WITH_GATES,Socket carrier DFM gated
+MFR-025,X70-Two-Step-Relay-Verification-Register.csv,TWO_STEP,READ,NO,REV2,ACTIVE,Bench/installation acceptance
+MFR-026,OEM-Connector-Physical-Identification-Pack.md,OEM_CONNECTORS,READ_AND_DFM,YES,REV2,FROZEN_WITH_GATES,X10-X23 identification method
+MFR-027,OEM-Connector-Physical-ID-Register.csv,OEM_CONNECTORS,REVIEW_AND_RETURN,YES,REV2,OPEN_RETURN,Exact connector/pigtail proposals
+MFR-028,X50-Master-Engineering-Service-Connector-Freeze.md,SERVICE,READ_AND_DFM,YES,REV2,FROZEN_WITH_GATES,X50 architecture
+MFR-029,X50-Service-Connector-Cavity-Register.csv,SERVICE,REVIEW_AND_RETURN,YES,REV2,OPEN_RETURN,Final cavity count/housing gated
+MFR-030,../Commissioning/First-Power-First-Start-Master-Release-Gate.md,COMMISSIONING,READ,NO,REV2,RELEASED_GATE,No first power from manufacturer release alone
