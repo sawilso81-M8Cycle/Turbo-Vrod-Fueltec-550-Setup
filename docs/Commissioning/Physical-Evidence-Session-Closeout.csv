@@ -1,0 +1,17 @@
+Closeout_ID,Requirement,Acceptance_Criteria,State,Evidence,Blocker_or_Missing_Item,Owner,Date,Notes
+PEC-001,Primary datums defined,D0-D10 or approved equivalents photographed/documented,OPEN,TBD,TBD,TBD,TBD,TBD
+PEC-002,Fuel pumps identified,Both installed pump PNs/connectors photographed or access blocker documented,OPEN,TBD,TBD,TBD,TBD,TBD
+PEC-003,Injectors identified,Front/rear PNs/connectors photographed,OPEN,TBD,TBD,TBD,TBD,TBD
+PEC-004,Coils identified,Front/rear PNs/connectors photographed,OPEN,TBD,TBD,TBD,TBD,TBD
+PEC-005,Cooling loads identified,Fan and charge-cooler pump if fitted captured,OPEN,TBD,TBD,TBD,TBD,TBD
+PEC-006,X10-X23 evidence,Every used interface has full photo set or explicit blocker,OPEN,TBD,TBD,TBD,TBD,TBD
+PEC-007,Module locations,FT550 PMU16 SparkPRO final candidate locations documented,OPEN,TBD,TBD,TBD,TBD,TBD
+PEC-008,Power junction locations,Battery J-P01 J-P02 locations documented,OPEN,TBD,TBD,TBD,TBD,TBD
+PEC-009,Service hardware locations,X50 X51 X70 locations documented,OPEN,TBD,TBD,TBD,TBD,TBD
+PEC-010,Major branch lengths,All applicable DIM rows measured or explicit blocker recorded,OPEN,TBD,TBD,TBD,TBD,TBD
+PEC-011,Steering movement,Center/full-left/full-right evidence captured,OPEN,TBD,TBD,TBD,TBD,TBD
+PEC-012,Rear movement,VSS/rear route movement evidence captured,OPEN,TBD,TBD,TBD,TBD,TBD
+PEC-013,Thermal zones,Turbo/exhaust/engine heat zones photographed with clearance notes,OPEN,TBD,TBD,TBD,TBD,TBD
+PEC-014,Service loops,Required service allowances recorded separately from routed lengths,OPEN,TBD,TBD,TBD,TBD,TBD
+PEC-015,Missing evidence list,All incomplete items explicitly recorded,OPEN,TBD,TBD,TBD,TBD,TBD
+PEC-016,Engineering review,Capture package reviewed for HP-2/HP-4 use,OPEN,TBD,TBD,TBD,TBD,TBD
