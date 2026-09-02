@@ -1,0 +1,23 @@
+ID,System,Architecture_State,Procurement_DFM_State,Measurement_Evidence_State,Production_State,Primary_Blocker,Closure_Evidence,Priority,Next_Action
+PMC-001,FT550 ECU,FROZEN,DFM_REQUIRED,CAVITY_VERIFY_REQUIRED,GATED,Exact production cavity/tooling acceptance,FT550 interface audit,HIGH,Manufacturer DFM
+PMC-002,PMU16,FROZEN,DFM_REQUIRED,CAVITY_VERIFY_REQUIRED,GATED,Exact HW and cavity-terminal-wire compatibility,PMU audit signed,HIGH,Verify hardware and DFM
+PMC-003,Fuel Pump Wiring,FROZEN,HDSCS_MCP_BASELINE,PUMP_TEST_PENDING,GATED,Actual pump current/inrush/thermal,Fuel pump verification register,CRITICAL,Run BD-001 tests
+PMC-004,Fuel Pump Switching,DUAL_PATH_FROZEN,EXTERNAL_STAGE_TBD_IF_REQUIRED,DECISION_PENDING,GATED,Direct PMU vs external stage,Signed switching decision,CRITICAL,Run BD-001 tests
+PMC-005,Injectors,DUAL_PATH_FROZEN,PNH_TBD_IF_REQUIRED,TEST_PENDING,GATED,Injector electrical class,Injector final decision,CRITICAL,Run BD-002 tests
+PMC-006,SparkPRO Coils,FROZEN,DFM_REQUIRED,TEST_PENDING,GATED,Dwell/current map,Coil dwell decision,CRITICAL,Run BD-003 tests
+PMC-007,B11 Radiator Fan,FROZEN_BASELINE,DFM_REQUIRED,TEST_PENDING,GATED,Actual current/inrush,Cooling final decision,HIGH,Run BD-004 tests
+PMC-008,B12 Charge Cooler,FROZEN_BASELINE_DNP_OPTION,DFM_REQUIRED_IF_FITTED,FITTED_STATUS_PENDING,GATED,Fitted status and load,Cooling final decision,HIGH,Confirm fitted status/test
+PMC-009,B15 Primary Power,10MM2_BASELINE_FROZEN,DFM_REQUIRED,LOAD_CALC_PENDING,GATED,Master protection/junction hardware,Primary power verification,HIGH,Complete load model
+PMC-010,B39 Injector Supply,FROZEN,DFM_REQUIRED,INJECTOR_TEST_PENDING,GATED,Final protection,Injector/B39 evidence,HIGH,Close after BD-002
+PMC-011,B40 Ignition Supply,FROZEN,DFM_REQUIRED,COIL_TEST_PENDING,GATED,Final protection/conductor,Coil/B40 evidence,HIGH,Close after BD-003
+PMC-012,Trigger CKP CAM,FROZEN,DFM_REQUIRED,INSTALLED_TEST_PENDING,GATED,Installed signal integrity,Scope/log evidence,HIGH,Capture connector/route then commission
+PMC-013,CAN Backbone,FROZEN,DFM_REQUIRED,TERMINATION_VERIFY_PENDING,GATED,Exact endpoint termination states,CAN verification,HIGH,Verify FT550/PMU config
+PMC-014,X51 CAN Service,FROZEN,EXACT_PNS_PENDING,TEST_PENDING,GATED,Exact procurement set,DFM return and CAN test,MEDIUM,Manufacturer DFM
+PMC-015,X50 Service,FROZEN,HOUSING_COUNT_PENDING,CAVITY_FREEZE_PENDING,GATED,Exact connector/cavity count,Approved X50 register,MEDIUM,Manufacturer DFM
+PMC-016,X70 Two Step,FROZEN,SOCKET_PENDING,BENCH_TEST_PENDING,GATED,Relay socket/carrier and truth table,X70 verification,HIGH,Manufacturer DFM + bench test
+PMC-017,OEM X10-X23,ID_METHOD_FROZEN,EXACT_CONNECTORS_PENDING,PHYSICAL_ID_PENDING,GATED,Exact connector/pigtail identification,OEM ID register,CRITICAL,Physical evidence capture
+PMC-018,Branch Dimensions,METHOD_FROZEN,MEASUREMENT_PROCESS_READY,MEASUREMENT_PENDING,GATED,Physical bike dimensions,Dimension schedule,CRITICAL,Workshop measurement session
+PMC-019,Manufacturer DFM,REV2_RELEASED,RETURN_PENDING,NA,GATED,Manufacturer response,Return review PASS,CRITICAL,Issue Rev2 ZIP
+PMC-020,Prototype Acceptance,PROCESS_FROZEN,FUTURE,FUTURE,FUTURE,Manufacturing release,40-row acceptance register,FUTURE,After release
+PMC-021,Golden Harness,PROCESS_FROZEN,FUTURE,FUTURE,FUTURE,Successful prototype qualification,Golden Harness PASS,FUTURE,After prototype
+PMC-022,Repeat Production,CONFIG_CONTROL_FROZEN,FUTURE,FUTURE,FUTURE,Golden Harness/as-built freeze,Repeat build release,FUTURE,After validation
