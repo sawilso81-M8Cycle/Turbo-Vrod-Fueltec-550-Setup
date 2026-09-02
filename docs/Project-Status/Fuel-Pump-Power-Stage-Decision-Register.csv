@@ -1,0 +1,3 @@
+Decision_ID,Pump,Exact_PN,Measured_Continuous_A,Measured_Peak_A,Test_Voltage_V,Test_Pressure,Feed_mm2,Return_mm2,Connector_Rating_A,PMU_Channel,PMU_Continuous_Rating_A,PMU_Transient_Data,PMU_Thermal_Derating_Reviewed,PMU_Direct_Margin_A,Nuisance_Limit_Risk,External_Relay_Candidate,External_Solid_State_Candidate,Decision,Evidence,State,Approved_By,Date,Notes
+FPS-001,Pump 1,TBD,TBD,TBD,TBD,TBD,4.0,4.0,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,UNDECIDED,TBD,OPEN,TBD,TBD,Do not release until exact pump and measured current are verified
+FPS-002,Pump 2,TBD,TBD,TBD,TBD,TBD,4.0,4.0,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,UNDECIDED,TBD,OPEN,TBD,TBD,Do not release until exact pump and measured current are verified
