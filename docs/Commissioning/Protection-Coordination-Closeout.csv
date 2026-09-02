@@ -1,0 +1,14 @@
+Gate_ID,Branch,Requirement,Acceptance_Criteria,State,Evidence,Blocker,Decision,Owner,Date,Notes
+PCC-001,B15,Load cases populated,LC-01 through LC-07 applicable states supported by evidence,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+PCC-002,B15,10mm2 path compatibility,Wire terminals junctions and routing accepted,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+PCC-003,B15,Primary protection selected,Rating/type supported by load and downstream coordination,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+PCC-004,B15,Voltage drop accepted,Calculated/prototype measured drop acceptable,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+PCC-005,B39,Injector architecture frozen,Direct or peak-and-hold decision complete,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+PCC-006,B39,Conductor/terminal path accepted,Final wire and every terminal compatible,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+PCC-007,B39,Protection frozen,Protection/current limit supported by measured injector evidence,OPEN,TBD,TBD,B39_PROTECTION_FROZEN,TBD,TBD,TBD
+PCC-008,B40,Dwell/current evidence accepted,SparkPRO/coil evidence sufficient for load definition,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+PCC-009,B40,Conductor/terminal path accepted,Final wire and every terminal compatible,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+PCC-010,B40,Protection frozen,Protection/current limit supported by measured ignition evidence,OPEN,TBD,TBD,B40_PROTECTION_FROZEN,TBD,TBD,TBD
+PCC-011,ALL,Selective coordination reviewed,Downstream branch fault clearing does not unnecessarily remove unrelated loads where practical,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+PCC-012,ALL,Thermal path accepted,No abnormal wire terminal connector junction or protection-device heating,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+PCC-013,ALL,Engineering release,B15 B39 B40 final decisions signed,OPEN,TBD,TBD,HP3_CONTRIBUTION_PASS,TBD,TBD,TBD
