@@ -1,0 +1,44 @@
+Gate_ID,System,Requirement,Acceptance_Criteria,State,Evidence,Correction_or_Deviation,Decision,Approved_By,Date,Notes
+GF0-01,TRACEABILITY,Harness identity,Serial/revision/manufacturer/build date recorded,OPEN,TBD,TBD,GF0_TRACEABILITY_ACCEPTED,TBD,TBD,TBD
+GF0-02,TRACEABILITY,Race configuration identity,FT550 PMU SparkPRO protection and envelope revisions recorded,OPEN,TBD,TBD,GF0_TRACEABILITY_ACCEPTED,TBD,TBD,TBD
+GF1-01,PHYSICAL,Connector housings/PNs,Match final as-built BOM,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+GF1-02,PHYSICAL,Terminal families/wire sizes,Match final schedules and approved ranges,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+GF1-03,FUEL_PUMP,Pump wiring,4.0mm2 minimum feeds and dedicated returns retained,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+GF1-04,POWER,B15 conductor,Matches final released size/spec,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+GF1-05,EPM,B39/B40 paths,Match final segregated production definition,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+GF1-06,DIMENSIONS,Branch dimensions,Match Golden Harness candidate schedule,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+GF1-07,SPLICES,Splice locations/methods,Match final splice schedule,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+GF1-08,THERMAL,Heat protection,Matches final released schedule,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+GF1-09,SERVICE,X50/X51/X70 hardware,Matches final approved hardware,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+GF1-10,OEM,X10-X23 strategy,Matches final connector/pigtail baseline,OPEN,TBD,TBD,GF1_PHYSICAL_CONFIGURATION_MATCHED,TBD,TBD,TBD
+GF2-01,ELECTRICAL,Circuit assignments,No undocumented circuit change from released schedules,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+GF2-02,PROTECTION,Protection hardware/channel map,Matches final protection schedule,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+GF2-03,CAN,CAN topology,Matches validated linear backbone/service architecture,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+GF2-04,TRIGGER,CKP/CAM wiring,Polarity/routing/shielding match validated release,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+GF2-05,X70,A21 architecture,Dry-contact +12V isolation preserved,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+GF2-06,GROUNDS,Sensor ground segregation,No uncontrolled merge into high-current ground,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+GF2-07,DEVELOPMENT,Temporary wiring removed,No dyno/track temporary wiring included in production baseline,OPEN,TBD,TBD,GF2_ELECTRICAL_CONFIGURATION_MATCHED,TBD,TBD,TBD
+GF3-01,CONDITION,Heat damage,None affecting release suitability,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+GF3-02,CONDITION,Connector/terminal condition,No push-back/fretting/discolouration/seal damage,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+GF3-03,CONDITION,Chafe/tension,No unacceptable wear or branch stress,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+GF3-04,CONDITION,J-P01/J-P02,No loosening/heating evidence,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+GF3-05,CONDITION,Pump/B15/B39/B40,X70 and high-current paths show no recurring thermal defect,OPEN,TBD,TBD,GF3_POST_RACE_CONDITION_ACCEPTED,TBD,TBD,TBD
+GF4-01,DRIFT,Approved deviations reviewed,Each incorporated removed superseded rejected or new revision,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+GF4-02,DRIFT,Trackside changes reviewed,No undocumented change enters production,OPEN,TBD,TBD,GF4_CONFIGURATION_DRIFT_CLOSED,TBD,TBD,TBD
+GF5-01,DOCUMENTS,As-built BOM frozen,Points to Golden Harness revision,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+GF5-02,DOCUMENTS,Wire/cavity/splice/protection schedules frozen,All point to same revision,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+GF5-03,DOCUMENTS,Dimension/formboard schedule frozen,All point to same revision,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+GF5-04,DOCUMENTS,Terminal/sleeving/label schedules frozen,All point to same revision,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+GF5-05,DOCUMENTS,Build/test/inspection documents frozen,Traveller HP6 HP7 serial record and test plan aligned,OPEN,TBD,TBD,GF5_GOLDEN_HARNESS_DOCUMENT_SET_FROZEN,TBD,TBD,TBD
+GF6-01,GOLDEN_HARNESS,Prototype acceptance complete,All applicable prototype acceptance rows PASS,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+GF6-02,GOLDEN_HARNESS,Corrections incorporated,Golden Harness correction register closed,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+GF6-03,GOLDEN_HARNESS,Manufacturer repeatability confirmed,Formboard/process and materials accepted,OPEN,TBD,TBD,GOLDEN_HARNESS_VALIDATED,TBD,TBD,TBD
+GF7-01,PROCESS,Formboard/fixture frozen,Revision controlled,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+GF7-02,PROCESS,Crimp/pull-test process controlled,Manufacturer process accepted,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+GF7-03,PROCESS,Continuity/isolation test active,100 percent production test controlled,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+GF7-04,PROCESS,Serial/substitution/deviation control active,Repeat-build traceability accepted,OPEN,TBD,TBD,GF7_REPEAT_BUILD_PROCESS_ACCEPTED,TBD,TBD,TBD
+GF8-01,FIRST_REPEAT,Repeat article dimensions,Match released Golden Harness tolerance,LOCKED,TBD,TBD,TBD,TBD,TBD,Unlock after GF7
+GF8-02,FIRST_REPEAT,Repeat article electrical build,Cavity wire splice labels and continuity match,LOCKED,TBD,TBD,TBD,TBD,TBD,TBD
+GF8-03,FIRST_REPEAT,Repeat article fit,Vehicle fit accepted where practical,LOCKED,TBD,TBD,GF8_FIRST_REPEAT_ARTICLE_ACCEPTED,TBD,TBD,TBD
+RELEASE,GFR-01,OVERALL,Golden Harness release,GF0 through GF6 complete,NOT_RELEASED,TBD,TBD,GOLDEN_HARNESS_VALIDATED,TBD,TBD,TBD
+RELEASE,GFR-02,OVERALL,Repeat build release,GF7 and GF8 complete,NOT_RELEASED,TBD,TBD,REPEAT_BUILD_RELEASED,TBD,TBD,TBD
