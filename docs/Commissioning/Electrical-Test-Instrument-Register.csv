@@ -1,0 +1,7 @@
+Instrument_ID,Instrument_Type,Manufacturer,Model,Serial_Number,Range,Resolution,Calibration_or_Verification_Date,Calibration_Status,Owner,Suitable_For,Limitations,State,Notes
+INST-001,DC Current Clamp,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,Pump/Fan inrush and steady current,TBD,OPEN,TBD
+INST-002,DMM,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,Voltage drop resistance continuity,TBD,OPEN,TBD
+INST-003,Oscilloscope,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,Ignition/injector/trigger waveform evidence,TBD,OPEN,TBD
+INST-004,Temperature Meter,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,Connector/device thermal checks,TBD,OPEN,TBD
+INST-005,Bench Supply,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,Controlled low-energy tests only,Current/voltage capability must suit test,OPEN,TBD
+INST-006,Battery/Power Source,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,Installed-load current tests,Record source voltage/state,OPEN,TBD
