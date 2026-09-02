@@ -1,0 +1,21 @@
+Handover_ID,Recipient_Role,Deliverable_or_Briefing,Acceptance_Criteria,State,Evidence,Recipient_or_Representative,Issued_By,Date,Notes
+PHA-001,TUNER,Final FT550 race calibration,Release ID revision and SHA256 identity provided,OPEN,TBD,TBD,TBD,TBD,TBD
+PHA-002,TUNER,PMU/SparkPRO configuration,Relevant configuration and change-control boundaries provided,OPEN,TBD,TBD,TBD,TBD,TBD
+PHA-003,TUNER,Fuel/injector/boost baseline,Installed hardware and verified reference conditions documented,OPEN,TBD,TBD,TBD,TBD,TBD
+PHA-004,TUNER,Operating/abort envelope,Current boost RPM pressure AFR temperature and turbo limits reviewed,OPEN,TBD,TBD,TBD,TBD,TBD
+PHA-005,TUNER,Dyno/track evidence,Accepted validation logs and known limitations available,OPEN,TBD,TBD,TBD,TBD,TBD
+PHA-006,HARNESS_BUILDER,Manufacturing release set,Wire cavity splice dimension label and build traveller revisions provided,OPEN,TBD,TBD,TBD,TBD,TBD
+PHA-007,HARNESS_BUILDER,Quality gates,HP6 HP7 and repeat-build qualification requirements acknowledged,OPEN,TBD,TBD,TBD,TBD,TBD
+PHA-008,HARNESS_BUILDER,Approved BOM/substitutions,Only released materials/substitutions permitted,OPEN,TBD,TBD,TBD,TBD,TBD
+PHA-009,RACE_CREW,Race release identity,Current race release ID and configuration check method briefed,OPEN,TBD,TBD,TBD,TBD,TBD
+PHA-010,RACE_CREW,Pre/post-run checks,Operational inspection checklist briefed,OPEN,TBD,TBD,TBD,TBD,TBD
+PHA-011,RACE_CREW,Two-Step/boost limits,Released launch RPM duration boost and normal boost envelope briefed,OPEN,TBD,TBD,TBD,TBD,TBD
+PHA-012,RACE_CREW,Emergency/abort response,Shutdown and no-go conditions briefed,OPEN,TBD,TBD,TBD,TBD,TBD
+PHA-013,RACE_CREW,Spares/field repair,Approved spares and field repair boundaries briefed,OPEN,TBD,TBD,TBD,TBD,TBD
+PHA-014,MAINTENANCE,Wiring/service documentation,Final wiring cavity splice ground CAN and protection records provided,OPEN,TBD,TBD,TBD,TBD,TBD
+PHA-015,MAINTENANCE,Repair rules,Field repair and required retest rules acknowledged,OPEN,TBD,TBD,TBD,TBD,TBD
+PHA-016,MAINTENANCE,Inspection triggers,Periodic/event-driven inspection strategy acknowledged,OPEN,TBD,TBD,TBD,TBD,TBD
+PHA-017,OWNER,Rollback archive,LAST_KNOWN_GOOD_RACE DYNO FIRST_START and CURRENT_DEVELOPMENT locations confirmed,OPEN,TBD,TBD,TBD,TBD,TBD
+PHA-018,OWNER,Change control,Class A/B/C/D post-completion change policy accepted,OPEN,TBD,TBD,TBD,TBD,TBD
+PHA-019,PROJECT,Release index,All applicable controlled documents/revisions resolved,OPEN,TBD,TBD,TBD,TBD,TBD
+PHA-020,PROJECT,Final handover release,All applicable handover rows PASS,NOT_RELEASED,TBD,TBD,TBD,TBD,Issue PROJECT_HANDOVER_COMPLETE then IN_SERVICE_CONFIGURATION_CONTROL_ACTIVE
