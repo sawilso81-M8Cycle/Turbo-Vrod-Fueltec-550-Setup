@@ -1,0 +1,21 @@
+Check_ID,Requirement,Acceptance_Criteria,State,Evidence,Blocker,Engineering_Disposition,Owner,Date,Notes
+SJC-001,J-P01 hardware,Exact junction/distribution hardware and rating frozen,OPEN,TBD,TBD,PENDING,TBD,TBD,TBD
+SJC-002,J-P01 stack-up,Every ring/terminal and branch stack-up documented,OPEN,TBD,TBD,PENDING,TBD,TBD,TBD
+SJC-003,J-P02 hardware,Exact ground-star hardware and rating frozen,OPEN,TBD,TBD,PENDING,TBD,TBD,TBD
+SJC-004,J-P02 segregation,No precision sensor ground merged into J-P02,OPEN,TBD,TBD,PENDING,TBD,TBD,TBD
+SJC-005,5V splice,Every released 5V consumer listed and conductor sizes frozen,OPEN,TBD,TBD,PENDING,TBD,TBD,TBD
+SJC-006,Sensor-ground splice,Every released sensor return listed and segregated,OPEN,TBD,TBD,PENDING,TBD,TBD,TBD
+SJC-007,B39 split,Injector power split matches final driver architecture,OPEN,TBD,TBD,PENDING,TBD,TBD,TBD
+SJC-008,B40 split,Ignition/SparkPRO power split matches final architecture,OPEN,TBD,TBD,PENDING,TBD,TBD,TBD
+SJC-009,B11/B12,Auxiliary splice or direct-branch topology explicitly frozen,OPEN,TBD,TBD,PENDING,TBD,TBD,TBD
+SJC-010,CAN branch,X51 service branch exact splice method/location/length frozen,OPEN,TBD,TBD,PENDING,TBD,TBD,TBD
+SJC-011,CAN termination,No hidden resistor or undocumented CAN star created,OPEN,TBD,TBD,PENDING,TBD,TBD,TBD
+SJC-012,CKP/CAM,Any repair-pigtail splice preserves polarity/shield/twist,OPEN,TBD,TBD,PENDING,TBD,TBD,TBD
+SJC-013,Service power,Optional X50/X51 service-power split protected or explicitly DNP,OPEN,TBD,TBD,PENDING,TBD,TBD,TBD
+SJC-014,Splice method,Manufacturer splice method/tooling accepted for each conductor class,OPEN,TBD,TBD,PENDING,TBD,TBD,TBD
+SJC-015,Seal/insulation,Every production splice sealing/insulation method frozen,OPEN,TBD,TBD,PENDING,TBD,TBD,TBD
+SJC-016,Physical location,Every production splice/junction tied to datum or controlled location,OPEN,TBD,TBD,PENDING,TBD,TBD,TBD
+SJC-017,Movement zones,No splice placed in steering/suspension high-flex zone,OPEN,TBD,TBD,PENDING,TBD,TBD,TBD
+SJC-018,Thermal zones,No unprotected splice placed in unacceptable turbo/exhaust heat zone,OPEN,TBD,TBD,PENDING,TBD,TBD,TBD
+SJC-019,Documentation,No undocumented electrical join remains in released loom,OPEN,TBD,TBD,PENDING,TBD,TBD,TBD
+SJC-020,HP5 release,All applicable splice/junction rows complete and accepted,OPEN,TBD,TBD,SPLICE_JUNCTION_MASTER_SCHEDULE_HP5_RELEASED,TBD,TBD,TBD
