@@ -1,0 +1,21 @@
+Test_ID,System,Requirement,Acceptance_Criteria,Evidence,State
+PWR-001,B15,Cable size,10.0 mm2 production baseline used unless formally upsized,Build record,OPEN
+PWR-002,B15,Installed length,Final route and finished length recorded,Dimension report,OPEN
+PWR-003,B15,Positive termination,M6 PMU stud ring terminal matches 10 mm2 conductor and approved stud hardware,Crimp/PN record,OPEN
+PWR-004,J-P01,Positive junction,J-P01 insulated fixed labelled and rated for aggregate branch current,Hardware datasheet + photo,OPEN
+PWR-005,Protection,Master protection location,Protection fitted as close to source/J-P01 as practical and protects B15 cable,Installed photo,OPEN
+PWR-006,Protection,Master protection rating,Rating based on simultaneous-load model cable ampacity terminal ratings and fuse time-current data,Calculation record,OPEN
+PWR-007,Load,Key-on total current,Measured/calculated key-on PMU current recorded,PMU log/current measurement,OPEN
+PWR-008,Load,Cranking total current,Measured PMU/system current state recorded during crank,PMU log/current measurement,OPEN
+PWR-009,Load,Hot idle total current,Measured with radiator fan and normal hot auxiliaries operating,PMU log/current measurement,OPEN
+PWR-010,Load,Boost/race total current,Maximum credible PMU load state recorded,PMU log/current measurement,OPEN
+PWR-011,Load,Two-Step total current,Launch/Two-Step operating state recorded if applicable,PMU log/current measurement,OPEN
+PWR-012,B15,Voltage drop,Voltage drop source/J-P01 to PMU stud acceptable at maximum credible PMU load,DMM/logger record,OPEN
+PWR-013,B15,Thermal,Cable ring terminal PMU stud and J-P01 remain within approved thermal limits,Thermal record,OPEN
+PWR-014,Ground,J-P02 architecture,High-current returns use approved J-P02/power-ground path and not sensor grounds,Continuity/visual audit,OPEN
+PWR-015,Ground,Battery negative to engine,Bond secure low-resistance and voltage drop acceptable under cranking,Voltage-drop record,OPEN
+PWR-016,Ground,Engine/chassis bond,If chassis is used as return path bond is validated under load,Voltage-drop record or N/A,OPEN
+PWR-017,Ground,PMU ground,PMU module ground correctly terminated and not carrying heavy auxiliary return current,Continuity/current-path audit,OPEN
+PWR-018,Ground,Sensor isolation,FT550 sensor/reference grounds remain segregated from pump/fan/coil high-current returns,Continuity/topology audit,OPEN
+PWR-019,External stages,External pump stage branch,If fitted receives dedicated protection and is supplied from approved J-P01 architecture,Build/protection record or N/A,OPEN
+PWR-020,Release,Primary power acceptance,PWR-001 through applicable PWR-019 PASS,Engineering signoff,PRIMARY_POWER_NOT_ACCEPTED
