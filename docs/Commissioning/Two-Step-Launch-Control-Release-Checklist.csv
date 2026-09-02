@@ -1,0 +1,21 @@
+Gate_ID,System,Requirement,Acceptance_Criteria,State,Evidence,Blocker_or_Retest,Decision,Approved_By,Date,Notes
+TSR-001,ENTRY,Dyno commissioning,DYNO_LOAD_COMMISSIONING_ACCEPTED,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+TSR-002,ENTRY,Controlled boost release,CONTROLLED_BOOST_OPERATION_RELEASED current,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+TSR-003,CONFIG,Configuration freeze,FT550 PMU X70 clutch and launch parameters recorded,OPEN,TBD,TBD,TS0_CONFIGURATION_ACCEPTED,TBD,TBD,TBD
+TSR-004,CLUTCH,Input truth table,Physical/input/debounce/fault states verified,OPEN,TBD,TBD,TS1_CLUTCH_INPUT_ACCEPTED,TBD,TBD,TBD
+TSR-005,X70,A21 electrical chain,PMU O11 X70 and FT550 A21 truth table passes,OPEN,TBD,TBD,TS2_ELECTRICAL_CHAIN_ACCEPTED,TBD,TBD,TBD
+TSR-006,X70,A21 +12V isolation,A21 dry-contact side remains isolated from +12V,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+TSR-007,RUNNING,Non-event behaviour,Normal clutch use cannot trigger unintended launch control,LOCKED,TBD,TBD,TS3_NON_EVENT_BEHAVIOUR_ACCEPTED,TBD,TBD,Unlock after electrical truth table
+TSR-008,TWO_STEP,First conservative event,Short low-risk event passes all approved limits,LOCKED,TBD,TBD,TS4_FIRST_EVENT_ACCEPTED,TBD,TBD,Unlock after TS3
+TSR-009,LAUNCH_RPM,RPM Stage 1,Stage limits satisfied and thermal recovery accepted,LOCKED,TBD,TBD,LAUNCH_RPM_STAGE_1_ACCEPTED,TBD,TBD,TBD
+TSR-010,LAUNCH_RPM,RPM Stage 2,Stage limits satisfied and thermal recovery accepted,LOCKED,TBD,TBD,LAUNCH_RPM_STAGE_2_ACCEPTED,TBD,TBD,TBD
+TSR-011,LAUNCH_RPM,RPM Stage 3,Stage limits satisfied and thermal recovery accepted,LOCKED,TBD,TBD,LAUNCH_RPM_STAGE_3_ACCEPTED,TBD,TBD,TBD
+TSR-012,LAUNCH_BOOST,Boost Stage 1,Progressive launch boost stage accepted,LOCKED,TBD,TBD,LAUNCH_BOOST_STAGE_1_ACCEPTED,TBD,TBD,TBD
+TSR-013,LAUNCH_BOOST,Boost Stage 2,Progressive launch boost stage accepted,LOCKED,TBD,TBD,LAUNCH_BOOST_STAGE_2_ACCEPTED,TBD,TBD,TBD
+TSR-014,RELEASE,Clutch release transition,No chatter retrigger persistent cut or uncontrolled boost transition,LOCKED,TBD,TBD,TS7_RELEASE_TRANSITION_ACCEPTED,TBD,TBD,TBD
+TSR-015,FAILSAFE,Maximum activation timeout,Timeout/recovery/re-arm behaviour verified,LOCKED,TBD,TBD,TS8_TIMEOUT_FAILSAFE_ACCEPTED,TBD,TBD,TBD
+TSR-016,FAULTS,Fault-state behaviour,Credible input/relay/PMU/CAN faults fail safely,LOCKED,TBD,TBD,TS9_FAULT_STATE_ACCEPTED,TBD,TBD,TBD
+TSR-017,THERMAL,Thermal repeatability,Repeated accepted events show no adverse thermal/electrical trend,LOCKED,TBD,TBD,TS10_THERMAL_REPEATABILITY_ACCEPTED,TBD,TBD,TBD
+TSR-018,DATA,Logs/configurations archived,Every event traceable to exact FT550/PMU configuration,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+TSR-019,RELEASE,Launch operating envelope,Max RPM duration boost fuel calibration and restrictions explicitly recorded,NOT_RELEASED,TBD,TBD,TBD,TBD,TBD,TBD
+TSR-020,OVERALL,Two-Step commissioning review,All applicable checks PASS,NOT_RELEASED,TBD,TBD,TWO_STEP_LAUNCH_CONTROL_COMMISSIONED,TBD,TBD,Does not equal final race validation
