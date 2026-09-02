@@ -1,0 +1,21 @@
+Test_ID,System,Requirement,Acceptance_Criteria,Evidence,State
+FPIF-001,X30/X31,Connector family,TE HDSCS AMP MCP 6.3/4.8K 2-position sealed family or approved equivalent,Build/DFM record,OPEN
+FPIF-002,X30/X31,Feed conductor,4.0 mm2 feed maintained through service interface,Wire/cavity audit,OPEN
+FPIF-003,X30/X31,Return conductor,4.0 mm2 dedicated return maintained through service interface,Wire/cavity audit,OPEN
+FPIF-004,X30/X31,Contact wire range,Selected contact explicitly supports actual 4.0 mm2 wire and insulation diameter,Datasheet/crimp record,OPEN
+FPIF-005,X30/X31,Current capability,Selected contact/housing continuous rating exceeds measured pump steady current with thermal margin,Datasheet + test,OPEN
+FPIF-006,X30/X31,Inrush capability,Measured pump inrush does not create unacceptable heating/arcing/contact damage,Powered test,OPEN
+FPIF-007,X30/X31,Voltage drop,Mated connector voltage drop acceptable at representative pump current,Voltage-drop record,OPEN
+FPIF-008,X30/X31,Temperature rise,Connector/contact temperature acceptable at representative current and ambient,Thermal test,OPEN
+FPIF-009,X30/X31,Polarity,Cavity mapping prevents reversed pump polarity,Continuity/cavity report,OPEN
+FPIF-010,X30/X31,Keying,Pump 1 and Pump 2 cannot be accidentally cross-connected where both fitted,Physical/label audit,OPEN
+FPIF-011,Pump pigtail,Native pump interface,Exact pump-side connector/pigtail identified and documented,PN/photos,OPEN
+FPIF-012,Pump pigtail,No hidden downsizing,Any conductor reduction below 4.0 mm2 is explicitly justified by pump-native design/current evidence,As-built audit,OPEN
+FPIF-013,Environment,Sealing/placement,Connector mounted outside direct fuel immersion and away from excessive heat unless specifically rated,Installed photos,OPEN
+FPIF-014,Mechanical,Strain relief,Connector and pigtail supported so pump vibration is not carried into terminals,Physical inspection,OPEN
+FPIF-015,PMU,Direct-drive option,If direct PMU selected exact PMU HW/output/terminal/current/thermal evidence all PASS,Decision record,DNP_OR_OPEN
+FPIF-016,Power stage,External-stage option,If external relay/SSR selected switching hardware and protection are frozen and tested,Decision record,DNP_OR_OPEN
+FPIF-017,Protection,Branch protection,Fuse/electronic protection coordinated to conductor connector pump and switching device,Protection record,OPEN
+FPIF-018,Crimp,Crimp quality,Correct tooling conductor brush seal compression retention and pull-test evidence,QA record,OPEN
+FPIF-019,Service,Replacement,Main harness remains serviceable without cutting when pump/pigtail is replaced,Physical inspection,OPEN
+FPIF-020,Release,Fuel-pump interface acceptance,Applicable FPIF-001 through FPIF-019 PASS,Engineering signoff,FUEL_PUMP_INTERFACE_NOT_ACCEPTED
