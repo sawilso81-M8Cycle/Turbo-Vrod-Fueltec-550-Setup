@@ -1,0 +1,4 @@
+Branch,Function,Baseline_Wire_mm2,Final_Wire_mm2,One_Way_Length_mm,Continuous_Load_A,Transient_Load_A,Protection_Type,Protection_Value_A,PMU_Channel_or_Device,Terminal_PN,Terminal_Rating_A,Junction_or_Connector_Rating_A,Calculated_Drop_V,Measured_Drop_V,Hot_Test_Result,Coordination_Result,Evidence,Engineering_State,Approved_By,Date,Notes
+B15,Primary PMU16 feed,10.0,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,OPEN,TBD,TBD,10mm2 baseline remains until final evidence review
+B39,Injector supply,1.0_BASELINE,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,OPEN,TBD,TBD,Re-evaluate if peak-and-hold stage selected
+B40,SparkPRO ignition supply,1.5_BASELINE,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,OPEN,TBD,TBD,Must use measured SparkPRO/coil/dwell evidence
