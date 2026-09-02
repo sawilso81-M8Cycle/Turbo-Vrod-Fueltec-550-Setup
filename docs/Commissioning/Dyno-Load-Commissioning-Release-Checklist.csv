@@ -1,0 +1,21 @@
+Gate_ID,System,Requirement,Acceptance_Criteria,State,Evidence,Blocker_or_Retest,Decision,Approved_By,Date,Notes
+DCR-001,ENTRY,Low-load heat-cycle validation,LOW_LOAD_HEAT_CYCLE_VALIDATED,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+DCR-002,DYNO,Dyno restraint/cooling/safety,Setup suitable for planned load and emergency shutdown,OPEN,TBD,TBD,DL0_DYNO_SETUP_ACCEPTED,TBD,TBD,TBD
+DCR-003,CONFIG,Configuration archived,FT550 PMU SparkPRO and fuel/wastegate configuration recorded,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+DCR-004,FUEL,Fuel pressure monitoring,Verified and logged under load,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+DCR-005,OIL,Oil pressure monitoring,Verified and logged under load,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+DCR-006,WIDEBAND,AFR/lambda monitoring,Verified and suitable for loaded operation,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+DCR-007,DL1,Low-load dyno stage,Stable electrical fuel ignition trigger and thermal behaviour,OPEN,TBD,TBD,DL1_LOW_LOAD_DYNO_ACCEPTED,TBD,TBD,TBD
+DCR-008,DL2,Base boost/wastegate,Mechanical boost behaviour verified without uncontrolled creep,OPEN,TBD,TBD,DL2_BASE_BOOST_VERIFIED,TBD,TBD,TBD
+DCR-009,DL3,Fuel differential,Pressure differential/pump current/injector duty remain acceptable,OPEN,TBD,TBD,DL3_FUEL_DELIVERY_ACCEPTED,TBD,TBD,TBD
+DCR-010,BOOST,Boost Stage 1,All approved Stage 1 thresholds satisfied,LOCKED,TBD,TBD,BOOST_STAGE_1_ACCEPTED,TBD,TBD,Unlock after DL3
+DCR-011,BOOST,Boost Stage 2,All approved Stage 2 thresholds satisfied,LOCKED,TBD,TBD,BOOST_STAGE_2_ACCEPTED,TBD,TBD,Unlock only after Stage 1
+DCR-012,BOOST,Boost Stage 3,All approved Stage 3 thresholds satisfied,LOCKED,TBD,TBD,BOOST_STAGE_3_ACCEPTED,TBD,TBD,Unlock only after Stage 2
+DCR-013,IGNITION,Ignition review,Timing/dwell/combustion evidence reviewed conservatively,OPEN,TBD,TBD,DL5_IGNITION_REVIEW_ACCEPTED,TBD,TBD,TBD
+DCR-014,TURBO,Turbo speed,Exact turbo limit and sensor scaling accepted or DNP,OPEN,TBD,TBD,DL6_TURBO_SPEED_VALIDATED_OR_DNP,TBD,TBD,TBD
+DCR-015,ELECTRICAL,High-load electrical validation,B15 pumps B39 B40 charging PMU and thermal paths stable,OPEN,TBD,TBD,DL7_HIGH_LOAD_ELECTRICAL_ACCEPTED,TBD,TBD,TBD
+DCR-016,THERMAL,Recovery/repeatability,Accepted stages repeat without adverse thermal/electrical drift,OPEN,TBD,TBD,DL8_REPEATABILITY_ACCEPTED,TBD,TBD,TBD
+DCR-017,TWO_STEP,Two-Step state,Remains disabled for this gate unless separately authorised,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+DCR-018,DATA,Run logs archived,Original logs and calibration revisions retained for every run,OPEN,TBD,TBD,TBD,TBD,TBD,TBD
+DCR-019,RELEASE,Controlled boost envelope,Boost/RPM/fuel/calibration/restrictions explicitly documented,NOT_RELEASED,TBD,TBD,CONTROLLED_BOOST_OPERATION_RELEASED,TBD,TBD,TBD
+DCR-020,OVERALL,Dyno commissioning review,All applicable DCR checks PASS,NOT_RELEASED,TBD,TBD,DYNO_LOAD_COMMISSIONING_ACCEPTED,TBD,TBD,Does not equal final race calibration
