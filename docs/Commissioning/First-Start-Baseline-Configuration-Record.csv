@@ -1,0 +1,19 @@
+Config_ID,System,Parameter_or_Item,Value,Units_or_Format,Source_or_Rationale,Evidence,State,Approved_By,Date,Notes
+FSC-001,FT550,Calibration filename,TBD,file,Controlled baseline,TBD,OPEN,TBD,TBD,Preserve original file
+FSC-002,FT550,Calibration revision,TBD,revision,Controlled baseline,TBD,OPEN,TBD,TBD,TBD
+FSC-003,INJECTOR,Installed injector PN,TBD,PN,Physical verification,TBD,OPEN,TBD,TBD,TBD
+FSC-004,INJECTOR,Injector characterization/data source,TBD,reference,Manufacturer/verified source,TBD,OPEN,TBD,TBD,TBD
+FSC-005,FUEL,Base fuel pressure target,TBD,kPa_or_bar,Verified installed fuel-system specification,TBD,OPEN,TBD,TBD,Record reference condition
+FSC-006,TRIGGER,CKP/trigger configuration,TBD,configuration,Verified hardware/FT550 setup,TBD,OPEN,TBD,TBD,TBD
+FSC-007,TRIGGER,CAM/sync configuration,TBD,configuration,Verified hardware/FT550 setup,TBD,OPEN,TBD,TBD,DNP if not used
+FSC-008,IGNITION,Ignition output mapping,TBD,configuration,Released wiring/configuration,TBD,OPEN,TBD,TBD,TBD
+FSC-009,IGNITION,Dwell baseline,TBD,ms_or_table,Verified coil/SparkPRO evidence,TBD,OPEN,TBD,TBD,Do not guess
+FSC-010,STARTING,Cranking fuel baseline,TBD,configuration,Verified starting calibration,TBD,OPEN,TBD,TBD,TBD
+FSC-011,IDLE,Initial idle target,TBD,rpm,Approved commissioning calibration,TBD,OPEN,TBD,TBD,TBD
+FSC-012,LIMIT,Initial rev limit,TBD,rpm,Approved commissioning safety limit,TBD,OPEN,TBD,TBD,Conservative first-run limit
+FSC-013,BOOST,Boost control state,DISABLED,state,First-start policy,TBD,OPEN,TBD,TBD,Must remain disabled for this gate
+FSC-014,TWO_STEP,Two-Step/launch state,DISABLED,state,First-start policy,TBD,OPEN,TBD,TBD,Electrical function already tested dead-engine
+FSC-015,WIDEBAND,Wideband configuration,TBD,configuration,Installed sensor/controller verification,TBD,OPEN,TBD,TBD,TBD
+FSC-016,PMU,PMU configuration filename/revision,TBD,file_or_revision,Controlled baseline,TBD,OPEN,TBD,TBD,Preserve original export
+FSC-017,SPARKPRO,SparkPRO hardware/configuration,TBD,PN_or_configuration,Physical/electrical verification,TBD,OPEN,TBD,TBD,TBD
+FSC-018,RELEASE,First-start baseline configuration review,TBD,PASS_FAIL,All required baseline fields accepted,TBD,NOT_RELEASED,TBD,TBD,Required before fuel and spark are enabled
