@@ -1,0 +1,14 @@
+wire_type_id,display_name,metric_mm2,construction,class,twisted,shielded,canonical_status,notes
+W035,0.35 mm2 motorsport thin-wall,0.35,M22759/32 ETFE or approved equivalent,GENERAL,false,false,BASELINE,Final manufacturer wire PN may be DFM-selected
+W050,0.50 mm2 motorsport thin-wall,0.50,M22759/32 ETFE or approved equivalent,GENERAL,false,false,BASELINE,TBD color/ident
+W075,0.75 mm2 motorsport thin-wall,0.75,M22759/32 ETFE or approved equivalent,GENERAL,false,false,BASELINE,TBD color/ident
+W100,1.00 mm2 motorsport thin-wall,1.00,M22759/32 ETFE or approved equivalent,GENERAL,false,false,BASELINE,TBD color/ident
+W150,1.50 mm2 motorsport thin-wall,1.50,M22759/32 ETFE or approved equivalent,GENERAL,false,false,BASELINE,TBD color/ident
+W200,2.00 mm2 motorsport thin-wall,2.00,M22759/32 ETFE or approved equivalent,GENERAL,false,false,BASELINE,TBD color/ident
+W250,2.50 mm2 motorsport thin-wall,2.50,M22759/32 ETFE or approved equivalent,HIGH_CURRENT,false,false,BASELINE,Fan baseline subject to measured load
+W400,4.00 mm2 high-current motorsport wire,4.00,Automotive/motorsport thin-wall approved equivalent,HIGH_CURRENT,false,false,FROZEN_MINIMUM,Pump feeds and dedicated returns minimum 4.0mm2
+W1000,10.00 mm2 primary power cable,10.00,Automotive/motorsport high-current cable,PRIMARY_POWER,false,false,BASELINE_FROZEN_EVIDENCE_GATED,B15 main PMU feed baseline
+CAN035,CAN twisted pair 2x0.35,0.35,120-ohm characteristic-impedance automotive CAN cable,CAN,true,false,FROZEN,Linear FT550-PMU backbone and short X51 stub
+CKP035,CKP twisted/shielded pair 2x0.35,0.35,Shielded/twisted trigger cable,TRIGGER,true,true,PHYSICAL_VERIFY,Polarity and shield termination must follow released trigger evidence
+SENSOR035,Precision sensor 0.35,0.35,M22759/32 ETFE or approved equivalent,PRECISION_SENSOR,false,false,FROZEN_CLASS,Must use FT550 reference/sensor-ground architecture
+SERVICE075,Service power/ground 0.75,0.75,M22759/32 ETFE or approved equivalent,SERVICE,false,false,BASELINE,Low-current service use only
