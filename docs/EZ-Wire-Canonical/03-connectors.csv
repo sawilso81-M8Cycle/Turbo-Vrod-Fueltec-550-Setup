@@ -1,0 +1,28 @@
+connector_id,harness_id,device_id,connector_name,cavity_count,part_number_or_family,release_state,notes
+FT550-A,H-MAIN,D-FT550,FT550 Main Connector A,TBD,FuelTech supplied/service family,FUNCTION_FROZEN_CAVITY_VERIFY,Exact service housing/terminals verify
+FT550-B,H-MAIN,D-FT550,FT550 Main Connector B,TBD,FuelTech supplied/service family,FUNCTION_FROZEN_CAVITY_VERIFY,Exact service housing/terminals verify
+PMU16,H-MAIN,D-PMU16,ECUMASTER PMU16 Main,39,Sicma/FCI 39-position family,VERIFIED_PIN_CAPABILITY,Use verified PMU physical pin numbers
+SPARKPRO,H-IGN,D-SPARKPRO,SparkPRO 2,6,FuelTech SparkPRO connector,VERIFY_REVISION,Pin-function map controlled by SparkPRO evidence
+X10,H-SENS,D-CKP,CKP OEM Connector,2,TBD,PHYSICAL_ID_REQUIRED,OEM housing/terminal/seal verify
+X11,H-SENS,D-CAM,CAM OEM Connector,TBD,TBD,DNP_OR_PHYSICAL_ID_REQUIRED,DNP if CAM not used
+X12,H-SENS,D-TPS,TPS OEM Connector,3,TBD,PHYSICAL_ID_REQUIRED,5V signal ground cavities verify
+X13,H-SENS,D-MAP,MAP OEM Connector,3,TBD,PHYSICAL_ID_REQUIRED,5V signal ground cavities verify
+X14,H-SENS,D-ECT,Engine Temperature OEM Connector,2,TBD,PHYSICAL_ID_REQUIRED,Signal/return cavities verify
+X15,H-SENS,D-IAT,IAT OEM Connector,2,TBD,PHYSICAL_ID_REQUIRED,Signal/return cavities verify
+X16,H-SENS,D-VSS,VSS OEM Connector,3,TBD,PHYSICAL_ID_REQUIRED,Supply/signal/ground cavities verify
+X19,H-INJ,D-INJ-F,Front Injector OEM Connector,2,TBD,PHYSICAL_ID_REQUIRED,+12V and command cavities verify
+X20,H-INJ,D-INJ-R,Rear Injector OEM Connector,2,TBD,PHYSICAL_ID_REQUIRED,+12V and command cavities verify
+X21,H-IGN,D-COIL-F,Front Coil OEM Connector,TBD,TBD,PHYSICAL_ID_REQUIRED,Exact cavity map verify
+X22,H-IGN,D-COIL-R,Rear Coil OEM Connector,TBD,TBD,PHYSICAL_ID_REQUIRED,Exact cavity map verify
+X30,H-PUMP1,D-PUMP1,Pump 1 HDSCS Service Connector,2,TE HDSCS AMP MCP 6.3/4.8K 2-pos baseline,DFM_PENDING,Cav1 +12 feed; Cav2 dedicated return
+X31,H-PUMP2,D-PUMP2,Pump 2 HDSCS Service Connector,2,TE HDSCS AMP MCP 6.3/4.8K 2-pos alternate key,DFM_PENDING,Cav1 +12 feed; Cav2 dedicated return
+X50,H-X50,D-X50,Engineering Service Connector,TBD,TBD,DFM_GATED,Only controlled assigned circuits populated
+X51,H-CAN,D-X51,CAN Service Connector,4,Deutsch DTM 4-way family,FUNCTION_FROZEN_PN_PENDING,Cav1 H; Cav2 L; Cav3 GND; Cav4 +12 optional
+X62,H-INJ,,Injector Driver Inlet Service Connector,2,TBD,FUNCTION_FROZEN_PN_PENDING,Cav1 front command; Cav2 rear command
+X63,H-INJ,,Injector Driver Outlet Service Connector,2,TBD,FUNCTION_FROZEN_PN_PENDING,Cav1 front command; Cav2 rear command
+X70,H-2STEP,D-X70,Two-Step Relay Socket,4,Micro-ISO holder/socket DFM selection,DFM_PENDING,Coil A/B; COM; NO
+X71,H-2STEP,D-CLUTCH,Clutch Switch Interface,2,OEM clutch-switch interface,BASELINE,PMU A6 launch request
+J-P01,H-PWR,D-JP01,J-P01 Positive Distribution,TBD,Stud/distribution block DFM selection,DFM_REQUIRED,Primary +12V distribution node
+J-P02,H-PWR,D-JP02,J-P02 High-Current Ground Star,TBD,Stud/ground block DFM selection,DFM_REQUIRED,High-current returns only
+B11-FAN,H-MAIN,D-FAN1,Radiator Fan Interface,TBD,TBD,EVIDENCE_GATED,Exact connector/terminal current capability verify
+B12-PUMP,H-MAIN,D-CCP,Charge Cooler Pump Interface,TBD,TBD,DNP_OR_EVIDENCE_GATED,DNP if not fitted
