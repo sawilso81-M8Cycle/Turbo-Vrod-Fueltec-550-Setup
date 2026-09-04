@@ -1,0 +1,16 @@
+item_id,category,affected_objects,required_evidence,current_state,ezwire_rule,notes
+UE-001,PHYSICAL_DIMENSIONS,B01-B44,Actual bike measurements and frozen formboard,OPEN,KEEP_PROVISIONAL_LENGTHS,Do not treat prototype cut lengths as production lengths
+UE-002,OEM_CONNECTORS,X10;X11;X12;X13;X14;X15;X16;X19;X20;X21;X22,Physical connector housing terminal seal and cavity evidence,OPEN,KEEP_TBD_CAVITIES,Do not infer cavity numbering from photos
+UE-003,FUEL_PUMP_1,D-PUMP1;PWR-002;GND-001,Exact PN steady current transient current pressure voltage-drop evidence,OPEN,NO_PMUDIRECT_RELEASE,4.0mm2 feed/return remains locked
+UE-004,FUEL_PUMP_2,D-PUMP2;PWR-003;GND-002,Exact PN and current evidence or explicit DNP,OPEN,NO_PMUDIRECT_RELEASE,4.0mm2 feed/return if fitted
+UE-005,INJECTORS,D-INJ-F;D-INJ-R;INJ-003;INJ-004,Exact PN impedance/current and FT550 driver compatibility,OPEN,DRIVER_BAY_UNRESOLVED,Do not choose direct bypass or Peak & Hold without evidence
+UE-006,IGNITION,D-COIL-F;D-COIL-R;D-SPARKPRO;B40,Exact coil PN SparkPRO revision dwell source and current evidence,OPEN,PROTECTION_AND_DWELL_PENDING,Do not guess dwell
+UE-007,PROTECTION,PROT-001..PROT-012,Measured continuous/transient load conductor terminal and device capability,OPEN,LEAVE_LIMITS_TBD,No rounded-up generic fuse/current-limit values
+UE-008,X70_SOCKET,X70,Exact holder/socket terminal/seal part numbers and orientation,DFM_PENDING,KEEP_LOGICAL_CAVITY_NAMES,Relay PN 1393292-5 remains frozen
+UE-009,X51_PARTS,X51,Exact Deutsch DTM housing contact plug and cap PNs,OPEN,FUNCTIONS_CAN_BE_ENTERED_PNS_TBD,No permanent termination
+UE-010,FT550_CAVITIES,FT550-A;FT550-B,Exact FuelTech manual/physical connector confirmation for working cross-references,OPEN,KEEP_VERIFY_FLAGS,Do not promote working references silently
+UE-011,CAN_TERMINATION,H-CAN,Physical endpoint/termination confirmation on installed harness,OPEN,MODEL_TWO_END_TERMINATIONS,1 Mbps linear backbone remains design baseline
+UE-012,SENSOR_SCALING,D-MAP;D-ECT;D-IAT;D-VSS;added sensors,Verified calibration/scaling source and physical sensor identity,OPEN,STORE_DESCRIPTION_NOT_GUESSED_SCALE,Calibration is not a wiring-cavity invention
+UE-013,JUNCTION_HARDWARE,J-P01;J-P02,Exact hardware stud sizes stack-up insulation and terminal compatibility,DFM_REQUIRED,USE_ABSTRACT_JUNCTION_NODES,Ground segregation remains locked
+UE-014,SERVICE_POWER,X50;X51,Decision whether protected service +12V is populated,CONDITIONAL,ALLOW_DNP,No backfeed
+UE-015,PMU_PROJECT_OVERRIDES,PMU16 pin3;pin18;pin32,Later project allocation evidence versus older PMU pinout labels,CONTROLLED_OVERRIDE,USE_LATER_PROJECT_ALLOCATION,O11=X70; A6=clutch discrete; A7 optional clutch position
