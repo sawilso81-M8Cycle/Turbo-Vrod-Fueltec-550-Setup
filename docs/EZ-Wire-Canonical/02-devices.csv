@@ -1,0 +1,25 @@
+device_id,manufacturer,device_name,device_type,connector_ids,canonical_status,notes
+D-FT550,FuelTech,FT550,ECU,FT550-A;FT550-B,PARTLY_VERIFIED,Use exact FuelTech connector/cavity evidence; do not infer unresolved cavities
+D-PMU16,ECUMASTER,PMU16,PDM/PMU,PMU16,VERIFIED_PIN_CAPABILITY,Physical pin capability from PMU16-Pinout-v1.2.csv; project allocation may be later-release override
+D-SPARKPRO,FuelTech,SparkPRO 2,Ignition Driver,SPARKPRO,VERIFY_REVISION,Exact installed hardware revision and dwell remain evidence-gated
+D-CKP,Harley-Davidson,CKP 32313-01A,Sensor,X10,PHYSICAL_ID_REQUIRED,Polarity must be scope verified
+D-CAM,Harley-Davidson,CAM Sensor,Sensor,X11,DNP_OR_PHYSICAL_ID_REQUIRED,Only if final trigger strategy uses CAM
+D-TPS,Harley-Davidson,TPS 27975-01,Sensor,X12,PHYSICAL_ID_REQUIRED,5V signal and precision ground
+D-MAP,Harley-Davidson,MAP 32416-10,Sensor,X13,PHYSICAL_ID_REQUIRED,5V signal and precision ground
+D-ECT,Harley-Davidson,Engine Temperature 32315-01,Sensor,X14,PHYSICAL_ID_REQUIRED,Exact topology/cavities verify
+D-IAT,Harley-Davidson,IAT 27388-01,Sensor,X15,PHYSICAL_ID_REQUIRED,Precision return
+D-VSS,Harley-Davidson,VSS 74402-05B,Sensor,X16,PHYSICAL_ID_REQUIRED,Supply/signal/ground topology verify
+D-INJ-F,VERIFY,Front Injector,Injector,X19,EVIDENCE_GATED,Exact PN impedance and driver compatibility required
+D-INJ-R,VERIFY,Rear Injector,Injector,X20,EVIDENCE_GATED,Exact PN impedance and driver compatibility required
+D-COIL-F,VERIFY,Front Ignition Coil,Ignition Coil,X21,EVIDENCE_GATED,Exact PN required
+D-COIL-R,VERIFY,Rear Ignition Coil,Ignition Coil,X22,EVIDENCE_GATED,Exact PN required
+D-PUMP1,VERIFY,Fuel Pump 1,Fuel Pump,X30,EVIDENCE_GATED,Exact PN/current determines PMU direct vs external stage
+D-PUMP2,VERIFY,Fuel Pump 2,Fuel Pump,X31,DNP_OR_EVIDENCE_GATED,Exact PN/current determines PMU direct vs external stage
+D-FAN1,VERIFY,Radiator Fan 1,Fan,B11-FAN,EVIDENCE_GATED,Startup/steady current required
+D-CCP,VERIFY,Charge Cooler Pump,Pump,B12-PUMP,DNP_OR_EVIDENCE_GATED,Only if fitted
+D-X70,TE Connectivity,1393292-5 Micro Relay A,Relay,X70,RELAY_PN_FROZEN,Resistor-suppressed relay; holder/socket remains DFM-gated
+D-CLUTCH,Harley-Davidson,Clutch Switch 71620-08,Switch,X71,BASELINE,Feeds PMU A6 launch request
+D-X51,Deutsch,DTM 4-way Service Connector,Service Connector,X51,FUNCTION_FROZEN_PN_PENDING,No permanent CAN termination
+D-X50,VERIFY,Engineering Service Connector,Service Connector,X50,DFM_GATED,Optional power and controlled spare circuits
+D-JP01,VERIFY,J-P01 Positive Distribution,Junction,J-P01,DFM_REQUIRED,Exact stud/distribution hardware and stack-up pending
+D-JP02,VERIFY,J-P02 High-Current Ground Star,Junction,J-P02,DFM_REQUIRED,Must not include FT550 precision sensor ground
