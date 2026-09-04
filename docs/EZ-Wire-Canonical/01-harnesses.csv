@@ -1,0 +1,11 @@
+harness_id,name,description,measurement_unit,release_state,source_scope
+H-MAIN,Turbo V-Rod Main Engine Harness,FT550 + PMU16 engine-management main harness including sensors injection ignition CAN and service interfaces,mm,EZ_WIRE_CANONICAL_BASELINE_READY,Repository master harness
+H-PWR,Primary Power and Ground Harness,Battery J-P01 B15 J-P02 primary power and high-current ground distribution,mm,EVIDENCE_GATED,Primary power architecture
+H-PUMP1,Fuel Pump 1 Harness,Dedicated 4.0mm2 feed and 4.0mm2 return for primary fuel pump,mm,EVIDENCE_GATED,Pump architecture
+H-PUMP2,Fuel Pump 2 Harness,Dedicated 4.0mm2 feed and 4.0mm2 return for staged/secondary fuel pump,mm,DNP_OR_EVIDENCE_GATED,Pump architecture
+H-IGN,SparkPRO Ignition Harness,FT550 ignition commands SparkPRO power grounds and front/rear coil outputs,mm,EVIDENCE_GATED,Ignition architecture
+H-INJ,Injector Harness,B39 injector power FT550 A1/A2 commands X62/X63 driver bay and front/rear injectors,mm,EVIDENCE_GATED,Injector architecture
+H-SENS,Sensor Harness,CKP CAM TPS MAP ECT IAT VSS and precision sensor reference/ground network,mm,PHYSICAL_ID_REQUIRED,Sensor architecture
+H-CAN,CAN and Service Harness,FT550-PMU CAN2 backbone X51 service stub and optional service power,mm,EVIDENCE_GATED,CAN architecture
+H-2STEP,Two-Step Clutch Harness,Clutch input PMU O11 X70 relay and FT550 A21 isolated dry-contact path,mm,EVIDENCE_GATED,Launch-control architecture
+H-X50,Engineering Service Harness,X50 service ground optional power and controlled spare circuits,mm,DFM_GATED,Engineering service interface
