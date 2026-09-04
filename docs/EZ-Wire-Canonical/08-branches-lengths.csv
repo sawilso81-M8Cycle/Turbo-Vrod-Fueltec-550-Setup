@@ -1,0 +1,42 @@
+branch_id,harness_id,function,wire_or_cable_type,approx_length_mm,prototype_cut_length_mm,ezwire_length_state,canonical_status,notes
+B01,H-SENS,FT550 to engine sensor spine,mixed W035/SENSOR035,750,900,PROVISIONAL,PHYSICAL_MEASUREMENT_REQUIRED,Final breakout positions bike-measured
+B02,H-SENS,CKP shielded twisted pair,CKP035,450,550,PROVISIONAL,PHYSICAL_MEASUREMENT_REQUIRED,Keep away from ignition/starter
+B03,H-SENS,TPS 5V signal return,3xSENSOR035,300,400,PROVISIONAL,PHYSICAL_MEASUREMENT_REQUIRED,Sensor branch
+B04,H-SENS,MAP 5V signal return,3xSENSOR035,350,450,PROVISIONAL,PHYSICAL_MEASUREMENT_REQUIRED,Sensor branch
+B05,H-SENS,ECT signal return,2xSENSOR035,450,550,PROVISIONAL,PHYSICAL_MEASUREMENT_REQUIRED,Sensor branch
+B06,H-SENS,IAT signal return,2xSENSOR035,500,600,PROVISIONAL,PHYSICAL_MEASUREMENT_REQUIRED,Heat protect if required
+B07,H-SENS,VSS supply signal ground,3xSENSOR035,950,1100,PROVISIONAL,PHYSICAL_MEASUREMENT_REQUIRED,Rearward route installation dependent
+B08,H-INJ,Injector driven/control branch,2xW050 plus B39 supply,450,550,PROVISIONAL,PHYSICAL_MEASUREMENT_REQUIRED,Front/rear breakout allowance
+B09,H-IGN,Coil primary driven branch,2xW100,450,550,PROVISIONAL,PHYSICAL_MEASUREMENT_REQUIRED,SparkPRO to coils; short as practical
+B10,H-PUMP1,Primary fuel pump feed,W400,700,850,PROVISIONAL,FROZEN_WIRE_SIZE_PHYSICAL_LENGTH_PENDING,Newer release overrides stale prototype 2.5mm2 note: 4.0mm2 minimum
+B10R,H-PUMP1,Primary fuel pump dedicated return,W400,700,850,PROVISIONAL,FROZEN_WIRE_SIZE_PHYSICAL_LENGTH_PENDING,Dedicated 4.0mm2 return to J-P02
+PUMP2_FEED,H-PUMP2,Secondary fuel pump feed,W400,700,850,PROVISIONAL,DNP_OR_PHYSICAL_MEASUREMENT_REQUIRED,4.0mm2 minimum if fitted
+PUMP2_RETURN,H-PUMP2,Secondary fuel pump dedicated return,W400,700,850,PROVISIONAL,DNP_OR_PHYSICAL_MEASUREMENT_REQUIRED,4.0mm2 minimum if fitted
+B11,H-MAIN,Radiator fan 1 feed,W250,950,1100,PROVISIONAL,ELECTRICAL_AND_PHYSICAL_VERIFY,Freeze after fan current evidence
+B12,H-MAIN,Charge/intercooler pump feed,W200,850,1000,PROVISIONAL,DNP_OR_ELECTRICAL_AND_PHYSICAL_VERIFY,DNP if not fitted
+B13,H-X50,Service/logger feed and service branch,SERVICE075 plus W035 signals,500,650,PROVISIONAL,PHYSICAL_MEASUREMENT_REQUIRED,Accessible service location assumed
+B14,H-CAN,FT550-PMU CAN twisted pair,CAN035,500,650,PROVISIONAL,PHYSICAL_MEASUREMENT_REQUIRED,Linear trunk; X51 stub separate
+B15,H-PWR,Main J-P01 to PMU stud,W1000,400,500,PROVISIONAL,PHYSICAL_MEASUREMENT_AND_PROTECTION_PENDING,10.0mm2 baseline
+B17,H-SENS,Fuel pressure sensor branch,3xSENSOR035,550,650,PROVISIONAL,SENSOR_SELECTION_AND_PHYSICAL_VERIFY,Precision sensor branch
+B18,H-SENS,Engine oil pressure sensor branch,3xSENSOR035,600,700,PROVISIONAL,SENSOR_SELECTION_AND_PHYSICAL_VERIFY,Precision sensor branch
+B19,H-SENS,Post-intercooler IAT branch,2xSENSOR035,750,900,PROVISIONAL,SENSOR_SELECTION_AND_PHYSICAL_VERIFY,Turbo plumbing location dependent
+B20-B31,H-X50,Expansion turbo/development sensors,W035 typical,TBD,TBD,UNDEFINED,DNP,Do not create cut lengths until sensor and mounting positions selected
+B32,H-IGN,FT550 A8/A9 to SparkPRO commands,2xW050,450,550,PROVISIONAL,PHYSICAL_MEASUREMENT_REQUIRED,Low-current ignition commands
+B33,H-IGN,SparkPRO power/grounds,2xW100 grounds plus B40 supply,400,500,PROVISIONAL,PHYSICAL_MEASUREMENT_REQUIRED,Direct to J-P02 / protected supply
+B34,H-IGN,SparkPRO driven coil outputs,2xW100,400,500,PROVISIONAL,PHYSICAL_MEASUREMENT_REQUIRED,Keep short and segregated from CKP
+B35,H-INJ,FT550 A1/A2 to injector driver junction,2xW050,350,450,PROVISIONAL,PHYSICAL_MEASUREMENT_REQUIRED,Front/rear injector command pair
+B36,H-INJ,Direct-drive injector bypass link,2xW050,150,220,PROVISIONAL,EVIDENCE_GATED,Fit only DIRECT_DRIVE_APPROVED
+B37,H-INJ,Peak-Hold input branch if fitted,2xW050,250,350,PROVISIONAL,DNP_OR_EVIDENCE_GATED,DNP unless Peak & Hold selected
+B38,H-INJ,Peak-Hold output branch if fitted,TBD,250,350,PROVISIONAL,DNP_OR_EVIDENCE_GATED,Final size depends selected driver/injector current
+B39,H-INJ,Injector common +12V feed,W100,500,650,PROVISIONAL,ELECTRICAL_VERIFY,Independent protected branch
+B40,H-IGN,Ignition/SparkPRO common +12V feed,W150,500,650,PROVISIONAL,ELECTRICAL_VERIFY,Independent protected branch
+B41,H-2STEP,OEM clutch switch to PMU A6,2xW035,1200,1400,PROVISIONAL,PHYSICAL_MEASUREMENT_REQUIRED,Allow full steering lock and lever service loop
+B42,H-2STEP,Optional clutch Hall position sensor,3xW035,1200,1400,PROVISIONAL,DNP,DNP until sensor/bracket final
+B43,H-2STEP,PMU O11 to X70 relay coil,W050,450,550,PROVISIONAL,PHYSICAL_MEASUREMENT_REQUIRED,High-side relay-coil command
+B44,H-2STEP,X70 relay dry contact to FT550 A21,W035,350,450,PROVISIONAL,PHYSICAL_MEASUREMENT_REQUIRED,Ground-active request; no +12V on A21
+X51_STUB,H-CAN,CAN service stub,CAN035 plus optional SERVICE075,250,300,PROVISIONAL,FROZEN_MAXIMUM_PHYSICAL_VERIFY,Keep <=300mm where practical
+PMU_SW,H-MAIN,PMU switched enable,W050,450,550,PROVISIONAL,PHYSICAL_MEASUREMENT_REQUIRED,Low-current switched feed
+PMU_A1_A5,H-MAIN,Master/start/kill/fan/service commands,W035 each,700,850,PROVISIONAL,PHYSICAL_MEASUREMENT_REQUIRED,Actual switch positions determine individual lengths
+O8_WARNING,H-MAIN,Warning lamp output,W050,800,950,PROVISIONAL,PHYSICAL_MEASUREMENT_REQUIRED,Final location dependent
+O10_SERVICE,H-X50,Logger/display supply,SERVICE075,500,650,PROVISIONAL,ELECTRICAL_AND_PHYSICAL_VERIFY,Aggregate load check required
+O6_BOOST,H-MAIN,Boost solenoid supply,SERVICE075,750,900,PROVISIONAL,ELECTRICAL_AND_PHYSICAL_VERIFY,Final solenoid location/current verify
