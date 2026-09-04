@@ -1,0 +1,13 @@
+protection_id,branch_id,function,wire_type_id,protection_type,protection_value_or_limit_A,pmu_channel,direct_or_command,release_state,notes
+PROT-001,B15,PMU16 main feed,W1000,FUSE_OR_BREAKER,TBD,NA,DIRECT,PROTECTION_VALUE_PENDING,Final value load-model gated
+PROT-002,PUMP1,Pump 1 power,W400,PMU_LIMIT_OR_FUSE,TBD,TBD,TBD,PROTECTION_VALUE_PENDING,4.0mm2 minimum retained; exact pump current/switching decision pending
+PROT-003,PUMP2,Pump 2 power,W400,PMU_LIMIT_OR_FUSE,TBD,TBD,TBD,PROTECTION_VALUE_PENDING,4.0mm2 minimum retained; DNP if Pump2 omitted
+PROT-004,B11,Radiator fan,W250,PMU_LIMIT_OR_FUSE,TBD,TBD,TBD,PROTECTION_VALUE_PENDING,Final architecture measurement gated
+PROT-005,B12,Charge-cooler pump,W200,PMU_LIMIT_OR_FUSE,TBD,TBD,TBD,PROTECTION_VALUE_PENDING,DNP if not fitted
+PROT-006,B39,Injector supply,W100,FUSE_OR_PMU_LIMIT,TBD,TBD,TBD,PROTECTION_VALUE_PENDING,Independent from B40
+PROT-007,B40,SparkPRO ignition supply,W150,FUSE_OR_PMU_LIMIT,TBD,TBD,TBD,PROTECTION_VALUE_PENDING,Independent from B39; freeze after coil/dwell/current verification
+PROT-008,X50_SVC,Optional protected service 12V,SERVICE075,FUSE_OR_CURRENT_LIMIT,TBD,NA,DIRECT,PROTECTION_VALUE_PENDING,DNP if unused; no backfeed
+PROT-009,X51_SVC,Optional protected CAN service 12V,SERVICE075,FUSE_OR_CURRENT_LIMIT,TBD,NA,DIRECT,PROTECTION_VALUE_PENDING,DNP if unused; no backfeed
+PROT-010,X70_COIL,Two-Step relay coil,W050,PMU_CURRENT_LIMIT,TBD,O11,DIRECT,PROTECTION_VALUE_PENDING,A21 contact side remains isolated from +12V
+PROT-011,FT550_SUPPLY,FT550 ECU supply,TBD,FUSE_OR_PMU_LIMIT,TBD,TBD,TBD,PROTECTION_VALUE_PENDING,Final source/protection to match released architecture
+PROT-012,SPARE_AUX_1,Reserved auxiliary branch,TBD,TBD,TBD,TBD,TBD,PROTECTION_VALUE_PENDING,DNP until released
