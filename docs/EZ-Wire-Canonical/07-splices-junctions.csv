@@ -1,0 +1,13 @@
+node_id,node_type,function,input_circuits,output_circuits,current_class,release_state,ezwire_representation,notes
+J-P01,JUNCTION,Primary positive distribution,BATTERY_POSITIVE_OR_MASTER_PROTECTED,B15;B39;B40;PUMP_FEEDS_IF_EXTERNAL_STAGE;AUX_FEEDS,HIGH_CURRENT,DFM_REQUIRED,Manual connector/junction node,Exact hardware and stack-up pending
+J-P02,JUNCTION,High-current ground star,BATTERY_NEGATIVE_OR_ENGINE_GROUND,PUMP_RETURNS;FAN_RETURN;COOLER_RETURN;IGNITION_POWER_GROUND_AS_RELEASED,HIGH_CURRENT,DFM_REQUIRED,Manual connector/junction node,Do not include FT550 precision sensor ground
+S-SENS-01,SPLICE,5V reference fan-out,FT550_5V_REF,TPS_5V;MAP_5V;OTHER_RELEASED_5V_SENSORS,PRECISION_REFERENCE,VERIFY_REQUIRED,Splice connector/node,Only released 5V consumers
+S-SENS-02,SPLICE,Sensor-ground fan-out,FT550_SENSOR_GROUND,TPS_GND;MAP_GND;IAT_GND;ET_GND;OTHER_RELEASED_SENSOR_RETURNS,PRECISION_GROUND,VERIFY_REQUIRED,Splice connector/node,Keep separate from J-P02
+S-PWR-01,SPLICE,Injector supply split,B39,FRONT_INJECTOR_12V;REAR_INJECTOR_12V,ENGINE_CRITICAL_POWER,VERIFY_REQUIRED,Splice connector/node,Re-evaluate if Peak & Hold changes topology
+S-PWR-02,SPLICE,Ignition supply distribution,B40,SPARKPRO_SUPPLY;COIL_SUPPLY_IF_REQUIRED_BY_RELEASED_ARCHITECTURE,ENGINE_CRITICAL_POWER,VERIFY_REQUIRED,Splice connector/node,Exact topology depends SparkPRO/coil architecture
+S-AUX-01,SPLICE_OR_DIRECT,Radiator fan branch distribution,B11,TBD,AUX_HIGH_CURRENT,VERIFY_REQUIRED,Optional splice node,May be direct branch without splice
+S-AUX-02,SPLICE_OR_DIRECT,Charge-cooler branch distribution,B12,TBD,AUX_HIGH_CURRENT,VERIFY_REQUIRED,Optional splice node,DNP if not fitted
+S-CAN-01,SPLICE,CAN X51 service stub branch,CAN_BACKBONE_HL,X51_CAN_HL,CAN,VERIFY_REQUIRED,Controlled branch node,Stub <=300mm and preserve twist; no local termination
+S-TRG-01,REPAIR_SPLICE,CKP repair/service pigtail transition if required,X10_OEM_PIGTAIL,FT550_CKP,PRECISION_TRIGGER,CONDITIONAL,Repair splice node,Only if exact loose connector parts unavailable
+S-TRG-02,REPAIR_SPLICE,CAM repair/service pigtail transition if required,X11_OEM_PIGTAIL,FT550_CAM,PRECISION_TRIGGER,CONDITIONAL,Repair splice node,DNP if CAM not used
+S-SVC-01,SPLICE,Optional service 12V split,J-P01_PROTECTED_SERVICE,X50_SERVICE_12V;X51_SERVICE_12V,LOW_CURRENT_POWER,CONDITIONAL,Splice connector/node,DNP if service power omitted
