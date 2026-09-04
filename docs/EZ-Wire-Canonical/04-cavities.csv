@@ -1,0 +1,57 @@
+connector_id,cavity,description,direction,canonical_circuit_id,original_circuit_id,evidence_state,notes
+FT550-A,A1,Front Injector Command,OUTPUT,INJ-001,INJ-001,FUNCTION_FROZEN_CAVITY_VERIFY,Front channel
+FT550-A,A2,Rear Injector Command,OUTPUT,INJ-002,INJ-002,FUNCTION_FROZEN_CAVITY_VERIFY,Rear channel
+FT550-A,A8,SparkPRO CH1 Command,OUTPUT,IGN-001,IGN-001,FUNCTION_FROZEN_CAVITY_VERIFY,Front coil channel
+FT550-A,A9,SparkPRO CH2 Command,OUTPUT,IGN-002,IGN-002,FUNCTION_FROZEN_CAVITY_VERIFY,Rear coil channel
+FT550-A,A15,CAN-L,BIDIRECTIONAL,CAN-002,CAN-002,PROJECT_FROZEN,Project CAN reference
+FT550-A,A16,CAN-H,BIDIRECTIONAL,CAN-001,CAN-001,PROJECT_FROZEN,Project CAN reference
+FT550-A,A18,CKP RPM-/Trigger Reference,INPUT,TRG-002,TRG-002,WORKING_CROSS_REFERENCE,Scope/sync verify
+FT550-A,A19,CKP RPM+/Trigger Input,INPUT,TRG-001,TRG-001,WORKING_CROSS_REFERENCE,Scope/sync verify
+FT550-A,A21,Two-Step Ground-Active Input,INPUT,CTL-002,CTL-001,FUNCTION_FROZEN_CAVITY_VERIFY,Original connector schedule used CTL-001; canonical conductor authority is CTL-002; NO +12V
+FT550-A,A22,TPS Signal,INPUT,SEN-003,TBD,WORKING_CROSS_REFERENCE,Verify exact connector manual
+FT550-A,A24,Engine Temperature Input,INPUT,SEN-007,TBD,WORKING_CROSS_REFERENCE,Verify exact connector manual
+FT550-A,A26,VSS/Speed Input,INPUT,SEN-013,TBD,WORKING_CROSS_REFERENCE,Verify exact connector manual
+FT550-B,B5,IAT Input,INPUT,SEN-009,TBD,WORKING_CROSS_REFERENCE,Verify exact connector manual
+PMU16,3,Output O11 - Two-Step Relay Command,OUTPUT,CTL-001,CTL-010,VERIFIED_PIN_LATER_PROJECT_OVERRIDE,Physical pin verified; later project freeze assigns O11 to X70
+PMU16,4,Output O10 - Logger/Service,OUTPUT,TBD,TBD,VERIFIED_PIN,Reserved service allocation
+PMU16,7,+12V Switched PMU Enable,INPUT,TBD,TBD,VERIFIED_PIN,Ignition-switched PMU enable
+PMU16,11,Output O6 - Boost Solenoid Supply,OUTPUT,TBD,TBD,VERIFIED_PIN,Boost fails to mechanical minimum when de-energised
+PMU16,12,Output O5 - Charge Cooler Pump,OUTPUT,AUX-002,B12,VERIFIED_PIN,If fitted
+PMU16,13,Output O4 - Radiator Fan 2,OUTPUT,TBD,TBD,VERIFIED_PIN,DNP unless fitted
+PMU16,15,+5V PMU-Local Reference,OUTPUT,TBD,TBD,VERIFIED_PIN,Not a substitute for FT550 precision reference network
+PMU16,16,Input A2 - Start Request,INPUT,TBD,TBD,VERIFIED_PIN,Project input
+PMU16,17,Input A4 - Fan Override,INPUT,TBD,TBD,VERIFIED_PIN,Optional project input
+PMU16,18,Input A6 - Clutch Launch Input,INPUT,TBD,TBD,VERIFIED_PIN_LATER_PROJECT_OVERRIDE,PMU pinout source called this reserved; later launch-control freeze assigns clutch input
+PMU16,24,CAN2-H,BIDIRECTIONAL,CAN-001,CAN-001,VERIFIED_PIN,Vehicle/FT550 CAN high
+PMU16,25,Power Ground,RETURN,TBD,TBD,VERIFIED_PIN,To J-P02 high-current ground star
+PMU16,26,Output O3 - Radiator Fan 1,OUTPUT,AUX-001,B11,VERIFIED_PIN,Final current limit evidence-gated
+PMU16,29,Input A1 - Master Enable,INPUT,TBD,TBD,VERIFIED_PIN,Project input
+PMU16,30,Input A3 - Kill Request,INPUT,TBD,TBD,VERIFIED_PIN,Highest safety priority input
+PMU16,31,Input A5 - Service/Test Mode,INPUT,TBD,TBD,VERIFIED_PIN,Project input
+PMU16,32,Input A7 - Optional Clutch Position,INPUT,TBD,TBD,VERIFIED_PIN_LATER_PROJECT_OVERRIDE,A6 remains authoritative clutch discrete
+PMU16,37,CAN2-L,BIDIRECTIONAL,CAN-002,CAN-002,VERIFIED_PIN,Vehicle/FT550 CAN low
+PMU16,38,Output O1 - Primary Fuel Pump,OUTPUT,PWR-002,PWR-010,VERIFIED_PIN,4.0mm2 feed if direct; otherwise low-current external-stage command
+PMU16,39,Output O2 - Secondary Fuel Pump,OUTPUT,PWR-003,PWR-011,VERIFIED_PIN,4.0mm2 feed if direct; DNP if Pump2 omitted
+PMU16,STUD,+12V Battery Main PMU Power,INPUT,PWR-001,PWR-001,VERIFIED_PIN,150A max constant device rating; branch protection separately evidence-gated
+SPARKPRO,1,Channel 1 Command Input,INPUT,IGN-001,IGN-001,PROJECT_BASELINE,From FT550 A8
+SPARKPRO,2,Power Ground 1,RETURN,GND-005,GND-005,PROJECT_BASELINE,To J-P02
+SPARKPRO,3,Channel 2 Command Input,INPUT,IGN-002,IGN-002,PROJECT_BASELINE,From FT550 A9
+SPARKPRO,4,Channel 2 Coil Output,OUTPUT,IGN-004,IGN-004,PROJECT_BASELINE,Rear coil
+SPARKPRO,5,Power Ground 2,RETURN,GND-005,GND-005,PROJECT_BASELINE,To J-P02
+SPARKPRO,6,Channel 1 Coil Output,OUTPUT,IGN-003,IGN-003,PROJECT_BASELINE,Front coil
+X30,1,Pump 1 +12V Feed,OUTPUT,PWR-002,PWR-010,DFM_PENDING,4.0mm2 minimum
+X30,2,Pump 1 Dedicated Return,RETURN,GND-001,PWR-012,DFM_PENDING,4.0mm2 dedicated return
+X31,1,Pump 2 +12V Feed,OUTPUT,PWR-003,PWR-011,DFM_PENDING,4.0mm2 minimum
+X31,2,Pump 2 Dedicated Return,RETURN,GND-002,PWR-013,DFM_PENDING,4.0mm2 dedicated return
+X51,1,CAN-H,BIDIRECTIONAL,CAN-003,CAN-001,FUNCTION_FROZEN_PN_PENDING,Canonical service-stub circuit is CAN-003
+X51,2,CAN-L,BIDIRECTIONAL,CAN-004,CAN-002,FUNCTION_FROZEN_PN_PENDING,Canonical service-stub circuit is CAN-004
+X51,3,Service Ground,RETURN,SRV-001,CAN-003,FUNCTION_FROZEN_PN_PENDING,Legacy circuit-ID conflict retained in original_circuit_id
+X51,4,Protected Service +12V or DNP,SUPPLY,SRV-002,CAN-004,FUNCTION_FROZEN_PN_PENDING,Legacy circuit-ID conflict retained in original_circuit_id
+X62,1,Front Injector Command In,INPUT,INJ-001,INJ-001,FUNCTION_FROZEN_PN_PENDING,Front only
+X62,2,Rear Injector Command In,INPUT,INJ-002,INJ-002,FUNCTION_FROZEN_PN_PENDING,Rear only
+X63,1,Front Injector Command Out,OUTPUT,INJ-003,INJ-001,FUNCTION_FROZEN_PN_PENDING,Canonical driver-output circuit INJ-003
+X63,2,Rear Injector Command Out,OUTPUT,INJ-004,INJ-002,FUNCTION_FROZEN_PN_PENDING,Canonical driver-output circuit INJ-004
+X70,COIL_A,PMU O11 Coil Command,INPUT,CTL-001,CTL-010,DFM_PENDING,Exact socket number 85/86 orientation verify
+X70,COIL_B,Relay Coil Return,RETURN,GND-006,CTL-011,DFM_PENDING,Exact socket number 85/86 orientation verify
+X70,COM,Dry Contact Common,CONTACT,GND-007,CTL-012,DFM_PENDING,Approved signal-compatible ground; NO +12V
+X70,NO,Dry Contact NO to FT550 A21,CONTACT,CTL-002,CTL-001,DFM_PENDING,NO +12V
